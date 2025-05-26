@@ -124,8 +124,8 @@ export type TranslationKey =
   | 'solutions.solution.postDeclarationControl'
   | 'solutions.solution.cbamReporting'
   | 'solutions.solution.dataVisualization'
-  | 'solutions.solution.declarantAI' // New
-  | 'solutions.solution.transitAI'   // New
+  | 'solutions.solution.declarantAI'
+  | 'solutions.solution.transitAI'
   | 'solutions.viewProductDetails';
 
 export const translations: Record<Locale, Record<string, string>> = {
@@ -243,8 +243,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Post-Declaration Control & Audit Support',
     'solutions.solution.cbamReporting': 'CBAM Reporting & Carbon Accounting',
     'solutions.solution.dataVisualization': 'Trade Data Visualization & Analytics',
-    'solutions.solution.declarantAI': 'AI-Assisted Declaration Preparation',
-    'solutions.solution.transitAI': 'AI-Optimized Transit Procedures',
+    'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation',
+    'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',
     'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
@@ -361,8 +361,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Nachverzollungskontrolle & Audit-Unterstützung',
     'solutions.solution.cbamReporting': 'CBAM-Berichterstattung & CO2-Bilanzierung',
     'solutions.solution.dataVisualization': 'Handelsdatenvisualisierung & -analyse',
-    'solutions.solution.declarantAI': 'KI-gestützte Beyanname Hazırlama', // Placeholder
-    'solutions.solution.transitAI': 'KI-optimierte Transitverfahren', // Placeholder
+    'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation', // Placeholder, new English text
+    'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',   // Placeholder, new English text
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
@@ -479,8 +479,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Sonradan Kontrol ve Denetim Desteği',
     'solutions.solution.cbamReporting': 'CBAM Raporlaması ve Karbon Muhasebesi',
     'solutions.solution.dataVisualization': 'Ticaret Veri Görselleştirme ve Analizi',
-    'solutions.solution.declarantAI': 'Yapay Zeka Destekli Beyanname Hazırlama',
-    'solutions.solution.transitAI': 'Yapay Zeka İle Optimize Edilmiş Transit Prosedürleri',
+    'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation', // Placeholder, new English text
+    'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',   // Placeholder, new English text
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };
