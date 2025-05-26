@@ -60,7 +60,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
       </Sidebar>
       <SidebarInset>
         <Header />
-        <main className="flex-1 p-6 overflow-auto">
+        <main className="flex flex-col items-center flex-1 p-6 overflow-auto">
           {children}
         </main>
       </SidebarInset>
