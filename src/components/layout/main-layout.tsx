@@ -33,7 +33,7 @@ function CustomSidebarHeaderContent() {
 
   // For desktop view
   return (
-    <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label={state === 'expanded' ? "Collapse sidebar" : "Expand sidebar"}>
+    <Button variant="outline" size="icon" onClick={toggleSidebar} aria-label={state === 'expanded' ? "Collapse sidebar" : "Expand sidebar"}>
       {state === 'expanded' ? <PanelLeftClose className="h-6 w-6" /> : <PanelLeftOpen className="h-6 w-6" />}
     </Button>
   );
