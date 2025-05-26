@@ -1,3 +1,4 @@
+
 import type {Metadata} from 'next';
 import {Geist, Geist_Mono} from 'next/font/google';
 import './globals.css';
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Global Hub',
-  description: 'Your centralized platform for global content management and translation.',
+  description: 'Your centralized platform for global content management.', // Updated description
 };
 
 export default function RootLayout({

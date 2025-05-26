@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -6,12 +7,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import type { TranslationKey } from '@/lib/i18n';
 
 interface FeatureItem {
-  titleKey: 'home.contentManagement.title' | 'home.aiTranslation.title' | 'home.languageSelector.title' | 'home.companyInfo.title' | 'home.contactForm.title';
-  descriptionKey: 'home.contentManagement.description' | 'home.aiTranslation.description' | 'home.languageSelector.description' | 'home.companyInfo.description' | 'home.contactForm.description';
+  titleKey: 'home.contentManagement.title' | 'home.languageSelector.title';
+  descriptionKey: 'home.contentManagement.description' | 'home.languageSelector.description';
   imageSrc: string;
-  imageAltKey: string;
+  imageAltKey: 'home.contentManagement.title' | 'home.languageSelector.title'; // Using titleKey as altKey for simplicity and relevance
   dataAiHint: string;
 }
 
@@ -22,13 +24,6 @@ const features: FeatureItem[] = [
     imageSrc: 'https://placehold.co/600x400.png',
     imageAltKey: 'home.contentManagement.title',
     dataAiHint: 'content organization',
-  },
-  {
-    titleKey: 'home.aiTranslation.title',
-    descriptionKey: 'home.aiTranslation.description',
-    imageSrc: 'https://placehold.co/600x400.png',
-    imageAltKey: 'home.aiTranslation.title',
-    dataAiHint: 'global communication',
   },
   {
     titleKey: 'home.languageSelector.title',
@@ -53,9 +48,7 @@ export default function HomePage() {
             {t('home.welcomeSubtitle')}
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <Button asChild size="lg">
-              <Link href="/translate">{t('nav.translate')} <ArrowRight className="ml-2 h-5 w-5" /></Link>
-            </Button>
+            {/* Removed Translate Button, kept About Us button */}
             <Button asChild variant="outline" size="lg">
               <Link href="/about">{t('nav.about')}</Link>
             </Button>
@@ -67,7 +60,7 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
           {t('home.featuresTitle')}
         </h2>
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2"> {/* Adjusted to 2 columns */}
           {features.map((feature) => (
             <Card key={feature.titleKey} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 w-full">
@@ -99,7 +92,7 @@ export default function HomePage() {
               Ready to Go Global?
             </h2>
             <p className="mx-auto max-w-[600px] text-foreground/80 md:text-xl mt-4 mb-8">
-              Start managing and translating your content effortlessly with Global Hub.
+              Start managing your content effortlessly with Global Hub.
             </p>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
               <Link href="/contact">Contact Us Today <ArrowRight className="ml-2 h-5 w-5" /></Link>
