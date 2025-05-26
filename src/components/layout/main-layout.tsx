@@ -2,7 +2,7 @@
 "use client";
 
 import type { ReactNode } from 'react';
-import Image from 'next/image';
+// Image import is no longer needed here
 import Link from 'next/link'; // Import Link
 import {
   SidebarProvider,
@@ -25,17 +25,8 @@ export default function MainLayout({ children }: { children: ReactNode }) {
   return (
     <SidebarProvider defaultOpen={true}>
       <Sidebar collapsible="icon" className="border-r">
-        <SidebarHeader className="p-4 flex items-center justify-between">
-          <div className="group-data-[collapsible=icon]:hidden">
-            <Image
-              src="/atez-logo.png"
-              alt="ATEZ Software Technologies Logo"
-              width={512}
-              height={159}
-              className="h-8 w-auto"
-              priority
-            />
-          </div>
+        <SidebarHeader className="p-4 flex items-center justify-end">
+          {/* Logo removed from here */}
            <SidebarTrigger asChild className="group-data-[collapsible=icon]:hidden">
              <Button variant="ghost" size="icon">
                 <PanelLeftClose className="h-6 w-6" />
