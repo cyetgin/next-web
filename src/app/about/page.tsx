@@ -27,7 +27,7 @@ export default function AboutPage() {
             width={600}
             height={400}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="team collaboration"
+            data-ai-hint="team meeting"
           />
         </div>
         <Card className="shadow-lg">
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <BookOpen className="h-10 w-10 text-primary" />
              <div>
               <CardTitle className="text-3xl">{t('about.story.title')}</CardTitle>
-              <CardDescription>The journey that shaped Global Hub.</CardDescription>
+              <CardDescription>The journey that shaped ATEZ Software Technologies.</CardDescription>
             </div>
           </CardHeader>
           <CardContent>
@@ -68,7 +68,7 @@ export default function AboutPage() {
             width={600}
             height={400}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="company history"
+            data-ai-hint="company journey"
           />
         </div>
       </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
          <Users className="h-16 w-16 text-primary mx-auto mb-4" />
         <h2 className="text-3xl font-semibold mb-4">Meet Our Team (Placeholder)</h2>
         <p className="text-foreground/80 max-w-2xl mx-auto">
-          Our diverse team of linguists, engineers, and product visionaries are passionate about connecting the world. We are currently working on showcasing our amazing team members here!
+          Our diverse team of engineers, designers, and product visionaries are passionate about building great software. We are currently working on showcasing our amazing team members here!
         </p>
       </section>
 

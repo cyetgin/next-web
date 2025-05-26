@@ -48,7 +48,6 @@ export default function HomePage() {
             {t('home.welcomeSubtitle')}
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            {/* Removed Translate Button, kept About Us button */}
             <Button asChild variant="outline" size="lg">
               <Link href="/about">{t('nav.about')}</Link>
             </Button>
@@ -89,10 +88,10 @@ export default function HomePage() {
       <section className="w-full py-12 md:py-24 bg-secondary/50">
         <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-              Ready to Go Global?
+              Ready to Innovate with ATEZ?
             </h2>
             <p className="mx-auto max-w-[600px] text-foreground/80 md:text-xl mt-4 mb-8">
-              Start managing your content effortlessly with Global Hub.
+              Start managing your content effortlessly with ATEZ Software Technologies.
             </p>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
               <Link href="/contact">Contact Us Today <ArrowRight className="ml-2 h-5 w-5" /></Link>

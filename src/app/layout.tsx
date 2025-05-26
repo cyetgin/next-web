@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Global Hub',
-  description: 'Your centralized platform for global content management.', // Updated description
+  title: 'ATEZ Software Technologies',
+  description: 'Your centralized platform for content management by ATEZ Software Technologies.',
 };
 
 export default function RootLayout({
@@ -39,3 +39,4 @@ export default function RootLayout({
     </html>
   );
 }
+
