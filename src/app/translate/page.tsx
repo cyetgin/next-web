@@ -1,7 +1,8 @@
+
 "use client";
 
 import { useEffect, useRef } from 'react';
-import { useFormState } from 'react-dom';
+import { useActionState } from 'react'; // Changed from 'react-dom' and useFormState
 import { useTranslation } from '@/hooks/use-translation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -27,7 +28,7 @@ const initialState: TranslateFormState = {
 
 export default function TranslatePage() {
   const { t } = useTranslation();
-  const [state, formAction] = useFormState(handleTranslate, initialState);
+  const [state, formAction] = useActionState(handleTranslate, initialState); // Changed from useFormState
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 

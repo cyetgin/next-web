@@ -1,7 +1,8 @@
+
 "use client";
 
 import { useEffect, useRef } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState, useFormStatus } from 'react'; // Changed from 'react-dom' and useFormState
 import { useTranslation } from '@/hooks/use-translation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -36,7 +37,7 @@ function SubmitButton() {
 
 export function ContactForm() {
   const { t } = useTranslation();
-  const [state, formAction] = useFormState(handleContactForm, initialState);
+  const [state, formAction] = useActionState(handleContactForm, initialState); // Changed from useFormState
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
