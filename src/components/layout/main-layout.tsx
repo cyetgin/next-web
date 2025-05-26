@@ -1,18 +1,19 @@
+
 "use client";
 
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 import {
   SidebarProvider,
   Sidebar,
   SidebarHeader,
   SidebarContent,
   SidebarFooter,
-  SidebarInset, // Replaces SidebarMain from older versions
+  SidebarInset,
   SidebarTrigger
 } from '@/components/ui/sidebar';
 import { Header } from './header';
 import { SidebarNav } from './sidebar-nav';
-import { AppLogo } from '@/components/icons/app-logo';
 import { Button } from '@/components/ui/button';
 import { PanelLeftClose, Settings, LogOut } from 'lucide-react';
 
@@ -21,8 +22,22 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     <SidebarProvider defaultOpen={true}>
       <Sidebar collapsible="icon" className="border-r">
         <SidebarHeader className="p-4 flex items-center justify-between">
-          <div className="group-data-[collapsible=icon]:hidden text-primary"> {/* Provides color context for AppLogo SVG */}
-            <AppLogo className="h-7 w-auto" /> {/* Control size via className */}
+          <div className="group-data-[collapsible=icon]:hidden">
+            {/* 
+              Replace with your actual logo. 
+              1. Place your logo (e.g., logo.png) in the /public directory.
+              2. Update src to "/logo.png".
+              3. Adjust width and height to your logo's dimensions.
+            */}
+            <Image
+              src="https://placehold.co/154x32.png"
+              alt="ATEZ Software Technologies Logo"
+              width={154}
+              height={32}
+              className="h-8 w-auto" // Adjust height constraint as needed
+              data-ai-hint="company logo"
+              priority // Optional: if logo is LCP
+            />
           </div>
            <SidebarTrigger asChild className="group-data-[collapsible=icon]:hidden">
              <Button variant="ghost" size="icon">
@@ -44,7 +59,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           </Button>
         </SidebarFooter>
       </Sidebar>
-      <SidebarInset> {/* Use SidebarInset for the main content area */}
+      <SidebarInset>
         <Header />
         <main className="flex-1 p-6 overflow-auto">
           {children}

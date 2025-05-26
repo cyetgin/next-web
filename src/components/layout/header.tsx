@@ -1,6 +1,7 @@
+
 "use client";
 
-import { AppLogo } from '@/components/icons/app-logo';
+import Image from 'next/image';
 import { LanguageSelector } from '@/components/language-selector';
 import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
@@ -18,9 +19,21 @@ export function Header() {
               <PanelLeftOpen className="h-6 w-6" />
             </Button>
           </SidebarTrigger>}
-          <div className="text-primary"> {/* Provides color context for AppLogo SVG */}
-            <AppLogo className="h-7 w-auto" /> {/* Control size via className */}
-          </div>
+          {/* 
+            Replace with your actual logo. 
+            1. Place your logo (e.g., logo.png) in the /public directory.
+            2. Update src to "/logo.png".
+            3. Adjust width and height to your logo's dimensions.
+          */}
+          <Image
+            src="https://placehold.co/154x32.png" 
+            alt="ATEZ Software Technologies Logo"
+            width={154} 
+            height={32}
+            className="h-8 w-auto" // Adjust height constraint as needed, width will scale automatically
+            data-ai-hint="company logo"
+            priority // Optional: if logo is LCP
+          />
         </div>
         
         <div className="flex items-center gap-4">
