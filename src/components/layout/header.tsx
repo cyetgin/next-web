@@ -20,18 +20,15 @@ export function Header() {
             </Button>
           </SidebarTrigger>}
           {/* 
-            Replace with your actual logo. 
-            1. Place your logo (e.g., logo.png) in the /public directory.
-            2. Update src to "/logo.png".
-            3. Adjust width and height to your logo's dimensions.
+            Logo updated to use atez-logo.png. 
+            Ensure atez-logo.png (512x159 pixels) is in the /public directory.
           */}
           <Image
-            src="https://placehold.co/154x32.png" 
+            src="/atez-logo.png" 
             alt="ATEZ Software Technologies Logo"
-            width={154} 
-            height={32}
+            width={512} 
+            height={159}
             className="h-8 w-auto" // Adjust height constraint as needed, width will scale automatically
-            data-ai-hint="company logo"
             priority // Optional: if logo is LCP
           />
         </div>
