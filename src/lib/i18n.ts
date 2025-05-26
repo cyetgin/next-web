@@ -12,10 +12,11 @@ export type TranslationKey =
   | 'app.name'
   | 'nav.home'
   | 'nav.products'
+  | 'nav.solutions' // New
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
-  // | 'nav.settings' // Removed
+  | 'nav.settings'
   | 'home.welcomeTitle'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
@@ -106,24 +107,31 @@ export type TranslationKey =
   | 'settings.language.title'
   | 'settings.language.description'
   | 'settings.language.select.label'
-  // Translate Page (Now removed, but keys might be used elsewhere if not cleaned up fully)
-  | 'translate.title'
-  | 'translate.description'
-  | 'translate.form.textToTranslate.label'
-  | 'translate.form.textToTranslate.placeholder'
-  | 'translate.form.targetLanguage.label'
-  | 'translate.form.customTerminology.label'
-  | 'translate.form.customTerminology.placeholder'
-  | 'translate.form.submitButton'
-  | 'translate.result.title'
-  | 'translate.result.noResult'
-  | 'nav.settings'; // Explicitly adding back if it was meant to be TranslationKey
+  // Solutions Page Keys (New)
+  | 'solutions.title'
+  | 'solutions.description'
+  | 'solutions.solution.htsClassification'
+  | 'solutions.solution.landedCost'
+  | 'solutions.solution.customsCompliance'
+  | 'solutions.solution.exportControls'
+  | 'solutions.solution.findHtsCode'
+  | 'solutions.solution.taxCalculation'
+  | 'solutions.solution.customsDeclarationFiling'
+  | 'solutions.solution.sapIntegration'
+  | 'solutions.solution.transitDeclarationFiling'
+  | 'solutions.solution.guaranteeManagement'
+  | 'solutions.solution.preClearanceControl'
+  | 'solutions.solution.postDeclarationControl'
+  | 'solutions.solution.cbamReporting'
+  | 'solutions.solution.dataVisualization'
+  | 'solutions.viewProductDetails';
 
 export const translations: Record<Locale, Record<string, string>> = {
   en: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Home',
     'nav.products': 'Products',
+    'nav.solutions': 'Solutions', // New
     'nav.about': 'About Us',
     'nav.contact': 'Contact Us',
     'nav.news': 'News',
@@ -162,7 +170,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.description': 'Discover our suite of advanced software solutions designed to streamline international trade and customs operations. All our products are accessible through our central platform.',
     'products.mainPlatformIntro': 'Our comprehensive suite of products is available through our central platform:',
     'products.visitPlatformButton': 'Visit SingleWindow.io',
-    'products.exploreButton': 'Explore',
+    'products.exploreButton': 'Explore Product',
     'products.category.customsCompliance': 'Customs Compliance',
     'products.category.aiSolutions': 'AI Solutions for Customs',
     'products.category.declarationFiling': 'Declaration Filing',
@@ -216,21 +224,30 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Language',
     'settings.language.description': 'Choose your preferred language for the application.',
     'settings.language.select.label': 'Select Language',
-    'translate.title': 'Content Translation', // Kept for potential future use or until full cleanup
-    'translate.description': 'Translate website content into multiple languages using AI.',
-    'translate.form.textToTranslate.label': 'Text to Translate',
-    'translate.form.textToTranslate.placeholder': 'Enter the text you want to translate...',
-    'translate.form.targetLanguage.label': 'Target Language',
-    'translate.form.customTerminology.label': 'Custom Terminology (Optional)',
-    'translate.form.customTerminology.placeholder': 'e.g., product names, specific phrases',
-    'translate.form.submitButton': 'Translate',
-    'translate.result.title': 'Translation Result',
-    'translate.result.noResult': 'Translated text will appear here once submitted.',
+    // Solutions Page Keys (New)
+    'solutions.title': 'Our Solutions',
+    'solutions.description': 'Explore how ATEZ Software Technologies leverages its products to deliver targeted solutions for your international trade and customs challenges.',
+    'solutions.solution.htsClassification': 'HTS Code Classification',
+    'solutions.solution.landedCost': 'Landed Cost Simulation',
+    'solutions.solution.customsCompliance': 'Customs Compliance Management',
+    'solutions.solution.exportControls': 'Export Controls & Sanction Screening',
+    'solutions.solution.findHtsCode': 'Find Your HTS Code',
+    'solutions.solution.taxCalculation': 'Duty & Tax Calculation',
+    'solutions.solution.customsDeclarationFiling': 'Customs Declaration Filing',
+    'solutions.solution.sapIntegration': 'SAP Integration for Declarations',
+    'solutions.solution.transitDeclarationFiling': 'Transit Declaration Filing',
+    'solutions.solution.guaranteeManagement': 'Guarantee Management',
+    'solutions.solution.preClearanceControl': 'Pre-Clearance Control & Risk Assessment',
+    'solutions.solution.postDeclarationControl': 'Post-Declaration Control & Audit Support',
+    'solutions.solution.cbamReporting': 'CBAM Reporting & Carbon Accounting',
+    'solutions.solution.dataVisualization': 'Trade Data Visualization & Analytics',
+    'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Startseite',
     'nav.products': 'Produkte',
+    'nav.solutions': 'Lösungen', // New
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
     'nav.news': 'Aktuelles',
@@ -269,7 +286,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.description': 'Entdecken Sie unsere Suite fortschrittlicher Softwarelösungen zur Optimierung internationaler Handels- und Zollabläufe. Alle unsere Produkte sind über unsere zentrale Plattform zugänglich.',
     'products.mainPlatformIntro': 'Unsere umfassende Produktpalette ist über unsere zentrale Plattform verfügbar:',
     'products.visitPlatformButton': 'SingleWindow.io besuchen',
-    'products.exploreButton': 'Entdecken',
+    'products.exploreButton': 'Produkt entdecken',
     'products.category.customsCompliance': 'Zollkonformität',
     'products.category.aiSolutions': 'KI-Lösungen für den Zoll',
     'products.category.declarationFiling': 'Zollanmeldung',
@@ -323,21 +340,30 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Sprache',
     'settings.language.description': 'Wählen Sie Ihre bevorzugte Sprache für die Anwendung.',
     'settings.language.select.label': 'Sprache auswählen',
-    'translate.title': 'Inhaltsübersetzung',
-    'translate.description': 'Übersetzen Sie Website-Inhalte mit KI in mehrere Sprachen.',
-    'translate.form.textToTranslate.label': 'Zu übersetzender Text',
-    'translate.form.textToTranslate.placeholder': 'Geben Sie den Text ein, den Sie übersetzen möchten...',
-    'translate.form.targetLanguage.label': 'Zielsprache',
-    'translate.form.customTerminology.label': 'Benutzerdefinierte Terminologie (Optional)',
-    'translate.form.customTerminology.placeholder': 'z.B. Produktnamen, spezifische Phrasen',
-    'translate.form.submitButton': 'Übersetzen',
-    'translate.result.title': 'Übersetzungsergebnis',
-    'translate.result.noResult': 'Übersetzter Text wird hier angezeigt, sobald er übermittelt wurde.',
+    // Solutions Page Keys (New)
+    'solutions.title': 'Unsere Lösungen',
+    'solutions.description': 'Entdecken Sie, wie ATEZ Software Technologies seine Produkte einsetzt, um gezielte Lösungen für Ihre internationalen Handels- und Zollherausforderungen zu liefern.',
+    'solutions.solution.htsClassification': 'HS-Code-Klassifizierung',
+    'solutions.solution.landedCost': 'Landed-Cost-Simulation',
+    'solutions.solution.customsCompliance': 'Zoll-Compliance-Management',
+    'solutions.solution.exportControls': 'Exportkontrollen & Sanktionslistenprüfung',
+    'solutions.solution.findHtsCode': 'Finden Sie Ihren HS-Code',
+    'solutions.solution.taxCalculation': 'Zoll- & Steuerberechnung',
+    'solutions.solution.customsDeclarationFiling': 'Zollanmeldung',
+    'solutions.solution.sapIntegration': 'SAP-Integration für Anmeldungen',
+    'solutions.solution.transitDeclarationFiling': 'Transitanmeldung',
+    'solutions.solution.guaranteeManagement': 'Bürgschaftsmanagement',
+    'solutions.solution.preClearanceControl': 'Vorfeldkontrolle & Risikobewertung',
+    'solutions.solution.postDeclarationControl': 'Nachverzollungskontrolle & Audit-Unterstützung',
+    'solutions.solution.cbamReporting': 'CBAM-Berichterstattung & CO2-Bilanzierung',
+    'solutions.solution.dataVisualization': 'Handelsdatenvisualisierung & -analyse',
+    'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Ana Sayfa',
     'nav.products': 'Ürünler',
+    'nav.solutions': 'Çözümler', // New
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
     'nav.news': 'Haberler',
@@ -376,7 +402,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.description': 'Uluslararası ticaret ve gümrük operasyonlarını kolaylaştırmak için tasarlanmış gelişmiş yazılım çözümlerimizi keşfedin. Tüm ürünlerimize merkezi platformumuz üzerinden erişilebilir.',
     'products.mainPlatformIntro': 'Kapsamlı ürün yelpazemiz merkezi platformumuz aracılığıyla sunulmaktadır:',
     'products.visitPlatformButton': 'SingleWindow.io\'yu Ziyaret Et',
-    'products.exploreButton': 'Keşfet',
+    'products.exploreButton': 'Ürünü Keşfet',
     'products.category.customsCompliance': 'Gümrük Uyumluluğu',
     'products.category.aiSolutions': 'Gümrük için Yapay Zeka Çözümleri',
     'products.category.declarationFiling': 'Beyanname Dosyalama',
@@ -430,17 +456,23 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Dil',
     'settings.language.description': 'Uygulama için tercih ettiğiniz dili seçin.',
     'settings.language.select.label': 'Dil Seçin',
-    'translate.title': 'İçerik Çevirisi',
-    'translate.description': 'Web sitesi içeriğini yapay zeka kullanarak birden çok dile çevirin.',
-    'translate.form.textToTranslate.label': 'Çevrilecek Metin',
-    'translate.form.textToTranslate.placeholder': 'Çevirmek istediğiniz metni girin...',
-    'translate.form.targetLanguage.label': 'Hedef Dil',
-    'translate.form.customTerminology.label': 'Özel Terminoloji (İsteğe Bağlı)',
-    'translate.form.customTerminology.placeholder': 'örn. ürün adları, belirli ifadeler',
-    'translate.form.submitButton': 'Çevir',
-    'translate.result.title': 'Çeviri Sonucu',
-    'translate.result.noResult': 'Gönderildikten sonra çevrilen metin burada görünecektir.',
+    // Solutions Page Keys (New)
+    'solutions.title': 'Çözümlerimiz',
+    'solutions.description': 'ATEZ Software Technologies\'in uluslararası ticaret ve gümrük zorluklarınız için ürünlerini nasıl kullanarak hedefe yönelik çözümler sunduğunu keşfedin.',
+    'solutions.solution.htsClassification': 'GTİP Kodu Sınıflandırması',
+    'solutions.solution.landedCost': 'Toplam Maliyet Simülasyonu',
+    'solutions.solution.customsCompliance': 'Gümrük Uyumluluk Yönetimi',
+    'solutions.solution.exportControls': 'İhracat Kontrolleri ve Yaptırım Taraması',
+    'solutions.solution.findHtsCode': 'GTİP Kodunuzu Bulun',
+    'solutions.solution.taxCalculation': 'Gümrük Vergisi ve Vergi Hesaplaması',
+    'solutions.solution.customsDeclarationFiling': 'Gümrük Beyannamesi Dosyalama',
+    'solutions.solution.sapIntegration': 'Beyannameler için SAP Entegrasyonu',
+    'solutions.solution.transitDeclarationFiling': 'Transit Beyannamesi Dosyalama',
+    'solutions.solution.guaranteeManagement': 'Teminat Yönetimi',
+    'solutions.solution.preClearanceControl': 'Ön Gümrük Kontrolü ve Risk Değerlendirmesi',
+    'solutions.solution.postDeclarationControl': 'Sonradan Kontrol ve Denetim Desteği',
+    'solutions.solution.cbamReporting': 'CBAM Raporlaması ve Karbon Muhasebesi',
+    'solutions.solution.dataVisualization': 'Ticaret Veri Görselleştirme ve Analizi',
+    'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };
-
-
