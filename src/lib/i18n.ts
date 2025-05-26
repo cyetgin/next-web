@@ -10,7 +10,7 @@ export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
 
 export type TranslationKey =
   | 'app.name'
-  | 'logo.text' // New key for logo text
+  | 'logo.text'
   | 'nav.home'
   | 'nav.products'
   | 'nav.solutions'
@@ -125,6 +125,7 @@ export type TranslationKey =
   | 'solutions.solution.declarantAI'
   | 'solutions.solution.transitAI'
   | 'solutions.solution.relayhub'
+  | 'solutions.solution.smartSuggestions'
   | 'solutions.viewProductDetails';
 
 export const translations: Record<Locale, Record<string, string>> = {
@@ -245,6 +246,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation',
     'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',
     'solutions.solution.relayhub': 'Relayhub Data Exchange Integration',
+    'solutions.solution.smartSuggestions': 'Smart Suggestions',
     'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
@@ -361,6 +363,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.declarantAI': 'KI-gestützte Erstellung von Zollanmeldungen',
     'solutions.solution.transitAI': 'KI-gestützte Erstellung von Transitanmeldungen',
     'solutions.solution.relayhub': 'Relayhub Daten Austausch Integration',
+    'solutions.solution.smartSuggestions': 'Intelligente Vorschläge',
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
@@ -477,6 +480,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.declarantAI': 'Yapay Zeka Destekli Gümrük Beyannamesi Hazırlama',
     'solutions.solution.transitAI': 'Yapay Zeka Destekli Transit Beyannamesi Hazırlama',
     'solutions.solution.relayhub': 'Relayhub Veri Değişim Entegrasyonu',
+    'solutions.solution.smartSuggestions': 'Akıllı Öneriler',
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };

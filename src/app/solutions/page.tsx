@@ -32,7 +32,8 @@ import {
   ShieldAlert,
   SearchCheck,
   FileBarChart2,
-  AreaChart
+  AreaChart,
+  Sparkles // Added for Smart Suggestions
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -56,6 +57,7 @@ const solutionsList: Solution[] = [
   { nameKey: 'solutions.solution.exportControls', productNameKey: 'products.product.logicust', icon: FileWarning },
   { nameKey: 'solutions.solution.findHtsCode', productNameKey: 'products.product.tariff', icon: SearchCode },
   { nameKey: 'solutions.solution.taxCalculation', productNameKey: 'products.product.tariff', icon: Percent },
+  { nameKey: 'solutions.solution.smartSuggestions', productNameKey: 'products.product.tariff', icon: Sparkles },
   { nameKey: 'solutions.solution.sapIntegration', productNameKey: 'products.product.declarant', icon: PlugZap },
   { nameKey: 'solutions.solution.declarantAI', productNameKey: 'products.product.declarant', icon: Bot }, 
   { nameKey: 'solutions.solution.relayhub', productNameKey: 'products.product.declarant', icon: Network },
@@ -156,3 +158,4 @@ export default function SolutionsPage() {
   );
 }
 
+    
