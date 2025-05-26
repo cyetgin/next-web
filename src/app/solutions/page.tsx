@@ -22,12 +22,14 @@ import {
   // Solution specific icons
   ListFilter,
   Calculator,
+  // ShieldCheck, // Re-used
   FileWarning,
   SearchCode,
   Percent,
   PlugZap,
   FileStack,
   FileLock2,
+  // Bot, // Re-used
   ShieldAlert,
   SearchCheck,
   FileBarChart2,
@@ -39,7 +41,7 @@ import type { LucideIcon } from 'lucide-react';
 interface Solution {
   nameKey: TranslationKey;
   productNameKey: TranslationKey;
-  icon: LucideIcon; // Added icon for each solution
+  icon: LucideIcon;
 }
 
 interface ProductInfo {
@@ -116,27 +118,30 @@ export default function SolutionsPage() {
                 <ProductIcon className="h-8 w-8 text-primary flex-shrink-0" />
                 <CardTitle className="text-2xl">{t(productInfo.nameKey)}</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3 flex-grow">
-                <ul className="space-y-2">
+              <CardContent className="flex-grow">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {productSolutions.map((solution) => {
                     const SolutionIcon = solution.icon;
                     return (
-                      <li key={solution.nameKey}>
-                        <Button asChild variant="ghost" className="w-full justify-start text-left h-auto py-2 group">
-                          <Link href={`/products#${productInfo.slug}`} className="flex items-center justify-between w-full">
-                            <div className="flex items-center gap-2">
-                              <SolutionIcon className="h-5 w-5 text-primary/80 group-hover:text-primary transition-colors" />
-                              <span className="text-base text-foreground/90">{t(solution.nameKey)}</span>
-                            </div>
-                            <ChevronRight className="h-5 w-5 text-primary opacity-70 group-hover:opacity-100 transition-opacity" />
-                          </Link>
-                        </Button>
-                      </li>
+                      <Link
+                        key={solution.nameKey}
+                        href={`/products#${productInfo.slug}`}
+                        className="block p-4 border rounded-lg shadow-sm bg-card hover:shadow-lg transition-shadow duration-300 group transform hover:-translate-y-1"
+                      >
+                        <div className="flex items-start gap-3">
+                          <SolutionIcon className="h-7 w-7 text-accent flex-shrink-0 mt-0.5" />
+                          <div>
+                            <h4 className="text-md font-semibold text-foreground group-hover:text-primary transition-colors">
+                              {t(solution.nameKey)}
+                            </h4>
+                          </div>
+                        </div>
+                      </Link>
                     );
                   })}
-                </ul>
+                </div>
               </CardContent>
-              <div className="p-6 pt-0 mt-auto">
+              <div className="p-6 pt-4 mt-auto"> {/* Adjusted pt-4 from pt-0 */}
                  <Button asChild variant="outline" className="w-full group">
                     <Link href={`/products#${productInfo.slug}`}>
                       {t('solutions.viewProductDetails')} ({t(productInfo.nameKey)})
