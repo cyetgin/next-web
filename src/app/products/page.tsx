@@ -5,13 +5,32 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ExternalLink, PackageCheck, BrainCircuit, FileText, Lightbulb, ArrowRight } from 'lucide-react';
+import { 
+  ExternalLink, 
+  PackageCheck, 
+  BrainCircuit, 
+  FileText, 
+  Lightbulb, 
+  ArrowRight,
+  BookOpen, // For Tariff
+  Truck, // For Logicust
+  ShieldCheck, // For Customs Shield
+  Search, // For Customs X-Ray
+  ArrowRightLeft, // For TransitAI
+  Bot, // For Declarant AI
+  Replace, // For Transcode
+  FilePenLine, // For Declarant
+  Network, // For Relayhub
+  Leaf, // For Greenpulse
+  Globe // For Tradeloupe
+} from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 
 interface Product {
   nameKey: TranslationKey;
   descriptionKey: TranslationKey;
   slug: string; // For placeholder link
+  icon: React.ElementType;
 }
 
 interface ProductCategory {
@@ -25,35 +44,35 @@ const productCategories: ProductCategory[] = [
     categoryKey: 'products.category.customsCompliance',
     icon: PackageCheck,
     products: [
-      { nameKey: 'products.product.tariff', descriptionKey: 'products.product.tariff.description', slug: 'tariff' },
-      { nameKey: 'products.product.logicust', descriptionKey: 'products.product.logicust.description', slug: 'logicust' },
+      { nameKey: 'products.product.tariff', descriptionKey: 'products.product.tariff.description', slug: 'tariff', icon: BookOpen },
+      { nameKey: 'products.product.logicust', descriptionKey: 'products.product.logicust.description', slug: 'logicust', icon: Truck },
     ],
   },
   {
     categoryKey: 'products.category.aiSolutions',
     icon: BrainCircuit,
     products: [
-      { nameKey: 'products.product.customsShield', descriptionKey: 'products.product.customsShield.description', slug: 'customs-shield' },
-      { nameKey: 'products.product.customsXRay', descriptionKey: 'products.product.customsXRay.description', slug: 'customs-xray' },
-      { nameKey: 'products.product.transitAI', descriptionKey: 'products.product.transitAI.description', slug: 'transit-ai' },
-      { nameKey: 'products.product.declarantAI', descriptionKey: 'products.product.declarantAI.description', slug: 'declarant-ai' },
+      { nameKey: 'products.product.customsShield', descriptionKey: 'products.product.customsShield.description', slug: 'customs-shield', icon: ShieldCheck },
+      { nameKey: 'products.product.customsXRay', descriptionKey: 'products.product.customsXRay.description', slug: 'customs-xray', icon: Search },
+      { nameKey: 'products.product.transitAI', descriptionKey: 'products.product.transitAI.description', slug: 'transit-ai', icon: ArrowRightLeft },
+      { nameKey: 'products.product.declarantAI', descriptionKey: 'products.product.declarantAI.description', slug: 'declarant-ai', icon: Bot },
     ],
   },
   {
     categoryKey: 'products.category.declarationFiling',
     icon: FileText,
     products: [
-      { nameKey: 'products.product.transcode', descriptionKey: 'products.product.transcode.description', slug: 'transcode' },
-      { nameKey: 'products.product.declarant', descriptionKey: 'products.product.declarant.description', slug: 'declarant' },
-      { nameKey: 'products.product.relayhub', descriptionKey: 'products.product.relayhub.description', slug: 'relayhub' },
+      { nameKey: 'products.product.transcode', descriptionKey: 'products.product.transcode.description', slug: 'transcode', icon: Replace },
+      { nameKey: 'products.product.declarant', descriptionKey: 'products.product.declarant.description', slug: 'declarant', icon: FilePenLine },
+      { nameKey: 'products.product.relayhub', descriptionKey: 'products.product.relayhub.description', slug: 'relayhub', icon: Network },
     ],
   },
   {
     categoryKey: 'products.category.other',
     icon: Lightbulb,
     products: [
-      { nameKey: 'products.product.greenpulse', descriptionKey: 'products.product.greenpulse.description', slug: 'greenpulse' },
-      { nameKey: 'products.product.tradeloupe', descriptionKey: 'products.product.tradeloupe.description', slug: 'tradeloupe' },
+      { nameKey: 'products.product.greenpulse', descriptionKey: 'products.product.greenpulse.description', slug: 'greenpulse', icon: Leaf },
+      { nameKey: 'products.product.tradeloupe', descriptionKey: 'products.product.tradeloupe.description', slug: 'tradeloupe', icon: Globe },
     ],
   },
 ];
@@ -92,12 +111,14 @@ export default function ProductsPage() {
             </CardHeader>
             <CardContent className="space-y-6 flex-grow">
               {category.products.map((product) => (
-                <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card">
-                  <h3 className="text-xl font-semibold text-primary">{t(product.nameKey)}</h3>
+                <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-3 mb-2">
+                    <product.icon className="h-6 w-6 text-accent flex-shrink-0" />
+                    <h3 className="text-xl font-semibold text-primary">{t(product.nameKey)}</h3>
+                  </div>
                   <p className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed">
                     {t(product.descriptionKey)}
                   </p>
-                  {/* Placeholder link: Update href to actual product detail page later */}
                   <Button asChild size="sm" variant="outline" className="mt-auto group">
                     <Link href={`#${product.slug}`}>
                       {t('products.exploreButton')}
@@ -113,5 +134,3 @@ export default function ProductsPage() {
     </div>
   );
 }
-
-    
