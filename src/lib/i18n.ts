@@ -114,7 +114,7 @@ export type TranslationKey =
   | 'solutions.solution.exportControls'
   | 'solutions.solution.findHtsCode'
   | 'solutions.solution.taxCalculation'
-  | 'solutions.solution.customsDeclarationFiling'
+  // | 'solutions.solution.customsDeclarationFiling' // Removed
   | 'solutions.solution.sapIntegration'
   | 'solutions.solution.transitDeclarationFiling'
   | 'solutions.solution.guaranteeManagement'
@@ -234,7 +234,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.exportControls': 'Export Controls & Sanction Screening',
     'solutions.solution.findHtsCode': 'Find Your HTS Code',
     'solutions.solution.taxCalculation': 'Duty & Tax Calculation',
-    'solutions.solution.customsDeclarationFiling': 'Customs Declaration Filing',
+    // 'solutions.solution.customsDeclarationFiling': 'Customs Declaration Filing', // Removed
     'solutions.solution.sapIntegration': 'SAP Integration for Declarations',
     'solutions.solution.transitDeclarationFiling': 'Transit Declaration Filing',
     'solutions.solution.guaranteeManagement': 'Guarantee Management',
@@ -351,7 +351,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.exportControls': 'Exportkontrollen & Sanktionslistenprüfung',
     'solutions.solution.findHtsCode': 'Finden Sie Ihren HS-Code',
     'solutions.solution.taxCalculation': 'Zoll- & Steuerberechnung',
-    'solutions.solution.customsDeclarationFiling': 'Zollanmeldung',
+    // 'solutions.solution.customsDeclarationFiling': 'Zollanmeldung', // Removed
     'solutions.solution.sapIntegration': 'SAP-Integration für Anmeldungen',
     'solutions.solution.transitDeclarationFiling': 'Transitanmeldung',
     'solutions.solution.guaranteeManagement': 'Bürgschaftsmanagement',
@@ -361,7 +361,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.dataVisualization': 'Handelsdatenvisualisierung & -analyse',
     'solutions.solution.declarantAI': 'KI-gestützte Erstellung von Zollanmeldungen',
     'solutions.solution.transitAI': 'KI-gestützte Erstellung von Transitanmeldungen',
-    'solutions.solution.relayhub': 'Relayhub Daten Austausch Integration', // Placeholder
+    'solutions.solution.relayhub': 'Relayhub Daten Austausch Integration',
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
@@ -468,7 +468,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.exportControls': 'İhracat Kontrolleri ve Yaptırım Taraması',
     'solutions.solution.findHtsCode': 'GTİP Kodunuzu Bulun',
     'solutions.solution.taxCalculation': 'Gümrük Vergisi ve Vergi Hesaplaması',
-    'solutions.solution.customsDeclarationFiling': 'Gümrük Beyannamesi Dosyalama',
+    // 'solutions.solution.customsDeclarationFiling': 'Gümrük Beyannamesi Dosyalama', // Removed
     'solutions.solution.sapIntegration': 'Beyannameler için SAP Entegrasyonu',
     'solutions.solution.transitDeclarationFiling': 'Transit Beyannamesi Dosyalama',
     'solutions.solution.guaranteeManagement': 'Teminat Yönetimi',
@@ -478,7 +478,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.dataVisualization': 'Ticaret Veri Görselleştirme ve Analizi',
     'solutions.solution.declarantAI': 'Yapay Zeka Destekli Gümrük Beyannamesi Hazırlama',
     'solutions.solution.transitAI': 'Yapay Zeka Destekli Transit Beyannamesi Hazırlama',
-    'solutions.solution.relayhub': 'Relayhub Veri Değişim Entegrasyonu', // Placeholder
+    'solutions.solution.relayhub': 'Relayhub Veri Değişim Entegrasyonu',
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };

@@ -41,10 +41,10 @@ const solutionsList: Solution[] = [
   { nameKey: 'solutions.solution.exportControls', productNameKey: 'products.product.logicust' },
   { nameKey: 'solutions.solution.findHtsCode', productNameKey: 'products.product.tariff' },
   { nameKey: 'solutions.solution.taxCalculation', productNameKey: 'products.product.tariff' },
-  { nameKey: 'solutions.solution.customsDeclarationFiling', productNameKey: 'products.product.declarant' },
+  // { nameKey: 'solutions.solution.customsDeclarationFiling', productNameKey: 'products.product.declarant' }, // Removed
   { nameKey: 'solutions.solution.sapIntegration', productNameKey: 'products.product.declarant' },
   { nameKey: 'solutions.solution.declarantAI', productNameKey: 'products.product.declarant' }, 
-  { nameKey: 'solutions.solution.relayhub', productNameKey: 'products.product.declarant' }, // Added Relayhub here
+  { nameKey: 'solutions.solution.relayhub', productNameKey: 'products.product.declarant' },
   { nameKey: 'solutions.solution.transitDeclarationFiling', productNameKey: 'products.product.transcode' },
   { nameKey: 'solutions.solution.guaranteeManagement', productNameKey: 'products.product.transcode' },
   { nameKey: 'solutions.solution.transitAI', productNameKey: 'products.product.transcode' }, 
