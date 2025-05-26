@@ -11,19 +11,18 @@ export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
 export type TranslationKey =
   | 'app.name'
   | 'nav.home'
+  | 'nav.products'
   | 'nav.about'
   | 'nav.contact'
   | 'home.welcomeTitle'
   | 'home.welcomeSubtitle'
-  | 'home.featuresTitle' // Kept for consistency, will be "Core Capabilities"
+  | 'home.featuresTitle'
   | 'home.capabilities.crossBorder.title'
   | 'home.capabilities.crossBorder.description'
   | 'home.capabilities.autonomousData.title'
   | 'home.capabilities.autonomousData.description'
   | 'home.companyInfo.title'
   | 'home.companyInfo.description'
-  | 'home.contactForm.title' // This key might be unused on homepage now, but good to keep for other potential uses
-  | 'home.contactForm.description' // Same as above
   | 'home.cta.title'
   | 'home.cta.description'
   | 'home.cta.button'
@@ -44,12 +43,32 @@ export type TranslationKey =
   | 'contact.info.title'
   | 'contact.info.address'
   | 'contact.info.phone'
-  | 'contact.info.email';
+  | 'contact.info.email'
+  | 'products.title'
+  | 'products.description'
+  | 'products.mainPlatformIntro'
+  | 'products.visitPlatformButton'
+  | 'products.category.customsCompliance'
+  | 'products.category.aiSolutions'
+  | 'products.category.declarationFiling'
+  | 'products.category.other'
+  | 'products.product.tariff'
+  | 'products.product.logicust'
+  | 'products.product.customsShield'
+  | 'products.product.customsXRay'
+  | 'products.product.transitAI'
+  | 'products.product.declarantAI'
+  | 'products.product.transcode'
+  | 'products.product.declarant'
+  | 'products.product.relayhub'
+  | 'products.product.greenpulse'
+  | 'products.product.tradeloupe';
 
 export const translations: Record<Locale, Record<string, string>> = {
   en: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Home',
+    'nav.products': 'Products',
     'nav.about': 'About Us',
     'nav.contact': 'Contact Us',
     'home.welcomeTitle': 'ATEZ Software Technologies',
@@ -59,7 +78,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'home.capabilities.crossBorder.description': 'Navigate international trade complexities with ease. Our solutions optimize customs declarations, ensure compliance, and accelerate the movement of goods across borders.',
     'home.capabilities.autonomousData.title': 'Autonomous Data Flow & Process Automation',
     'home.capabilities.autonomousData.description': 'Leverage AI and ML to automate end-to-end data flows and procedure handling for customs and transit, minimizing manual intervention and maximizing efficiency.',
-    'home.companyInfo.title': 'About ATEZ Software Technologies', // Used on About page primarily
+    'home.companyInfo.title': 'About ATEZ Software Technologies',
     'home.companyInfo.description': 'ATEZ Software Technologies specializes in high-end software solutions for international trade, focusing on customs compliance, cross-border goods movement, and autonomous process automation through Blockchain, AI, ML, and BI.',
     'home.cta.title': 'Transform Your Trade Operations with ATEZ',
     'home.cta.description': 'Partner with us to implement cutting-edge solutions for autonomous customs declarations, compliance, and efficient cross-border logistics.',
@@ -81,11 +100,31 @@ export const translations: Record<Locale, Record<string, string>> = {
     'contact.info.title': 'Our Contact Information',
     'contact.info.address': '123 Innovation Dr, Tech City, World 54321',
     'contact.info.phone': '+1 (555) 987-6543',
-    'contact.info.email': 'solutions@atezsoftware.com', // Updated email
+    'contact.info.email': 'solutions@atezsoftware.com',
+    'products.title': 'Our Products',
+    'products.description': 'Discover our suite of advanced software solutions designed to streamline international trade and customs operations. All our products are accessible through our central platform.',
+    'products.mainPlatformIntro': 'Our comprehensive suite of products is available through our central platform:',
+    'products.visitPlatformButton': 'Visit SingleWindow.io',
+    'products.category.customsCompliance': 'Customs Compliance',
+    'products.category.aiSolutions': 'AI Solutions for Customs',
+    'products.category.declarationFiling': 'Declaration Filing',
+    'products.category.other': 'Other Solutions',
+    'products.product.tariff': 'Tariff',
+    'products.product.logicust': 'Logicust',
+    'products.product.customsShield': 'Customs Shield',
+    'products.product.customsXRay': 'Customs X-Ray',
+    'products.product.transitAI': 'TransitAI',
+    'products.product.declarantAI': 'Declarant AI',
+    'products.product.transcode': 'Transcode',
+    'products.product.declarant': 'Declarant',
+    'products.product.relayhub': 'Relayhub',
+    'products.product.greenpulse': 'Greenpulse',
+    'products.product.tradeloupe': 'Tradeloupe',
   },
   de: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Startseite',
+    'nav.products': 'Produkte',
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
     'home.welcomeTitle': 'ATEZ Software Technologies',
@@ -118,10 +157,30 @@ export const translations: Record<Locale, Record<string, string>> = {
     'contact.info.address': 'Innovationsstraße 123, Tech City, Welt 54321',
     'contact.info.phone': '+49 (123) 987-6543',
     'contact.info.email': 'solutions@atezsoftware.com',
+    'products.title': 'Unsere Produkte',
+    'products.description': 'Entdecken Sie unsere Suite fortschrittlicher Softwarelösungen zur Optimierung internationaler Handels- und Zollabläufe. Alle unsere Produkte sind über unsere zentrale Plattform zugänglich.',
+    'products.mainPlatformIntro': 'Unsere umfassende Produktpalette ist über unsere zentrale Plattform verfügbar:',
+    'products.visitPlatformButton': 'SingleWindow.io besuchen',
+    'products.category.customsCompliance': 'Zollkonformität',
+    'products.category.aiSolutions': 'KI-Lösungen für den Zoll',
+    'products.category.declarationFiling': 'Zollanmeldung',
+    'products.category.other': 'Weitere Lösungen',
+    'products.product.tariff': 'Tariff',
+    'products.product.logicust': 'Logicust',
+    'products.product.customsShield': 'Customs Shield',
+    'products.product.customsXRay': 'Customs X-Ray',
+    'products.product.transitAI': 'TransitAI',
+    'products.product.declarantAI': 'Declarant AI',
+    'products.product.transcode': 'Transcode',
+    'products.product.declarant': 'Declarant',
+    'products.product.relayhub': 'Relayhub',
+    'products.product.greenpulse': 'Greenpulse',
+    'products.product.tradeloupe': 'Tradeloupe',
   },
   tr: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Ana Sayfa',
+    'nav.products': 'Ürünler',
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
     'home.welcomeTitle': 'ATEZ Software Technologies',
@@ -154,6 +213,24 @@ export const translations: Record<Locale, Record<string, string>> = {
     'contact.info.address': 'İnovasyon Cd. No:123, Teknoloji Şehri, Dünya 54321',
     'contact.info.phone': '+90 (555) 987-6543',
     'contact.info.email': 'solutions@atezsoftware.com',
+    'products.title': 'Ürünlerimiz',
+    'products.description': 'Uluslararası ticaret ve gümrük operasyonlarını kolaylaştırmak için tasarlanmış gelişmiş yazılım çözümlerimizi keşfedin. Tüm ürünlerimize merkezi platformumuz üzerinden erişilebilir.',
+    'products.mainPlatformIntro': 'Kapsamlı ürün yelpazemiz merkezi platformumuz aracılığıyla sunulmaktadır:',
+    'products.visitPlatformButton': 'SingleWindow.io\'yu Ziyaret Et',
+    'products.category.customsCompliance': 'Gümrük Uyumluluğu',
+    'products.category.aiSolutions': 'Gümrük için Yapay Zeka Çözümleri',
+    'products.category.declarationFiling': 'Beyanname Dosyalama',
+    'products.category.other': 'Diğer Çözümler',
+    'products.product.tariff': 'Tariff',
+    'products.product.logicust': 'Logicust',
+    'products.product.customsShield': 'Customs Shield',
+    'products.product.customsXRay': 'Customs X-Ray',
+    'products.product.transitAI': 'TransitAI',
+    'products.product.declarantAI': 'Declarant AI',
+    'products.product.transcode': 'Transcode',
+    'products.product.declarant': 'Declarant',
+    'products.product.relayhub': 'Relayhub',
+    'products.product.greenpulse': 'Greenpulse',
+    'products.product.tradeloupe': 'Tradeloupe',
   },
 };
-
