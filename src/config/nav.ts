@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from 'lucide-react';
-import { Home, Info, Mail, LayoutGrid } from 'lucide-react';
+import { Home, Info, Mail, LayoutGrid, Newspaper } from 'lucide-react'; // Added Newspaper
 import type { TranslationKey } from '@/lib/i18n';
 
 export interface NavItem {
@@ -14,6 +14,9 @@ export interface NavItem {
 export const navItems: NavItem[] = [
   { titleKey: 'nav.home', href: '/', icon: Home, exactMatch: true },
   { titleKey: 'nav.products', href: '/products', icon: LayoutGrid },
+  { titleKey: 'nav.news', href: '/news', icon: Newspaper }, // New "News" item
   { titleKey: 'nav.about', href: '/about', icon: Info },
   { titleKey: 'nav.contact', href: '/contact', icon: Mail },
 ];
+
+    
