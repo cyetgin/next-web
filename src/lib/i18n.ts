@@ -16,7 +16,7 @@ export type TranslationKey =
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
-  | 'nav.settings'
+  // | 'nav.settings' // Removed as per user request
   | 'home.welcomeTitle'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
@@ -72,8 +72,6 @@ export type TranslationKey =
   | 'products.product.transcode.description'
   | 'products.product.declarant'
   | 'products.product.declarant.description'
-  | 'products.product.relayhub'
-  | 'products.product.relayhub.description'
   | 'products.product.greenpulse'
   | 'products.product.greenpulse.description'
   | 'products.product.tradeloupe'
@@ -126,6 +124,7 @@ export type TranslationKey =
   | 'solutions.solution.dataVisualization'
   | 'solutions.solution.declarantAI'
   | 'solutions.solution.transitAI'
+  | 'solutions.solution.relayhub' // Added for Relayhub as a solution
   | 'solutions.viewProductDetails';
 
 export const translations: Record<Locale, Record<string, string>> = {
@@ -137,7 +136,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.about': 'About Us',
     'nav.contact': 'Contact Us',
     'nav.news': 'News',
-    'nav.settings': 'Settings',
+    // 'nav.settings': 'Settings', // Removed as per user request
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, goods movement, and autonomous data handling, powered by Blockchain, AI, ML, and BI.',
     'home.featuresTitle': 'Core Capabilities',
@@ -193,12 +192,11 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.transcode.description': 'Automated commodity code conversion and validation for international trade.',
     'products.product.declarant': 'Declarant',
     'products.product.declarant.description': 'Comprehensive solution for efficient and compliant customs declaration filing.',
-    'products.product.relayhub': 'Relayhub',
-    'products.product.relayhub.description': 'Centralized data exchange platform connecting trade partners and customs authorities.',
     'products.product.greenpulse': 'Greenpulse',
     'products.product.greenpulse.description': 'Track and manage sustainability metrics and carbon footprint in logistics.',
     'products.product.tradeloupe': 'Tradeloupe',
     'products.product.tradeloupe.description': 'Platform for trade development, market analysis, and accessing new opportunities.',
+    // News Section Keys
     'news.title': 'News & Insights',
     'news.description': 'Stay updated with the latest news, industry insights, and technology updates from ATEZ Software.',
     'news.readMore': 'Read More',
@@ -211,6 +209,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'news.post2.excerpt': 'We are excited to announce our latest project utilizing blockchain technology to enhance transparency and security in global supply chains.',
     'news.post3.title': 'The Impact of Autonomous Data Handling on Cross-Border Logistics',
     'news.post3.excerpt': 'An in-depth look at how autonomous systems are streamlining data flow and revolutionizing procedure handling in the logistics sector.',
+    // Settings Page Keys
     'settings.title': 'Settings',
     'settings.description': 'Customize your application experience.',
     'settings.appearance.title': 'Appearance',
@@ -245,6 +244,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.dataVisualization': 'Trade Data Visualization & Analytics',
     'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation',
     'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',
+    'solutions.solution.relayhub': 'Relayhub Data Exchange Integration',
     'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
@@ -255,7 +255,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
     'nav.news': 'Aktuelles',
-    'nav.settings': 'Einstellungen',
+    // 'nav.settings': 'Einstellungen', // Removed as per user request
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Blockchain, KI, ML und BI.',
     'home.featuresTitle': 'Kernkompetenzen',
@@ -311,8 +311,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.transcode.description': 'Automatisierte Konvertierung und Validierung von Warencodes für den internationalen Handel.',
     'products.product.declarant': 'Declarant',
     'products.product.declarant.description': 'Umfassende Lösung für die effiziente und konforme Einreichung von Zollanmeldungen.',
-    'products.product.relayhub': 'Relayhub',
-    'products.product.relayhub.description': 'Zentralisierte Datenaustauschplattform, die Handelspartner und Zollbehörden verbindet.',
     'products.product.greenpulse': 'Greenpulse',
     'products.product.greenpulse.description': 'Verfolgung und Verwaltung von Nachhaltigkeitskennzahlen und CO2-Fußabdruck in der Logistik.',
     'products.product.tradeloupe': 'Tradeloupe',
@@ -361,8 +359,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Nachverzollungskontrolle & Audit-Unterstützung',
     'solutions.solution.cbamReporting': 'CBAM-Berichterstattung & CO2-Bilanzierung',
     'solutions.solution.dataVisualization': 'Handelsdatenvisualisierung & -analyse',
-    'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation', // Placeholder, new English text
-    'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',   // Placeholder, new English text
+    'solutions.solution.declarantAI': 'KI-gestützte Erstellung von Zollanmeldungen',
+    'solutions.solution.transitAI': 'KI-gestützte Erstellung von Transitanmeldungen',
+    'solutions.solution.relayhub': 'Relayhub Daten Austausch Integration', // Placeholder
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
@@ -373,7 +372,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
     'nav.news': 'Haberler',
-    'nav.settings': 'Ayarlar',
+    // 'nav.settings': 'Ayarlar', // Removed as per user request
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
     'home.featuresTitle': 'Temel Yetenekler',
@@ -429,8 +428,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.transcode.description': 'Uluslararası ticaret için otomatik emtia kodu dönüştürme ve doğrulama.',
     'products.product.declarant': 'Declarant',
     'products.product.declarant.description': 'Verimli ve uyumlu gümrük beyannamesi dosyalama için kapsamlı çözüm.',
-    'products.product.relayhub': 'Relayhub',
-    'products.product.relayhub.description': 'Ticaret ortaklarını ve gümrük yetkililerini birbirine bağlayan merkezi veri alışveriş platformu.',
     'products.product.greenpulse': 'Greenpulse',
     'products.product.greenpulse.description': 'Lojistikte sürdürülebilirlik ölçümlerini ve karbon ayak izini takip edin ve yönetin.',
     'products.product.tradeloupe': 'Tradeloupe',
@@ -479,9 +476,11 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Sonradan Kontrol ve Denetim Desteği',
     'solutions.solution.cbamReporting': 'CBAM Raporlaması ve Karbon Muhasebesi',
     'solutions.solution.dataVisualization': 'Ticaret Veri Görselleştirme ve Analizi',
-    'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation', // Placeholder, new English text
-    'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',   // Placeholder, new English text
+    'solutions.solution.declarantAI': 'Yapay Zeka Destekli Gümrük Beyannamesi Hazırlama',
+    'solutions.solution.transitAI': 'Yapay Zeka Destekli Transit Beyannamesi Hazırlama',
+    'solutions.solution.relayhub': 'Relayhub Veri Değişim Entegrasyonu', // Placeholder
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };
 
+    

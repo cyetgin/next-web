@@ -17,7 +17,8 @@ import {
   Leaf,
   Globe,
   Bot, // For Declarant AI solution
-  ArrowRightLeft // For Transit AI solution
+  ArrowRightLeft, // For Transit AI solution
+  Network // Icon for Relayhub, though it will use Declarant's icon on this page
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -42,10 +43,11 @@ const solutionsList: Solution[] = [
   { nameKey: 'solutions.solution.taxCalculation', productNameKey: 'products.product.tariff' },
   { nameKey: 'solutions.solution.customsDeclarationFiling', productNameKey: 'products.product.declarant' },
   { nameKey: 'solutions.solution.sapIntegration', productNameKey: 'products.product.declarant' },
-  { nameKey: 'solutions.solution.declarantAI', productNameKey: 'products.product.declarant' }, // New
+  { nameKey: 'solutions.solution.declarantAI', productNameKey: 'products.product.declarant' }, 
+  { nameKey: 'solutions.solution.relayhub', productNameKey: 'products.product.declarant' }, // Added Relayhub here
   { nameKey: 'solutions.solution.transitDeclarationFiling', productNameKey: 'products.product.transcode' },
   { nameKey: 'solutions.solution.guaranteeManagement', productNameKey: 'products.product.transcode' },
-  { nameKey: 'solutions.solution.transitAI', productNameKey: 'products.product.transcode' }, // New
+  { nameKey: 'solutions.solution.transitAI', productNameKey: 'products.product.transcode' }, 
   { nameKey: 'solutions.solution.preClearanceControl', productNameKey: 'products.product.customsShield' },
   { nameKey: 'solutions.solution.postDeclarationControl', productNameKey: 'products.product.customsXRay' },
   { nameKey: 'solutions.solution.cbamReporting', productNameKey: 'products.product.greenpulse' },
@@ -61,9 +63,8 @@ const productDetailsMap: Record<string, ProductInfo> = {
   'products.product.customsXRay': { nameKey: 'products.product.customsXRay', icon: Search, slug: 'customs-xray' },
   'products.product.greenpulse': { nameKey: 'products.product.greenpulse', icon: Leaf, slug: 'greenpulse' },
   'products.product.tradeloupe': { nameKey: 'products.product.tradeloupe', icon: Globe, slug: 'tradeloupe' },
-  // Although DeclarantAI and TransitAI are products themselves, on this page they are listed as solutions
-  // provided BY Declarant and Transcode respectively. Their specific product icons (Bot, ArrowRightLeft)
-  // are used on the Products page. Here, we use the parent product's icon.
+  // Note: DeclarantAI and TransitAI use their parent product's icon on this page.
+  // Relayhub, now a solution, will also use its parent product's (Declarant) icon.
 };
 
 
@@ -134,3 +135,4 @@ export default function SolutionsPage() {
   );
 }
 
+    

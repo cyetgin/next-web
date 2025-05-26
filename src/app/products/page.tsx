@@ -20,7 +20,7 @@ import {
   Bot, // For Declarant AI
   Replace, // For Transcode
   FilePenLine, // For Declarant
-  Network, // For Relayhub
+  // Network, // For Relayhub - Removed as it's no longer a standalone product here
   Leaf, // For Greenpulse
   Globe // For Tradeloupe
 } from 'lucide-react';
@@ -64,7 +64,7 @@ const productCategories: ProductCategory[] = [
     products: [
       { nameKey: 'products.product.transcode', descriptionKey: 'products.product.transcode.description', slug: 'transcode', icon: Replace },
       { nameKey: 'products.product.declarant', descriptionKey: 'products.product.declarant.description', slug: 'declarant', icon: FilePenLine },
-      { nameKey: 'products.product.relayhub', descriptionKey: 'products.product.relayhub.description', slug: 'relayhub', icon: Network },
+      // Relayhub removed from here
     ],
   },
   {
@@ -134,3 +134,5 @@ export default function ProductsPage() {
     </div>
   );
 }
+
+    
