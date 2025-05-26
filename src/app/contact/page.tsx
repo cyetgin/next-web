@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useTranslation } from '@/hooks/use-translation';
@@ -22,8 +23,8 @@ export default function ContactPage() {
       <div className="grid md:grid-cols-2 gap-12">
         <Card className="shadow-xl">
           <CardHeader>
-            <CardTitle className="text-2xl">{t('home.contactForm.title')}</CardTitle>
-            <CardDescription>Send us your queries or feedback directly.</CardDescription>
+            <CardTitle className="text-2xl">{t('contact.form.name.label')}</CardTitle> {/* Adjusted to be more generic */}
+            <CardDescription>Send us your project ideas or inquiries.</CardDescription>
           </CardHeader>
           <CardContent>
             <ContactForm />
@@ -33,7 +34,7 @@ export default function ContactPage() {
         <Card className="shadow-xl">
           <CardHeader>
             <CardTitle className="text-2xl">{t('contact.info.title')}</CardTitle>
-            <CardDescription>Other ways to reach us.</CardDescription>
+            <CardDescription>Other ways to reach us for your trade solution needs.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-start gap-4">

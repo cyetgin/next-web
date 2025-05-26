@@ -6,34 +6,34 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Cpu, BrainCircuit, BarChart, Link2 } from 'lucide-react'; // Added specific tech icons
+import { ArrowRight, CheckCircle2, Cpu, BrainCircuit, BarChart, Link2, PackageCheck, Workflow, Settings2 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 
-interface FeatureItem {
-  titleKey: TranslationKey; // Updated to allow more general keys
-  descriptionKey: TranslationKey; // Updated to allow more general keys
+interface CapabilityItem {
+  titleKey: TranslationKey;
+  descriptionKey: TranslationKey;
   imageSrc: string;
-  imageAltKey: TranslationKey; // Using titleKey as altKey for simplicity and relevance
+  imageAltKey: TranslationKey;
   dataAiHint: string;
   icon: React.ElementType;
 }
 
-const features: FeatureItem[] = [
+const capabilities: CapabilityItem[] = [
   {
-    titleKey: 'home.contentManagement.title',
-    descriptionKey: 'home.contentManagement.description',
+    titleKey: 'home.capabilities.crossBorder.title',
+    descriptionKey: 'home.capabilities.crossBorder.description',
     imageSrc: 'https://placehold.co/600x400.png',
-    imageAltKey: 'home.contentManagement.title',
-    dataAiHint: 'software development',
-    icon: Cpu,
+    imageAltKey: 'home.capabilities.crossBorder.title',
+    dataAiHint: 'logistics customs',
+    icon: PackageCheck,
   },
   {
-    titleKey: 'home.languageSelector.title',
-    descriptionKey: 'home.languageSelector.description',
+    titleKey: 'home.capabilities.autonomousData.title',
+    descriptionKey: 'home.capabilities.autonomousData.description',
     imageSrc: 'https://placehold.co/600x400.png',
-    imageAltKey: 'home.languageSelector.title',
-    dataAiHint: 'technology consulting',
-    icon: BrainCircuit,
+    imageAltKey: 'home.capabilities.autonomousData.title',
+    dataAiHint: 'automation workflow',
+    icon: Workflow, // Or Settings2 for a more "autonomous process" feel
   },
 ];
 
@@ -81,25 +81,25 @@ export default function HomePage() {
           {t('home.featuresTitle')}
         </h2>
         <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
-          {features.map((feature) => (
-            <Card key={feature.titleKey} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          {capabilities.map((capability) => (
+            <Card key={capability.titleKey} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-48 w-full">
                 <Image
-                  src={feature.imageSrc}
-                  alt={t(feature.imageAltKey)}
+                  src={capability.imageSrc}
+                  alt={t(capability.imageAltKey)}
                   fill
                   style={{ objectFit: 'cover' }}
-                  data-ai-hint={feature.dataAiHint}
+                  data-ai-hint={capability.dataAiHint}
                 />
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">
-                  <feature.icon className="h-6 w-6 text-primary" />
-                  {t(feature.titleKey)}
+                  <capability.icon className="h-6 w-6 text-primary" />
+                  {t(capability.titleKey)}
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
-                <p className="text-foreground/80">{t(feature.descriptionKey)}</p>
+                <p className="text-foreground/80">{t(capability.descriptionKey)}</p>
               </CardContent>
             </Card>
           ))}
@@ -109,16 +109,17 @@ export default function HomePage() {
       <section className="w-full py-12 md:py-24 bg-secondary/50">
         <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
-              Ready to Innovate with ATEZ?
+              {t('home.cta.title')}
             </h2>
             <p className="mx-auto max-w-[600px] text-foreground/80 md:text-xl mt-4 mb-8">
-              Partner with ATEZ Software Technologies to harness the power of next-gen tech for your business.
+              {t('home.cta.description')}
             </p>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Contact Us Today <ArrowRight className="ml-2 h-5 w-5" /></Link>
+              <Link href="/contact">{t('home.cta.button')} <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
         </div>
       </section>
     </div>
   );
 }
+

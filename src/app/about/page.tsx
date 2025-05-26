@@ -1,17 +1,18 @@
+
 "use client";
 
 import Image from 'next/image';
 import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, Target, BookOpen, Cpu, BarChart, Link as LinkIcon } from 'lucide-react'; // Added Cpu, BarChart, LinkIcon for Blockchain, AI/ML, BI
+import { Users, Target, BookOpen, Cpu, BarChart, Link as LinkIcon } from 'lucide-react';
 
 export default function AboutPage() {
   const { t } = useTranslation();
 
   const techIcons = [
-    { Icon: LinkIcon, label: "Blockchain", color: "text-blue-500" }, // Example color
-    { Icon: Cpu, label: "Artificial Intelligence", color: "text-purple-500" }, // Example color
-    { Icon: BarChart, label: "Business Intelligence", color: "text-green-500" } // Example color
+    { Icon: LinkIcon, label: "Blockchain", color: "text-blue-500" },
+    { Icon: Cpu, label: "Artificial Intelligence", color: "text-purple-500" },
+    { Icon: BarChart, label: "Business Intelligence", color: "text-green-500" }
   ];
 
   return (
@@ -21,7 +22,7 @@ export default function AboutPage() {
           {t('about.title')}
         </h1>
         <p className="mx-auto max-w-[700px] text-foreground/80 md:text-xl">
-          {t('home.companyInfo.description')}
+          {t('home.companyInfo.description')} {/* Re-using this key as it's updated */}
         </p>
       </header>
 
@@ -33,7 +34,7 @@ export default function AboutPage() {
             width={600}
             height={400}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="team brainstorming"
+            data-ai-hint="global trade collaboration"
           />
         </div>
         <Card className="shadow-lg">
@@ -41,7 +42,7 @@ export default function AboutPage() {
             <Target className="h-10 w-10 text-primary" />
             <div>
               <CardTitle className="text-3xl">{t('about.mission.title')}</CardTitle>
-              <CardDescription>Our core purpose and driving force.</CardDescription>
+              <CardDescription>Our commitment to transforming international trade.</CardDescription>
             </div>
           </CardHeader>
           <CardContent>
@@ -58,7 +59,7 @@ export default function AboutPage() {
             <BookOpen className="h-10 w-10 text-primary" />
              <div>
               <CardTitle className="text-3xl">{t('about.story.title')}</CardTitle>
-              <CardDescription>The journey that shaped ATEZ Software Technologies.</CardDescription>
+              <CardDescription>Our journey in pioneering trade technology.</CardDescription>
             </div>
           </CardHeader>
           <CardContent>
@@ -66,7 +67,7 @@ export default function AboutPage() {
               {t('about.story.content')}
             </p>
              <div className="mt-6">
-              <h4 className="text-xl font-semibold mb-3 text-primary">Key Technologies:</h4>
+              <h4 className="text-xl font-semibold mb-3 text-primary">Enabling Technologies:</h4>
               <div className="flex flex-wrap gap-4">
                 {techIcons.map(tech => (
                   <div key={tech.label} className="flex items-center gap-2 p-2 border rounded-lg bg-secondary/30">
@@ -89,7 +90,7 @@ export default function AboutPage() {
             width={600}
             height={400}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="future technology"
+            data-ai-hint="autonomous systems"
           />
         </div>
       </div>
