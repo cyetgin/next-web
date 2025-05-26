@@ -112,7 +112,7 @@ export default function SolutionsPage() {
           const ProductIcon = productInfo.icon;
 
           return (
-            <Card key={productKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+            <Card key={productKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader className="flex flex-row items-center gap-3 pb-4">
                 <ProductIcon className="h-8 w-8 text-primary flex-shrink-0" />
                 <CardTitle className="text-2xl">{t(productInfo.nameKey)}</CardTitle>
@@ -155,3 +155,4 @@ export default function SolutionsPage() {
     </div>
   );
 }
+
