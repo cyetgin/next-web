@@ -15,7 +15,7 @@ export type TranslationKey =
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
-  | 'nav.settings' // New
+  // | 'nav.settings' // Removed
   | 'home.welcomeTitle'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
@@ -105,7 +105,19 @@ export type TranslationKey =
   | 'settings.appearance.fontSize.lg'
   | 'settings.language.title'
   | 'settings.language.description'
-  | 'settings.language.select.label';
+  | 'settings.language.select.label'
+  // Translate Page (Now removed, but keys might be used elsewhere if not cleaned up fully)
+  | 'translate.title'
+  | 'translate.description'
+  | 'translate.form.textToTranslate.label'
+  | 'translate.form.textToTranslate.placeholder'
+  | 'translate.form.targetLanguage.label'
+  | 'translate.form.customTerminology.label'
+  | 'translate.form.customTerminology.placeholder'
+  | 'translate.form.submitButton'
+  | 'translate.result.title'
+  | 'translate.result.noResult'
+  | 'nav.settings'; // Explicitly adding back if it was meant to be TranslationKey
 
 export const translations: Record<Locale, Record<string, string>> = {
   en: {
@@ -156,7 +168,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Declaration Filing',
     'products.category.other': 'Other Solutions',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': 'Advanced tariff classification and management for streamlined customs processes.',
+    'products.product.tariff.description': 'Your digital assistant for cross-border trade. Tariff is your go-to digital solution for seamless, transparent cross-border trade. Operating currently within the European Union, United Kingdom, Switzerland, and Türkiye. The platform presents customs regulations, duties, and control measures. With just a few clicks, Tariff enables users to access critical information tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export process.',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Optimize logistics and customs documentation for efficient international trade.',
     'products.product.customsShield': 'Customs Shield',
@@ -204,6 +216,16 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Language',
     'settings.language.description': 'Choose your preferred language for the application.',
     'settings.language.select.label': 'Select Language',
+    'translate.title': 'Content Translation', // Kept for potential future use or until full cleanup
+    'translate.description': 'Translate website content into multiple languages using AI.',
+    'translate.form.textToTranslate.label': 'Text to Translate',
+    'translate.form.textToTranslate.placeholder': 'Enter the text you want to translate...',
+    'translate.form.targetLanguage.label': 'Target Language',
+    'translate.form.customTerminology.label': 'Custom Terminology (Optional)',
+    'translate.form.customTerminology.placeholder': 'e.g., product names, specific phrases',
+    'translate.form.submitButton': 'Translate',
+    'translate.result.title': 'Translation Result',
+    'translate.result.noResult': 'Translated text will appear here once submitted.',
   },
   de: {
     'app.name': 'ATEZ Software Technologies',
@@ -253,7 +275,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Zollanmeldung',
     'products.category.other': 'Weitere Lösungen',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': 'Erweiterte Tarifklassifizierung und -verwaltung für optimierte Zollprozesse.',
+    'products.product.tariff.description': 'Ihr digitaler Assistent für den grenzüberschreitenden Handel. Tariff ist Ihre digitale Lösung für nahtlosen, transparenten grenzüberschreitenden Handel. Derzeit in der Europäischen Union, dem Vereinigten Königreich, der Schweiz und der Türkei tätig. Die Plattform präsentiert Zollvorschriften, Zölle und Kontrollmaßnahmen. Mit nur wenigen Klicks ermöglicht Tariff den Nutzern den Zugriff auf wichtige Informationen, die auf ihre Handelsrouten zugeschnitten sind, und gewährleistet so einen reibungsloseren, effizienteren und konformen Import- oder Exportprozess.',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Optimierte Logistik- und Zolldokumentation für effizienten internationalen Handel.',
     'products.product.customsShield': 'Customs Shield',
@@ -301,6 +323,16 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Sprache',
     'settings.language.description': 'Wählen Sie Ihre bevorzugte Sprache für die Anwendung.',
     'settings.language.select.label': 'Sprache auswählen',
+    'translate.title': 'Inhaltsübersetzung',
+    'translate.description': 'Übersetzen Sie Website-Inhalte mit KI in mehrere Sprachen.',
+    'translate.form.textToTranslate.label': 'Zu übersetzender Text',
+    'translate.form.textToTranslate.placeholder': 'Geben Sie den Text ein, den Sie übersetzen möchten...',
+    'translate.form.targetLanguage.label': 'Zielsprache',
+    'translate.form.customTerminology.label': 'Benutzerdefinierte Terminologie (Optional)',
+    'translate.form.customTerminology.placeholder': 'z.B. Produktnamen, spezifische Phrasen',
+    'translate.form.submitButton': 'Übersetzen',
+    'translate.result.title': 'Übersetzungsergebnis',
+    'translate.result.noResult': 'Übersetzter Text wird hier angezeigt, sobald er übermittelt wurde.',
   },
   tr: {
     'app.name': 'ATEZ Software Technologies',
@@ -350,7 +382,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Beyanname Dosyalama',
     'products.category.other': 'Diğer Çözümler',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': 'Optimize edilmiş gümrük süreçleri için gelişmiş tarife sınıflandırması ve yönetimi.',
+    'products.product.tariff.description': 'Sınır ötesi ticaret için dijital asistanınız. Tariff, sorunsuz, şeffaf sınır ötesi ticaret için başvuracağınız dijital çözümdür. Şu anda Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye\'de faaliyet göstermektedir. Platform, gümrük düzenlemelerini, vergileri ve kontrol önlemlerini sunar. Sadece birkaç tıklama ile Tariff, kullanıcıların ticaret rotalarına göre uyarlanmış kritik bilgilere erişmesini sağlayarak daha sorunsuz, daha verimli ve uyumlu bir ithalat veya ihracat süreci sağlar.',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Verimli uluslararası ticaret için optimize edilmiş lojistik ve gümrük dokümantasyonu.',
     'products.product.customsShield': 'Customs Shield',
@@ -398,5 +430,17 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Dil',
     'settings.language.description': 'Uygulama için tercih ettiğiniz dili seçin.',
     'settings.language.select.label': 'Dil Seçin',
+    'translate.title': 'İçerik Çevirisi',
+    'translate.description': 'Web sitesi içeriğini yapay zeka kullanarak birden çok dile çevirin.',
+    'translate.form.textToTranslate.label': 'Çevrilecek Metin',
+    'translate.form.textToTranslate.placeholder': 'Çevirmek istediğiniz metni girin...',
+    'translate.form.targetLanguage.label': 'Hedef Dil',
+    'translate.form.customTerminology.label': 'Özel Terminoloji (İsteğe Bağlı)',
+    'translate.form.customTerminology.placeholder': 'örn. ürün adları, belirli ifadeler',
+    'translate.form.submitButton': 'Çevir',
+    'translate.result.title': 'Çeviri Sonucu',
+    'translate.result.noResult': 'Gönderildikten sonra çevrilen metin burada görünecektir.',
   },
 };
+
+
