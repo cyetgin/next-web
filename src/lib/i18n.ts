@@ -14,7 +14,8 @@ export type TranslationKey =
   | 'nav.products'
   | 'nav.about'
   | 'nav.contact'
-  | 'nav.news' // New
+  | 'nav.news'
+  | 'nav.settings' // New
   | 'home.welcomeTitle'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
@@ -76,16 +77,6 @@ export type TranslationKey =
   | 'products.product.greenpulse.description'
   | 'products.product.tradeloupe'
   | 'products.product.tradeloupe.description'
-  | 'translate.title'
-  | 'translate.description'
-  | 'translate.form.textToTranslate.label'
-  | 'translate.form.textToTranslate.placeholder'
-  | 'translate.form.targetLanguage.label'
-  | 'translate.form.customTerminology.label'
-  | 'translate.form.customTerminology.placeholder'
-  | 'translate.form.submitButton'
-  | 'translate.result.title'
-  | 'translate.result.noResult'
   // News Section Keys
   | 'news.title'
   | 'news.description'
@@ -98,7 +89,23 @@ export type TranslationKey =
   | 'news.post2.title'
   | 'news.post2.excerpt'
   | 'news.post3.title'
-  | 'news.post3.excerpt';
+  | 'news.post3.excerpt'
+  // Settings Page Keys
+  | 'settings.title'
+  | 'settings.description'
+  | 'settings.appearance.title'
+  | 'settings.appearance.description'
+  | 'settings.appearance.theme.label'
+  | 'settings.appearance.theme.light'
+  | 'settings.appearance.theme.dark'
+  | 'settings.appearance.theme.system'
+  | 'settings.appearance.fontSize.label'
+  | 'settings.appearance.fontSize.sm'
+  | 'settings.appearance.fontSize.md'
+  | 'settings.appearance.fontSize.lg'
+  | 'settings.language.title'
+  | 'settings.language.description'
+  | 'settings.language.select.label';
 
 export const translations: Record<Locale, Record<string, string>> = {
   en: {
@@ -108,6 +115,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.about': 'About Us',
     'nav.contact': 'Contact Us',
     'nav.news': 'News',
+    'nav.settings': 'Settings',
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, goods movement, and autonomous data handling, powered by Blockchain, AI, ML, and BI.',
     'home.featuresTitle': 'Core Capabilities',
@@ -169,16 +177,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.greenpulse.description': 'Track and manage sustainability metrics and carbon footprint in logistics.',
     'products.product.tradeloupe': 'Tradeloupe',
     'products.product.tradeloupe.description': 'Platform for trade development, market analysis, and accessing new opportunities.',
-    'translate.title': 'AI Content Translation',
-    'translate.description': 'Use our AI-powered tool to translate your website content into multiple languages. Define custom terminology for precise translations.',
-    'translate.form.textToTranslate.label': 'Text to Translate',
-    'translate.form.textToTranslate.placeholder': 'Enter the content you want to translate...',
-    'translate.form.targetLanguage.label': 'Target Language',
-    'translate.form.customTerminology.label': 'Custom Terminology (Optional)',
-    'translate.form.customTerminology.placeholder': 'e.g., product names, specific phrases',
-    'translate.form.submitButton': 'Translate Content',
-    'translate.result.title': 'Translated Content',
-    'translate.result.noResult': 'The translated text will appear here once the translation is complete.',
     'news.title': 'News & Insights',
     'news.description': 'Stay updated with the latest news, industry insights, and technology updates from ATEZ Software.',
     'news.readMore': 'Read More',
@@ -191,6 +189,21 @@ export const translations: Record<Locale, Record<string, string>> = {
     'news.post2.excerpt': 'We are excited to announce our latest project utilizing blockchain technology to enhance transparency and security in global supply chains.',
     'news.post3.title': 'The Impact of Autonomous Data Handling on Cross-Border Logistics',
     'news.post3.excerpt': 'An in-depth look at how autonomous systems are streamlining data flow and revolutionizing procedure handling in the logistics sector.',
+    'settings.title': 'Settings',
+    'settings.description': 'Customize your application experience.',
+    'settings.appearance.title': 'Appearance',
+    'settings.appearance.description': 'Adjust the look and feel of the application.',
+    'settings.appearance.theme.label': 'Theme',
+    'settings.appearance.theme.light': 'Light',
+    'settings.appearance.theme.dark': 'Dark',
+    'settings.appearance.theme.system': 'System',
+    'settings.appearance.fontSize.label': 'Font Size',
+    'settings.appearance.fontSize.sm': 'Small',
+    'settings.appearance.fontSize.md': 'Medium',
+    'settings.appearance.fontSize.lg': 'Large',
+    'settings.language.title': 'Language',
+    'settings.language.description': 'Choose your preferred language for the application.',
+    'settings.language.select.label': 'Select Language',
   },
   de: {
     'app.name': 'ATEZ Software Technologies',
@@ -199,6 +212,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
     'nav.news': 'Aktuelles',
+    'nav.settings': 'Einstellungen',
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Blockchain, KI, ML und BI.',
     'home.featuresTitle': 'Kernkompetenzen',
@@ -260,16 +274,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.greenpulse.description': 'Verfolgung und Verwaltung von Nachhaltigkeitskennzahlen und CO2-Fußabdruck in der Logistik.',
     'products.product.tradeloupe': 'Tradeloupe',
     'products.product.tradeloupe.description': 'Plattform für Handelsentwicklung, Marktanalyse und Erschließung neuer Möglichkeiten.',
-    'translate.title': 'KI-Inhaltsübersetzung',
-    'translate.description': 'Nutzen Sie unser KI-gestütztes Tool, um Ihre Website-Inhalte in mehrere Sprachen zu übersetzen. Definieren Sie benutzerdefinierte Terminologie für präzise Übersetzungen.',
-    'translate.form.textToTranslate.label': 'Zu übersetzender Text',
-    'translate.form.textToTranslate.placeholder': 'Geben Sie den Inhalt ein, den Sie übersetzen möchten...',
-    'translate.form.targetLanguage.label': 'Zielsprache',
-    'translate.form.customTerminology.label': 'Benutzerdefinierte Terminologie (Optional)',
-    'translate.form.customTerminology.placeholder': 'z.B. Produktnamen, spezifische Phrasen',
-    'translate.form.submitButton': 'Inhalt übersetzen',
-    'translate.result.title': 'Übersetzter Inhalt',
-    'translate.result.noResult': 'Der übersetzte Text erscheint hier, sobald die Übersetzung abgeschlossen ist.',
     'news.title': 'Aktuelles & Einblicke',
     'news.description': 'Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Brancheneinblicken und Technologie-Updates von ATEZ Software.',
     'news.readMore': 'Weiterlesen',
@@ -282,6 +286,21 @@ export const translations: Record<Locale, Record<string, string>> = {
     'news.post2.excerpt': 'Wir freuen uns, unser neuestes Projekt bekannt zu geben, das Blockchain-Technologie zur Verbesserung der Transparenz und Sicherheit in globalen Lieferketten einsetzt.',
     'news.post3.title': 'Die Auswirkungen autonomer Datenverarbeitung auf die grenzüberschreitende Logistik',
     'news.post3.excerpt': 'Ein detaillierter Blick darauf, wie autonome Systeme den Datenfluss optimieren und die Verfahrensabwicklung im Logistiksektor revolutionieren.',
+    'settings.title': 'Einstellungen',
+    'settings.description': 'Passen Sie Ihre Anwendungserfahrung an.',
+    'settings.appearance.title': 'Erscheinungsbild',
+    'settings.appearance.description': 'Passen Sie das Aussehen und Verhalten der Anwendung an.',
+    'settings.appearance.theme.label': 'Thema',
+    'settings.appearance.theme.light': 'Hell',
+    'settings.appearance.theme.dark': 'Dunkel',
+    'settings.appearance.theme.system': 'System',
+    'settings.appearance.fontSize.label': 'Schriftgröße',
+    'settings.appearance.fontSize.sm': 'Klein',
+    'settings.appearance.fontSize.md': 'Mittel',
+    'settings.appearance.fontSize.lg': 'Groß',
+    'settings.language.title': 'Sprache',
+    'settings.language.description': 'Wählen Sie Ihre bevorzugte Sprache für die Anwendung.',
+    'settings.language.select.label': 'Sprache auswählen',
   },
   tr: {
     'app.name': 'ATEZ Software Technologies',
@@ -290,6 +309,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
     'nav.news': 'Haberler',
+    'nav.settings': 'Ayarlar',
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
     'home.featuresTitle': 'Temel Yetenekler',
@@ -351,16 +371,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.greenpulse.description': 'Lojistikte sürdürülebilirlik ölçümlerini ve karbon ayak izini takip edin ve yönetin.',
     'products.product.tradeloupe': 'Tradeloupe',
     'products.product.tradeloupe.description': 'Ticaret geliştirme, pazar analizi ve yeni fırsatlara erişim platformu.',
-    'translate.title': 'AI Content Translation',
-    'translate.description': 'Use our AI-powered tool to translate your website content into multiple languages. Define custom terminology for precise translations.',
-    'translate.form.textToTranslate.label': 'Text to Translate',
-    'translate.form.textToTranslate.placeholder': 'Enter the content you want to translate...',
-    'translate.form.targetLanguage.label': 'Target Language',
-    'translate.form.customTerminology.label': 'Custom Terminology (Optional)',
-    'translate.form.customTerminology.placeholder': 'e.g., product names, specific phrases',
-    'translate.form.submitButton': 'Translate Content',
-    'translate.result.title': 'Translated Content',
-    'translate.result.noResult': 'The translated text will appear here once the translation is complete.',
     'news.title': 'Haberler & Analizler',
     'news.description': 'ATEZ Software\'den en son haberler, sektör analizleri ve teknoloji güncellemeleri ile haberdar olun.',
     'news.readMore': 'Devamını Oku',
@@ -373,7 +383,20 @@ export const translations: Record<Locale, Record<string, string>> = {
     'news.post2.excerpt': 'Küresel tedarik zincirlerinde şeffaflığı ve güvenliği artırmak için blockchain teknolojisini kullanan en son projemizi duyurmaktan heyecan duyuyoruz.',
     'news.post3.title': 'Otonom Veri İşlemenin Sınır Ötesi Lojistiğe Etkisi',
     'news.post3.excerpt': 'Otonom sistemlerin lojistik sektöründe veri akışını nasıl optimize ettiğine ve prosedür yönetimini nasıl devrimleştirdiğine derinlemesine bir bakış.',
+    'settings.title': 'Ayarlar',
+    'settings.description': 'Uygulama deneyiminizi özelleştirin.',
+    'settings.appearance.title': 'Görünüm',
+    'settings.appearance.description': 'Uygulamanın görünümünü ve hissini ayarlayın.',
+    'settings.appearance.theme.label': 'Tema',
+    'settings.appearance.theme.light': 'Açık',
+    'settings.appearance.theme.dark': 'Koyu',
+    'settings.appearance.theme.system': 'Sistem',
+    'settings.appearance.fontSize.label': 'Yazı Tipi Boyutu',
+    'settings.appearance.fontSize.sm': 'Küçük',
+    'settings.appearance.fontSize.md': 'Orta',
+    'settings.appearance.fontSize.lg': 'Büyük',
+    'settings.language.title': 'Dil',
+    'settings.language.description': 'Uygulama için tercih ettiğiniz dili seçin.',
+    'settings.language.select.label': 'Dil Seçin',
   },
 };
-
-    

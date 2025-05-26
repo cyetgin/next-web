@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,5 +99,16 @@
   body {
     @apply bg-background text-foreground;
     /* font-family from Geist in layout.tsx will take precedence */
+  }
+
+  /* Font scaling classes */
+  html.font-scale-sm {
+    font-size: 14px; /* Approx 87.5% of 16px */
+  }
+  html.font-scale-md {
+    font-size: 16px; /* Default */
+  }
+  html.font-scale-lg {
+    font-size: 18px; /* Approx 112.5% of 16px */
   }
 }
