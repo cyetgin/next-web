@@ -20,22 +20,23 @@ import {
   Bot, // For Declarant AI
   Replace, // For Transcode
   FilePenLine, // For Declarant
-  // Network, // For Relayhub - Removed as it's no longer a standalone product here
   Leaf, // For Greenpulse
-  Globe // For Tradeloupe
+  Globe, // For Tradeloupe
+  Network // For Relayhub, now a solution under Declarant
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
+import type { LucideIcon } from 'lucide-react';
 
 interface Product {
   nameKey: TranslationKey;
   descriptionKey: TranslationKey;
-  slug: string; // For placeholder link
-  icon: React.ElementType;
+  slug: string; 
+  icon: LucideIcon;
 }
 
 interface ProductCategory {
   categoryKey: TranslationKey;
-  icon: React.ElementType;
+  icon: LucideIcon;
   products: Product[];
 }
 
@@ -64,7 +65,6 @@ const productCategories: ProductCategory[] = [
     products: [
       { nameKey: 'products.product.transcode', descriptionKey: 'products.product.transcode.description', slug: 'transcode', icon: Replace },
       { nameKey: 'products.product.declarant', descriptionKey: 'products.product.declarant.description', slug: 'declarant', icon: FilePenLine },
-      // Relayhub removed from here
     ],
   },
   {
@@ -109,24 +109,26 @@ export default function ProductsPage() {
               <category.icon className="h-8 w-8 text-primary flex-shrink-0" />
               <CardTitle className="text-2xl">{t(category.categoryKey)}</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6 flex-grow">
-              {category.products.map((product) => (
-                <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-3 mb-2">
-                    <product.icon className="h-6 w-6 text-accent flex-shrink-0" />
-                    <h3 className="text-xl font-semibold text-primary">{t(product.nameKey)}</h3>
+            <CardContent className="flex-grow">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {category.products.map((product) => (
+                  <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow flex flex-col">
+                    <div className="flex items-center gap-3 mb-2">
+                      <product.icon className="h-6 w-6 text-accent flex-shrink-0" />
+                      <h3 className="text-xl font-semibold text-primary">{t(product.nameKey)}</h3>
+                    </div>
+                    <p className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed flex-grow">
+                      {t(product.descriptionKey)}
+                    </p>
+                    <Button asChild size="sm" variant="outline" className="mt-auto group">
+                      <Link href={`#${product.slug}`}>
+                        {t('products.exploreButton')}
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </Button>
                   </div>
-                  <p className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed">
-                    {t(product.descriptionKey)}
-                  </p>
-                  <Button asChild size="sm" variant="outline" className="mt-auto group">
-                    <Link href={`#${product.slug}`}>
-                      {t('products.exploreButton')}
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
-                </div>
-              ))}
+                ))}
+              </div>
             </CardContent>
           </Card>
         ))}
@@ -134,5 +136,3 @@ export default function ProductsPage() {
     </div>
   );
 }
-
-    
