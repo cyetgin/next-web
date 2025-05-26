@@ -1,6 +1,7 @@
 
 "use client";
 
+import React from "react"; // Added this line
 import { useTheme } from "next-themes";
 import { useTranslation } from "@/hooks/use-translation";
 import { useFont, type FontSize } from "@/context/font-provider";
