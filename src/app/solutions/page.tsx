@@ -16,9 +16,22 @@ import {
   Replace,
   Leaf,
   Globe,
-  Bot, // For Declarant AI solution
-  ArrowRightLeft, // For Transit AI solution
-  Network // Icon for Relayhub, though it will use Declarant's icon on this page
+  Bot, 
+  ArrowRightLeft,
+  Network,
+  // Solution specific icons
+  ListFilter,
+  Calculator,
+  FileWarning,
+  SearchCode,
+  Percent,
+  PlugZap,
+  FileStack,
+  FileLock2,
+  ShieldAlert,
+  SearchCheck,
+  FileBarChart2,
+  AreaChart
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -26,6 +39,7 @@ import type { LucideIcon } from 'lucide-react';
 interface Solution {
   nameKey: TranslationKey;
   productNameKey: TranslationKey;
+  icon: LucideIcon; // Added icon for each solution
 }
 
 interface ProductInfo {
@@ -35,23 +49,22 @@ interface ProductInfo {
 }
 
 const solutionsList: Solution[] = [
-  { nameKey: 'solutions.solution.htsClassification', productNameKey: 'products.product.logicust' },
-  { nameKey: 'solutions.solution.landedCost', productNameKey: 'products.product.logicust' },
-  { nameKey: 'solutions.solution.customsCompliance', productNameKey: 'products.product.logicust' },
-  { nameKey: 'solutions.solution.exportControls', productNameKey: 'products.product.logicust' },
-  { nameKey: 'solutions.solution.findHtsCode', productNameKey: 'products.product.tariff' },
-  { nameKey: 'solutions.solution.taxCalculation', productNameKey: 'products.product.tariff' },
-  // { nameKey: 'solutions.solution.customsDeclarationFiling', productNameKey: 'products.product.declarant' }, // Removed
-  { nameKey: 'solutions.solution.sapIntegration', productNameKey: 'products.product.declarant' },
-  { nameKey: 'solutions.solution.declarantAI', productNameKey: 'products.product.declarant' }, 
-  { nameKey: 'solutions.solution.relayhub', productNameKey: 'products.product.declarant' },
-  { nameKey: 'solutions.solution.transitDeclarationFiling', productNameKey: 'products.product.transcode' },
-  { nameKey: 'solutions.solution.guaranteeManagement', productNameKey: 'products.product.transcode' },
-  { nameKey: 'solutions.solution.transitAI', productNameKey: 'products.product.transcode' }, 
-  { nameKey: 'solutions.solution.preClearanceControl', productNameKey: 'products.product.customsShield' },
-  { nameKey: 'solutions.solution.postDeclarationControl', productNameKey: 'products.product.customsXRay' },
-  { nameKey: 'solutions.solution.cbamReporting', productNameKey: 'products.product.greenpulse' },
-  { nameKey: 'solutions.solution.dataVisualization', productNameKey: 'products.product.tradeloupe' },
+  { nameKey: 'solutions.solution.htsClassification', productNameKey: 'products.product.logicust', icon: ListFilter },
+  { nameKey: 'solutions.solution.landedCost', productNameKey: 'products.product.logicust', icon: Calculator },
+  { nameKey: 'solutions.solution.customsCompliance', productNameKey: 'products.product.logicust', icon: ShieldCheck },
+  { nameKey: 'solutions.solution.exportControls', productNameKey: 'products.product.logicust', icon: FileWarning },
+  { nameKey: 'solutions.solution.findHtsCode', productNameKey: 'products.product.tariff', icon: SearchCode },
+  { nameKey: 'solutions.solution.taxCalculation', productNameKey: 'products.product.tariff', icon: Percent },
+  { nameKey: 'solutions.solution.sapIntegration', productNameKey: 'products.product.declarant', icon: PlugZap },
+  { nameKey: 'solutions.solution.declarantAI', productNameKey: 'products.product.declarant', icon: Bot }, 
+  { nameKey: 'solutions.solution.relayhub', productNameKey: 'products.product.declarant', icon: Network },
+  { nameKey: 'solutions.solution.transitDeclarationFiling', productNameKey: 'products.product.transcode', icon: FileStack },
+  { nameKey: 'solutions.solution.guaranteeManagement', productNameKey: 'products.product.transcode', icon: FileLock2 },
+  { nameKey: 'solutions.solution.transitAI', productNameKey: 'products.product.transcode', icon: Bot }, 
+  { nameKey: 'solutions.solution.preClearanceControl', productNameKey: 'products.product.customsShield', icon: ShieldAlert },
+  { nameKey: 'solutions.solution.postDeclarationControl', productNameKey: 'products.product.customsXRay', icon: SearchCheck },
+  { nameKey: 'solutions.solution.cbamReporting', productNameKey: 'products.product.greenpulse', icon: FileBarChart2 },
+  { nameKey: 'solutions.solution.dataVisualization', productNameKey: 'products.product.tradeloupe', icon: AreaChart },
 ];
 
 const productDetailsMap: Record<string, ProductInfo> = {
@@ -63,8 +76,6 @@ const productDetailsMap: Record<string, ProductInfo> = {
   'products.product.customsXRay': { nameKey: 'products.product.customsXRay', icon: Search, slug: 'customs-xray' },
   'products.product.greenpulse': { nameKey: 'products.product.greenpulse', icon: Leaf, slug: 'greenpulse' },
   'products.product.tradeloupe': { nameKey: 'products.product.tradeloupe', icon: Globe, slug: 'tradeloupe' },
-  // Note: DeclarantAI and TransitAI use their parent product's icon on this page.
-  // Relayhub, now a solution, will also use its parent product's (Declarant) icon.
 };
 
 
@@ -107,16 +118,22 @@ export default function SolutionsPage() {
               </CardHeader>
               <CardContent className="space-y-3 flex-grow">
                 <ul className="space-y-2">
-                  {productSolutions.map((solution) => (
-                    <li key={solution.nameKey}>
-                      <Button asChild variant="ghost" className="w-full justify-start text-left h-auto py-2 group">
-                        <Link href={`/products#${productInfo.slug}`} className="flex items-center justify-between w-full">
-                          <span className="text-base text-foreground/90">{t(solution.nameKey)}</span>
-                          <ChevronRight className="h-5 w-5 text-primary opacity-70 group-hover:opacity-100 transition-opacity" />
-                        </Link>
-                      </Button>
-                    </li>
-                  ))}
+                  {productSolutions.map((solution) => {
+                    const SolutionIcon = solution.icon;
+                    return (
+                      <li key={solution.nameKey}>
+                        <Button asChild variant="ghost" className="w-full justify-start text-left h-auto py-2 group">
+                          <Link href={`/products#${productInfo.slug}`} className="flex items-center justify-between w-full">
+                            <div className="flex items-center gap-2">
+                              <SolutionIcon className="h-5 w-5 text-primary/80 group-hover:text-primary transition-colors" />
+                              <span className="text-base text-foreground/90">{t(solution.nameKey)}</span>
+                            </div>
+                            <ChevronRight className="h-5 w-5 text-primary opacity-70 group-hover:opacity-100 transition-opacity" />
+                          </Link>
+                        </Button>
+                      </li>
+                    );
+                  })}
                 </ul>
               </CardContent>
               <div className="p-6 pt-0 mt-auto">
