@@ -126,7 +126,7 @@ export type TranslationKey =
   | 'solutions.solution.transitAI'
   | 'solutions.solution.relayhub'
   | 'solutions.solution.smartSuggestions'
-  | 'solutions.solution.historicalDataTariff' // New key
+  | 'solutions.solution.historicalDataTariff'
   | 'solutions.viewProductDetails';
 
 export const translations: Record<Locale, Record<string, string>> = {
@@ -237,7 +237,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.exportControls': 'Export Controls & Sanction Screening',
     'solutions.solution.findHtsCode': 'Find Your HTS Code',
     'solutions.solution.taxCalculation': 'Duty & Tax Calculation',
-    'solutions.solution.sapIntegration': 'SAP Integration for Declarations',
+    'solutions.solution.sapIntegration': 'SAP Plugins for Data Sync',
     'solutions.solution.transitDeclarationFiling': 'Transit Declaration Filing',
     'solutions.solution.guaranteeManagement': 'Guarantee Management',
     'solutions.solution.preClearanceControl': 'Pre-Clearance Control & Risk Assessment',
@@ -355,7 +355,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.exportControls': 'Exportkontrollen & Sanktionslistenprüfung',
     'solutions.solution.findHtsCode': 'Finden Sie Ihren HS-Code',
     'solutions.solution.taxCalculation': 'Zoll- & Steuerberechnung',
-    'solutions.solution.sapIntegration': 'SAP-Integration für Anmeldungen',
+    'solutions.solution.sapIntegration': 'SAP-Plugins für Datensynchronisation',
     'solutions.solution.transitDeclarationFiling': 'Transitanmeldung',
     'solutions.solution.guaranteeManagement': 'Bürgschaftsmanagement',
     'solutions.solution.preClearanceControl': 'Vorfeldkontrolle & Risikobewertung',
@@ -473,7 +473,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.exportControls': 'İhracat Kontrolleri ve Yaptırım Taraması',
     'solutions.solution.findHtsCode': 'GTİP Kodunuzu Bulun',
     'solutions.solution.taxCalculation': 'Gümrük Vergisi ve Vergi Hesaplaması',
-    'solutions.solution.sapIntegration': 'Beyannameler için SAP Entegrasyonu',
+    'solutions.solution.sapIntegration': 'Veri Senkronizasyonu için SAP Eklentileri',
     'solutions.solution.transitDeclarationFiling': 'Transit Beyannamesi Dosyalama',
     'solutions.solution.guaranteeManagement': 'Teminat Yönetimi',
     'solutions.solution.preClearanceControl': 'Ön Gümrük Kontrolü ve Risk Değerlendirmesi',
@@ -488,3 +488,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };
+
+
+    
