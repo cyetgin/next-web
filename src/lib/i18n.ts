@@ -12,7 +12,7 @@ export type TranslationKey =
   | 'app.name'
   | 'nav.home'
   | 'nav.products'
-  | 'nav.solutions' // New
+  | 'nav.solutions'
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
@@ -107,7 +107,7 @@ export type TranslationKey =
   | 'settings.language.title'
   | 'settings.language.description'
   | 'settings.language.select.label'
-  // Solutions Page Keys (New)
+  // Solutions Page Keys
   | 'solutions.title'
   | 'solutions.description'
   | 'solutions.solution.htsClassification'
@@ -124,6 +124,8 @@ export type TranslationKey =
   | 'solutions.solution.postDeclarationControl'
   | 'solutions.solution.cbamReporting'
   | 'solutions.solution.dataVisualization'
+  | 'solutions.solution.declarantAI' // New
+  | 'solutions.solution.transitAI'   // New
   | 'solutions.viewProductDetails';
 
 export const translations: Record<Locale, Record<string, string>> = {
@@ -131,7 +133,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Home',
     'nav.products': 'Products',
-    'nav.solutions': 'Solutions', // New
+    'nav.solutions': 'Solutions',
     'nav.about': 'About Us',
     'nav.contact': 'Contact Us',
     'nav.news': 'News',
@@ -224,7 +226,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Language',
     'settings.language.description': 'Choose your preferred language for the application.',
     'settings.language.select.label': 'Select Language',
-    // Solutions Page Keys (New)
+    // Solutions Page Keys
     'solutions.title': 'Our Solutions',
     'solutions.description': 'Explore how ATEZ Software Technologies leverages its products to deliver targeted solutions for your international trade and customs challenges.',
     'solutions.solution.htsClassification': 'HTS Code Classification',
@@ -241,13 +243,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Post-Declaration Control & Audit Support',
     'solutions.solution.cbamReporting': 'CBAM Reporting & Carbon Accounting',
     'solutions.solution.dataVisualization': 'Trade Data Visualization & Analytics',
+    'solutions.solution.declarantAI': 'AI-Assisted Declaration Preparation',
+    'solutions.solution.transitAI': 'AI-Optimized Transit Procedures',
     'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Startseite',
     'nav.products': 'Produkte',
-    'nav.solutions': 'Lösungen', // New
+    'nav.solutions': 'Lösungen',
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
     'nav.news': 'Aktuelles',
@@ -340,7 +344,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Sprache',
     'settings.language.description': 'Wählen Sie Ihre bevorzugte Sprache für die Anwendung.',
     'settings.language.select.label': 'Sprache auswählen',
-    // Solutions Page Keys (New)
+    // Solutions Page Keys
     'solutions.title': 'Unsere Lösungen',
     'solutions.description': 'Entdecken Sie, wie ATEZ Software Technologies seine Produkte einsetzt, um gezielte Lösungen für Ihre internationalen Handels- und Zollherausforderungen zu liefern.',
     'solutions.solution.htsClassification': 'HS-Code-Klassifizierung',
@@ -357,13 +361,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Nachverzollungskontrolle & Audit-Unterstützung',
     'solutions.solution.cbamReporting': 'CBAM-Berichterstattung & CO2-Bilanzierung',
     'solutions.solution.dataVisualization': 'Handelsdatenvisualisierung & -analyse',
+    'solutions.solution.declarantAI': 'KI-gestützte Beyanname Hazırlama', // Placeholder
+    'solutions.solution.transitAI': 'KI-optimierte Transitverfahren', // Placeholder
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
     'app.name': 'ATEZ Software Technologies',
     'nav.home': 'Ana Sayfa',
     'nav.products': 'Ürünler',
-    'nav.solutions': 'Çözümler', // New
+    'nav.solutions': 'Çözümler',
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
     'nav.news': 'Haberler',
@@ -456,7 +462,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Dil',
     'settings.language.description': 'Uygulama için tercih ettiğiniz dili seçin.',
     'settings.language.select.label': 'Dil Seçin',
-    // Solutions Page Keys (New)
+    // Solutions Page Keys
     'solutions.title': 'Çözümlerimiz',
     'solutions.description': 'ATEZ Software Technologies\'in uluslararası ticaret ve gümrük zorluklarınız için ürünlerini nasıl kullanarak hedefe yönelik çözümler sunduğunu keşfedin.',
     'solutions.solution.htsClassification': 'GTİP Kodu Sınıflandırması',
@@ -473,6 +479,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Sonradan Kontrol ve Denetim Desteği',
     'solutions.solution.cbamReporting': 'CBAM Raporlaması ve Karbon Muhasebesi',
     'solutions.solution.dataVisualization': 'Ticaret Veri Görselleştirme ve Analizi',
+    'solutions.solution.declarantAI': 'Yapay Zeka Destekli Beyanname Hazırlama',
+    'solutions.solution.transitAI': 'Yapay Zeka İle Optimize Edilmiş Transit Prosedürleri',
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };
+

@@ -15,7 +15,9 @@ import {
   FilePenLine,
   Replace,
   Leaf,
-  Globe
+  Globe,
+  Bot, // For Declarant AI solution
+  ArrowRightLeft // For Transit AI solution
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -40,8 +42,10 @@ const solutionsList: Solution[] = [
   { nameKey: 'solutions.solution.taxCalculation', productNameKey: 'products.product.tariff' },
   { nameKey: 'solutions.solution.customsDeclarationFiling', productNameKey: 'products.product.declarant' },
   { nameKey: 'solutions.solution.sapIntegration', productNameKey: 'products.product.declarant' },
+  { nameKey: 'solutions.solution.declarantAI', productNameKey: 'products.product.declarant' }, // New
   { nameKey: 'solutions.solution.transitDeclarationFiling', productNameKey: 'products.product.transcode' },
   { nameKey: 'solutions.solution.guaranteeManagement', productNameKey: 'products.product.transcode' },
+  { nameKey: 'solutions.solution.transitAI', productNameKey: 'products.product.transcode' }, // New
   { nameKey: 'solutions.solution.preClearanceControl', productNameKey: 'products.product.customsShield' },
   { nameKey: 'solutions.solution.postDeclarationControl', productNameKey: 'products.product.customsXRay' },
   { nameKey: 'solutions.solution.cbamReporting', productNameKey: 'products.product.greenpulse' },
@@ -57,7 +61,9 @@ const productDetailsMap: Record<string, ProductInfo> = {
   'products.product.customsXRay': { nameKey: 'products.product.customsXRay', icon: Search, slug: 'customs-xray' },
   'products.product.greenpulse': { nameKey: 'products.product.greenpulse', icon: Leaf, slug: 'greenpulse' },
   'products.product.tradeloupe': { nameKey: 'products.product.tradeloupe', icon: Globe, slug: 'tradeloupe' },
-  // Note: TransitAI, DeclarantAI, Relayhub are not directly linked to the 14 solutions provided, so they are not in this map for now.
+  // Although DeclarantAI and TransitAI are products themselves, on this page they are listed as solutions
+  // provided BY Declarant and Transcode respectively. Their specific product icons (Bot, ArrowRightLeft)
+  // are used on the Products page. Here, we use the parent product's icon.
 };
 
 
@@ -88,7 +94,7 @@ export default function SolutionsPage() {
       <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {Object.entries(solutionsByProduct).map(([productKey, productSolutions]) => {
           const productInfo = productDetailsMap[productKey as TranslationKey];
-          if (!productInfo) return null; // Should not happen if data is consistent
+          if (!productInfo) return null; 
 
           const ProductIcon = productInfo.icon;
 
@@ -127,3 +133,4 @@ export default function SolutionsPage() {
     </div>
   );
 }
+
