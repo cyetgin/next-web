@@ -178,7 +178,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Declaration Filing',
     'products.category.other': 'Other Solutions',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': 'Your digital assistant for cross-border trade. Tariff is your go-to digital solution for seamless, transparent cross-border trade. Operating currently within the European Union, United Kingdom, Switzerland, and Türkiye. The platform presents customs regulations, duties, and control measures. With just a few clicks, Tariff enables users to access critical information tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export process.',
+    'products.product.tariff.description': '7/24 updated official customs regulations databank.',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Optimize logistics and customs documentation for efficient international trade.',
     'products.product.customsShield': 'Customs Shield',
@@ -248,7 +248,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
-    'app.name': 'ATEZ Software Technologies', // This was not updated in a previous step, keeping it consistent
+    'app.name': 'ATEZ Software Technologies',
     'logo.text': 'ATEZ Softwaretechnologien',
     'nav.home': 'Startseite',
     'nav.products': 'Produkte',
@@ -297,7 +297,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Zollanmeldung',
     'products.category.other': 'Weitere Lösungen',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': 'Ihr digitaler Assistent für den grenzüberschreitenden Handel. Tariff ist Ihre digitale Lösung für nahtlosen, transparenten grenzüberschreitenden Handel. Derzeit in der Europäischen Union, dem Vereinigten Königreich, der Schweiz und der Türkei tätig. Die Plattform präsentiert Zollvorschriften, Zölle und Kontrollmaßnahmen. Mit nur wenigen Klicks ermöglicht Tariff den Nutzern den Zugriff auf wichtige Informationen, die auf ihre Handelsrouten zugeschnitten sind, und gewährleistet so einen reibungsloseren, effizienteren und konformen Import- oder Exportprozess.',
+    'products.product.tariff.description': '7/24 aktualisierte offizielle Zolldatenbank.',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Optimierte Logistik- und Zolldokumentation für effizienten internationalen Handel.',
     'products.product.customsShield': 'Customs Shield',
@@ -364,7 +364,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
-    'app.name': 'ATEZ Software Technologies', // This was not updated in a previous step
+    'app.name': 'ATEZ Software Technologies',
     'logo.text': 'ATEZ Yazılım Teknolojileri',
     'nav.home': 'Ana Sayfa',
     'nav.products': 'Ürünler',
@@ -413,7 +413,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Beyanname Dosyalama',
     'products.category.other': 'Diğer Çözümler',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': 'Sınır ötesi ticaret için dijital asistanınız. Tariff, sorunsuz, şeffaf sınır ötesi ticaret için başvuracağınız dijital çözümdür. Şu anda Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye\'de faaliyet göstermektedir. Platform, gümrük düzenlemelerini, vergileri ve kontrol önlemlerini sunar. Sadece birkaç tıklama ile Tariff, kullanıcıların ticaret rotalarına göre uyarlanmış kritik bilgilere erişmesini sağlayarak daha sorunsuz, daha verimli ve uyumlu bir ithalat veya ihracat süreci sağlar.',
+    'products.product.tariff.description': '7/24 güncel resmi gümrük mevzuatı veritabanı.',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Verimli uluslararası ticaret için optimize edilmiş lojistik ve gümrük dokümantasyonu.',
     'products.product.customsShield': 'Customs Shield',
