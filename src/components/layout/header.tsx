@@ -3,22 +3,29 @@
 
 import Image from 'next/image';
 import { LanguageSelector } from '@/components/language-selector';
-import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar';
+import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar'; // Import useSidebar
 import { Button } from '@/components/ui/button';
 import { PanelLeftOpen, UserCircle } from 'lucide-react';
 
 export function Header() {
-  const { isMobile } = useSidebar();
+  const { isMobile, state: sidebarState, toggleSidebar } = useSidebar(); // Added sidebarState and toggleSidebar
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
-          {isMobile && <SidebarTrigger asChild>
-            <Button variant="ghost" size="icon">
+          {isMobile && ( // Mobile trigger
+            <SidebarTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <PanelLeftOpen className="h-6 w-6" />
+              </Button>
+            </SidebarTrigger>
+          )}
+          {!isMobile && sidebarState === 'collapsed' && ( // Desktop trigger for collapsed sidebar (restore button)
+            <Button variant="ghost" size="icon" onClick={toggleSidebar} aria-label="Open sidebar">
               <PanelLeftOpen className="h-6 w-6" />
             </Button>
-          </SidebarTrigger>}
+          )}
           {/* 
             Logo updated to use atez-logo.png. 
             Ensure atez-logo.png (512x159 pixels) is in the /public directory.
@@ -28,8 +35,8 @@ export function Header() {
             alt="ATEZ Software Technologies Logo"
             width={512} 
             height={159}
-            className="h-8 w-auto" // Adjust height constraint as needed, width will scale automatically
-            priority // Optional: if logo is LCP
+            className="h-8 w-auto" 
+            priority 
           />
         </div>
         
