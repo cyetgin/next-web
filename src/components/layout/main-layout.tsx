@@ -21,8 +21,8 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     <SidebarProvider defaultOpen={true}>
       <Sidebar collapsible="icon" className="border-r">
         <SidebarHeader className="p-4 flex items-center justify-between">
-          <div className="group-data-[collapsible=icon]:hidden">
-            <AppLogo />
+          <div className="group-data-[collapsible=icon]:hidden text-primary"> {/* Provides color context for AppLogo SVG */}
+            <AppLogo className="h-7 w-auto" /> {/* Control size via className */}
           </div>
            <SidebarTrigger asChild className="group-data-[collapsible=icon]:hidden">
              <Button variant="ghost" size="icon">

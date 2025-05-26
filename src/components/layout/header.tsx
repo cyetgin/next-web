@@ -18,7 +18,9 @@ export function Header() {
               <PanelLeftOpen className="h-6 w-6" />
             </Button>
           </SidebarTrigger>}
-          <AppLogo />
+          <div className="text-primary"> {/* Provides color context for AppLogo SVG */}
+            <AppLogo className="h-7 w-auto" /> {/* Control size via className */}
+          </div>
         </div>
         
         <div className="flex items-center gap-4">
