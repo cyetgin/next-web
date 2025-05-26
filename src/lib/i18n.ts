@@ -10,13 +10,14 @@ export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
 
 export type TranslationKey =
   | 'app.name'
+  | 'logo.text' // New key for logo text
   | 'nav.home'
   | 'nav.products'
   | 'nav.solutions'
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
-  | 'nav.settings' // Added back
+  | 'nav.settings'
   | 'home.welcomeTitle'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
@@ -129,13 +130,14 @@ export type TranslationKey =
 export const translations: Record<Locale, Record<string, string>> = {
   en: {
     'app.name': 'ATEZ Software Technologies',
+    'logo.text': 'ATEZ Software Technologies',
     'nav.home': 'Home',
     'nav.products': 'Products',
     'nav.solutions': 'Solutions',
     'nav.about': 'About Us',
     'nav.contact': 'Contact Us',
     'nav.news': 'News',
-    'nav.settings': 'Settings', // Added back
+    'nav.settings': 'Settings',
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, goods movement, and autonomous data handling, powered by Blockchain, AI, ML, and BI.',
     'home.featuresTitle': 'Core Capabilities',
@@ -246,14 +248,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
-    'app.name': 'ATEZ Software Technologies',
+    'app.name': 'ATEZ Software Technologies', // This was not updated in a previous step, keeping it consistent
+    'logo.text': 'ATEZ Softwaretechnologien',
     'nav.home': 'Startseite',
     'nav.products': 'Produkte',
     'nav.solutions': 'Lösungen',
     'nav.about': 'Über Uns',
     'nav.contact': 'Kontakt',
     'nav.news': 'Aktuelles',
-    'nav.settings': 'Einstellungen', // Added back
+    'nav.settings': 'Einstellungen',
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Blockchain, KI, ML und BI.',
     'home.featuresTitle': 'Kernkompetenzen',
@@ -340,7 +343,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Sprache',
     'settings.language.description': 'Wählen Sie Ihre bevorzugte Sprache für die Anwendung.',
     'settings.language.select.label': 'Sprache auswählen',
-    // Solutions Page Keys
     'solutions.title': 'Unsere Lösungen',
     'solutions.description': 'Entdecken Sie, wie ATEZ Software Technologies seine Produkte einsetzt, um gezielte Lösungen für Ihre internationalen Handels- und Zollherausforderungen zu liefern.',
     'solutions.solution.htsClassification': 'HS-Code-Klassifizierung',
@@ -356,20 +358,21 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Nachverzollungskontrolle & Audit-Unterstützung',
     'solutions.solution.cbamReporting': 'CBAM-Berichterstattung & CO2-Bilanzierung',
     'solutions.solution.dataVisualization': 'Handelsdatenvisualisierung & -analyse',
-    'solutions.solution.declarantAI': 'KI-gestützte Erstellung von Zollanmeldungen', // Updated
-    'solutions.solution.transitAI': 'KI-gestützte Erstellung von Transitanmeldungen', // Updated
+    'solutions.solution.declarantAI': 'KI-gestützte Erstellung von Zollanmeldungen',
+    'solutions.solution.transitAI': 'KI-gestützte Erstellung von Transitanmeldungen',
     'solutions.solution.relayhub': 'Relayhub Daten Austausch Integration',
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
-    'app.name': 'ATEZ Software Technologies',
+    'app.name': 'ATEZ Software Technologies', // This was not updated in a previous step
+    'logo.text': 'ATEZ Yazılım Teknolojileri',
     'nav.home': 'Ana Sayfa',
     'nav.products': 'Ürünler',
     'nav.solutions': 'Çözümler',
     'nav.about': 'Hakkımızda',
     'nav.contact': 'İletişim',
     'nav.news': 'Haberler',
-    'nav.settings': 'Ayarlar', // Added back
+    'nav.settings': 'Ayarlar',
     'home.welcomeTitle': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
     'home.featuresTitle': 'Temel Yetenekler',
@@ -456,7 +459,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Dil',
     'settings.language.description': 'Uygulama için tercih ettiğiniz dili seçin.',
     'settings.language.select.label': 'Dil Seçin',
-    // Solutions Page Keys
     'solutions.title': 'Çözümlerimiz',
     'solutions.description': 'ATEZ Software Technologies\'in uluslararası ticaret ve gümrük zorluklarınız için ürünlerini nasıl kullanarak hedefe yönelik çözümler sunduğunu keşfedin.',
     'solutions.solution.htsClassification': 'GTİP Kodu Sınıflandırması',
@@ -472,8 +474,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.postDeclarationControl': 'Sonradan Kontrol ve Denetim Desteği',
     'solutions.solution.cbamReporting': 'CBAM Raporlaması ve Karbon Muhasebesi',
     'solutions.solution.dataVisualization': 'Ticaret Veri Görselleştirme ve Analizi',
-    'solutions.solution.declarantAI': 'Yapay Zeka Destekli Gümrük Beyannamesi Hazırlama', // Updated
-    'solutions.solution.transitAI': 'Yapay Zeka Destekli Transit Beyannamesi Hazırlama', // Updated
+    'solutions.solution.declarantAI': 'Yapay Zeka Destekli Gümrük Beyannamesi Hazırlama',
+    'solutions.solution.transitAI': 'Yapay Zeka Destekli Transit Beyannamesi Hazırlama',
     'solutions.solution.relayhub': 'Relayhub Veri Değişim Entegrasyonu',
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
