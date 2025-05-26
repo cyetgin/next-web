@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'ATEZ Software Technologies',
-  description: 'Your centralized platform for content management by ATEZ Software Technologies.',
+  description: 'ATEZ Software Technologies: High-end software solutions powered by Blockchain, AI, ML, and Business Intelligence.',
 };
 
 export default function RootLayout({
