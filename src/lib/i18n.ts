@@ -126,6 +126,7 @@ export type TranslationKey =
   | 'solutions.solution.transitAI'
   | 'solutions.solution.relayhub'
   | 'solutions.solution.smartSuggestions'
+  | 'solutions.solution.historicalDataTariff' // New key
   | 'solutions.viewProductDetails';
 
 export const translations: Record<Locale, Record<string, string>> = {
@@ -247,6 +248,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',
     'solutions.solution.relayhub': 'Relayhub Data Exchange Integration',
     'solutions.solution.smartSuggestions': 'Smart Suggestions',
+    'solutions.solution.historicalDataTariff': 'Historically Indexed Regulative Data',
     'solutions.viewProductDetails': 'View Product Details',
   },
   de: {
@@ -364,6 +366,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.transitAI': 'KI-gestützte Erstellung von Transitanmeldungen',
     'solutions.solution.relayhub': 'Relayhub Daten Austausch Integration',
     'solutions.solution.smartSuggestions': 'Intelligente Vorschläge',
+    'solutions.solution.historicalDataTariff': 'Historisch indexierte Regulierungsdaten',
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
   },
   tr: {
@@ -481,8 +484,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.transitAI': 'Yapay Zeka Destekli Transit Beyannamesi Hazırlama',
     'solutions.solution.relayhub': 'Relayhub Veri Değişim Entegrasyonu',
     'solutions.solution.smartSuggestions': 'Akıllı Öneriler',
+    'solutions.solution.historicalDataTariff': 'Tarihsel Endeksli Düzenleyici Veriler',
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };
-
-    
