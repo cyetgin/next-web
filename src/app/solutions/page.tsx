@@ -17,7 +17,6 @@ import {
   Leaf,
   Globe,
   Bot, 
-  ArrowRightLeft,
   Network,
   // Solution specific icons
   ListFilter,
@@ -29,7 +28,7 @@ import {
   PlugZap,
   FileStack,
   FileLock2,
-  // Bot, // Re-used
+  // Bot, // Re-used for TransitAI, DeclarantAI
   ShieldAlert,
   SearchCheck,
   FileBarChart2,
@@ -126,7 +125,7 @@ export default function SolutionsPage() {
                       <Link
                         key={solution.nameKey}
                         href={`/products#${productInfo.slug}`}
-                        className="block p-4 border rounded-lg shadow-sm bg-card hover:shadow-lg transition-shadow duration-300 group transform hover:-translate-y-1"
+                        className="block p-4 border rounded-lg shadow-sm bg-card hover:shadow-lg transition-shadow duration-300 group transform hover:-translate-y-1 h-full"
                       >
                         <div className="flex items-start gap-3">
                           <SolutionIcon className="h-7 w-7 text-accent flex-shrink-0 mt-0.5" />
@@ -141,7 +140,7 @@ export default function SolutionsPage() {
                   })}
                 </div>
               </CardContent>
-              <div className="p-6 pt-4 mt-auto"> {/* Adjusted pt-4 from pt-0 */}
+              <div className="p-6 pt-4 mt-auto">
                  <Button asChild variant="outline" className="w-full group">
                     <Link href={`/products#${productInfo.slug}`}>
                       {t('solutions.viewProductDetails')} ({t(productInfo.nameKey)})
@@ -156,5 +155,3 @@ export default function SolutionsPage() {
     </div>
   );
 }
-
-    
