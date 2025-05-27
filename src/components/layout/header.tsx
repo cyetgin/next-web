@@ -45,7 +45,7 @@ export function Header() {
               alt={t('logo.text')}
               width={logoWidth}
               height={logoHeight}
-              className="h-8 w-auto" // This scales it down to fit header height
+              className="h-[105px] w-auto" // Changed h-8 to h-[105px]
               priority
             />
           </Link>
