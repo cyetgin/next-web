@@ -18,7 +18,8 @@ import {
   BrainCircuit, 
   FileText, 
   Lightbulb, 
-  ArrowRight
+  ArrowRight,
+  AreaChart
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -169,7 +170,7 @@ export default function ProductsPage() {
                     if (product.nameKey === 'products.product.logicust') {
                       const parts = descriptionText.split('{{PRODUCT_TOOLTIP_TARGET}}');
                       productDescriptionElement = (
-                        <p className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed flex-grow">
+                        <div className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed flex-grow">
                           {parts[0]}
                           {parts.length > 1 && (
                             <Tooltip>
@@ -184,7 +185,7 @@ export default function ProductsPage() {
                             </Tooltip>
                           )}
                           {parts[1]}
-                        </p>
+                        </div>
                       );
                     } else {
                       productDescriptionElement = (
