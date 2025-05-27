@@ -2,20 +2,21 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image'; // Import next/image
 import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
   Lightbulb, 
   ChevronRight,
-  BookOpen,
-  Truck,
-  ShieldCheck,
-  Search,
-  FilePenLine,
-  Replace,
-  Leaf,
-  Globe,
+  // BookOpen, // Replaced by imageUrl for Tariff
+  // Truck, // Replaced by imageUrl for Logicust
+  ShieldCheck, // Kept for Customs Compliance solution, though Customs Shield product uses imageUrl
+  // Search, // Replaced by imageUrl for Customs X-Ray
+  // FilePenLine, // Replaced by imageUrl for Declarant
+  // Replace, // Replaced by imageUrl for Transcode
+  // Leaf, // Replaced by imageUrl for Greenpulse
+  Globe, // For Tradeloupe product
   Bot, 
   Network,
   // Solution specific icons
@@ -47,7 +48,8 @@ interface Solution {
 
 interface ProductInfo {
   nameKey: TranslationKey;
-  icon: LucideIcon;
+  icon?: LucideIcon; // Lucide icon is now optional
+  imageUrl?: string; // Added imageUrl for Firebase images
   slug: string;
   detailPagePath?: string; // For linking to specific product pages
 }
@@ -74,13 +76,42 @@ const solutionsList: Solution[] = [
 ];
 
 const productDetailsMap: Record<string, ProductInfo> = {
-  'products.product.logicust': { nameKey: 'products.product.logicust', icon: Truck, slug: 'logicust' },
-  'products.product.tariff': { nameKey: 'products.product.tariff', icon: BookOpen, slug: 'tariff', detailPagePath: '/products/tariff' },
-  'products.product.declarant': { nameKey: 'products.product.declarant', icon: FilePenLine, slug: 'declarant' },
-  'products.product.transcode': { nameKey: 'products.product.transcode', icon: Replace, slug: 'transcode' },
-  'products.product.customsShield': { nameKey: 'products.product.customsShield', icon: ShieldCheck, slug: 'customs-shield' },
-  'products.product.customsXRay': { nameKey: 'products.product.customsXRay', icon: Search, slug: 'customs-xray' },
-  'products.product.greenpulse': { nameKey: 'products.product.greenpulse', icon: Leaf, slug: 'greenpulse' },
+  'products.product.logicust': { 
+    nameKey: 'products.product.logicust', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=4f83103e-5574-4ec7-abd5-8b0d299ecf2f', 
+    slug: 'logicust' 
+  },
+  'products.product.tariff': { 
+    nameKey: 'products.product.tariff', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd', 
+    slug: 'tariff', 
+    detailPagePath: '/products/tariff' 
+  },
+  'products.product.declarant': { 
+    nameKey: 'products.product.declarant', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-declarant-3-%400.5x.webp?alt=media&token=a2c6cf7f-b841-455b-b503-043679d5400d', 
+    slug: 'declarant' 
+  },
+  'products.product.transcode': { 
+    nameKey: 'products.product.transcode', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transcode-3-%400.5x.webp?alt=media&token=86b8bffe-3847-416a-b413-9b822565641b', 
+    slug: 'transcode' 
+  },
+  'products.product.customsShield': { 
+    nameKey: 'products.product.customsShield', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icons-customs-shield-3-%400.5x.webp?alt=media&token=b0f7725f-a3b1-4765-834c-a7bda54e022a', 
+    slug: 'customs-shield' 
+  },
+  'products.product.customsXRay': { 
+    nameKey: 'products.product.customsXRay', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-customs-x-ray-3-%400.5x.webp?alt=media&token=24feb9c5-9986-4b84-aabd-1fe9adb3838f', 
+    slug: 'customs-xray' 
+  },
+  'products.product.greenpulse': { 
+    nameKey: 'products.product.greenpulse', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-greenpulse-3-%400.5x.webp?alt=media&token=ade9a485-6717-467d-855e-2a757a087dcf', 
+    slug: 'greenpulse' 
+  },
   'products.product.tradeloupe': { nameKey: 'products.product.tradeloupe', icon: Globe, slug: 'tradeloupe' },
 };
 
@@ -114,13 +145,23 @@ export default function SolutionsPage() {
           const productInfo = productDetailsMap[productKey as TranslationKey];
           if (!productInfo) return null; 
 
-          const ProductIcon = productInfo.icon;
+          const ProductIcon = productInfo.icon; // This will be undefined if imageUrl is used
           const productLink = productInfo.detailPagePath || `/products#${productInfo.slug}`;
 
           return (
             <Card key={productKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
               <CardHeader className="flex flex-row items-center gap-3 pb-4">
-                <ProductIcon className="h-8 w-8 text-primary flex-shrink-0" />
+                {productInfo.imageUrl ? (
+                  <Image
+                    src={productInfo.imageUrl}
+                    alt={t(productInfo.nameKey)}
+                    width={32} 
+                    height={32} 
+                    className="h-8 w-8 object-contain flex-shrink-0"
+                  />
+                ) : ProductIcon ? (
+                  <ProductIcon className="h-8 w-8 text-primary flex-shrink-0" />
+                ) : null}
                 <CardTitle className="text-2xl">{t(productInfo.nameKey)}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
@@ -130,7 +171,7 @@ export default function SolutionsPage() {
                     return (
                       <Link
                         key={solution.nameKey}
-                        href={productLink} // Link to the product detail page or anchor
+                        href={productLink} 
                         className="block p-4 border rounded-lg shadow-sm bg-card hover:shadow-lg transition-shadow duration-300 group transform hover:-translate-y-1 h-full"
                       >
                         <div className="flex items-start gap-3">
@@ -161,5 +202,4 @@ export default function SolutionsPage() {
     </div>
   );
 }
-
     
