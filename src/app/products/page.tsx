@@ -13,8 +13,7 @@ import {
   FileText, 
   Lightbulb, 
   ArrowRight,
-  // FilePenLine, // Removed as Declarant now uses imageUrl
-  Leaf, 
+  // Leaf, // Removed as Greenpulse now uses imageUrl
   Globe,
   // Network // Keep for Relayhub if it's still a product, or remove if not - Relayhub removed
 } from 'lucide-react';
@@ -108,7 +107,12 @@ const productCategories: ProductCategory[] = [
     categoryKey: 'products.category.other',
     icon: Lightbulb,
     products: [
-      { nameKey: 'products.product.greenpulse', descriptionKey: 'products.product.greenpulse.description', slug: 'greenpulse', icon: Leaf },
+      { 
+        nameKey: 'products.product.greenpulse', 
+        descriptionKey: 'products.product.greenpulse.description', 
+        slug: 'greenpulse', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-greenpulse-3-%400.5x.webp?alt=media&token=ade9a485-6717-467d-855e-2a757a087dcf' 
+      },
       { nameKey: 'products.product.tradeloupe', descriptionKey: 'products.product.tradeloupe.description', slug: 'tradeloupe', icon: Globe },
     ],
   },
