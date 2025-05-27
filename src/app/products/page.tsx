@@ -13,7 +13,6 @@ import {
   FileText, 
   Lightbulb, 
   ArrowRight,
-  ArrowRightLeft, 
   Bot, 
   FilePenLine, 
   Leaf, 
@@ -74,7 +73,12 @@ const productCategories: ProductCategory[] = [
         slug: 'customs-xray', 
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-customs-x-ray-3-%400.5x.webp?alt=media&token=24feb9c5-9986-4b84-aabd-1fe9adb3838f' 
       },
-      { nameKey: 'products.product.transitAI', descriptionKey: 'products.product.transitAI.description', slug: 'transit-ai', icon: ArrowRightLeft },
+      { 
+        nameKey: 'products.product.transitAI', 
+        descriptionKey: 'products.product.transitAI.description', 
+        slug: 'transit-ai', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transitAI%400.5x.webp?alt=media&token=aaff5c1b-885a-4059-9a73-3cac5ef437c1' 
+      },
       { nameKey: 'products.product.declarantAI', descriptionKey: 'products.product.declarantAI.description', slug: 'declarant-ai', icon: Bot },
     ],
   },
