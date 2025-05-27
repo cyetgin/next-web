@@ -145,6 +145,15 @@ export type TranslationKey =
   | 'products.tariff.module.taxCalculation.description'
   | 'products.tariff.module.findMyCommodityCode.title'
   | 'products.tariff.module.findMyCommodityCode.description'
+  | 'products.tariff.keyBenefits.title'
+  | 'products.tariff.keyBenefit.realTimeUpdates.title'
+  | 'products.tariff.keyBenefit.realTimeUpdates.description'
+  | 'products.tariff.keyBenefit.multiCountrySupport.title'
+  | 'products.tariff.keyBenefit.multiCountrySupport.description'
+  | 'products.tariff.keyBenefit.eliminateLanguageBarriers.title'
+  | 'products.tariff.keyBenefit.eliminateLanguageBarriers.description'
+  | 'products.tariff.keyBenefit.upToDateNomenclatures.title'
+  | 'products.tariff.keyBenefit.upToDateNomenclatures.description'
   // Common
   | 'common.backToProducts';
 
@@ -287,6 +296,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.module.taxCalculation.description': 'Tariff offers a tax calculation module for your import inquiries, letting you estimate customs duties and other import taxes with a few clicks.',
     'products.tariff.module.findMyCommodityCode.title': 'Find Your HTS Code',
     'products.tariff.module.findMyCommodityCode.description': 'Simply define your good with keywords and search it. Tariff helps you identify the appropriate commodity codes for your goods based on keywords you enter. Benefit from always up-to-date nomenclature for European Union, United Kingdom, Switzerland, and Türkiye.',
+    'products.tariff.keyBenefits.title': 'Key Benefits',
+    'products.tariff.keyBenefit.realTimeUpdates.title': 'Real-Time Updates',
+    'products.tariff.keyBenefit.realTimeUpdates.description': 'Benefit from real-time updates for your articles, guaranteeing constant alignment with the latest legislations.',
+    'products.tariff.keyBenefit.multiCountrySupport.title': 'Multi-Country Support',
+    'products.tariff.keyBenefit.multiCountrySupport.description': 'Access customs regulation data for European Union, United Kingdom, Switzerland, and Türkiye, with ongoing expansion efforts to include more countries. Establishing Tariff as a truly international resource for trade facilitation.',
+    'products.tariff.keyBenefit.eliminateLanguageBarriers.title': 'Eliminate Language Barriers',
+    'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff provides comprehensive customs regulations for European Union, United Kingdom, Switzerland, and Türkiye in English, German and Turkish.',
+    'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Up-to-Date Tariff Nomenclatures',
+    'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Stay ahead with always up-to-date tariff nomenclatures. Every change tracked by Tariff to serve its users.',
     'common.backToProducts': 'Back to Products',
   },
   de: {
@@ -422,6 +440,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.module.taxCalculation.description': 'Tariff bietet ein Steuerberechnungsmodul für Ihre Importanfragen, mit dem Sie Zollabgaben und andere Importsteuern mit wenigen Klicks schätzen können.',
     'products.tariff.module.findMyCommodityCode.title': 'Finden Sie Ihren HS-Code',
     'products.tariff.module.findMyCommodityCode.description': 'Definieren Sie Ihre Ware einfach mit Schlüsselwörtern und suchen Sie danach. Tariff hilft Ihnen, die passenden Warencodes für Ihre Waren basierend auf den von Ihnen eingegebenen Schlüsselwörtern zu identifizieren. Profitieren Sie von stets aktueller Nomenklatur für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei.',
+    'products.tariff.keyBenefits.title': 'Wichtige Vorteile',
+    'products.tariff.keyBenefit.realTimeUpdates.title': 'Echtzeit-Updates',
+    'products.tariff.keyBenefit.realTimeUpdates.description': 'Profitieren Sie von Echtzeit-Updates für Ihre Artikel, die eine ständige Anpassung an die neuesten Gesetze gewährleisten.',
+    'products.tariff.keyBenefit.multiCountrySupport.title': 'Unterstützung mehrerer Länder',
+    'products.tariff.keyBenefit.multiCountrySupport.description': 'Greifen Sie auf Zollvorschriftsdaten für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei zu, mit laufenden Erweiterungsbemühungen um weitere Länder. Tariff etabliert sich als eine wirklich internationale Ressource für Handelserleichterungen.',
+    'products.tariff.keyBenefit.eliminateLanguageBarriers.title': 'Sprachbarrieren beseitigen',
+    'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff bietet umfassende Zollvorschriften für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei in Englisch, Deutsch und Türkisch.',
+    'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Aktuelle Tarifnomenklaturen',
+    'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Bleiben Sie mit stets aktuellen Tarifnomenklaturen immer einen Schritt voraus. Jede Änderung wird von Tariff verfolgt, um seinen Benutzern zu dienen.',
     'common.backToProducts': 'Zurück zu den Produkten',
   },
   tr: {
@@ -557,8 +584,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.module.taxCalculation.description': 'Tariff, ithalat sorgularınız için bir vergi hesaplama modülü sunarak, birkaç tıklama ile gümrük vergilerini ve diğer ithalat vergilerini tahmin etmenizi sağlar.',
     'products.tariff.module.findMyCommodityCode.title': 'GTİP Kodunuzu Bulun',
     'products.tariff.module.findMyCommodityCode.description': 'Malınızı anahtar kelimelerle tanımlayın ve arayın. Tariff, girdiğiniz anahtar kelimelere göre mallarınız için uygun GTİP kodlarını belirlemenize yardımcı olur. Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için her zaman güncel nomanklatürden yararlanın.',
+    'products.tariff.keyBenefits.title': 'Temel Avantajlar',
+    'products.tariff.keyBenefit.realTimeUpdates.title': 'Gerçek Zamanlı Güncellemeler',
+    'products.tariff.keyBenefit.realTimeUpdates.description': 'Maddeleriniz için gerçek zamanlı güncellemelerden yararlanın, en son mevzuatlarla sürekli uyumu garanti edin.',
+    'products.tariff.keyBenefit.multiCountrySupport.title': 'Çoklu Ülke Desteği',
+    'products.tariff.keyBenefit.multiCountrySupport.description': 'Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için gümrük düzenleme verilerine erişin, daha fazla ülkeyi dahil etmek için devam eden genişletme çabalarıyla. Tariff\'i ticaret kolaylaştırması için gerçekten uluslararası bir kaynak olarak konumlandırın.',
+    'products.tariff.keyBenefit.eliminateLanguageBarriers.title': 'Dil Engellerini Ortadan Kaldırın',
+    'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff, Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için İngilizce, Almanca ve Türkçe dillerinde kapsamlı gümrük düzenlemeleri sunar.',
+    'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Güncel Tarife Nomanklatürleri',
+    'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Her zaman güncel tarife nomanklatürleri ile bir adım önde olun. Her değişiklik, kullanıcılarına hizmet vermek için Tariff tarafından takip edilir.',
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
-
-    

@@ -6,10 +6,16 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Search, ListChecks, Calculator, Sparkles } from 'lucide-react';
+import { ArrowLeft, Search, ListChecks, Calculator, Sparkles, RefreshCw, Globe2, Languages, FileText } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 
 interface Module {
+  titleKey: TranslationKey;
+  descriptionKey: TranslationKey;
+  icon: React.ElementType;
+}
+
+interface Benefit {
   titleKey: TranslationKey;
   descriptionKey: TranslationKey;
   icon: React.ElementType;
@@ -23,6 +29,13 @@ export default function TariffPage() {
     { titleKey: 'products.tariff.module.detailedQuery.title', descriptionKey: 'products.tariff.module.detailedQuery.description', icon: ListChecks },
     { titleKey: 'products.tariff.module.taxCalculation.title', descriptionKey: 'products.tariff.module.taxCalculation.description', icon: Calculator },
     { titleKey: 'products.tariff.module.findMyCommodityCode.title', descriptionKey: 'products.tariff.module.findMyCommodityCode.description', icon: Sparkles },
+  ];
+
+  const benefits: Benefit[] = [
+    { titleKey: 'products.tariff.keyBenefit.realTimeUpdates.title', descriptionKey: 'products.tariff.keyBenefit.realTimeUpdates.description', icon: RefreshCw },
+    { titleKey: 'products.tariff.keyBenefit.multiCountrySupport.title', descriptionKey: 'products.tariff.keyBenefit.multiCountrySupport.description', icon: Globe2 },
+    { titleKey: 'products.tariff.keyBenefit.eliminateLanguageBarriers.title', descriptionKey: 'products.tariff.keyBenefit.eliminateLanguageBarriers.description', icon: Languages },
+    { titleKey: 'products.tariff.keyBenefit.upToDateNomenclatures.title', descriptionKey: 'products.tariff.keyBenefit.upToDateNomenclatures.description', icon: FileText },
   ];
 
   return (
@@ -80,8 +93,28 @@ export default function TariffPage() {
           ))}
         </div>
       </section>
+
+      <section className="space-y-10">
+        <h2 className="text-3xl font-semibold text-center text-primary">
+          {t('products.tariff.keyBenefits.title')}
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          {benefits.map((benefit) => (
+            <Card key={benefit.titleKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+              <CardHeader className="flex flex-row items-start gap-4">
+                <benefit.icon className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
+                <div>
+                  <CardTitle className="text-2xl">{t(benefit.titleKey)}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-foreground/80 leading-relaxed whitespace-pre-line">{t(benefit.descriptionKey)}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 }
-
-    
