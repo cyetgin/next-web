@@ -19,7 +19,7 @@ import {
   Search, 
   ArrowRightLeft, 
   Bot, 
-  Replace, 
+  // Replace, // Transcode icon removed as it will use an image
   FilePenLine, 
   Leaf, 
   Globe,
@@ -59,7 +59,7 @@ const productCategories: ProductCategory[] = [
         nameKey: 'products.product.logicust', 
         descriptionKey: 'products.product.logicust.description', 
         slug: 'logicust', 
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd' // Updated Logicust to use imageUrl
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=4f83103e-5574-4ec7-abd5-8b0d299ecf2f'
       },
     ],
   },
@@ -77,7 +77,12 @@ const productCategories: ProductCategory[] = [
     categoryKey: 'products.category.declarationFiling',
     icon: FileText,
     products: [
-      { nameKey: 'products.product.transcode', descriptionKey: 'products.product.transcode.description', slug: 'transcode', icon: Replace },
+      { 
+        nameKey: 'products.product.transcode', 
+        descriptionKey: 'products.product.transcode.description', 
+        slug: 'transcode', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transcode-3-%400.5x.webp?alt=media&token=86b8bffe-3847-416a-b413-9b822565641b' 
+      },
       { nameKey: 'products.product.declarant', descriptionKey: 'products.product.declarant.description', slug: 'declarant', icon: FilePenLine },
     ],
   },
@@ -163,3 +168,4 @@ export default function ProductsPage() {
     </div>
   );
 }
+
