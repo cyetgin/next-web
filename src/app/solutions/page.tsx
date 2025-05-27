@@ -23,7 +23,7 @@ import {
   ShieldAlert,
   SearchCheck,
   FileBarChart2,
-  AreaChart,
+  AreaChart, // Keep for solution icon
   Sparkles,
   History
 } from 'lucide-react';
@@ -104,7 +104,7 @@ const productDetailsMap: Record<string, ProductInfo> = {
   },
   'products.product.customsLoupe': { 
     nameKey: 'products.product.customsLoupe', 
-    icon: AreaChart, // Or use an imageUrl if you have one
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-customs-loupe-3-%400.5x.webp?alt=media&token=8b3ddf7b-bc43-4461-a2fb-2a692a363722', 
     slug: 'customs-loupe' 
   },
 };

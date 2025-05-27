@@ -12,8 +12,8 @@ import {
   BrainCircuit, 
   FileText, 
   Lightbulb, 
-  ArrowRight,
-  AreaChart, // Added for Customs Loupe
+  ArrowRight
+  // AreaChart, // Removed as Customs Loupe now uses imageUrl
   // Leaf, // Removed as Greenpulse now uses imageUrl
   // Globe, // Removed as Tradeloupe is removed
   // Network // Keep for Relayhub if it's still a product, or remove if not - Relayhub removed
@@ -118,7 +118,7 @@ const productCategories: ProductCategory[] = [
         nameKey: 'products.product.customsLoupe', 
         descriptionKey: 'products.product.customsLoupe.description', 
         slug: 'customs-loupe', 
-        icon: AreaChart 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-customs-loupe-3-%400.5x.webp?alt=media&token=8b3ddf7b-bc43-4461-a2fb-2a692a363722'
       },
     ],
   },
