@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import { useTranslation } from '@/hooks/use-translation';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2, Truck } from 'lucide-react';
@@ -16,8 +16,6 @@ interface CapabilityItem {
   descriptionKey: TranslationKey;
   imageSrc: string;
   imageAltKey: TranslationKey;
-  dataAiHint?: string; // Made optional
-  icon: React.ElementType;
 }
 
 const capabilities: CapabilityItem[] = [
@@ -26,28 +24,24 @@ const capabilities: CapabilityItem[] = [
     descriptionKey: 'home.capabilities.crossBorder.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/compliance-600-400.webp?alt=media&token=ae787123-7b50-47f0-899b-5b0369e35768',
     imageAltKey: 'home.capabilities.crossBorder.title',
-    icon: ShieldCheck,
   },
   {
     titleKey: 'home.capabilities.autonomousData.title',
     descriptionKey: 'home.capabilities.autonomousData.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/end-to-end.webp?alt=media&token=20090d41-cf2b-455e-ad11-e8c172743f9c',
     imageAltKey: 'home.capabilities.autonomousData.title',
-    icon: Workflow,
   },
   {
     titleKey: 'home.capabilities.streamlinedCustomsTransit.title',
     descriptionKey: 'home.capabilities.streamlinedCustomsTransit.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/streamlined-600-400.webp?alt=media&token=05a6798f-3d8c-4ee9-abc3-0f8e5b4dba75',
     imageAltKey: 'home.capabilities.streamlinedCustomsTransit.title',
-    icon: Truck,
   },
   {
     titleKey: 'home.capabilities.autonomousDataFlowAutomation.title',
     descriptionKey: 'home.capabilities.autonomousDataFlowAutomation.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/autonomous-600-400.webp?alt=media&token=a8bb849d-f80a-4457-afc9-8b5a9eded375',
     imageAltKey: 'home.capabilities.autonomousDataFlowAutomation.title',
-    icon: Settings2,
   },
 ];
 
@@ -80,6 +74,9 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
             {t('home.welcomeTitle')}
           </h1>
+          <p className="mt-2 text-lg font-medium text-primary/80 md:text-xl">
+            {t('home.blockchainReadySlogan')}
+          </p>
           <p className="mx-auto max-w-[800px] text-foreground/80 md:text-xl mt-4">
             {t('home.welcomeSubtitle')}
           </p>
@@ -123,7 +120,6 @@ export default function HomePage() {
                   alt={t(capability.imageAltKey)}
                   fill
                   style={{ objectFit: 'cover' }}
-                  data-ai-hint={capability.dataAiHint}
                 />
               </div>
               <CardHeader>

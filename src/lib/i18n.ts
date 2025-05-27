@@ -19,6 +19,7 @@ export type TranslationKey =
   | 'nav.news'
   | 'nav.settings'
   | 'home.welcomeTitle'
+  | 'home.blockchainReadySlogan' // New key
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
   | 'home.capabilities.crossBorder.title'
@@ -179,7 +180,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.news': 'News',
     'nav.settings': 'Settings',
     'home.welcomeTitle': 'Automating Global Trade, Intelligently.',
-    'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Blockchain, AI, ML, and BI.',
+    'home.blockchainReadySlogan': 'Blockchain ready',
+    'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Artificial Intelligence, Machine Learning, and Business Intelligence.',
     'home.featuresTitle': 'Core Capabilities',
     'home.capabilities.crossBorder.title': 'Comprehensive Customs Compliance Solutions',
     'home.capabilities.crossBorder.description': 'Ensure adherence to global trade regulations with our advanced tools. Leverage Tariff for up-to-date regulations, Logicust for operational efficiency, and AI-powered solutions for risk management and accuracy.',
@@ -190,7 +192,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'home.capabilities.autonomousDataFlowAutomation.title': 'Autonomous Data Flow & Process Automation',
     'home.capabilities.autonomousDataFlowAutomation.description': 'Implement intelligent automation for data exchange and process handling, minimizing manual intervention and improving operational efficiency throughout your trade lifecycle.',
     'home.companyInfo.title': 'About ATEZ Software Technologies',
-    'home.companyInfo.description': 'ATEZ Software Technologies specializes in high-end software solutions for international trade, focusing on customs compliance, cross-border goods movement, and autonomous process automation through Blockchain, AI, ML, and BI.',
+    'home.companyInfo.description': 'ATEZ Software Technologies specializes in high-end software solutions for international trade, focusing on customs compliance, cross-border goods movement, and autonomous process automation through Blockchain, Artificial Intelligence, Machine Learning, and Business Intelligence.',
     'home.cta.title': 'Transform Your Trade Operations with ATEZ',
     'home.cta.description': 'Partner with us to implement cutting-edge solutions for autonomous customs declarations, compliance, and efficient cross-border logistics.',
     'home.cta.button': 'Discuss Your Needs',
@@ -336,7 +338,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.news': 'Aktuelles',
     'nav.settings': 'Einstellungen',
     'home.welcomeTitle': 'Globalen Handel intelligent automatisieren.',
-    'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Blockchain, KI, ML und BI.',
+    'home.blockchainReadySlogan': 'Blockchain-fähig',
+    'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Künstliche Intelligenz, Maschinelles Lernen und Business Intelligence.',
     'home.featuresTitle': 'Kernkompetenzen',
     'home.capabilities.crossBorder.title': 'Umfassende Lösungen für Zollkonformität',
     'home.capabilities.crossBorder.description': 'Stellen Sie die Einhaltung globaler Handelsvorschriften mit unseren fortschrittlichen Werkzeugen sicher. Nutzen Sie Tariff für aktuelle Vorschriften, Logicust für betriebliche Effizienz und KI-gestützte Lösungen für Risikomanagement und Genauigkeit.',
@@ -347,7 +350,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'home.capabilities.autonomousDataFlowAutomation.title': 'Autonomer Datenfluss & Prozessautomatisierung',
     'home.capabilities.autonomousDataFlowAutomation.description': 'Implementieren Sie intelligente Automatisierung für den Datenaustausch und die Prozessabwicklung, minimieren Sie manuelle Eingriffe und verbessern Sie die betriebliche Effizienz während Ihres gesamten Handelszyklus.',
     'home.companyInfo.title': 'Über ATEZ Software Technologies',
-    'home.companyInfo.description': 'ATEZ Software Technologies ist spezialisiert auf High-End-Softwarelösungen für den internationalen Handel, mit Fokus auf Zollkonformität, grenzüberschreitenden Warenverkehr und autonome Prozessautomatisierung durch Blockchain, KI, ML und BI.',
+    'home.companyInfo.description': 'ATEZ Software Technologies ist spezialisiert auf High-End-Softwarelösungen für den internationalen Handel, mit Fokus auf Zollkonformität, grenzüberschreitenden Warenverkehr und autonome Prozessautomatisierung durch Blockchain, Künstliche Intelligenz, Maschinelles Lernen und Business Intelligence.',
     'home.cta.title': 'Transformieren Sie Ihre Handelsoperationen mit ATEZ',
     'home.cta.description': 'Arbeiten Sie mit uns zusammen, um innovative Lösungen für autonome Zollanmeldungen, Compliance und effiziente grenzüberschreitende Logistik zu implementieren.',
     'home.cta.button': 'Besprechen Sie Ihre Bedürfnisse',
@@ -489,6 +492,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.news': 'Haberler',
     'nav.settings': 'Ayarlar',
     'home.welcomeTitle': 'Küresel Ticareti Akıllıca Otomatikleştirin.',
+    'home.blockchainReadySlogan': 'Blockchain hazır',
     'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
     'home.featuresTitle': 'Temel Yetenekler',
     'home.capabilities.crossBorder.title': 'Kapsamlı Gümrük Uyumluluk Çözümleri',
@@ -632,3 +636,4 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+
