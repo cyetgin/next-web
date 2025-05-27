@@ -6,7 +6,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, Cpu, BrainCircuit, BarChart, Link2, PackageCheck, Workflow, Settings2 } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
@@ -22,20 +22,20 @@ interface CapabilityItem {
 
 const capabilities: CapabilityItem[] = [
   {
-    titleKey: 'home.capabilities.crossBorder.title',
+    titleKey: 'home.capabilities.crossBorder.title', // Represents "Comprehensive Customs Compliance Solutions"
     descriptionKey: 'home.capabilities.crossBorder.description',
     imageSrc: 'https://placehold.co/600x400.png',
     imageAltKey: 'home.capabilities.crossBorder.title',
-    dataAiHint: 'logistics customs',
-    icon: PackageCheck,
+    dataAiHint: 'compliance regulations',
+    icon: ShieldCheck, // Updated Icon
   },
   {
-    titleKey: 'home.capabilities.autonomousData.title',
+    titleKey: 'home.capabilities.autonomousData.title', // Represents "Automated End-to-End Customs Procedure Handling"
     descriptionKey: 'home.capabilities.autonomousData.description',
     imageSrc: 'https://placehold.co/600x400.png',
     imageAltKey: 'home.capabilities.autonomousData.title',
-    dataAiHint: 'automation workflow',
-    icon: Workflow,
+    dataAiHint: 'data automation',
+    icon: Workflow, // Icon remains suitable
   },
 ];
 
@@ -147,5 +147,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    

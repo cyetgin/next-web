@@ -22,10 +22,10 @@ export type TranslationKey =
   | 'home.companyNameForSlogan' // New key for company name under slogan
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
-  | 'home.capabilities.crossBorder.title'
-  | 'home.capabilities.crossBorder.description'
-  | 'home.capabilities.autonomousData.title'
-  | 'home.capabilities.autonomousData.description'
+  | 'home.capabilities.crossBorder.title' // Now: "Comprehensive Customs Compliance Solutions"
+  | 'home.capabilities.crossBorder.description' // Now: Description for Customs Compliance
+  | 'home.capabilities.autonomousData.title' // Now: "Automated End-to-End Customs Procedure Handling"
+  | 'home.capabilities.autonomousData.description' // Now: Description for End-to-End Handling
   | 'home.companyInfo.title'
   | 'home.companyInfo.description'
   | 'home.cta.title'
@@ -141,14 +141,14 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.contact': 'Contact Us',
     'nav.news': 'News',
     'nav.settings': 'Settings',
-    'home.welcomeTitle': 'Automating Global Trade, Intelligently.', // Slogan
-    'home.companyNameForSlogan': 'ATEZ Software Technologies', // Company name under slogan
+    'home.welcomeTitle': 'Automating Global Trade, Intelligently.',
+    'home.companyNameForSlogan': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Blockchain, AI, ML, and BI.',
     'home.featuresTitle': 'Core Capabilities',
-    'home.capabilities.crossBorder.title': 'Streamlined Cross-Border Customs & Transit Procedures',
-    'home.capabilities.crossBorder.description': 'Navigate international trade complexities with ease. Our solutions optimize customs declarations, ensure compliance, and accelerate the movement of goods across borders.',
-    'home.capabilities.autonomousData.title': 'Autonomous Data Flow & Process Automation',
-    'home.capabilities.autonomousData.description': 'Leverage AI and ML to automate end-to-end data flows and procedure handling for customs and transit, minimizing manual intervention and maximizing efficiency.',
+    'home.capabilities.crossBorder.title': 'Comprehensive Customs Compliance Solutions',
+    'home.capabilities.crossBorder.description': 'Ensure adherence to global trade regulations with our advanced tools. Leverage Tariff for up-to-date regulations, Logicust for operational efficiency, and AI-powered solutions for risk management and accuracy.',
+    'home.capabilities.autonomousData.title': 'Automated End-to-End Customs Procedure Handling',
+    'home.capabilities.autonomousData.description': 'Streamline your customs processes from start to finish. Our systems enable seamless data flow, including automated conversion of export declaration data into import declaration data, minimizing errors and saving time.',
     'home.companyInfo.title': 'About ATEZ Software Technologies',
     'home.companyInfo.description': 'ATEZ Software Technologies specializes in high-end software solutions for international trade, focusing on customs compliance, cross-border goods movement, and autonomous process automation through Blockchain, AI, ML, and BI.',
     'home.cta.title': 'Transform Your Trade Operations with ATEZ',
@@ -263,14 +263,14 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.contact': 'Kontakt',
     'nav.news': 'Aktuelles',
     'nav.settings': 'Einstellungen',
-    'home.welcomeTitle': 'Globalen Handel intelligent automatisieren.', // Slogan
-    'home.companyNameForSlogan': 'ATEZ Softwaretechnologien', // Company name under slogan
+    'home.welcomeTitle': 'Globalen Handel intelligent automatisieren.',
+    'home.companyNameForSlogan': 'ATEZ Softwaretechnologien',
     'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Blockchain, KI, ML und BI.',
     'home.featuresTitle': 'Kernkompetenzen',
-    'home.capabilities.crossBorder.title': 'Optimierte Grenzüberschreitende Logistik & Zoll',
-    'home.capabilities.crossBorder.description': 'Meistern Sie die Komplexität des internationalen Handels mühelos. Unsere Lösungen optimieren Zollanmeldungen, gewährleisten Konformität und beschleunigen den Warenverkehr über Grenzen hinweg.',
-    'home.capabilities.autonomousData.title': 'Autonomer Datenfluss & Prozessautomatisierung',
-    'home.capabilities.autonomousData.description': 'Nutzen Sie KI und ML, um End-to-End-Datenflüsse und die Abwicklung von Zoll- und Transitverfahren zu automatisieren, manuelle Eingriffe zu minimieren und die Effizienz zu maximieren.',
+    'home.capabilities.crossBorder.title': 'Umfassende Lösungen für Zollkonformität',
+    'home.capabilities.crossBorder.description': 'Stellen Sie die Einhaltung globaler Handelsvorschriften mit unseren fortschrittlichen Werkzeugen sicher. Nutzen Sie Tariff für aktuelle Vorschriften, Logicust für betriebliche Effizienz und KI-gestützte Lösungen für Risikomanagement und Genauigkeit.',
+    'home.capabilities.autonomousData.title': 'Automatisierte End-to-End-Abwicklung von Zollverfahren',
+    'home.capabilities.autonomousData.description': 'Optimieren Sie Ihre Zollprozesse von Anfang bis Ende. Unsere Systeme ermöglichen einen nahtlosen Datenfluss, einschließlich der automatisierten Umwandlung von Ausfuhrdeklarationsdaten in Einfuhrdeklarationsdaten, wodurch Fehler minimiert und Zeit gespart wird.',
     'home.companyInfo.title': 'Über ATEZ Software Technologies',
     'home.companyInfo.description': 'ATEZ Software Technologies ist spezialisiert auf High-End-Softwarelösungen für den internationalen Handel, mit Fokus auf Zollkonformität, grenzüberschreitenden Warenverkehr und autonome Prozessautomatisierung durch Blockchain, KI, ML und BI.',
     'home.cta.title': 'Transformieren Sie Ihre Handelsoperationen mit ATEZ',
@@ -382,14 +382,14 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.contact': 'İletişim',
     'nav.news': 'Haberler',
     'nav.settings': 'Ayarlar',
-    'home.welcomeTitle': 'Küresel Ticareti Akıllıca Otomatikleştirin.', // Slogan
-    'home.companyNameForSlogan': 'ATEZ Yazılım Teknolojileri', // Company name under slogan
+    'home.welcomeTitle': 'Küresel Ticareti Akıllıca Otomatikleştirin.',
+    'home.companyNameForSlogan': 'ATEZ Yazılım Teknolojileri',
     'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
     'home.featuresTitle': 'Temel Yetenekler',
-    'home.capabilities.crossBorder.title': 'Optimize Edilmiş Sınır Ötesi Lojistik ve Gümrük',
-    'home.capabilities.crossBorder.description': 'Uluslararası ticaretin karmaşıklıklarını kolaylıkla yönetin. Çözümlerimiz gümrük beyannamelerini optimize eder, uyumluluğu sağlar ve malların sınırlar arasında hareketini hızlandırır.',
-    'home.capabilities.autonomousData.title': 'Otonom Veri Akışı ve Süreç Otomasyonu',
-    'home.capabilities.autonomousData.description': 'Gümrük ve transit için uçtan uca veri akışlarını ve prosedür yönetimini otomatikleştirmek, manuel müdahaleyi en aza indirmek ve verimliliği en üst düzeye çıkarmak için Yapay Zeka ve Makine Öğreniminden yararlanın.',
+    'home.capabilities.crossBorder.title': 'Kapsamlı Gümrük Uyumluluk Çözümleri',
+    'home.capabilities.crossBorder.description': 'Gelişmiş araçlarımızla küresel ticaret düzenlemelerine uyumu sağlayın. Güncel mevzuat için Tariff\'i, operasyonel verimlilik için Logicust\'u ve risk yönetimi ile doğruluk için yapay zeka destekli çözümleri kullanın.',
+    'home.capabilities.autonomousData.title': 'Otomatikleştirilmiş Uçtan Uca Gümrük Prosedürü Yönetimi',
+    'home.capabilities.autonomousData.description': 'Gümrük süreçlerinizi baştan sona optimize edin. Sistemlerimiz, ihracat beyannamesi verilerinin ithalat beyannamesi verilerine otomatik olarak dönüştürülmesi dahil olmak üzere kesintisiz veri akışı sağlayarak hataları en aza indirir ve zaman kazandırır.',
     'home.companyInfo.title': 'ATEZ Software Technologies Hakkında',
     'home.companyInfo.description': 'ATEZ Software Technologies, Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası aracılığıyla gümrük uyumluluğu, sınır ötesi mal hareketi ve otonom süreç otomasyonuna odaklanarak uluslararası ticaret için üst düzey yazılım çözümlerinde uzmanlaşmıştır.',
     'home.cta.title': 'ATEZ ile Ticaret Operasyonlarınızı Dönüştürün',
@@ -492,6 +492,3 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
   },
 };
-
-
-    
