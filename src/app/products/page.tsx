@@ -151,7 +151,7 @@ export default function ProductsPage() {
 
       <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
         {productCategories.map((category) => (
-          <Card key={category.categoryKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+          <Card key={category.categoryKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
             <CardHeader className="flex flex-row items-center gap-3 pb-4">
               <category.icon className="h-8 w-8 text-primary flex-shrink-0" />
               <CardTitle className="text-2xl">{t(category.categoryKey)}</CardTitle>
@@ -196,3 +196,4 @@ export default function ProductsPage() {
     </div>
   );
 }
+
