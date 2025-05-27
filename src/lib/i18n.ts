@@ -232,7 +232,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Declaration Filing',
     'products.category.other': 'Other Solutions',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': '7/24 updated official customs regulations databank.',
+    'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Optimize logistics and customs documentation for efficient international trade.',
     'products.product.customsShield': 'Customs Shield',
@@ -390,7 +390,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Zollanmeldung',
     'products.category.other': 'Weitere Lösungen',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': '7/24 aktualisierte offizielle Zolldatenbank.',
+    'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Optimierte Logistik- und Zolldokumentation für effizienten internationalen Handel.',
     'products.product.customsShield': 'Customs Shield',
@@ -544,7 +544,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Beyanname Dosyalama',
     'products.category.other': 'Diğer Çözümler',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': '7/24 güncel resmi gümrük mevzuatı veritabanı.',
+    'products.product.tariff.description': '24/7 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
     'products.product.logicust': 'Logicust',
     'products.product.logicust.description': 'Verimli uluslararası ticaret için optimize edilmiş lojistik ve gümrük dokümantasyonu.',
     'products.product.customsShield': 'Customs Shield',
@@ -636,3 +636,5 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+
+
