@@ -42,6 +42,8 @@ export type TranslationKey =
   | 'about.story.content'
   | 'contact.title'
   | 'contact.description'
+  | 'contact.form.title' // New key for form title
+  | 'contact.form.description' // New key for form description
   | 'contact.form.name.label'
   | 'contact.form.name.placeholder'
   | 'contact.form.email.label'
@@ -201,6 +203,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'about.story.content': 'ATEZ Software Technologies was founded to address the growing complexities of global trade. We deliver innovative platforms that make cross-border logistics, customs compliance, and transit declarations more efficient and autonomous. By harnessing Blockchain, AI, ML, and Business Intelligence, we help businesses reduce operational friction and unlock new potentials in international commerce.',
     'contact.title': 'Get In Touch',
     'contact.description': 'Discuss how our specialized solutions for customs, logistics, and autonomous trade can benefit your business. We\'d love to hear from you!',
+    'contact.form.title': 'Contact Form',
+    'contact.form.description': 'Send us your inquiries or questions.',
     'contact.form.name.label': 'Full Name',
     'contact.form.name.placeholder': 'John Doe',
     'contact.form.email.label': 'Email Address',
@@ -357,6 +361,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'about.story.content': 'ATEZ Software Technologies wurde gegründet, um den wachsenden Komplexitäten des globalen Handels zu begegnen. Wir liefern innovative Plattformen, die grenzüberschreitende Logistik, Zollkonformität und Transitanmeldungen effizienter und autonomer gestalten. Durch den Einsatz von Blockchain, KI, ML und Business Intelligence helfen wir Unternehmen, operative Reibungsverluste zu reduzieren und neue Potenziale im internationalen Handel zu erschließen.',
     'contact.title': 'Kontakt aufnehmen',
     'contact.description': 'Besprechen Sie, wie unsere spezialisierten Lösungen für Zoll, Logistik und autonomen Handel Ihrem Unternehmen zugutekommen können. Wir freuen uns, von Ihnen zu hören!',
+    'contact.form.title': 'Kontaktformular',
+    'contact.form.description': 'Senden Sie uns Ihre Anfragen oder Fragen.',
     'contact.form.name.label': 'Vollständiger Name',
     'contact.form.name.placeholder': 'Max Mustermann',
     'contact.form.email.label': 'E-Mail-Adresse',
@@ -509,6 +515,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'about.story.content': 'ATEZ Software Technologies, küresel ticaretin artan karmaşıklıklarına çözüm bulmak amacıyla kurulmuştur. Sınır ötesi lojistiği, gümrük uyumluluğunu ve transit beyannamelerini daha verimli ve otonom hale getiren yenilikçi platformlar sunuyoruz. Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekasını kullanarak, işletmelerin operasyonel engelleri azaltmasına ve uluslararası ticarette yeni potansiyellerin kilidini açmasına yardımcı oluyoruz.',
     'contact.title': 'İletişime Geçin',
     'contact.description': 'Gümrük, lojistik ve otonom ticaret için özel çözümlerimizin işletmenize nasıl fayda sağlayabileceğini görüşün. Sizden haber almak isteriz!',
+    'contact.form.title': 'İletişim Formu',
+    'contact.form.description': 'Sorularınızı veya taleplerinizi bize gönderin.',
     'contact.form.name.label': 'Tam Adınız',
     'contact.form.name.placeholder': 'Ahmet Yılmaz',
     'contact.form.email.label': 'E-posta Adresi',
@@ -628,6 +636,3 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
-
-
-    

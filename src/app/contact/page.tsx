@@ -37,8 +37,8 @@ export default function ContactPage() {
       <div className="grid md:grid-cols-2 gap-12">
         <Card className="shadow-xl">
           <CardHeader>
-            <CardTitle className="text-2xl">{t('contact.form.name.label')}</CardTitle> {/* Adjusted to be more generic */}
-            <CardDescription>Send us your project ideas or inquiries.</CardDescription>
+            <CardTitle className="text-2xl">{t('contact.form.title')}</CardTitle>
+            <CardDescription>{t('contact.form.description')}</CardDescription>
           </CardHeader>
           <CardContent>
             <ContactForm />
