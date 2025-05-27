@@ -42,8 +42,8 @@ export type TranslationKey =
   | 'about.story.content'
   | 'contact.title'
   | 'contact.description'
-  | 'contact.form.title' // New key for form title
-  | 'contact.form.description' // New key for form description
+  | 'contact.form.title'
+  | 'contact.form.description'
   | 'contact.form.name.label'
   | 'contact.form.name.placeholder'
   | 'contact.form.email.label'
@@ -200,7 +200,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'about.mission.title': 'Our Mission',
     'about.mission.content': 'To empower businesses engaged in international trade by providing sophisticated software solutions that automate customs processes, ensure compliance, and streamline the cross-border movement of goods, all driven by next-generation technologies.',
     'about.story.title': 'Our Story',
-    'about.story.content': 'ATEZ Software Technologies was founded to address the growing complexities of global trade. We deliver innovative platforms that make cross-border logistics, customs compliance, and transit declarations more efficient and autonomous. By harnessing Blockchain, AI, ML, and Business Intelligence, we help businesses reduce operational friction and unlock new potentials in international commerce.',
+    'about.story.content': 'Atez Software Technologies, established in 2017, embodies a rich convergence of field and academic proficiency, with a legacy exceeding 30 years in cross-border trade procedures, logistics, customs brokerage, and IT solutions for customs brokerage as well as finance and reporting. This enterprise flourishes under the guidance of seasoned managers and is bolstered by a dynamic fusion of consultants and innovative minds, ensuring a deep reservoir of industry-specific knowledge. Central to Atez’s ethos is the symbiotic relationship between domain experts and software developers, a collaboration that is pivotal in harnessing new technologies, particularly Blockchain, to devise solutions that are both revolutionary and aligned with customer demands. Our foundational principles are: a robust commitment to teamwork, innovation, and the strategic integration of domain expertise with cutting-edge technology to address the multifaceted challenges of international trade and logistics.',
     'contact.title': 'Get In Touch',
     'contact.description': 'Discuss how our specialized solutions for customs, logistics, and autonomous trade can benefit your business. We\'d love to hear from you!',
     'contact.form.title': 'Contact Form',
@@ -358,7 +358,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'about.mission.title': 'Unsere Mission',
     'about.mission.content': 'Unternehmen im internationalen Handel durch hochentwickelte Softwarelösungen zu stärken, die Zollprozesse automatisieren, Konformität sicherstellen und den grenzüberschreitenden Warenverkehr optimieren – alles angetrieben durch Technologien der nächsten Generation.',
     'about.story.title': 'Unsere Geschichte',
-    'about.story.content': 'ATEZ Software Technologies wurde gegründet, um den wachsenden Komplexitäten des globalen Handels zu begegnen. Wir liefern innovative Plattformen, die grenzüberschreitende Logistik, Zollkonformität und Transitanmeldungen effizienter und autonomer gestalten. Durch den Einsatz von Blockchain, KI, ML und Business Intelligence helfen wir Unternehmen, operative Reibungsverluste zu reduzieren und neue Potenziale im internationalen Handel zu erschließen.',
+    'about.story.content': 'Atez Software Technologies, gegründet 2017, verkörpert eine reiche Konvergenz von Feld- und akademischer Kompetenz mit einer über 30-jährigen Erfahrung in grenzüberschreitenden Handelsverfahren, Logistik, Zollabfertigung und IT-Lösungen für die Zollabfertigung sowie Finanz- und Berichtswesen. Dieses Unternehmen gedeiht unter der Leitung erfahrener Manager und wird durch eine dynamische Fusion von Beratern und innovativen Köpfen gestärkt, was einen tiefen Wissensschatz in der Branche sicherstellt. Zentral für das Ethos von Atez ist die symbiotische Beziehung zwischen Fachexperten und Softwareentwicklern, eine Zusammenarbeit, die entscheidend ist, um neue Technologien, insbesondere Blockchain, zu nutzen und Lösungen zu entwickeln, die sowohl revolutionär als auch auf die Kundenanforderungen abgestimmt sind. Unsere Grundprinzipien sind: ein starkes Engagement für Teamarbeit, Innovation und die strategische Integration von Fachwissen mit modernster Technologie, um die vielschichtigen Herausforderungen des internationalen Handels und der Logistik zu bewältigen.',
     'contact.title': 'Kontakt aufnehmen',
     'contact.description': 'Besprechen Sie, wie unsere spezialisierten Lösungen für Zoll, Logistik und autonomen Handel Ihrem Unternehmen zugutekommen können. Wir freuen uns, von Ihnen zu hören!',
     'contact.form.title': 'Kontaktformular',
@@ -444,7 +444,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.exportControls': 'Exportkontrollen & Sanktionslistenprüfung',
     'solutions.solution.findHtsCode': 'Finden Sie Ihren HS-Code',
     'solutions.solution.taxCalculation': 'Zoll- & Steuerberechnung',
-    'solutions.solution.sapIntegration': 'SAP-Plugins für Datensynchronisation',
+    'solutions.solution.sapIntegration': 'SAP Plugins für Datensynchronisation',
     'solutions.solution.transitDeclarationFiling': 'Transitanmeldung',
     'solutions.solution.guaranteeManagement': 'Bürgschaftsmanagement',
     'solutions.solution.preClearanceControl': 'Vorfeldkontrolle & Risikobewertung',
@@ -512,7 +512,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'about.mission.title': 'Misyonumuz',
     'about.mission.content': 'Gümrük süreçlerini otomatikleştiren, uyumluluğu sağlayan ve malların sınır ötesi hareketini kolaylaştıran, tamamı yeni nesil teknolojilerle desteklenen gelişmiş yazılım çözümleri sunarak uluslararası ticarette faaliyet gösteren işletmeleri güçlendirmek.',
     'about.story.title': 'Hikayemiz',
-    'about.story.content': 'ATEZ Software Technologies, küresel ticaretin artan karmaşıklıklarına çözüm bulmak amacıyla kurulmuştur. Sınır ötesi lojistiği, gümrük uyumluluğunu ve transit beyannamelerini daha verimli ve otonom hale getiren yenilikçi platformlar sunuyoruz. Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekasını kullanarak, işletmelerin operasyonel engelleri azaltmasına ve uluslararası ticarette yeni potansiyellerin kilidini açmasına yardımcı oluyoruz.',
+    'about.story.content': '2017 yılında kurulan Atez Yazılım Teknolojileri, sınır ötesi ticaret prosedürleri, lojistik, gümrük müşavirliği ve gümrük müşavirliği için IT çözümlerinin yanı sıra finans ve raporlama alanlarında 30 yılı aşan bir mirasa sahip, saha ve akademik yeterliliğin zengin bir birleşimini temsil etmektedir. Bu girişim, deneyimli yöneticilerin rehberliğinde gelişmekte ve danışmanlar ile yenilikçi beyinlerin dinamik bir birleşimiyle desteklenmekte, böylece sektöre özgü derin bir bilgi birikimi sağlanmaktadır. Atez’in temel felsefesi, alan uzmanları ile yazılım geliştiriciler arasındaki simbiyotik ilişkidir; bu işbirliği, özellikle Blockchain olmak üzere yeni teknolojilerin devrimci ve müşteri taleplerine uygun çözümler geliştirmek için kullanılmasında hayati öneme sahiptir. Temel ilkelerimiz: ekip çalışmasına, yeniliğe ve uluslararası ticaret ve lojistiğin çok yönlü zorluklarını ele almak için alan uzmanlığını en son teknolojiyle stratejik entegrasyonuna güçlü bir bağlılık.',
     'contact.title': 'İletişime Geçin',
     'contact.description': 'Gümrük, lojistik ve otonom ticaret için özel çözümlerimizin işletmenize nasıl fayda sağlayabileceğini görüşün. Sizden haber almak isteriz!',
     'contact.form.title': 'İletişim Formu',
@@ -636,3 +636,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+
+
+    
