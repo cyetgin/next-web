@@ -13,11 +13,10 @@ import {
   FileText, 
   Lightbulb, 
   ArrowRight,
-  Bot, 
   FilePenLine, 
   Leaf, 
   Globe,
-  Network // Keep for Relayhub if it's still a product, or remove if not
+  // Network // Keep for Relayhub if it's still a product, or remove if not
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -79,7 +78,12 @@ const productCategories: ProductCategory[] = [
         slug: 'transit-ai', 
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transitAI%400.5x.webp?alt=media&token=aaff5c1b-885a-4059-9a73-3cac5ef437c1' 
       },
-      { nameKey: 'products.product.declarantAI', descriptionKey: 'products.product.declarantAI.description', slug: 'declarant-ai', icon: Bot },
+      { 
+        nameKey: 'products.product.declarantAI', 
+        descriptionKey: 'products.product.declarantAI.description', 
+        slug: 'declarant-ai', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-declarantAI%400.5x.webp?alt=media&token=321b1787-e926-446f-9eec-79d2e4b778ea'
+      },
     ],
   },
   {
