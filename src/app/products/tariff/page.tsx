@@ -6,7 +6,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Search, ListChecks, Calculator, Sparkles, RefreshCw, Globe2, Languages, FileText } from 'lucide-react';
+import { ArrowLeft, Search, ListChecks, Calculator, Sparkles, RefreshCw, Globe2, Languages, FileText, ExternalLink } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 
 interface Module {
@@ -115,6 +115,22 @@ export default function TariffPage() {
         </div>
       </section>
 
+      <section className="w-full py-12 md:py-16 bg-secondary/50 rounded-lg shadow-inner text-center">
+        <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">
+              {t('products.tariff.cta.title')}
+            </h2>
+            <div className="mt-8">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg">
+                <Link href="https://tariff.singlewindow.io" target="_blank" rel="noopener noreferrer">
+                  {t('products.tariff.cta.button')} <ExternalLink className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+        </div>
+      </section>
+
     </div>
   );
 }
+

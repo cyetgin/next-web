@@ -154,6 +154,8 @@ export type TranslationKey =
   | 'products.tariff.keyBenefit.eliminateLanguageBarriers.description'
   | 'products.tariff.keyBenefit.upToDateNomenclatures.title'
   | 'products.tariff.keyBenefit.upToDateNomenclatures.description'
+  | 'products.tariff.cta.title'
+  | 'products.tariff.cta.button'
   // Common
   | 'common.backToProducts';
 
@@ -305,6 +307,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff provides comprehensive customs regulations for European Union, United Kingdom, Switzerland, and Türkiye in English, German and Turkish.',
     'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Up-to-Date Tariff Nomenclatures',
     'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Stay ahead with always up-to-date tariff nomenclatures. Every change tracked by Tariff to serve its users.',
+    'products.tariff.cta.title': 'Ready to Simplify Your Trade?',
+    'products.tariff.cta.button': 'Use Tariff for FREE',
     'common.backToProducts': 'Back to Products',
   },
   de: {
@@ -449,6 +453,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff bietet umfassende Zollvorschriften für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei in Englisch, Deutsch und Türkisch.',
     'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Aktuelle Tarifnomenklaturen',
     'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Bleiben Sie mit stets aktuellen Tarifnomenklaturen immer einen Schritt voraus. Jede Änderung wird von Tariff verfolgt, um seinen Benutzern zu dienen.',
+    'products.tariff.cta.title': 'Bereit, Ihren Handel zu vereinfachen?',
+    'products.tariff.cta.button': 'Tariff KOSTENLOS nutzen',
     'common.backToProducts': 'Zurück zu den Produkten',
   },
   tr: {
@@ -593,6 +599,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff, Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için İngilizce, Almanca ve Türkçe dillerinde kapsamlı gümrük düzenlemeleri sunar.',
     'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Güncel Tarife Nomanklatürleri',
     'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Her zaman güncel tarife nomanklatürleri ile bir adım önde olun. Her değişiklik, kullanıcılarına hizmet vermek için Tariff tarafından takip edilir.',
+    'products.tariff.cta.title': 'Ticaretinizi Basitleştirmeye Hazır mısınız?',
+    'products.tariff.cta.button': 'Tariff\'i ÜCRETSİZ Kullanın',
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+
