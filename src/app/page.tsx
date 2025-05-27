@@ -68,6 +68,9 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
             {t('home.welcomeTitle')}
           </h1>
+          <p className="mt-2 text-xl md:text-2xl text-primary/90">
+            {t('home.companyNameForSlogan')}
+          </p>
           <p className="mx-auto max-w-[800px] text-foreground/80 md:text-xl mt-4">
             {t('home.welcomeSubtitle')}
           </p>
@@ -81,6 +84,7 @@ export default function HomePage() {
                   animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
                   `delay-[${index * 150}ms]` // Tailwind JIT handles arbitrary delay values
                 )}
+                style={{ transitionDelay: `${index * 150}ms` }} // Inline style for broader compatibility
               >
                 {tech.icon} {tech.nameKey}
               </span>

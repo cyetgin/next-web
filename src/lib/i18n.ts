@@ -18,7 +18,8 @@ export type TranslationKey =
   | 'nav.contact'
   | 'nav.news'
   | 'nav.settings'
-  | 'home.welcomeTitle'
+  | 'home.welcomeTitle' // This will now be the Slogan
+  | 'home.companyNameForSlogan' // New key for company name under slogan
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
   | 'home.capabilities.crossBorder.title'
@@ -140,7 +141,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.contact': 'Contact Us',
     'nav.news': 'News',
     'nav.settings': 'Settings',
-    'home.welcomeTitle': 'ATEZ Software Technologies',
+    'home.welcomeTitle': 'Automating Global Trade, Intelligently.', // Slogan
+    'home.companyNameForSlogan': 'ATEZ Software Technologies', // Company name under slogan
     'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Blockchain, AI, ML, and BI.',
     'home.featuresTitle': 'Core Capabilities',
     'home.capabilities.crossBorder.title': 'Streamlined Cross-Border Customs & Transit Procedures',
@@ -261,7 +263,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.contact': 'Kontakt',
     'nav.news': 'Aktuelles',
     'nav.settings': 'Einstellungen',
-    'home.welcomeTitle': 'ATEZ Software Technologies',
+    'home.welcomeTitle': 'Globalen Handel intelligent automatisieren.', // Slogan
+    'home.companyNameForSlogan': 'ATEZ Softwaretechnologien', // Company name under slogan
     'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Blockchain, KI, ML und BI.',
     'home.featuresTitle': 'Kernkompetenzen',
     'home.capabilities.crossBorder.title': 'Optimierte Grenzüberschreitende Logistik & Zoll',
@@ -379,7 +382,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.contact': 'İletişim',
     'nav.news': 'Haberler',
     'nav.settings': 'Ayarlar',
-    'home.welcomeTitle': 'ATEZ Software Technologies',
+    'home.welcomeTitle': 'Küresel Ticareti Akıllıca Otomatikleştirin.', // Slogan
+    'home.companyNameForSlogan': 'ATEZ Yazılım Teknolojileri', // Company name under slogan
     'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
     'home.featuresTitle': 'Temel Yetenekler',
     'home.capabilities.crossBorder.title': 'Optimize Edilmiş Sınır Ötesi Lojistik ve Gümrük',
