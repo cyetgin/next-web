@@ -76,9 +76,9 @@ export default function HomePage() {
               <span
                 key={tech.nameKey}
                 className={cn(
-                  "inline-flex items-center gap-2 text-sm font-medium text-accent bg-accent/10 px-3 py-1 rounded-full",
+                  "inline-flex items-center gap-2 text-sm font-medium text-accent-foreground bg-accent px-3 py-1 rounded-full",
                   "transition-all duration-500 ease-out",
-                  animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3',
+                  animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
                   `delay-[${index * 150}ms]` // Tailwind JIT handles arbitrary delay values
                 )}
               >
