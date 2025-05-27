@@ -7,16 +7,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { 
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { 
   ExternalLink, 
   PackageCheck, 
   BrainCircuit, 
   FileText, 
   Lightbulb, 
   ArrowRight
-  // AreaChart, // Removed as Customs Loupe now uses imageUrl
-  // Leaf, // Removed as Greenpulse now uses imageUrl
-  // Globe, // Removed as Tradeloupe is removed
-  // Network // Keep for Relayhub if it's still a product, or remove if not - Relayhub removed
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -128,72 +130,103 @@ export default function ProductsPage() {
   const { t } = useTranslation();
 
   return (
-    <div className="container mx-auto py-12 px-4 md:px-6 space-y-12">
-      <header className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary">
-          {t('products.title')}
-        </h1>
-        <p className="mx-auto max-w-[800px] text-foreground/80 md:text-xl">
-          {t('products.description')}
-        </p>
-      </header>
+    <TooltipProvider>
+      <div className="container mx-auto py-12 px-4 md:px-6 space-y-12">
+        <header className="text-center space-y-4">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary">
+            {t('products.title')}
+          </h1>
+          <p className="mx-auto max-w-[800px] text-foreground/80 md:text-xl">
+            {t('products.description')}
+          </p>
+        </header>
 
-      <section className="text-center p-6 bg-secondary/30 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-3 text-primary">
-          {t('products.mainPlatformIntro')}
-        </h2>
-        <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-          <Link href="https://singlewindow.io" target="_blank" rel="noopener noreferrer">
-            {t('products.visitPlatformButton')} <ExternalLink className="ml-2 h-5 w-5" />
-          </Link>
-        </Button>
-      </section>
+        <section className="text-center p-6 bg-secondary/30 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-3 text-primary">
+            {t('products.mainPlatformIntro')}
+          </h2>
+          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Link href="https://singlewindow.io" target="_blank" rel="noopener noreferrer">
+              {t('products.visitPlatformButton')} <ExternalLink className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </section>
 
-      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-        {productCategories.map((category) => (
-          <Card key={category.categoryKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
-            <CardHeader className="flex flex-row items-center gap-3 pb-4">
-              <category.icon className="h-8 w-8 text-primary flex-shrink-0" />
-              <CardTitle className="text-2xl">{t(category.categoryKey)}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {category.products.map((product) => {
-                  const ProductIcon = product.icon; 
-                  return (
-                    <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow flex flex-col h-full">
-                      <div className="flex items-center gap-3 mb-2">
-                        {product.imageUrl ? (
-                          <Image
-                            src={product.imageUrl}
-                            alt={t(product.nameKey)}
-                            width={24} 
-                            height={24} 
-                            className="h-6 w-6 object-contain" 
-                          />
-                        ) : ProductIcon ? (
-                          <ProductIcon className="h-6 w-6 text-accent flex-shrink-0" />
-                        ) : null}
-                        <h3 className="text-xl font-semibold text-primary">{t(product.nameKey)}</h3>
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+          {productCategories.map((category) => (
+            <Card key={category.categoryKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+              <CardHeader className="flex flex-row items-center gap-3 pb-4">
+                <category.icon className="h-8 w-8 text-primary flex-shrink-0" />
+                <CardTitle className="text-2xl">{t(category.categoryKey)}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {category.products.map((product) => {
+                    const ProductIcon = product.icon; 
+                    const descriptionText = t(product.descriptionKey);
+                    
+                    let productDescriptionElement;
+                    if (product.nameKey === 'products.product.logicust') {
+                      const parts = descriptionText.split('{{PRODUCT_TOOLTIP_TARGET}}');
+                      productDescriptionElement = (
+                        <p className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed flex-grow">
+                          {parts[0]}
+                          {parts.length > 1 && (
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <span className="underline decoration-dashed cursor-help font-semibold text-primary">
+                                  {t('products.product.logicust.tooltip.productTrigger')}
+                                </span>
+                              </TooltipTrigger>
+                              <TooltipContent className="max-w-xs">
+                                <p>{t('products.product.logicust.tooltip.productContent')}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          )}
+                          {parts[1]}
+                        </p>
+                      );
+                    } else {
+                      productDescriptionElement = (
+                        <p className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed flex-grow">
+                          {descriptionText}
+                        </p>
+                      );
+                    }
+
+                    return (
+                      <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow flex flex-col h-full">
+                        <div className="flex items-center gap-3 mb-2">
+                          {product.imageUrl ? (
+                            <Image
+                              src={product.imageUrl}
+                              alt={t(product.nameKey)}
+                              width={24} 
+                              height={24} 
+                              className="h-6 w-6 object-contain" 
+                            />
+                          ) : ProductIcon ? (
+                            <ProductIcon className="h-6 w-6 text-accent flex-shrink-0" />
+                          ) : null}
+                          <h3 className="text-xl font-semibold text-primary">{t(product.nameKey)}</h3>
+                        </div>
+                        {productDescriptionElement}
+                        <Button asChild size="sm" variant="outline" className="mt-auto group">
+                          <Link href={product.detailPagePath || `#${product.slug}`}>
+                            {t('products.exploreButton')}
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          </Link>
+                        </Button>
                       </div>
-                      <p className="text-sm text-foreground/80 mt-1 mb-3 leading-relaxed flex-grow">
-                        {t(product.descriptionKey)}
-                      </p>
-                      <Button asChild size="sm" variant="outline" className="mt-auto group">
-                        <Link href={product.detailPagePath || `#${product.slug}`}>
-                          {t('products.exploreButton')}
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </div>
-                  );
-                })}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+                    );
+                  })}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
-    </div>
+    </TooltipProvider>
   );
 }
 

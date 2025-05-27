@@ -19,7 +19,7 @@ export type TranslationKey =
   | 'nav.news'
   | 'nav.settings'
   | 'home.welcomeTitle'
-  | 'home.blockchainReadySlogan' // New key
+  | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
   | 'home.capabilities.crossBorder.title'
@@ -74,6 +74,8 @@ export type TranslationKey =
   | 'products.product.tariff.description'
   | 'products.product.logicust'
   | 'products.product.logicust.description'
+  | 'products.product.logicust.tooltip.productTrigger'
+  | 'products.product.logicust.tooltip.productContent'
   | 'products.product.customsShield'
   | 'products.product.customsShield.description'
   | 'products.product.customsXRay'
@@ -234,7 +236,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} based, dynamically updated, customs and regulatory compliance data manager',
+    'products.product.logicust.tooltip.productTrigger': 'Product',
+    'products.product.logicust.tooltip.productContent': '(Article, raw material, semi or finished product, that is internationally traded by an economic operator)',
     'products.product.customsShield': 'Customs Shield',
     'products.product.customsShield.description': 'AI-powered risk assessment and compliance verification for customs operations.',
     'products.product.customsXRay': 'Customs X-Ray',
@@ -392,7 +396,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 aktualisierte offizielle (historisch indizierte) Zolldatenbank',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Produktbasierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} basierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
+    'products.product.logicust.tooltip.productTrigger': 'Produkt',
+    'products.product.logicust.tooltip.productContent': '(Artikel, Rohmaterial, Halb- oder Fertigprodukt, das von einem Wirtschaftsbeteiligten international gehandelt wird)',
     'products.product.customsShield': 'Customs Shield',
     'products.product.customsShield.description': 'KI-gestützte Risikobewertung und Compliance-Überprüfung für Zolloperationen.',
     'products.product.customsXRay': 'Customs X-Ray',
@@ -546,7 +552,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '7/24 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Ürün tabanlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} tabanlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
+    'products.product.logicust.tooltip.productTrigger': 'Ürün',
+    'products.product.logicust.tooltip.productContent': '(Bir ekonomik operatör tarafından uluslararası ticareti yapılan eşya, hammadde, yarı mamul veya bitmiş ürün)',
     'products.product.customsShield': 'Customs Shield',
     'products.product.customsShield.description': 'Gümrük operasyonları için yapay zeka destekli risk değerlendirmesi ve uyumluluk doğrulaması.',
     'products.product.customsXRay': 'Customs X-Ray',
@@ -636,4 +644,3 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
-
