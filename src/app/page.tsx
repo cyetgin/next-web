@@ -80,9 +80,6 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
             {t('home.welcomeTitle')}
           </h1>
-          <p className="mt-2 text-xl md:text-2xl text-primary/90">
-            {t('home.companyNameForSlogan')}
-          </p>
           <p className="mx-auto max-w-[800px] text-foreground/80 md:text-xl mt-4">
             {t('home.welcomeSubtitle')}
           </p>
@@ -131,7 +128,6 @@ export default function HomePage() {
               </div>
               <CardHeader>
                 <CardTitle className="text-2xl">
-                  {/* Icon removed from here */}
                   {t(capability.titleKey)}
                 </CardTitle>
               </CardHeader>
@@ -159,4 +155,3 @@ export default function HomePage() {
     </div>
   );
 }
-

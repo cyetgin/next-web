@@ -19,7 +19,6 @@ export type TranslationKey =
   | 'nav.news'
   | 'nav.settings'
   | 'home.welcomeTitle'
-  | 'home.companyNameForSlogan'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
   | 'home.capabilities.crossBorder.title'
@@ -180,7 +179,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.news': 'News',
     'nav.settings': 'Settings',
     'home.welcomeTitle': 'Automating Global Trade, Intelligently.',
-    'home.companyNameForSlogan': 'ATEZ Software Technologies',
     'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Blockchain, AI, ML, and BI.',
     'home.featuresTitle': 'Core Capabilities',
     'home.capabilities.crossBorder.title': 'Comprehensive Customs Compliance Solutions',
@@ -338,7 +336,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.news': 'Aktuelles',
     'nav.settings': 'Einstellungen',
     'home.welcomeTitle': 'Globalen Handel intelligent automatisieren.',
-    'home.companyNameForSlogan': 'ATEZ Softwaretechnologien',
     'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Blockchain, KI, ML und BI.',
     'home.featuresTitle': 'Kernkompetenzen',
     'home.capabilities.crossBorder.title': 'Umfassende Lösungen für Zollkonformität',
@@ -492,7 +489,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'nav.news': 'Haberler',
     'nav.settings': 'Ayarlar',
     'home.welcomeTitle': 'Küresel Ticareti Akıllıca Otomatikleştirin.',
-    'home.companyNameForSlogan': 'ATEZ Yazılım Teknolojileri',
     'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
     'home.featuresTitle': 'Temel Yetenekler',
     'home.capabilities.crossBorder.title': 'Kapsamlı Gümrük Uyumluluk Çözümleri',
@@ -636,6 +632,3 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
-
-
-
