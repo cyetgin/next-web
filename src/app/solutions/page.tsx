@@ -34,7 +34,7 @@ import {
   FileBarChart2,
   AreaChart,
   Sparkles,
-  History // Added for Historical Data
+  History
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -49,6 +49,7 @@ interface ProductInfo {
   nameKey: TranslationKey;
   icon: LucideIcon;
   slug: string;
+  detailPagePath?: string; // For linking to specific product pages
 }
 
 const solutionsList: Solution[] = [
@@ -74,7 +75,7 @@ const solutionsList: Solution[] = [
 
 const productDetailsMap: Record<string, ProductInfo> = {
   'products.product.logicust': { nameKey: 'products.product.logicust', icon: Truck, slug: 'logicust' },
-  'products.product.tariff': { nameKey: 'products.product.tariff', icon: BookOpen, slug: 'tariff' },
+  'products.product.tariff': { nameKey: 'products.product.tariff', icon: BookOpen, slug: 'tariff', detailPagePath: '/products/tariff' },
   'products.product.declarant': { nameKey: 'products.product.declarant', icon: FilePenLine, slug: 'declarant' },
   'products.product.transcode': { nameKey: 'products.product.transcode', icon: Replace, slug: 'transcode' },
   'products.product.customsShield': { nameKey: 'products.product.customsShield', icon: ShieldCheck, slug: 'customs-shield' },
@@ -114,6 +115,7 @@ export default function SolutionsPage() {
           if (!productInfo) return null; 
 
           const ProductIcon = productInfo.icon;
+          const productLink = productInfo.detailPagePath || `/products#${productInfo.slug}`;
 
           return (
             <Card key={productKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
@@ -128,7 +130,7 @@ export default function SolutionsPage() {
                     return (
                       <Link
                         key={solution.nameKey}
-                        href={`/products#${productInfo.slug}`}
+                        href={productLink} // Link to the product detail page or anchor
                         className="block p-4 border rounded-lg shadow-sm bg-card hover:shadow-lg transition-shadow duration-300 group transform hover:-translate-y-1 h-full"
                       >
                         <div className="flex items-start gap-3">
@@ -146,7 +148,7 @@ export default function SolutionsPage() {
               </CardContent>
               <div className="p-6 pt-4 mt-auto">
                  <Button asChild variant="outline" className="w-full group">
-                    <Link href={`/products#${productInfo.slug}`}>
+                    <Link href={productLink}>
                       {t('solutions.viewProductDetails')} ({t(productInfo.nameKey)})
                       <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>
@@ -159,3 +161,5 @@ export default function SolutionsPage() {
     </div>
   );
 }
+
+    

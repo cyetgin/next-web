@@ -22,7 +22,6 @@ import {
   FilePenLine, // For Declarant
   Leaf, // For Greenpulse
   Globe, // For Tradeloupe
-  Network // For Relayhub, now a solution under Declarant
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -32,6 +31,7 @@ interface Product {
   descriptionKey: TranslationKey;
   slug: string; 
   icon: LucideIcon;
+  detailPagePath?: string;
 }
 
 interface ProductCategory {
@@ -45,7 +45,7 @@ const productCategories: ProductCategory[] = [
     categoryKey: 'products.category.customsCompliance',
     icon: PackageCheck,
     products: [
-      { nameKey: 'products.product.tariff', descriptionKey: 'products.product.tariff.description', slug: 'tariff', icon: BookOpen },
+      { nameKey: 'products.product.tariff', descriptionKey: 'products.product.tariff.description', slug: 'tariff', icon: BookOpen, detailPagePath: '/products/tariff' },
       { nameKey: 'products.product.logicust', descriptionKey: 'products.product.logicust.description', slug: 'logicust', icon: Truck },
     ],
   },
@@ -112,7 +112,7 @@ export default function ProductsPage() {
             <CardContent className="flex-grow">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {category.products.map((product) => (
-                  <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow flex flex-col">
+                  <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow flex flex-col h-full">
                     <div className="flex items-center gap-3 mb-2">
                       <product.icon className="h-6 w-6 text-accent flex-shrink-0" />
                       <h3 className="text-xl font-semibold text-primary">{t(product.nameKey)}</h3>
@@ -121,7 +121,7 @@ export default function ProductsPage() {
                       {t(product.descriptionKey)}
                     </p>
                     <Button asChild size="sm" variant="outline" className="mt-auto group">
-                      <Link href={`#${product.slug}`}>
+                      <Link href={product.detailPagePath || `#${product.slug}`}>
                         {t('products.exploreButton')}
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Link>
@@ -136,3 +136,5 @@ export default function ProductsPage() {
     </div>
   );
 }
+
+    

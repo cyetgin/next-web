@@ -18,14 +18,14 @@ export type TranslationKey =
   | 'nav.contact'
   | 'nav.news'
   | 'nav.settings'
-  | 'home.welcomeTitle' // This will now be the Slogan
-  | 'home.companyNameForSlogan' // New key for company name under slogan
+  | 'home.welcomeTitle'
+  | 'home.companyNameForSlogan'
   | 'home.welcomeSubtitle'
   | 'home.featuresTitle'
-  | 'home.capabilities.crossBorder.title' // Now: "Comprehensive Customs Compliance Solutions"
-  | 'home.capabilities.crossBorder.description' // Now: Description for Customs Compliance
-  | 'home.capabilities.autonomousData.title' // Now: "Automated End-to-End Customs Procedure Handling"
-  | 'home.capabilities.autonomousData.description' // Now: Description for End-to-End Handling
+  | 'home.capabilities.crossBorder.title'
+  | 'home.capabilities.crossBorder.description'
+  | 'home.capabilities.autonomousData.title'
+  | 'home.capabilities.autonomousData.description'
   | 'home.capabilities.streamlinedCustomsTransit.title'
   | 'home.capabilities.streamlinedCustomsTransit.description'
   | 'home.capabilities.autonomousDataFlowAutomation.title'
@@ -132,7 +132,22 @@ export type TranslationKey =
   | 'solutions.solution.relayhub'
   | 'solutions.solution.smartSuggestions'
   | 'solutions.solution.historicalDataTariff'
-  | 'solutions.viewProductDetails';
+  | 'solutions.viewProductDetails'
+  // Tariff Detail Page
+  | 'products.tariff.pageTitle'
+  | 'products.tariff.generalDescription'
+  | 'products.tariff.modules.title'
+  | 'products.tariff.module.basicQuery.title'
+  | 'products.tariff.module.basicQuery.description'
+  | 'products.tariff.module.detailedQuery.title'
+  | 'products.tariff.module.detailedQuery.description'
+  | 'products.tariff.module.taxCalculation.title'
+  | 'products.tariff.module.taxCalculation.description'
+  | 'products.tariff.module.findMyCommodityCode.title'
+  | 'products.tariff.module.findMyCommodityCode.description'
+  // Common
+  | 'common.backToProducts';
+
 
 export const translations: Record<Locale, Record<string, string>> = {
   en: {
@@ -260,6 +275,19 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.smartSuggestions': 'Smart Suggestions',
     'solutions.solution.historicalDataTariff': 'Historically Indexed Regulative Data',
     'solutions.viewProductDetails': 'View Product Details',
+    // Tariff Detail Page
+    'products.tariff.pageTitle': 'Tariff',
+    'products.tariff.generalDescription': 'Tariff is your go-to digital solution for seamless, transparent cross-border trade. Operating currently within the European Union, United Kingdom, Switzerland, and Türkiye. The platform presents customs regulations, duties, and control measures. With just a few clicks, Tariff enables users to access critical information tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export process.',
+    'products.tariff.modules.title': 'Product Modules',
+    'products.tariff.module.basicQuery.title': 'Basic Query',
+    'products.tariff.module.basicQuery.description': 'Quickly identify the essential duty rates and regulatory measures for your selected export or import trade route by simply inputting the commodity code. The Basic Query provides a straightforward list of applicable tariffs.',
+    'products.tariff.module.detailedQuery.title': 'Detailed Query',
+    'products.tariff.module.detailedQuery.description': 'Detailed Query, offers a comprehensive insights including footnotes, conditions, legal bases, and the start and end dates of measures. Ideal for users requiring in-depth information on specific tariffs and regulations for informed decision-making.',
+    'products.tariff.module.taxCalculation.title': 'Tax Calculation',
+    'products.tariff.module.taxCalculation.description': 'Tariff offers a tax calculation module for your import inquiries, letting you estimate customs duties and other import taxes with a few clicks.',
+    'products.tariff.module.findMyCommodityCode.title': 'Find My Commodity Code',
+    'products.tariff.module.findMyCommodityCode.description': 'Simply define your good with keywords and search it. Tariff helps you identify the appropriate commodity codes for your goods based on keywords you enter. Benefit from always up-to-date nomenclature for European Union, United Kingdom, Switzerland, and Türkiye.',
+    'common.backToProducts': 'Back to Products',
   },
   de: {
     'app.name': 'ATEZ Software Technologies',
@@ -383,6 +411,18 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.smartSuggestions': 'Intelligente Vorschläge',
     'solutions.solution.historicalDataTariff': 'Historisch indexierte Regulierungsdaten',
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
+    'products.tariff.pageTitle': 'Tariff',
+    'products.tariff.generalDescription': 'Tariff ist Ihre digitale Lösung für nahtlosen, transparenten grenzüberschreitenden Handel. Derzeit in der Europäischen Union, dem Vereinigten Königreich, der Schweiz und der Türkei tätig. Die Plattform präsentiert Zollvorschriften, Abgaben und Kontrollmaßnahmen. Mit nur wenigen Klicks ermöglicht Tariff den Benutzern den Zugriff auf wichtige Informationen, die auf ihre Handelsrouten zugeschnitten sind, und gewährleistet so einen reibungsloseren, effizienteren und konformen Import- oder Exportprozess.',
+    'products.tariff.modules.title': 'Produktmodule',
+    'products.tariff.module.basicQuery.title': 'Basisabfrage',
+    'products.tariff.module.basicQuery.description': 'Identifizieren Sie schnell die wesentlichen Zollsätze und regulatorischen Maßnahmen für Ihre ausgewählte Export- oder Importhandelsroute, indem Sie einfach den Warencode eingeben. Die Basisabfrage liefert eine unkomplizierte Liste der anwendbaren Tarife.',
+    'products.tariff.module.detailedQuery.title': 'Detaillierte Abfrage',
+    'products.tariff.module.detailedQuery.description': 'Die detaillierte Abfrage bietet umfassende Einblicke einschließlich Fußnoten, Bedingungen, Rechtsgrundlagen sowie Start- und Enddaten von Maßnahmen. Ideal für Benutzer, die detaillierte Informationen zu spezifischen Tarifen und Vorschriften für fundierte Entscheidungen benötigen.',
+    'products.tariff.module.taxCalculation.title': 'Steuerberechnung',
+    'products.tariff.module.taxCalculation.description': 'Tariff bietet ein Steuerberechnungsmodul für Ihre Importanfragen, mit dem Sie Zollabgaben und andere Importsteuern mit wenigen Klicks schätzen können.',
+    'products.tariff.module.findMyCommodityCode.title': 'Meinen Warencode finden',
+    'products.tariff.module.findMyCommodityCode.description': 'Definieren Sie Ihre Ware einfach mit Schlüsselwörtern und suchen Sie danach. Tariff hilft Ihnen, die passenden Warencodes für Ihre Waren basierend auf den von Ihnen eingegebenen Schlüsselwörtern zu identifizieren. Profitieren Sie von stets aktueller Nomenklatur für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei.',
+    'common.backToProducts': 'Zurück zu den Produkten',
   },
   tr: {
     'app.name': 'ATEZ Software Technologies',
@@ -506,6 +546,19 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.smartSuggestions': 'Akıllı Öneriler',
     'solutions.solution.historicalDataTariff': 'Tarihsel Endeksli Düzenleyici Veriler',
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
+    'products.tariff.pageTitle': 'Tariff',
+    'products.tariff.generalDescription': 'Tariff, sorunsuz, şeffaf sınır ötesi ticaret için başvuracağınız dijital çözümdür. Şu anda Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye\'de faaliyet göstermektedir. Platform, gümrük düzenlemelerini, vergileri ve kontrol önlemlerini sunar. Sadece birkaç tıklama ile Tariff, kullanıcıların ticaret rotalarına göre uyarlanmış kritik bilgilere erişmelerini sağlayarak daha sorunsuz, daha verimli ve uyumlu bir ithalat veya ihracat süreci temin eder.',
+    'products.tariff.modules.title': 'Ürün Modülleri',
+    'products.tariff.module.basicQuery.title': 'Temel Sorgulama',
+    'products.tariff.module.basicQuery.description': 'Sadece GTİP kodunu girerek seçtiğiniz ihracat veya ithalat ticaret rotası için temel gümrük vergisi oranlarını ve düzenleyici önlemleri hızla belirleyin. Temel Sorgulama, uygulanabilir tarifelerin basit bir listesini sunar.',
+    'products.tariff.module.detailedQuery.title': 'Detaylı Sorgulama',
+    'products.tariff.module.detailedQuery.description': 'Detaylı Sorgulama, dipnotlar, koşullar, yasal dayanaklar ve önlemlerin başlangıç ve bitiş tarihleri dahil olmak üzere kapsamlı bilgiler sunar. Bilinçli karar verme için belirli tarifeler ve düzenlemeler hakkında derinlemesine bilgiye ihtiyaç duyan kullanıcılar için idealdir.',
+    'products.tariff.module.taxCalculation.title': 'Vergi Hesaplama',
+    'products.tariff.module.taxCalculation.description': 'Tariff, ithalat sorgularınız için bir vergi hesaplama modülü sunarak, birkaç tıklama ile gümrük vergilerini ve diğer ithalat vergilerini tahmin etmenizi sağlar.',
+    'products.tariff.module.findMyCommodityCode.title': 'GTİP Kodumu Bul',
+    'products.tariff.module.findMyCommodityCode.description': 'Malınızı anahtar kelimelerle tanımlayın ve arayın. Tariff, girdiğiniz anahtar kelimelere göre mallarınız için uygun GTİP kodlarını belirlemenize yardımcı olur. Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için her zaman güncel nomanklatürden yararlanın.',
+    'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
 
+    
