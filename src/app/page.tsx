@@ -26,15 +26,13 @@ const capabilities: CapabilityItem[] = [
     descriptionKey: 'home.capabilities.crossBorder.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/compliance-600-400.webp?alt=media&token=ae787123-7b50-47f0-899b-5b0369e35768',
     imageAltKey: 'home.capabilities.crossBorder.title',
-    // dataAiHint removed as we have a specific image
     icon: ShieldCheck,
   },
   {
     titleKey: 'home.capabilities.autonomousData.title',
     descriptionKey: 'home.capabilities.autonomousData.description',
-    imageSrc: 'https://placehold.co/600x400.png',
+    imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/end-to-end.webp?alt=media&token=20090d41-cf2b-455e-ad11-e8c172743f9c',
     imageAltKey: 'home.capabilities.autonomousData.title',
-    dataAiHint: 'data automation',
     icon: Workflow,
   },
   {
