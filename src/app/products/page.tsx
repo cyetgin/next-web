@@ -15,7 +15,7 @@ import {
   ArrowRight,
   // BookOpen, // Tariff icon removed as it will use an image
   // Truck, // Logicust icon will now use an image
-  ShieldCheck, 
+  // ShieldCheck, // Removed as Customs Shield now uses an image
   Search, 
   ArrowRightLeft, 
   Bot, 
@@ -23,7 +23,7 @@ import {
   FilePenLine, 
   Leaf, 
   Globe,
-  Network
+  Network // Keep for Relayhub if it's still a product, or remove if not
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -59,7 +59,7 @@ const productCategories: ProductCategory[] = [
         nameKey: 'products.product.logicust', 
         descriptionKey: 'products.product.logicust.description', 
         slug: 'logicust', 
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=4f83103e-5574-4ec7-abd5-8b0d299ecf2f'
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
       },
     ],
   },
@@ -67,7 +67,12 @@ const productCategories: ProductCategory[] = [
     categoryKey: 'products.category.aiSolutions',
     icon: BrainCircuit,
     products: [
-      { nameKey: 'products.product.customsShield', descriptionKey: 'products.product.customsShield.description', slug: 'customs-shield', icon: ShieldCheck },
+      { 
+        nameKey: 'products.product.customsShield', 
+        descriptionKey: 'products.product.customsShield.description', 
+        slug: 'customs-shield', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icons-customs-shield-3-%400.5x.webp?alt=media&token=b0f7725f-a3b1-4765-834c-a7bda54e022a' 
+      },
       { nameKey: 'products.product.customsXRay', descriptionKey: 'products.product.customsXRay.description', slug: 'customs-xray', icon: Search },
       { nameKey: 'products.product.transitAI', descriptionKey: 'products.product.transitAI.description', slug: 'transit-ai', icon: ArrowRightLeft },
       { nameKey: 'products.product.declarantAI', descriptionKey: 'products.product.declarantAI.description', slug: 'declarant-ai', icon: Bot },
