@@ -234,7 +234,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Optimize logistics and customs documentation for efficient international trade.',
+    'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
     'products.product.customsShield': 'Customs Shield',
     'products.product.customsShield.description': 'AI-powered risk assessment and compliance verification for customs operations.',
     'products.product.customsXRay': 'Customs X-Ray',
@@ -390,9 +390,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Zollanmeldung',
     'products.category.other': 'Weitere Lösungen',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
+    'products.product.tariff.description': '24/7 aktualisierte offizielle (historisch indizierte) Zolldatenbank',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Optimierte Logistik- und Zolldokumentation für effizienten internationalen Handel.',
+    'products.product.logicust.description': 'Produktbasierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
     'products.product.customsShield': 'Customs Shield',
     'products.product.customsShield.description': 'KI-gestützte Risikobewertung und Compliance-Überprüfung für Zolloperationen.',
     'products.product.customsXRay': 'Customs X-Ray',
@@ -544,9 +544,9 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.category.declarationFiling': 'Beyanname Dosyalama',
     'products.category.other': 'Diğer Çözümler',
     'products.product.tariff': 'Tariff',
-    'products.product.tariff.description': '24/7 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
+    'products.product.tariff.description': '7/24 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Verimli uluslararası ticaret için optimize edilmiş lojistik ve gümrük dokümantasyonu.',
+    'products.product.logicust.description': 'Ürün tabanlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
     'products.product.customsShield': 'Customs Shield',
     'products.product.customsShield.description': 'Gümrük operasyonları için yapay zeka destekli risk değerlendirmesi ve uyumluluk doğrulaması.',
     'products.product.customsXRay': 'Customs X-Ray',
@@ -636,5 +636,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+
 
 
