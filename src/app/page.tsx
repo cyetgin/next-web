@@ -16,7 +16,7 @@ interface CapabilityItem {
   descriptionKey: TranslationKey;
   imageSrc: string;
   imageAltKey: TranslationKey;
-  dataAiHint: string;
+  dataAiHint?: string; // Made optional
   icon: React.ElementType;
 }
 
@@ -24,9 +24,9 @@ const capabilities: CapabilityItem[] = [
   {
     titleKey: 'home.capabilities.crossBorder.title',
     descriptionKey: 'home.capabilities.crossBorder.description',
-    imageSrc: 'https://placehold.co/600x400.png',
+    imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/compliance-600-400.webp?alt=media&token=ae787123-7b50-47f0-899b-5b0369e35768',
     imageAltKey: 'home.capabilities.crossBorder.title',
-    dataAiHint: 'compliance regulations',
+    // dataAiHint removed as we have a specific image
     icon: ShieldCheck,
   },
   {
