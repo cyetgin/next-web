@@ -13,8 +13,9 @@ import {
   FileText, 
   Lightbulb, 
   ArrowRight,
+  AreaChart, // Added for Customs Loupe
   // Leaf, // Removed as Greenpulse now uses imageUrl
-  Globe,
+  // Globe, // Removed as Tradeloupe is removed
   // Network // Keep for Relayhub if it's still a product, or remove if not - Relayhub removed
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
@@ -113,7 +114,12 @@ const productCategories: ProductCategory[] = [
         slug: 'greenpulse', 
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-greenpulse-3-%400.5x.webp?alt=media&token=ade9a485-6717-467d-855e-2a757a087dcf' 
       },
-      { nameKey: 'products.product.tradeloupe', descriptionKey: 'products.product.tradeloupe.description', slug: 'tradeloupe', icon: Globe },
+      { 
+        nameKey: 'products.product.customsLoupe', 
+        descriptionKey: 'products.product.customsLoupe.description', 
+        slug: 'customs-loupe', 
+        icon: AreaChart 
+      },
     ],
   },
 ];
@@ -190,4 +196,3 @@ export default function ProductsPage() {
     </div>
   );
 }
-

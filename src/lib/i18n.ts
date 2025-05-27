@@ -88,8 +88,8 @@ export type TranslationKey =
   | 'products.product.declarant.description'
   | 'products.product.greenpulse'
   | 'products.product.greenpulse.description'
-  | 'products.product.tradeloupe'
-  | 'products.product.tradeloupe.description'
+  | 'products.product.customsLoupe'
+  | 'products.product.customsLoupe.description'
   // News Section Keys
   | 'news.title'
   | 'news.description'
@@ -249,8 +249,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.declarant.description': 'Comprehensive solution for efficient and compliant customs declaration filing.',
     'products.product.greenpulse': 'Greenpulse',
     'products.product.greenpulse.description': 'Track and manage sustainability metrics and carbon footprint in logistics.',
-    'products.product.tradeloupe': 'Tradeloupe',
-    'products.product.tradeloupe.description': 'Platform for trade development, market analysis, and accessing new opportunities.',
+    'products.product.customsLoupe': 'Customs Loupe',
+    'products.product.customsLoupe.description': 'A tool that provides data visualization for customs transactions.',
     // News Section Keys
     'news.title': 'News & Insights',
     'news.description': 'Stay updated with the latest news, industry insights, and technology updates from ATEZ Software.',
@@ -356,7 +356,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'home.cta.button': 'Besprechen Sie Ihre Bedürfnisse',
     'about.title': 'Über ATEZ Software Technologies',
     'about.mission.title': 'Unsere Mission',
-    'about.mission.content': 'Our mission is to create an autonomous, digital, secure and integrated ecosystem for all stakeholders of cross-border trade. We aim to contribute to environment and sustainability by digitizing processes, related to cross-border movement of goods, while increasing efficiency and transparency with our solutions.', // Placeholder
+    'about.mission.content': 'Our mission is to create an autonomous, digital, secure and integrated ecosystem for all stakeholders of cross-border trade. We aim to contribute to environment and sustainability by digitizing processes, related to cross-border movement of goods, while increasing efficiency and transparency with our solutions.', 
     'about.story.title': 'Unsere Geschichte',
     'about.story.content': 'Atez Software Technologies, gegründet 2017, verkörpert eine reiche Konvergenz von Feld- und akademischer Kompetenz mit einer über 30-jährigen Erfahrung in grenzüberschreitenden Handelsverfahren, Logistik, Zollabfertigung und IT-Lösungen für die Zollabfertigung sowie Finanz- und Berichtswesen. Dieses Unternehmen gedeiht unter der Leitung erfahrener Manager und wird durch eine dynamische Fusion von Beratern und innovativen Köpfen gestärkt, was einen tiefen Wissensschatz in der Branche sicherstellt. Zentral für das Ethos von Atez ist die symbiotische Beziehung zwischen Fachexperten und Softwareentwicklern, eine Zusammenarbeit, die entscheidend ist, um neue Technologien, insbesondere Blockchain, zu nutzen und Lösungen zu entwickeln, die sowohl revolutionär als auch auf die Kundenanforderungen abgestimmt sind. Unsere Grundprinzipien sind: ein starkes Engagement für Teamarbeit, Innovation und die strategische Integration von Fachwissen mit modernster Technologie, um die vielschichtigen Herausforderungen des internationalen Handels und der Logistik zu bewältigen.',
     'contact.title': 'Kontakt aufnehmen',
@@ -407,8 +407,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.declarant.description': 'Umfassende Lösung für die effiziente und konforme Einreichung von Zollanmeldungen.',
     'products.product.greenpulse': 'Greenpulse',
     'products.product.greenpulse.description': 'Verfolgung und Verwaltung von Nachhaltigkeitskennzahlen und CO2-Fußabdruck in der Logistik.',
-    'products.product.tradeloupe': 'Tradeloupe',
-    'products.product.tradeloupe.description': 'Plattform für Handelsentwicklung, Marktanalyse und Erschließung neuer Möglichkeiten.',
+    'products.product.customsLoupe': 'Customs Loupe',
+    'products.product.customsLoupe.description': 'Ein Werkzeug, das Datenvisualisierung für Zolltransaktionen bereitstellt.',
     'news.title': 'Aktuelles & Einblicke',
     'news.description': 'Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Brancheneinblicken und Technologie-Updates von ATEZ Software.',
     'news.readMore': 'Weiterlesen',
@@ -510,7 +510,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'home.cta.button': 'İhtiyaçlarınızı Görüşelim',
     'about.title': 'ATEZ Software Technologies Hakkında',
     'about.mission.title': 'Misyonumuz',
-    'about.mission.content': 'Our mission is to create an autonomous, digital, secure and integrated ecosystem for all stakeholders of cross-border trade. We aim to contribute to environment and sustainability by digitizing processes, related to cross-border movement of goods, while increasing efficiency and transparency with our solutions.', // Placeholder
+    'about.mission.content': 'Our mission is to create an autonomous, digital, secure and integrated ecosystem for all stakeholders of cross-border trade. We aim to contribute to environment and sustainability by digitizing processes, related to cross-border movement of goods, while increasing efficiency and transparency with our solutions.', 
     'about.story.title': 'Hikayemiz',
     'about.story.content': '2017 yılında kurulan Atez Yazılım Teknolojileri, sınır ötesi ticaret prosedürleri, lojistik, gümrük müşavirliği ve gümrük müşavirliği için IT çözümlerinin yanı sıra finans ve raporlama alanlarında 30 yılı aşan bir mirasa sahip, saha ve akademik yeterliliğin zengin bir birleşimini temsil etmektedir. Bu girişim, deneyimli yöneticilerin rehberliğinde gelişmekte ve danışmanlar ile yenilikçi beyinlerin dinamik bir birleşimiyle desteklenmekte, böylece sektöre özgü derin bir bilgi birikimi sağlanmaktadır. Atez’in temel felsefesi, alan uzmanları ile yazılım geliştiriciler arasındaki simbiyotik ilişkidir; bu işbirliği, özellikle Blockchain olmak üzere yeni teknolojilerin devrimci ve müşteri taleplerine uygun çözümler geliştirmek için kullanılmasında hayati öneme sahiptir. Temel ilkelerimiz: ekip çalışmasına, yeniliğe ve uluslararası ticaret ve lojistiğin çok yönlü zorluklarını ele almak için alan uzmanlığını en son teknolojiyle stratejik entegrasyonuna güçlü bir bağlılık.',
     'contact.title': 'İletişime Geçin',
@@ -561,8 +561,8 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.declarant.description': 'Verimli ve uyumlu gümrük beyannamesi dosyalama için kapsamlı çözüm.',
     'products.product.greenpulse': 'Greenpulse',
     'products.product.greenpulse.description': 'Lojistikte sürdürülebilirlik ölçümlerini ve karbon ayak izini takip edin ve yönetin.',
-    'products.product.tradeloupe': 'Tradeloupe',
-    'products.product.tradeloupe.description': 'Ticaret geliştirme, pazar analizi ve yeni fırsatlara erişim platformu.',
+    'products.product.customsLoupe': 'Customs Loupe',
+    'products.product.customsLoupe.description': 'Gümrük işlemleri için veri görselleştirme sağlayan bir araçtır.',
     'news.title': 'Haberler & Analizler',
     'news.description': 'ATEZ Software\'den en son haberler, sektör analizleri ve teknoloji güncellemeleri ile haberdar olun.',
     'news.readMore': 'Devamını Oku',
@@ -636,6 +636,3 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
-
-
-    

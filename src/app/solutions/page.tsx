@@ -9,27 +9,17 @@ import { Button } from '@/components/ui/button';
 import { 
   Lightbulb, 
   ChevronRight,
-  // BookOpen, // Replaced by imageUrl for Tariff
-  // Truck, // Replaced by imageUrl for Logicust
-  ShieldCheck, // Kept for Customs Compliance solution, though Customs Shield product uses imageUrl
-  // Search, // Replaced by imageUrl for Customs X-Ray
-  // FilePenLine, // Replaced by imageUrl for Declarant
-  // Replace, // Replaced by imageUrl for Transcode
-  // Leaf, // Replaced by imageUrl for Greenpulse
-  Globe, // For Tradeloupe product
+  ShieldCheck, 
   Bot, 
   Network,
-  // Solution specific icons
   ListFilter,
   Calculator,
-  // ShieldCheck, // Re-used
   FileWarning,
   SearchCode,
   Percent,
   PlugZap,
   FileStack,
   FileLock2,
-  // Bot, // Re-used for TransitAI, DeclarantAI
   ShieldAlert,
   SearchCheck,
   FileBarChart2,
@@ -72,7 +62,7 @@ const solutionsList: Solution[] = [
   { nameKey: 'solutions.solution.preClearanceControl', productNameKey: 'products.product.customsShield', icon: ShieldAlert },
   { nameKey: 'solutions.solution.postDeclarationControl', productNameKey: 'products.product.customsXRay', icon: SearchCheck },
   { nameKey: 'solutions.solution.cbamReporting', productNameKey: 'products.product.greenpulse', icon: FileBarChart2 },
-  { nameKey: 'solutions.solution.dataVisualization', productNameKey: 'products.product.tradeloupe', icon: AreaChart },
+  { nameKey: 'solutions.solution.dataVisualization', productNameKey: 'products.product.customsLoupe', icon: AreaChart },
 ];
 
 const productDetailsMap: Record<string, ProductInfo> = {
@@ -112,7 +102,11 @@ const productDetailsMap: Record<string, ProductInfo> = {
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-greenpulse-3-%400.5x.webp?alt=media&token=ade9a485-6717-467d-855e-2a757a087dcf', 
     slug: 'greenpulse' 
   },
-  'products.product.tradeloupe': { nameKey: 'products.product.tradeloupe', icon: Globe, slug: 'tradeloupe' },
+  'products.product.customsLoupe': { 
+    nameKey: 'products.product.customsLoupe', 
+    icon: AreaChart, // Or use an imageUrl if you have one
+    slug: 'customs-loupe' 
+  },
 };
 
 
@@ -145,7 +139,7 @@ export default function SolutionsPage() {
           const productInfo = productDetailsMap[productKey as TranslationKey];
           if (!productInfo) return null; 
 
-          const ProductIcon = productInfo.icon; // This will be undefined if imageUrl is used
+          const ProductIcon = productInfo.icon; 
           const productLink = productInfo.detailPagePath || `/products#${productInfo.slug}`;
 
           return (
@@ -202,4 +196,3 @@ export default function SolutionsPage() {
     </div>
   );
 }
-    
