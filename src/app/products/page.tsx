@@ -13,7 +13,6 @@ import {
   FileText, 
   Lightbulb, 
   ArrowRight,
-  Search, 
   ArrowRightLeft, 
   Bot, 
   FilePenLine, 
@@ -69,7 +68,12 @@ const productCategories: ProductCategory[] = [
         slug: 'customs-shield', 
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icons-customs-shield-3-%400.5x.webp?alt=media&token=b0f7725f-a3b1-4765-834c-a7bda54e022a' 
       },
-      { nameKey: 'products.product.customsXRay', descriptionKey: 'products.product.customsXRay.description', slug: 'customs-xray', icon: Search },
+      { 
+        nameKey: 'products.product.customsXRay', 
+        descriptionKey: 'products.product.customsXRay.description', 
+        slug: 'customs-xray', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-customs-x-ray-3-%400.5x.webp?alt=media&token=24feb9c5-9986-4b84-aabd-1fe9adb3838f' 
+      },
       { nameKey: 'products.product.transitAI', descriptionKey: 'products.product.transitAI.description', slug: 'transit-ai', icon: ArrowRightLeft },
       { nameKey: 'products.product.declarantAI', descriptionKey: 'products.product.declarantAI.description', slug: 'declarant-ai', icon: Bot },
     ],
