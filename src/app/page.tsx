@@ -45,9 +45,8 @@ const capabilities: CapabilityItem[] = [
   {
     titleKey: 'home.capabilities.autonomousDataFlowAutomation.title',
     descriptionKey: 'home.capabilities.autonomousDataFlowAutomation.description',
-    imageSrc: 'https://placehold.co/600x400.png',
+    imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/autonomous-600-400.webp?alt=media&token=a8bb849d-f80a-4457-afc9-8b5a9eded375',
     imageAltKey: 'home.capabilities.autonomousDataFlowAutomation.title',
-    dataAiHint: 'process automation',
     icon: Settings2,
   },
 ];
