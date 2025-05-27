@@ -14,7 +14,7 @@ import {
   Lightbulb, 
   ArrowRight,
   // BookOpen, // Tariff icon removed as it will use an image
-  Truck, 
+  // Truck, // Logicust icon will now use an image
   ShieldCheck, 
   Search, 
   ArrowRightLeft, 
@@ -55,7 +55,12 @@ const productCategories: ProductCategory[] = [
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd',
         detailPagePath: '/products/tariff' 
       },
-      { nameKey: 'products.product.logicust', descriptionKey: 'products.product.logicust.description', slug: 'logicust', icon: Truck },
+      { 
+        nameKey: 'products.product.logicust', 
+        descriptionKey: 'products.product.logicust.description', 
+        slug: 'logicust', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd' // Updated Logicust to use imageUrl
+      },
     ],
   },
   {
@@ -121,7 +126,7 @@ export default function ProductsPage() {
             <CardContent className="flex-grow">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {category.products.map((product) => {
-                  const ProductIcon = product.icon; // Keep this for other products
+                  const ProductIcon = product.icon; 
                   return (
                     <div key={product.nameKey} className="p-4 border rounded-lg shadow-sm bg-card hover:shadow-md transition-shadow flex flex-col h-full">
                       <div className="flex items-center gap-3 mb-2">
@@ -129,9 +134,9 @@ export default function ProductsPage() {
                           <Image
                             src={product.imageUrl}
                             alt={t(product.nameKey)}
-                            width={24} // Adjust as needed, or get actual dimensions
-                            height={24} // Adjust as needed
-                            className="h-6 w-6 object-contain" // Use object-contain to maintain aspect ratio
+                            width={24} 
+                            height={24} 
+                            className="h-6 w-6 object-contain" 
                           />
                         ) : ProductIcon ? (
                           <ProductIcon className="h-6 w-6 text-accent flex-shrink-0" />
