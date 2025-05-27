@@ -7,7 +7,6 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
-  Lightbulb, 
   ChevronRight,
   ShieldCheck, 
   Bot, 
@@ -23,7 +22,7 @@ import {
   ShieldAlert,
   SearchCheck,
   FileBarChart2,
-  AreaChart, // Keep for solution icon
+  AreaChart, 
   Sparkles,
   History
 } from 'lucide-react';
@@ -126,7 +125,6 @@ export default function SolutionsPage() {
     <div className="container mx-auto py-12 px-4 md:px-6 space-y-12">
       <header className="text-center space-y-4">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary flex items-center justify-center">
-          <Lightbulb className="mr-3 h-10 w-10" />
           {t('solutions.title')}
         </h1>
         <p className="mx-auto max-w-[800px] text-foreground/80 md:text-xl">
@@ -196,3 +194,4 @@ export default function SolutionsPage() {
     </div>
   );
 }
+
