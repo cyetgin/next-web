@@ -23,13 +23,13 @@ export function Header() {
     logoHeight = 105;
   } else { // English and German
     logoSrc = "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/400-105-EN.png?alt=media&token=63ad9b7e-7011-433a-b02d-03f695831975";
-    logoWidth = 400; 
+    logoWidth = 400;
     logoHeight = 105;
   }
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-[110px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
           {isMobile && (
             <Button variant="ghost" size="icon" onClick={() => {
