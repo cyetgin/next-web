@@ -38,9 +38,8 @@ const capabilities: CapabilityItem[] = [
   {
     titleKey: 'home.capabilities.streamlinedCustomsTransit.title',
     descriptionKey: 'home.capabilities.streamlinedCustomsTransit.description',
-    imageSrc: 'https://placehold.co/600x400.png',
+    imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/streamlined-600-400.webp?alt=media&token=05a6798f-3d8c-4ee9-abc3-0f8e5b4dba75',
     imageAltKey: 'home.capabilities.streamlinedCustomsTransit.title',
-    dataAiHint: 'customs transit',
     icon: Truck,
   },
   {
@@ -161,3 +160,4 @@ export default function HomePage() {
     </div>
   );
 }
+
