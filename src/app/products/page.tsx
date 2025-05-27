@@ -13,10 +13,10 @@ import {
   FileText, 
   Lightbulb, 
   ArrowRight,
-  FilePenLine, 
+  // FilePenLine, // Removed as Declarant now uses imageUrl
   Leaf, 
   Globe,
-  // Network // Keep for Relayhub if it's still a product, or remove if not
+  // Network // Keep for Relayhub if it's still a product, or remove if not - Relayhub removed
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -96,7 +96,12 @@ const productCategories: ProductCategory[] = [
         slug: 'transcode', 
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transcode-3-%400.5x.webp?alt=media&token=86b8bffe-3847-416a-b413-9b822565641b' 
       },
-      { nameKey: 'products.product.declarant', descriptionKey: 'products.product.declarant.description', slug: 'declarant', icon: FilePenLine },
+      { 
+        nameKey: 'products.product.declarant', 
+        descriptionKey: 'products.product.declarant.description', 
+        slug: 'declarant', 
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-declarant-3-%400.5x.webp?alt=media&token=a2c6cf7f-b841-455b-b503-043679d5400d'
+      },
     ],
   },
   {
