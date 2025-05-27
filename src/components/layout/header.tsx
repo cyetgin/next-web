@@ -22,12 +22,9 @@ export function Header() {
     logoWidth = 400;
     logoHeight = 105;
   } else { // English and German
-    logoSrc = "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-customs-loupe-3-%400.5x.webp?alt=media&token=8b3ddf7b-bc43-4461-a2fb-2a692a363722";
-    // Assuming intrinsic dimensions for the webp icon. Adjust if known.
-    // For an icon, these might be smaller, e.g., 48x48 or similar.
-    // For demonstration, using a common icon size.
-    logoWidth = 48; 
-    logoHeight = 48;
+    logoSrc = "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/400-105-EN.png?alt=media&token=63ad9b7e-7011-433a-b02d-03f695831975";
+    logoWidth = 400; 
+    logoHeight = 105;
   }
 
   return (
