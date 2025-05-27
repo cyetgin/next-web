@@ -6,7 +6,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { LanguageSelector } from '@/components/language-selector';
 import { SidebarTrigger, useSidebar } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { PanelLeftOpen, UserCircle } from 'lucide-react';
+import { Menu, UserCircle } from 'lucide-react'; // Changed PanelLeftOpen to Menu
 
 export function Header() {
   const { isMobile } = useSidebar();
@@ -19,7 +19,7 @@ export function Header() {
           {isMobile && ( 
             <SidebarTrigger asChild>
               <Button variant="ghost" size="icon">
-                <PanelLeftOpen className="h-6 w-6" />
+                <Menu className="h-6 w-6" /> {/* Changed from PanelLeftOpen */}
               </Button>
             </SidebarTrigger>
           )}
@@ -39,5 +39,3 @@ export function Header() {
     </header>
   );
 }
-
-    
