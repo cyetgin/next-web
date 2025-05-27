@@ -104,7 +104,7 @@ export default function HomePage() {
           </div>
           <div className="mt-10 flex justify-center gap-4">
              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/contact">Explore Our Solutions <ArrowRight className="ml-2 h-5 w-5" /></Link>
+              <Link href="/solutions">Explore Our Solutions <ArrowRight className="ml-2 h-5 w-5" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="/about">{t('nav.about')}</Link>
