@@ -50,8 +50,14 @@ export type TranslationKey =
   | 'contact.form.message.placeholder'
   | 'contact.form.submitButton'
   | 'contact.info.title'
-  | 'contact.info.address'
-  | 'contact.info.phone'
+  | 'contact.info.address.hq.title'
+  | 'contact.info.address.hq.address'
+  | 'contact.info.address.uk.title'
+  | 'contact.info.address.uk.address'
+  | 'contact.info.address.de.title'
+  | 'contact.info.address.de.address'
+  | 'contact.info.address.us.title'
+  | 'contact.info.address.us.address'
   | 'contact.info.email'
   | 'products.title'
   | 'products.description'
@@ -202,9 +208,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'contact.form.message.label': 'Your Inquiry',
     'contact.form.message.placeholder': 'Describe your challenges or project ideas...',
     'contact.form.submitButton': 'Send Inquiry',
-    'contact.info.title': 'Our Contact Information',
-    'contact.info.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkiye',
-    'contact.info.phone': '', // Removed
+    'contact.info.title': 'Our Offices',
+    'contact.info.address.hq.title': 'HQ',
+    'contact.info.address.hq.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkiye',
+    'contact.info.address.uk.title': 'UK Branch',
+    'contact.info.address.uk.address': 'China Works, 100 Black Prince Road SE1 7SJ London',
+    'contact.info.address.de.title': 'Germany Branch',
+    'contact.info.address.de.address': 'Friedrich-Ebert-Anlage 49 Nr: 2227 60308 Frankfurt am Main',
+    'contact.info.address.us.title': 'US Branch',
+    'contact.info.address.us.address': '1775 Tysons Blvd., Suite 4161 McLean, VA 22102 Virginia',
     'contact.info.email': 'solutions@atez.com',
     'products.title': 'Our Products',
     'products.description': 'Discover our suite of advanced software solutions designed to streamline international trade and customs operations. All our products are accessible through our central platform.',
@@ -352,9 +364,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'contact.form.message.label': 'Ihre Anfrage',
     'contact.form.message.placeholder': 'Beschreiben Sie Ihre Herausforderungen oder Projektideen...',
     'contact.form.submitButton': 'Anfrage senden',
-    'contact.info.title': 'Unsere Kontaktinformationen',
-    'contact.info.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkei',
-    'contact.info.phone': '', // Removed
+    'contact.info.title': 'Unsere Büros',
+    'contact.info.address.hq.title': 'Hauptsitz',
+    'contact.info.address.hq.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkei',
+    'contact.info.address.uk.title': 'Niederlassung UK',
+    'contact.info.address.uk.address': 'China Works, 100 Black Prince Road SE1 7SJ London',
+    'contact.info.address.de.title': 'Niederlassung Deutschland',
+    'contact.info.address.de.address': 'Friedrich-Ebert-Anlage 49 Nr: 2227 60308 Frankfurt am Main',
+    'contact.info.address.us.title': 'Niederlassung US',
+    'contact.info.address.us.address': '1775 Tysons Blvd., Suite 4161 McLean, VA 22102 Virginia',
     'contact.info.email': 'solutions@atez.com',
     'products.title': 'Unsere Produkte',
     'products.description': 'Entdecken Sie unsere Suite fortschrittlicher Softwarelösungen zur Optimierung internationaler Handels- und Zollabläufe. Alle unsere Produkte sind über unsere zentrale Plattform zugänglich.',
@@ -498,9 +516,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'contact.form.message.label': 'Talebiniz',
     'contact.form.message.placeholder': 'Zorluklarınızı veya proje fikirlerinizi açıklayın...',
     'contact.form.submitButton': 'Talep Gönder',
-    'contact.info.title': 'İletişim Bilgilerimiz',
-    'contact.info.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkiye',
-    'contact.info.phone': '', // Removed
+    'contact.info.title': 'Ofislerimiz',
+    'contact.info.address.hq.title': 'Genel Merkez',
+    'contact.info.address.hq.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkiye',
+    'contact.info.address.uk.title': 'İngiltere Şubesi',
+    'contact.info.address.uk.address': 'China Works, 100 Black Prince Road SE1 7SJ London',
+    'contact.info.address.de.title': 'Almanya Şubesi',
+    'contact.info.address.de.address': 'Friedrich-Ebert-Anlage 49 Nr: 2227 60308 Frankfurt am Main',
+    'contact.info.address.us.title': 'ABD Şubesi',
+    'contact.info.address.us.address': '1775 Tysons Blvd., Suite 4161 McLean, VA 22102 Virginia',
     'contact.info.email': 'solutions@atez.com',
     'products.title': 'Ürünlerimiz',
     'products.description': 'Uluslararası ticaret ve gümrük operasyonlarını kolaylaştırmak için tasarlanmış gelişmiş yazılım çözümlerimizi keşfedin. Tüm ürünlerimize merkezi platformumuz üzerinden erişilebilir.',
@@ -604,3 +628,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+
+
+    
