@@ -6,7 +6,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2 } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2, Truck } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
@@ -22,20 +22,36 @@ interface CapabilityItem {
 
 const capabilities: CapabilityItem[] = [
   {
-    titleKey: 'home.capabilities.crossBorder.title', // Represents "Comprehensive Customs Compliance Solutions"
+    titleKey: 'home.capabilities.crossBorder.title',
     descriptionKey: 'home.capabilities.crossBorder.description',
     imageSrc: 'https://placehold.co/600x400.png',
     imageAltKey: 'home.capabilities.crossBorder.title',
     dataAiHint: 'compliance regulations',
-    icon: ShieldCheck, // Updated Icon
+    icon: ShieldCheck,
   },
   {
-    titleKey: 'home.capabilities.autonomousData.title', // Represents "Automated End-to-End Customs Procedure Handling"
+    titleKey: 'home.capabilities.autonomousData.title',
     descriptionKey: 'home.capabilities.autonomousData.description',
     imageSrc: 'https://placehold.co/600x400.png',
     imageAltKey: 'home.capabilities.autonomousData.title',
     dataAiHint: 'data automation',
-    icon: Workflow, // Icon remains suitable
+    icon: Workflow,
+  },
+  {
+    titleKey: 'home.capabilities.streamlinedCustomsTransit.title',
+    descriptionKey: 'home.capabilities.streamlinedCustomsTransit.description',
+    imageSrc: 'https://placehold.co/600x400.png',
+    imageAltKey: 'home.capabilities.streamlinedCustomsTransit.title',
+    dataAiHint: 'customs transit',
+    icon: Truck,
+  },
+  {
+    titleKey: 'home.capabilities.autonomousDataFlowAutomation.title',
+    descriptionKey: 'home.capabilities.autonomousDataFlowAutomation.description',
+    imageSrc: 'https://placehold.co/600x400.png',
+    imageAltKey: 'home.capabilities.autonomousDataFlowAutomation.title',
+    dataAiHint: 'process automation',
+    icon: Settings2,
   },
 ];
 
