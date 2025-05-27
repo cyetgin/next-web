@@ -1,13 +1,17 @@
 
 "use client";
 
+import Link from 'next/link';
 import { useTranslation } from '@/hooks/use-translation';
 import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 export default function ContactPage() {
   const { t } = useTranslation();
+
+  const address = t('contact.info.address');
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
@@ -41,14 +45,9 @@ export default function ContactPage() {
               <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <div>
                 <h3 className="font-semibold">Address</h3>
-                <p className="text-foreground/80">{t('contact.info.address')}</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold">Phone</h3>
-                <p className="text-foreground/80">{t('contact.info.phone')}</p>
+                <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary hover:underline">
+                  {address}
+                </Link>
               </div>
             </div>
             <div className="flex items-start gap-4">
