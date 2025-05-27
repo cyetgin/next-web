@@ -18,7 +18,7 @@ export function Header() {
   let logoHeight: number;
 
   if (currentLanguage === 'tr') {
-    logoSrc = "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/400-105-EN.png?alt=media&token=63ad9b7e-7011-433a-b02d-03f695831975";
+    logoSrc = "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/400-105-TR.png?alt=media&token=a93538ed-50f5-42db-a4bc-e749bc3ea9b8";
     logoWidth = 400;
     logoHeight = 105;
   } else { // English and German
