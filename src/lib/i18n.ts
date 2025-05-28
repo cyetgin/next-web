@@ -121,6 +121,12 @@ export type TranslationKey =
   | 'settings.language.title'
   | 'settings.language.description'
   | 'settings.language.select.label'
+  | 'settings.density.title' // Added
+  | 'settings.density.description' // Added
+  | 'settings.density.label' // Added
+  | 'settings.density.compact' // Added
+  | 'settings.density.default' // Added
+  | 'settings.density.spacious' // Added
   // Solutions Page Keys
   | 'solutions.title'
   | 'solutions.description'
@@ -236,7 +242,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} based, dynamically updated, customs and regulatory compliance data manager',
     'products.product.logicust.tooltip.productTrigger': 'Product',
     'products.product.logicust.tooltip.productContent': '(Article, raw material, semi or finished product, that is internationally traded by an economic operator)',
     'products.product.customsShield': 'Customs Shield',
@@ -284,6 +290,12 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Language',
     'settings.language.description': 'Choose your preferred language for the application.',
     'settings.language.select.label': 'Select Language',
+    'settings.density.title': 'Content Density',
+    'settings.density.description': 'Adjust the spacing and density of content.',
+    'settings.density.label': 'Density Level',
+    'settings.density.compact': 'Compact',
+    'settings.density.default': 'Default',
+    'settings.density.spacious': 'Spacious',
     // Solutions Page Keys
     'solutions.title': 'Our Solutions',
     'solutions.description': 'Explore how ATEZ Software Technologies leverages its products to deliver targeted solutions for your international trade and customs challenges.',
@@ -396,7 +408,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 aktualisierte offizielle (historisch indizierte) Zolldatenbank',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} based, dynamically updated, customs and regulatory compliance data manager',
     'products.product.logicust.tooltip.productTrigger': 'Produkt',
     'products.product.logicust.tooltip.productContent': '(Artikel, Rohmaterial, Halb- oder Fertigprodukt, das von einem Wirtschaftsbeteiligten international gehandelt wird)',
     'products.product.customsShield': 'Customs Shield',
@@ -442,6 +454,12 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Sprache',
     'settings.language.description': 'Wählen Sie Ihre bevorzugte Sprache für die Anwendung.',
     'settings.language.select.label': 'Sprache auswählen',
+    'settings.density.title': 'Inhaltsdichte',
+    'settings.density.description': 'Passen Sie den Abstand und die Dichte des Inhalts an.',
+    'settings.density.label': 'Dichtestufe',
+    'settings.density.compact': 'Kompakt',
+    'settings.density.default': 'Standard',
+    'settings.density.spacious': 'Großzügig',
     'solutions.title': 'Unsere Lösungen',
     'solutions.description': 'Entdecken Sie, wie ATEZ Software Technologies seine Produkte einsetzt, um gezielte Lösungen für Ihre internationalen Handels- und Zollherausforderungen zu liefern.',
     'solutions.solution.htsClassification': 'HS-Code-Klassifizierung',
@@ -552,7 +570,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '7/24 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} tabanlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
     'products.product.logicust.tooltip.productTrigger': 'Ürün',
     'products.product.logicust.tooltip.productContent': '(Bir ekonomik operatör tarafından uluslararası ticareti yapılan eşya, hammadde, yarı mamul veya bitmiş ürün)',
     'products.product.customsShield': 'Customs Shield',
@@ -598,6 +616,12 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.language.title': 'Dil',
     'settings.language.description': 'Uygulama için tercih ettiğiniz dili seçin.',
     'settings.language.select.label': 'Dil Seçin',
+    'settings.density.title': 'İçerik Yoğunluğu',
+    'settings.density.description': 'İçeriğin aralıklarını ve yoğunluğunu ayarlayın.',
+    'settings.density.label': 'Yoğunluk Seviyesi',
+    'settings.density.compact': 'Kompakt',
+    'settings.density.default': 'Varsayılan',
+    'settings.density.spacious': 'Geniş',
     'solutions.title': 'Çözümlerimiz',
     'solutions.description': 'ATEZ Software Technologies\'in uluslararası ticaret ve gümrük zorluklarınız için ürünlerini nasıl kullanarak hedefe yönelik çözümler sunduğunu keşfedin.',
     'solutions.solution.htsClassification': 'GTİP Kodu Sınıflandırması',
@@ -644,5 +668,3 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
-
-

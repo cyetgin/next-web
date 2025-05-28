@@ -5,6 +5,7 @@ import React from "react";
 import { useTheme } from "next-themes";
 import { useTranslation } from "@/hooks/use-translation";
 import { useFont, type FontSize } from "@/context/font-provider";
+import { useDensity, type Density } from "@/context/density-provider"; // Added
 import { LanguageSelector } from "@/components/language-selector";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,20 +24,18 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Palette, Languages, Baseline } from "lucide-react"; // Baseline for font size
+import { Palette, Languages, Baseline, Rows } from "lucide-react"; // Added Rows for density
 
 export default function SettingsPage() {
   const { t } = useTranslation();
   const { theme, setTheme } = useTheme();
   const { fontSize, setFontSize } = useFont();
+  const { density, setDensity } = useDensity(); // Added
 
-  // Ensure theme and fontSize are not undefined before rendering Select/RadioGroup
-  // This is important because their values might be read from localStorage asynchronously.
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    // You can return a loading skeleton here if needed
     return null;
   }
 
@@ -79,7 +78,7 @@ export default function SettingsPage() {
             <div className="space-y-2">
               <Label>{t("settings.appearance.fontSize.label")}</Label>
               <RadioGroup
-                value={fontSize} // Changed from defaultValue to value
+                value={fontSize}
                 onValueChange={(value: string) => setFontSize(value as FontSize)}
                 className="flex space-x-2"
               >
@@ -112,12 +111,41 @@ export default function SettingsPage() {
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="language-select-settings-page">{t("settings.language.select.label")}</Label>
-               {/* We need to ensure LanguageSelector's SelectTrigger has a unique ID or is labelled correctly if used multiple times. 
-                   For simplicity here, assuming LanguageSelector is robust enough or giving it an ID here.
-                   However, LanguageSelector itself doesn't take an id prop for its Select component.
-                   A better approach might be to simply use the LanguageSelector component if its styling is acceptable.
-               */}
               <LanguageSelector />
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Content Density Card */}
+        <Card className="shadow-lg">
+          <CardHeader className="flex flex-row items-center gap-3">
+            <Rows className="h-8 w-8 text-primary" /> {/* Added Rows icon */}
+            <div>
+              <CardTitle className="text-2xl">{t("settings.density.title")}</CardTitle>
+              <CardDescription>{t("settings.density.description")}</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label>{t("settings.density.label")}</Label> {/* Assuming a general label for the group */}
+              <RadioGroup
+                value={density}
+                onValueChange={(value: string) => setDensity(value as Density)}
+                className="flex space-x-2"
+              >
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="compact" id="density-compact" />
+                  <Label htmlFor="density-compact" className="font-normal">{t("settings.density.compact")}</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="default" id="density-default" />
+                  <Label htmlFor="density-default" className="font-normal">{t("settings.density.default")}</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="spacious" id="density-spacious" />
+                  <Label htmlFor="density-spacious" className="font-normal">{t("settings.density.spacious")}</Label>
+                </div>
+              </RadioGroup>
             </div>
           </CardContent>
         </Card>

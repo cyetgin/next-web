@@ -5,6 +5,7 @@ import './globals.css';
 import { LanguageProvider } from '@/context/language-context';
 import { ThemeProvider } from '@/components/theme-provider';
 import { FontProvider } from '@/context/font-provider';
+import { DensityProvider } from '@/context/density-provider'; // Added
 import { Toaster } from '@/components/ui/toaster';
 import MainLayout from '@/components/layout/main-layout';
 
@@ -39,10 +40,12 @@ export default function RootLayout({
         >
           <LanguageProvider>
             <FontProvider>
-              <MainLayout>
-                {children}
-              </MainLayout>
-              <Toaster />
+              <DensityProvider> {/* Added */}
+                <MainLayout>
+                  {children}
+                </MainLayout>
+                <Toaster />
+              </DensityProvider> {/* Added */}
             </FontProvider>
           </LanguageProvider>
         </ThemeProvider>
