@@ -308,7 +308,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.viewProductDetails': 'View Product Details',
     // Tariff Detail Page
     'products.tariff.pageTitle': 'Tariff',
-    'products.tariff.generalDescription': 'Tariff is your go-to digital solution for seamless, transparent cross-border trade. Operating currently within the European Union, United Kingdom, Switzerland, and Türkiye. The platform presents customs regulations, duties, and control measures. With just a few clicks, Tariff enables users to access critical information tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export process.',
+    'products.tariff.generalDescription': 'Tariff is your digital regulative databank across customs territories with historically indexed duties, taxes and measures, applied in accordance with Tariff Schedules. Operating currently within the European Union, United Kingdom, Switzerland, and Türkiye. The platform presents customs regulations, duties, and control measures. With just a few clicks, Tariff enables users to access critical information tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export process.',
     'products.tariff.modules.title': 'Product Modules',
     'products.tariff.module.basicQuery.title': 'Basic Query',
     'products.tariff.module.basicQuery.description': 'Quickly identify the essential duty rates and regulatory measures for your selected export or import trade route by simply inputting the commodity code. The Basic Query provides a straightforward list of applicable tariffs.',
@@ -464,7 +464,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.historicalDataTariff': 'Historisch indexierte Regulierungsdaten',
     'solutions.viewProductDetails': 'Produktdetails anzeigen',
     'products.tariff.pageTitle': 'Tariff',
-    'products.tariff.generalDescription': 'Tariff ist Ihre digitale Lösung für nahtlosen, transparenten grenzüberschreitenden Handel. Derzeit in der Europäischen Union, dem Vereinigten Königreich, der Schweiz und der Türkei tätig. Die Plattform präsentiert Zollvorschriften, Abgaben und Kontrollmaßnahmen. Mit nur wenigen Klicks ermöglicht Tariff den Benutzern den Zugriff auf wichtige Informationen, die auf ihre Handelsrouten zugeschnitten sind, und gewährleistet so einen reibungsloseren, effizienteren und konformen Import- oder Exportprozess.',
+    'products.tariff.generalDescription': 'Tariff is your digital regulative databank across customs territories with historically indexed duties, taxes and measures, applied in accordance with Tariff Schedules. Operating currently within the European Union, United Kingdom, Switzerland, and Türkiye. The platform presents customs regulations, duties, and control measures. With just a few clicks, Tariff enables users to access critical information tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export process.',
     'products.tariff.modules.title': 'Produktmodule',
     'products.tariff.module.basicQuery.title': 'Basisabfrage',
     'products.tariff.module.basicQuery.description': 'Identifizieren Sie schnell die wesentlichen Zollsätze und regulatorischen Maßnahmen für Ihre ausgewählte Export- oder Importhandelsroute, indem Sie einfach den Warencode eingeben. Die Basisabfrage liefert eine unkomplizierte Liste der anwendbaren Tarife.',
@@ -620,7 +620,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.historicalDataTariff': 'Tarihsel Endeksli Düzenleyici Veriler',
     'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
     'products.tariff.pageTitle': 'Tariff',
-    'products.tariff.generalDescription': 'Tariff, sorunsuz, şeffaf sınır ötesi ticaret için başvuracağınız dijital çözümdür. Şu anda Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye\'de faaliyet göstermektedir. Platform, gümrük düzenlemelerini, vergileri ve kontrol önlemlerini sunar. Sadece birkaç tıklama ile Tariff, kullanıcıların ticaret rotalarına göre uyarlanmış kritik bilgilere erişmelerini sağlayarak daha sorunsuz, daha verimli ve uyumlu bir ithalat veya ihracat süreci temin eder.',
+    'products.tariff.generalDescription': 'Tariff is your digital regulative databank across customs territories with historically indexed duties, taxes and measures, applied in accordance with Tariff Schedules. Operating currently within the European Union, United Kingdom, Switzerland, and Türkiye. The platform presents customs regulations, duties, and control measures. With just a few clicks, Tariff enables users to access critical information tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export process.',
     'products.tariff.modules.title': 'Ürün Modülleri',
     'products.tariff.module.basicQuery.title': 'Temel Sorgulama',
     'products.tariff.module.basicQuery.description': 'Sadece GTİP kodunu girerek seçtiğiniz ihracat veya ithalat ticaret rotası için temel gümrük vergisi oranlarını ve düzenleyici önlemleri hızla belirleyin. Temel Sorgulama, uygulanabilir tarifelerin basit bir listesini sunar.',
@@ -644,3 +644,5 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+
+
