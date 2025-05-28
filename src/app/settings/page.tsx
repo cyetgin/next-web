@@ -1,7 +1,7 @@
 
 "use client";
 
-import React from "react"; // Added this line
+import React from "react"; 
 import { useTheme } from "next-themes";
 import { useTranslation } from "@/hooks/use-translation";
 import { useFont, type FontSize } from "@/context/font-provider";
@@ -79,7 +79,7 @@ export default function SettingsPage() {
             <div className="space-y-2">
               <Label>{t("settings.appearance.fontSize.label")}</Label>
               <RadioGroup
-                defaultValue={fontSize}
+                value={fontSize} // Changed from defaultValue to value
                 onValueChange={(value: string) => setFontSize(value as FontSize)}
                 className="flex space-x-2"
               >
