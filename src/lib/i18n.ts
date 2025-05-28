@@ -178,6 +178,7 @@ export type TranslationKey =
   // GDPR & Legal
   | 'legal.cookieConsent.text'
   | 'legal.cookieConsent.acceptButton'
+  | 'legal.cookieConsent.rejectButton' // Added
   | 'legal.privacyPolicy.link'
   | 'legal.privacyPolicy.title'
   | 'legal.privacyPolicy.placeholder'
@@ -253,7 +254,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} based, dynamically updated, customs and regulatory compliance data manager',
     'products.product.logicust.tooltip.productTrigger': 'Product',
     'products.product.logicust.tooltip.productContent': '(Article, raw material, semi or finished product, that is internationally traded by an economic operator)',
     'products.product.customsShield': 'Customs Shield',
@@ -351,6 +352,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Back to Products',
     'legal.cookieConsent.text': 'We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.',
     'legal.cookieConsent.acceptButton': 'Accept',
+    'legal.cookieConsent.rejectButton': 'Reject',
     'legal.privacyPolicy.link': 'Privacy Policy',
     'legal.privacyPolicy.title': 'Privacy Policy',
     'legal.privacyPolicy.placeholder': 'Your detailed Privacy Policy content goes here. Explain how you collect, use, and protect user data in compliance with GDPR and other relevant regulations.',
@@ -424,7 +426,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 aktualisierte offizielle (historisch indizierte) Zolldatenbank',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Produkt basierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} basierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
     'products.product.logicust.tooltip.productTrigger': 'Produkt',
     'products.product.logicust.tooltip.productContent': '(Artikel, Rohmaterial, Halb- oder Fertigprodukt, das von einem Wirtschaftsbeteiligten international gehandelt wird)',
     'products.product.customsShield': 'Customs Shield',
@@ -522,6 +524,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Zurück zu den Produkten',
     'legal.cookieConsent.text': 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch den weiteren Besuch dieser Website stimmen Sie unserer Verwendung von Cookies zu.',
     'legal.cookieConsent.acceptButton': 'Akzeptieren',
+    'legal.cookieConsent.rejectButton': 'Ablehnen',
     'legal.privacyPolicy.link': 'Datenschutz-Bestimmungen',
     'legal.privacyPolicy.title': 'Datenschutz-Bestimmungen',
     'legal.privacyPolicy.placeholder': 'Ihre detaillierten Datenschutzbestimmungen finden Sie hier. Erklären Sie, wie Sie Benutzerdaten gemäß der DSGVO und anderen relevanten Vorschriften sammeln, verwenden und schützen.',
@@ -595,7 +598,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '7/24 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': 'Ürün bazlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
+    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} bazlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
     'products.product.logicust.tooltip.productTrigger': 'Ürün',
     'products.product.logicust.tooltip.productContent': '(Bir ekonomik operatör tarafından uluslararası ticareti yapılan eşya, hammadde, yarı mamul veya bitmiş ürün)',
     'products.product.customsShield': 'Customs Shield',
@@ -693,6 +696,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
     'legal.cookieConsent.text': 'Deneyiminizi geliştirmek için çerezleri kullanıyoruz. Bu siteyi ziyaret etmeye devam ederek çerez kullanımımızı kabul etmiş olursunuz.',
     'legal.cookieConsent.acceptButton': 'Kabul Et',
+    'legal.cookieConsent.rejectButton': 'Reddet',
     'legal.privacyPolicy.link': 'Gizlilik Politikası',
     'legal.privacyPolicy.title': 'Gizlilik Politikası',
     'legal.privacyPolicy.placeholder': 'Detaylı Gizlilik Politikası içeriğiniz buraya gelecek. Kullanıcı verilerini GDPR ve diğer ilgili düzenlemelere uygun olarak nasıl topladığınızı, kullandığınızı ve koruduğunuzu açıklayın.',

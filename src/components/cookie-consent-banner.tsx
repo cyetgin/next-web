@@ -15,7 +15,8 @@ export function CookieConsentBanner() {
 
   useEffect(() => {
     const consentGiven = localStorage.getItem(COOKIE_CONSENT_KEY);
-    if (!consentGiven) {
+    // Show banner if no consent decision has been recorded yet
+    if (consentGiven === null) {
       setIsVisible(true);
     }
   }, []);
@@ -23,6 +24,13 @@ export function CookieConsentBanner() {
   const handleAccept = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, 'true');
     setIsVisible(false);
+    // Here you might trigger loading of consent-dependent scripts or services
+  };
+
+  const handleReject = () => {
+    localStorage.setItem(COOKIE_CONSENT_KEY, 'false');
+    setIsVisible(false);
+    // Here you might ensure non-essential cookies/trackers are disabled
   };
 
   if (!isVisible) {
@@ -37,15 +45,20 @@ export function CookieConsentBanner() {
       )}
     >
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-foreground/80">
+        <p className="text-sm text-foreground/80 text-center sm:text-left">
           {t('legal.cookieConsent.text')}
           <Link href="/privacy-policy" className="underline hover:text-primary ml-1">
             {t('legal.privacyPolicy.link')}
           </Link>.
         </p>
-        <Button onClick={handleAccept} size="sm">
-          {t('legal.cookieConsent.acceptButton')}
-        </Button>
+        <div className="flex gap-2 flex-shrink-0">
+          <Button onClick={handleReject} variant="destructive" size="sm">
+            {t('legal.cookieConsent.rejectButton')}
+          </Button>
+          <Button onClick={handleAccept} size="sm">
+            {t('legal.cookieConsent.acceptButton')}
+          </Button>
+        </div>
       </div>
     </div>
   );
