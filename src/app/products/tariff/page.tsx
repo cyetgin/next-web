@@ -58,12 +58,11 @@ export default function TariffPage() {
       <section className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <Image
-            src="https://placehold.co/600x450.png"
+            src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/tariff-main.webp?alt=media&token=e9b2602e-c9c2-4d40-b539-81a8d1de9cf1"
             alt={t('products.tariff.pageTitle')}
             width={600}
             height={450}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="trade compliance regulations"
           />
         </div>
         <div className="space-y-6">
