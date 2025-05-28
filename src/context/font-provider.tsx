@@ -20,28 +20,27 @@ interface FontProviderProps {
 }
 
 export const FontProvider = ({ children }: FontProviderProps) => {
-  const [fontSize, setFontSize] = useState<FontSize>(DEFAULT_FONT_SIZE);
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  useEffect(() => {
-    const storedFontSize = localStorage.getItem(FONT_STORAGE_KEY) as FontSize | null;
-    if (storedFontSize && ['sm', 'md', 'lg'].includes(storedFontSize)) {
-      setFontSize(storedFontSize);
+  const [fontSize, setFontSize] = useState<FontSize>(() => {
+    // This function runs only on initial mount for useState
+    if (typeof window !== 'undefined') { // Ensure localStorage is available
+      const storedFontSize = localStorage.getItem(FONT_STORAGE_KEY) as FontSize | null;
+      if (storedFontSize && ['sm', 'md', 'lg'].includes(storedFontSize)) {
+        return storedFontSize;
+      }
     }
-    setIsInitialized(true);
-  }, []);
+    return DEFAULT_FONT_SIZE;
+  });
 
   useEffect(() => {
-    if (isInitialized) {
+    // This effect runs on mount and whenever fontSize changes.
+    // It's crucial that typeof window check is here too for environments like SSR
+    // where document might not be available initially, though for classList it should be client-side.
+    if (typeof window !== 'undefined') {
       localStorage.setItem(FONT_STORAGE_KEY, fontSize);
       document.documentElement.classList.remove('font-scale-sm', 'font-scale-md', 'font-scale-lg');
       document.documentElement.classList.add(`font-scale-${fontSize}`);
     }
-  }, [fontSize, isInitialized]);
-  
-  if (!isInitialized) {
-    return null; // Or a loading spinner
-  }
+  }, [fontSize]);
 
   return (
     <FontContext.Provider value={{ fontSize, setFontSize }}>
