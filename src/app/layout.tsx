@@ -5,9 +5,10 @@ import './globals.css';
 import { LanguageProvider } from '@/context/language-context';
 import { ThemeProvider } from '@/components/theme-provider';
 import { FontProvider } from '@/context/font-provider';
-import { DensityProvider } from '@/context/density-provider'; // Added
+import { DensityProvider } from '@/context/density-provider';
 import { Toaster } from '@/components/ui/toaster';
 import MainLayout from '@/components/layout/main-layout';
+import { CookieConsentBanner } from '@/components/cookie-consent-banner'; // Added
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,12 +41,13 @@ export default function RootLayout({
         >
           <LanguageProvider>
             <FontProvider>
-              <DensityProvider> {/* Added */}
+              <DensityProvider>
                 <MainLayout>
                   {children}
                 </MainLayout>
                 <Toaster />
-              </DensityProvider> {/* Added */}
+                <CookieConsentBanner /> {/* Added */}
+              </DensityProvider>
             </FontProvider>
           </LanguageProvider>
         </ThemeProvider>
@@ -53,3 +55,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+    

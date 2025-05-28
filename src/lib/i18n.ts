@@ -17,7 +17,7 @@ export type TranslationKey =
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
-  | 'nav.settings'
+  // | 'nav.settings' // Intentionally keeping this commented as per previous request
   | 'home.welcomeTitle'
   | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'
@@ -121,12 +121,12 @@ export type TranslationKey =
   | 'settings.language.title'
   | 'settings.language.description'
   | 'settings.language.select.label'
-  | 'settings.density.title' // Added
-  | 'settings.density.description' // Added
-  | 'settings.density.label' // Added
-  | 'settings.density.compact' // Added
-  | 'settings.density.default' // Added
-  | 'settings.density.spacious' // Added
+  | 'settings.density.title'
+  | 'settings.density.description'
+  | 'settings.density.label'
+  | 'settings.density.compact'
+  | 'settings.density.default'
+  | 'settings.density.spacious'
   // Solutions Page Keys
   | 'solutions.title'
   | 'solutions.description'
@@ -173,7 +173,18 @@ export type TranslationKey =
   | 'products.tariff.cta.title'
   | 'products.tariff.cta.button'
   // Common
-  | 'common.backToProducts';
+  | 'common.backToProducts'
+  | 'nav.settings' // Re-added for Settings page title and link
+  // GDPR & Legal
+  | 'legal.cookieConsent.text'
+  | 'legal.cookieConsent.acceptButton'
+  | 'legal.privacyPolicy.link'
+  | 'legal.privacyPolicy.title'
+  | 'legal.privacyPolicy.placeholder'
+  | 'legal.termsOfService.link'
+  | 'legal.termsOfService.title'
+  | 'legal.termsOfService.placeholder'
+  | 'footer.copyright';
 
 
 export const translations: Record<Locale, Record<string, string>> = {
@@ -242,7 +253,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} based, dynamically updated, customs and regulatory compliance data manager',
+    'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
     'products.product.logicust.tooltip.productTrigger': 'Product',
     'products.product.logicust.tooltip.productContent': '(Article, raw material, semi or finished product, that is internationally traded by an economic operator)',
     'products.product.customsShield': 'Customs Shield',
@@ -261,7 +272,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.greenpulse.description': 'Track and manage sustainability metrics and carbon footprint in logistics.',
     'products.product.customsLoupe': 'Customs Loupe',
     'products.product.customsLoupe.description': 'A tool that provides data visualization for customs transactions.',
-    // News Section Keys
     'news.title': 'News & Insights',
     'news.description': 'Stay updated with the latest news, industry insights, and technology updates from ATEZ Software.',
     'news.readMore': 'Read More',
@@ -274,7 +284,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'news.post2.excerpt': 'We are excited to announce our latest project utilizing blockchain technology to enhance transparency and security in global supply chains.',
     'news.post3.title': 'The Impact of Autonomous Data Handling on Cross-Border Logistics',
     'news.post3.excerpt': 'An in-depth look at how autonomous systems are streamlining data flow and revolutionizing procedure handling in the logistics sector.',
-    // Settings Page Keys
     'settings.title': 'Settings',
     'settings.description': 'Customize your application experience.',
     'settings.appearance.title': 'Appearance',
@@ -296,7 +305,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'settings.density.compact': 'Compact',
     'settings.density.default': 'Default',
     'settings.density.spacious': 'Spacious',
-    // Solutions Page Keys
     'solutions.title': 'Our Solutions',
     'solutions.description': 'Explore how ATEZ Software Technologies leverages its products to deliver targeted solutions for your international trade and customs challenges.',
     'solutions.solution.htsClassification': 'HTS Code Classification',
@@ -318,7 +326,6 @@ export const translations: Record<Locale, Record<string, string>> = {
     'solutions.solution.smartSuggestions': 'Smart Suggestions',
     'solutions.solution.historicalDataTariff': 'Historically Indexed Regulative Data',
     'solutions.viewProductDetails': 'View Product Details',
-    // Tariff Detail Page
     'products.tariff.pageTitle': 'Tariff',
     'products.tariff.generalDescription': 'Tariff is the digital customs regulations databank solution for users and systems to reach historically indexed customs duties, taxes and measures, applied in accordance with Tariff Schedules used across customs territories. Tariff currently covers the European Union, United Kingdom, Switzerland, and Türkiye regulations and provides customs regulations, duties, and control measures with just a few clicks, Tariff enables users to access critical information, tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export readiness.',
     'products.tariff.modules.title': 'Product Modules',
@@ -342,6 +349,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.cta.title': 'Ready to Explore Tariff?',
     'products.tariff.cta.button': 'Use Tariff for FREE',
     'common.backToProducts': 'Back to Products',
+    'legal.cookieConsent.text': 'We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.',
+    'legal.cookieConsent.acceptButton': 'Accept',
+    'legal.privacyPolicy.link': 'Privacy Policy',
+    'legal.privacyPolicy.title': 'Privacy Policy',
+    'legal.privacyPolicy.placeholder': 'Your detailed Privacy Policy content goes here. Explain how you collect, use, and protect user data in compliance with GDPR and other relevant regulations.',
+    'legal.termsOfService.link': 'Terms of Service',
+    'legal.termsOfService.title': 'Terms of Service',
+    'legal.termsOfService.placeholder': 'Your comprehensive Terms of Service content goes here. Outline the rules and guidelines for using your application.',
+    'footer.copyright': `© ${new Date().getFullYear()} ATEZ Software Technologies. All rights reserved.`,
   },
   de: {
     'app.name': 'ATEZ Software Technologies',
@@ -408,7 +424,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '24/7 aktualisierte offizielle (historisch indizierte) Zolldatenbank',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} basierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
+    'products.product.logicust.description': 'Produkt basierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
     'products.product.logicust.tooltip.productTrigger': 'Produkt',
     'products.product.logicust.tooltip.productContent': '(Artikel, Rohmaterial, Halb- oder Fertigprodukt, das von einem Wirtschaftsbeteiligten international gehandelt wird)',
     'products.product.customsShield': 'Customs Shield',
@@ -504,6 +520,15 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.cta.title': 'Bereit, Tariff zu entdecken?',
     'products.tariff.cta.button': 'Tariff KOSTENLOS nutzen',
     'common.backToProducts': 'Zurück zu den Produkten',
+    'legal.cookieConsent.text': 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch den weiteren Besuch dieser Website stimmen Sie unserer Verwendung von Cookies zu.',
+    'legal.cookieConsent.acceptButton': 'Akzeptieren',
+    'legal.privacyPolicy.link': 'Datenschutz-Bestimmungen',
+    'legal.privacyPolicy.title': 'Datenschutz-Bestimmungen',
+    'legal.privacyPolicy.placeholder': 'Ihre detaillierten Datenschutzbestimmungen finden Sie hier. Erklären Sie, wie Sie Benutzerdaten gemäß der DSGVO und anderen relevanten Vorschriften sammeln, verwenden und schützen.',
+    'legal.termsOfService.link': 'Nutzungsbedingungen',
+    'legal.termsOfService.title': 'Nutzungsbedingungen',
+    'legal.termsOfService.placeholder': 'Ihre umfassenden Nutzungsbedingungen finden Sie hier. Beschreiben Sie die Regeln und Richtlinien für die Nutzung Ihrer Anwendung.',
+    'footer.copyright': `© ${new Date().getFullYear()} ATEZ Softwaretechnologien. Alle Rechte vorbehalten.`,
   },
   tr: {
     'app.name': 'ATEZ Software Technologies',
@@ -570,7 +595,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.product.tariff': 'Tariff',
     'products.product.tariff.description': '7/24 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
     'products.product.logicust': 'Logicust',
-    'products.product.logicust.description': '{{PRODUCT_TOOLTIP_TARGET}} bazlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
+    'products.product.logicust.description': 'Ürün bazlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
     'products.product.logicust.tooltip.productTrigger': 'Ürün',
     'products.product.logicust.tooltip.productContent': '(Bir ekonomik operatör tarafından uluslararası ticareti yapılan eşya, hammadde, yarı mamul veya bitmiş ürün)',
     'products.product.customsShield': 'Customs Shield',
@@ -666,6 +691,17 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.tariff.cta.title': 'Tariff\'i Keşfetmeye Hazır mısınız?',
     'products.tariff.cta.button': 'Tariff\'i ÜCRETSİZ Kullanın',
     'common.backToProducts': 'Ürünlere Geri Dön',
+    'legal.cookieConsent.text': 'Deneyiminizi geliştirmek için çerezleri kullanıyoruz. Bu siteyi ziyaret etmeye devam ederek çerez kullanımımızı kabul etmiş olursunuz.',
+    'legal.cookieConsent.acceptButton': 'Kabul Et',
+    'legal.privacyPolicy.link': 'Gizlilik Politikası',
+    'legal.privacyPolicy.title': 'Gizlilik Politikası',
+    'legal.privacyPolicy.placeholder': 'Detaylı Gizlilik Politikası içeriğiniz buraya gelecek. Kullanıcı verilerini GDPR ve diğer ilgili düzenlemelere uygun olarak nasıl topladığınızı, kullandığınızı ve koruduğunuzu açıklayın.',
+    'legal.termsOfService.link': 'Hizmet Şartları',
+    'legal.termsOfService.title': 'Hizmet Şartları',
+    'legal.termsOfService.placeholder': 'Kapsamlı Hizmet Şartları içeriğiniz buraya gelecek. Uygulamanızı kullanma kurallarını ve yönergelerini belirtin.',
+    'footer.copyright': `© ${new Date().getFullYear()} ATEZ Yazılım Teknolojileri. Tüm hakları saklıdır.`,
   },
 };
 
+
+    

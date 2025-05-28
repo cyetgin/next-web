@@ -10,28 +10,21 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarInset,
-  // SidebarTrigger // No longer needed directly here for PanelLeftClose
 } from '@/components/ui/sidebar';
 import { Header } from './header';
 import { SidebarNav } from './sidebar-nav';
 import { Button } from '@/components/ui/button';
-import { PanelLeftClose, PanelLeftOpen, Settings, LogOut } from 'lucide-react'; // Added PanelLeftOpen
+import { PanelLeftClose, PanelLeftOpen, Settings, LogOut } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
-import { useSidebar } from '@/components/ui/sidebar'; // Import useSidebar
+import { useSidebar } from '@/components/ui/sidebar';
 
-// New component for the sidebar's dynamic header content
 function CustomSidebarHeaderContent() {
   const { isMobile, state, toggleSidebar } = useSidebar();
 
   if (isMobile) {
-    // On mobile, the sidebar is a sheet, typically triggered/closed differently.
-    // The primary toggle (hamburger) is in the main Header component.
-    // An explicit close button can be part of the SheetContent if needed,
-    // but for this request, we focus on the desktop toggle.
     return null;
   }
 
-  // For desktop view
   return (
     <Button variant="outline" size="icon" onClick={toggleSidebar} aria-label={state === 'expanded' ? "Collapse sidebar" : "Expand sidebar"}>
       {state === 'expanded' ? <PanelLeftClose className="h-6 w-6" /> : <PanelLeftOpen className="h-6 w-6" />}
@@ -65,11 +58,28 @@ export default function MainLayout({ children }: { children: ReactNode }) {
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
-        <Header />
-        <main className="flex flex-col items-center flex-1 p-6 overflow-auto">
-          {children}
-        </main>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex flex-col items-center flex-1 p-6 overflow-auto">
+            {children}
+          </main>
+          <footer className="py-6 px-4 md:px-6 border-t bg-background">
+            <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+              <p>{t('footer.copyright')}</p>
+              <nav className="flex gap-4 mt-2 sm:mt-0">
+                <Link href="/terms-of-service" className="hover:text-primary hover:underline">
+                  {t('legal.termsOfService.link')}
+                </Link>
+                <Link href="/privacy-policy" className="hover:text-primary hover:underline">
+                  {t('legal.privacyPolicy.link')}
+                </Link>
+              </nav>
+            </div>
+          </footer>
+        </div>
       </SidebarInset>
     </SidebarProvider>
   );
 }
+
+    
