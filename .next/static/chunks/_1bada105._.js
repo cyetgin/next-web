@@ -224,10 +224,9 @@ function TariffPage() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     src: "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/TARIFF%402x-v2.png?alt=media&token=a94dcd84-fe64-4699-9ea2-70ec737ca484",
                     alt: t('products.tariff.pageTitle'),
-                    width: 300,
-                    height: 75,
-                    className: "mx-auto" // Center the image
-                    ,
+                    width: 620,
+                    height: 180,
+                    className: "mx-auto",
                     priority: true
                 }, void 0, false, {
                     fileName: "[project]/src/app/products/tariff/page.tsx",

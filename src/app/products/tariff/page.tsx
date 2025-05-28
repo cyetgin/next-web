@@ -49,13 +49,12 @@ export default function TariffPage() {
         </Button>
       </div>
 
-      <header className="text-center space-y-4">
+      <header className="space-y-4">
         <Image
           src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/TARIFF%402x-v2.png?alt=media&token=a94dcd84-fe64-4699-9ea2-70ec737ca484"
           alt={t('products.tariff.pageTitle')}
-          width={620} 
-          height={180}
-          className="mx-auto" 
+          width={310} 
+          height={90}
           priority 
         />
       </header>
