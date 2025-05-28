@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from '@/hooks/use-translation';
 import { LanguageSelector } from '@/components/language-selector';
-import { useSidebar } from '@/components/ui/sidebar';
+import { useSidebar } from '@/components/ui/sidebar'; // Import useSidebar
 import { Button } from '@/components/ui/button';
 import { Menu, UserCircle } from 'lucide-react';
 
 export function Header() {
-  const { isMobile } = useSidebar();
   const { t, currentLanguage } = useTranslation();
+  const { isMobile, toggleSidebar } = useSidebar(); // Call useSidebar at the top level
 
   let logoSrc: string;
   let logoWidth: number;
@@ -32,10 +32,7 @@ export function Header() {
       <div className="container mx-auto flex h-[110px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
           {isMobile && (
-            <Button variant="ghost" size="icon" onClick={() => {
-              const { toggleSidebar } = useSidebar(); // Get toggleSidebar inside onClick when needed for mobile
-              toggleSidebar();
-            }}>
+            <Button variant="ghost" size="icon" onClick={toggleSidebar}> {/* Use toggleSidebar directly */}
               <Menu className="h-6 w-6" />
             </Button>
           )}
@@ -45,7 +42,7 @@ export function Header() {
               alt={t('logo.text')}
               width={logoWidth}
               height={logoHeight}
-              className="h-[105px] w-auto" // Changed h-8 to h-[105px]
+              className="h-[105px] w-auto"
               priority
             />
           </Link>
