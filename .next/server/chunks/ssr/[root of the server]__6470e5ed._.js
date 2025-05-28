@@ -35,6 +35,14 @@ const AVAILABLE_LOCALES = [
     {
         value: 'it',
         label: 'Italiano'
+    },
+    {
+        value: 'fr',
+        label: 'Français'
+    },
+    {
+        value: 'nl',
+        label: 'Nederlands'
     }
 ];
 function getCopyrightText(translations) {

@@ -1,5 +1,5 @@
 
-export type Locale = 'en' | 'de' | 'tr' | 'it'; // English, German, Turkish, Italian
+export type Locale = 'en' | 'de' | 'tr' | 'it' | 'fr' | 'nl'; // English, German, Turkish, Italian, French, Dutch
 
 export const DEFAULT_LOCALE: Locale = 'en';
 export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
@@ -7,6 +7,8 @@ export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
   { value: 'de', label: 'Deutsch' }, // German
   { value: 'tr', label: 'Türkçe' },   // Turkish
   { value: 'it', label: 'Italiano' }, // Italian
+  { value: 'fr', label: 'Français' }, // French
+  { value: 'nl', label: 'Nederlands' }, // Dutch
 ];
 
 export type TranslationKey =
@@ -138,6 +140,7 @@ export type TranslationKey =
   | 'solutions.solution.findHtsCode'
   | 'solutions.solution.taxCalculation'
   | 'solutions.solution.sapIntegration'
+  // | 'solutions.solution.customsDeclarationFiling' // Removed as per previous request
   | 'solutions.solution.transitDeclarationFiling'
   | 'solutions.solution.guaranteeManagement'
   | 'solutions.solution.preClearanceControl'
@@ -196,5 +199,3 @@ export function getCopyrightText(translations: Record<string, string> | null): s
   const rawText = translations?.['footer.copyright'] || `© ${new Date().getFullYear()} ATEZ Software Technologies. All rights reserved.`;
   return rawText.replace('{{YEAR}}', new Date().getFullYear().toString());
 }
-
-    
