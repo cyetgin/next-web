@@ -8,7 +8,7 @@ var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_
 __turbopack_context__.s({
     "AVAILABLE_LOCALES": (()=>AVAILABLE_LOCALES),
     "DEFAULT_LOCALE": (()=>DEFAULT_LOCALE),
-    "translations": (()=>translations)
+    "getCopyrightText": (()=>getCopyrightText)
 });
 const DEFAULT_LOCALE = 'en';
 const AVAILABLE_LOCALES = [
@@ -29,696 +29,10 @@ const AVAILABLE_LOCALES = [
         label: 'Italiano'
     }
 ];
-const translations = {
-    en: {
-        'app.name': 'ATEZ Software Technologies',
-        'logo.text': 'ATEZ Software Technologies',
-        'nav.home': 'Home',
-        'nav.products': 'Products',
-        'nav.solutions': 'Solutions',
-        'nav.about': 'About Us',
-        'nav.contact': 'Contact Us',
-        'nav.news': 'News',
-        'nav.settings': 'Settings',
-        'home.welcomeTitle': 'Automating Global Trade, Intelligently.',
-        'home.blockchainReadySlogan': 'Blockchain ready',
-        'home.welcomeSubtitle': 'Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Artificial Intelligence, Machine Learning, and Business Intelligence.',
-        'home.featuresTitle': 'Core Capabilities',
-        'home.capabilities.crossBorder.title': 'Comprehensive Customs Compliance Solutions',
-        'home.capabilities.crossBorder.description': 'Ensure adherence to global trade regulations with our advanced tools. Leverage Tariff for up-to-date regulations, Logicust for operational efficiency, and AI-powered solutions for risk management and accuracy.',
-        'home.capabilities.autonomousData.title': 'Automated End-to-End Customs Procedures',
-        'home.capabilities.autonomousData.description': 'Streamline your customs processes from start to finish. Our systems enable seamless data flow, including automated conversion of export declaration data into import declaration data, minimizing errors and saving time.',
-        'home.capabilities.streamlinedCustomsTransit.title': 'Streamlined Cross-Border Customs & Transit Procedures',
-        'home.capabilities.streamlinedCustomsTransit.description': 'Facilitate smoother movement of goods across borders with optimized customs and transit procedures, reducing delays and enhancing supply chain velocity.',
-        'home.capabilities.autonomousDataFlowAutomation.title': 'Autonomous Data Flow & Process Automation',
-        'home.capabilities.autonomousDataFlowAutomation.description': 'Implement intelligent automation for data exchange and process handling, minimizing manual intervention and improving operational efficiency throughout your trade lifecycle.',
-        'home.companyInfo.title': 'About ATEZ Software Technologies',
-        'home.companyInfo.description': 'ATEZ Software Technologies specializes in high-end software solutions for international trade, focusing on customs compliance, cross-border goods movement, and autonomous process automation through Blockchain, Artificial Intelligence, Machine Learning, and Business Intelligence.',
-        'home.cta.title': 'Transform Your Trade Operations with ATEZ',
-        'home.cta.description': 'Partner with us to implement cutting-edge solutions for autonomous customs declarations, compliance, and efficient cross-border logistics.',
-        'home.cta.button': 'Discuss Your Needs',
-        'about.title': 'About ATEZ Software Technologies',
-        'about.mission.title': 'Our Mission',
-        'about.mission.content': 'Our mission is to create an autonomous, digital, secure and integrated ecosystem for all stakeholders of cross-border trade. We aim to contribute to environment and sustainability by digitizing processes, related to cross-border movement of goods, while increasing efficiency and transparency with our solutions.',
-        'about.story.title': 'Our Story',
-        'about.story.content': 'Atez Software Technologies, established in 2017, embodies a rich convergence of field and academic proficiency, with a legacy exceeding 30 years in cross-border trade procedures, logistics, customs brokerage, and IT solutions for customs brokerage as well as finance and reporting. This enterprise flourishes under the guidance of seasoned managers and is bolstered by a dynamic fusion of consultants and innovative minds, ensuring a deep reservoir of industry-specific knowledge. Central to Atez’s ethos is the symbiotic relationship between domain experts and software developers, a collaboration that is pivotal in harnessing new technologies, particularly Blockchain, to devise solutions that are both revolutionary and aligned with customer demands. Our foundational principles are: a robust commitment to teamwork, innovation, and the strategic integration of domain expertise with cutting-edge technology to address the multifaceted challenges of international trade and logistics.',
-        'contact.title': 'Get In Touch',
-        'contact.description': 'Discuss how our specialized solutions for customs, logistics, and autonomous trade can benefit your business. We\'d love to hear from you!',
-        'contact.form.title': 'Contact Form',
-        'contact.form.description': 'Send us your inquiries or questions.',
-        'contact.form.name.label': 'Full Name',
-        'contact.form.name.placeholder': 'John Doe',
-        'contact.form.email.label': 'Email Address',
-        'contact.form.email.placeholder': 'john.doe@example.com',
-        'contact.form.message.label': 'Your Inquiry',
-        'contact.form.message.placeholder': 'Describe your challenges or project ideas...',
-        'contact.form.submitButton': 'Send Inquiry',
-        'contact.info.title': 'Our Offices',
-        'contact.info.address.hq.title': 'HQ',
-        'contact.info.address.hq.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkiye',
-        'contact.info.address.uk.title': 'UK Branch',
-        'contact.info.address.uk.address': 'China Works, 100 Black Prince Road SE1 7SJ London',
-        'contact.info.address.de.title': 'Germany Branch',
-        'contact.info.address.de.address': 'Friedrich-Ebert-Anlage 49 Nr: 2227 60308 Frankfurt am Main',
-        'contact.info.address.us.title': 'US Branch',
-        'contact.info.address.us.address': '1775 Tysons Blvd., Suite 4161 McLean, VA 22102 Virginia',
-        'contact.info.email': 'solutions@atez.com',
-        'products.title': 'Our Products',
-        'products.description': 'Discover our suite of advanced software solutions designed to streamline international trade and customs operations. All our products are accessible through our central platform.',
-        'products.mainPlatformIntro': 'Our comprehensive suite of products is available through our central platform:',
-        'products.visitPlatformButton': 'Visit singlewindow.io',
-        'products.exploreButton': 'Explore Product',
-        'products.category.customsCompliance': 'Customs Compliance',
-        'products.category.aiSolutions': 'AI Solutions for Customs',
-        'products.category.declarationFiling': 'Declaration Filing',
-        'products.category.other': 'Other Solutions',
-        'products.product.tariff': 'Tariff',
-        'products.product.tariff.description': '24/7 updated official (historically indexed) customs regulations database',
-        'products.product.logicust': 'Logicust',
-        'products.product.logicust.description': 'Product based, dynamically updated, customs and regulatory compliance data manager',
-        'products.product.logicust.tooltip.productTrigger': 'Product',
-        'products.product.logicust.tooltip.productContent': '(Article, raw material, semi or finished product, that is internationally traded by an economic operator)',
-        'products.product.customsShield': 'Customs Shield',
-        'products.product.customsShield.description': 'AI-powered risk assessment and compliance verification for customs operations.',
-        'products.product.customsXRay': 'Customs X-Ray',
-        'products.product.customsXRay.description': 'Gain deep insights into customs data for enhanced compliance and decision-making.',
-        'products.product.transitAI': 'TransitAI',
-        'products.product.transitAI.description': 'Automated management of transit procedures for smoother cross-border movements.',
-        'products.product.declarantAI': 'Declarant AI',
-        'products.product.declarantAI.description': 'Intelligent assistance for accurate and efficient customs declaration preparation.',
-        'products.product.transcode': 'Transcode',
-        'products.product.transcode.description': 'Automated commodity code conversion and validation for international trade.',
-        'products.product.declarant': 'Declarant',
-        'products.product.declarant.description': 'Comprehensive solution for efficient and compliant customs declaration filing.',
-        'products.product.greenpulse': 'Greenpulse',
-        'products.product.greenpulse.description': 'Track and manage sustainability metrics and carbon footprint in logistics.',
-        'products.product.customsLoupe': 'Customs Loupe',
-        'products.product.customsLoupe.description': 'A tool that provides data visualization for customs transactions.',
-        'news.title': 'News & Insights',
-        'news.description': 'Stay updated with the latest news, industry insights, and technology updates from ATEZ Software.',
-        'news.readMore': 'Read More',
-        'news.category.industryUpdates': 'Industry Updates',
-        'news.category.technology': 'Technology',
-        'news.category.companyNews': 'Company News',
-        'news.post1.title': 'Navigating the Future of Customs with AI',
-        'news.post1.excerpt': 'Discover how Artificial Intelligence is reshaping customs compliance and simplifying international trade for businesses worldwide.',
-        'news.post2.title': 'ATEZ Software Launches New Blockchain Initiative for Supply Chains',
-        'news.post2.excerpt': 'We are excited to announce our latest project utilizing blockchain technology to enhance transparency and security in global supply chains.',
-        'news.post3.title': 'The Impact of Autonomous Data Handling on Cross-Border Logistics',
-        'news.post3.excerpt': 'An in-depth look at how autonomous systems are streamlining data flow and revolutionizing procedure handling in the logistics sector.',
-        'settings.title': 'Settings',
-        'settings.description': 'Customize your application experience.',
-        'settings.appearance.title': 'Appearance',
-        'settings.appearance.description': 'Adjust the look and feel of the application.',
-        'settings.appearance.theme.label': 'Theme',
-        'settings.appearance.theme.light': 'Light',
-        'settings.appearance.theme.dark': 'Dark',
-        'settings.appearance.theme.system': 'System',
-        'settings.appearance.fontSize.label': 'Font Size',
-        'settings.appearance.fontSize.sm': 'Small',
-        'settings.appearance.fontSize.md': 'Medium',
-        'settings.appearance.fontSize.lg': 'Large',
-        'settings.language.title': 'Language',
-        'settings.language.description': 'Choose your preferred language for the application.',
-        'settings.language.select.label': 'Select Language',
-        'settings.density.title': 'Content Density',
-        'settings.density.description': 'Adjust the spacing and density of content.',
-        'settings.density.label': 'Density Level',
-        'settings.density.compact': 'Compact',
-        'settings.density.default': 'Default',
-        'settings.density.spacious': 'Spacious',
-        'solutions.title': 'Our Solutions',
-        'solutions.description': 'Explore how ATEZ Software Technologies leverages its products to deliver targeted solutions for your international trade and customs challenges.',
-        'solutions.solution.htsClassification': 'HTS Code Classification',
-        'solutions.solution.landedCost': 'Landed Cost Simulation',
-        'solutions.solution.customsCompliance': 'Customs Compliance Management',
-        'solutions.solution.exportControls': 'Export Controls & Sanction Screening',
-        'solutions.solution.findHtsCode': 'Find Your HTS Code',
-        'solutions.solution.taxCalculation': 'Duty & Tax Calculation',
-        'solutions.solution.sapIntegration': 'SAP Plugins for Data Sync',
-        'solutions.solution.transitDeclarationFiling': 'Transit Declaration Filing',
-        'solutions.solution.guaranteeManagement': 'Guarantee Management',
-        'solutions.solution.preClearanceControl': 'Pre-Clearance Control & Risk Assessment',
-        'solutions.solution.postDeclarationControl': 'Post-Declaration Control & Audit Support',
-        'solutions.solution.cbamReporting': 'CBAM Reporting & Carbon Accounting',
-        'solutions.solution.dataVisualization': 'Trade Data Visualization & Analytics',
-        'solutions.solution.declarantAI': 'AI-Assisted Customs Declaration Preparation',
-        'solutions.solution.transitAI': 'AI-Assisted Transit Declaration Preparation',
-        'solutions.solution.relayhub': 'Relayhub Data Exchange Integration',
-        'solutions.solution.smartSuggestions': 'Smart Suggestions',
-        'solutions.solution.historicalDataTariff': 'Historically Indexed Regulative Data',
-        'solutions.viewProductDetails': 'View Product Details',
-        'products.tariff.pageTitle': 'Tariff',
-        'products.tariff.generalDescription': 'Tariff is the digital customs regulations databank solution for users and systems to reach historically indexed customs duties, taxes and measures, applied in accordance with Tariff Schedules used across customs territories. Tariff currently covers the European Union, United Kingdom, Switzerland, and Türkiye regulations and provides customs regulations, duties, and control measures with just a few clicks, Tariff enables users to access critical information, tailored to their trade routes, ensuring a smoother, more efficient, and compliant import or export readiness.',
-        'products.tariff.modules.title': 'Product Modules',
-        'products.tariff.module.basicQuery.title': 'Basic Query',
-        'products.tariff.module.basicQuery.description': 'Quickly identify the essential duty rates and regulatory measures for your selected export or import trade route by simply inputting the commodity code. The Basic Query provides a straightforward list of applicable tariffs.',
-        'products.tariff.module.detailedQuery.title': 'Detailed Query',
-        'products.tariff.module.detailedQuery.description': 'Detailed Query, offers a comprehensive insights including footnotes, conditions, legal bases, and the start and end dates of measures. Ideal for users requiring in-depth information on specific tariffs and regulations for informed decision-making.',
-        'products.tariff.module.taxCalculation.title': 'Duty & Tax Calculation',
-        'products.tariff.module.taxCalculation.description': 'Tariff offers a tax calculation module for your import inquiries, letting you estimate customs duties and other import taxes with a few clicks.',
-        'products.tariff.module.findMyCommodityCode.title': 'Find Your HTS Code',
-        'products.tariff.module.findMyCommodityCode.description': 'Simply define your good with keywords and search it. Tariff helps you identify the appropriate commodity codes for your goods based on keywords you enter. Benefit from always up-to-date nomenclature for European Union, United Kingdom, Switzerland, and Türkiye.',
-        'products.tariff.keyBenefits.title': 'Key Benefits',
-        'products.tariff.keyBenefit.realTimeUpdates.title': 'Real-Time Updates',
-        'products.tariff.keyBenefit.realTimeUpdates.description': 'Benefit from real-time updates for your articles, guaranteeing constant alignment with the latest legislations.',
-        'products.tariff.keyBenefit.multiCountrySupport.title': 'Multi-Country Support',
-        'products.tariff.keyBenefit.multiCountrySupport.description': 'Access customs regulation data for European Union, United Kingdom, Switzerland, and Türkiye, with ongoing expansion efforts to include more countries. Establishing Tariff as a truly international resource for trade facilitation.',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.title': 'Eliminate Language Barriers',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff provides comprehensive customs regulations for European Union, United Kingdom, Switzerland, and Türkiye in English, German and Turkish.',
-        'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Up-to-Date Tariff Nomenclatures',
-        'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Stay ahead with always up-to-date tariff nomenclatures. Every change tracked by Tariff to serve its users.',
-        'products.tariff.cta.title': 'Ready to Explore Tariff?',
-        'products.tariff.cta.button': 'Use Tariff for FREE',
-        'common.backToProducts': 'Back to Products',
-        'legal.cookieConsent.text': 'We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.',
-        'legal.cookieConsent.acceptButton': 'Accept',
-        'legal.cookieConsent.rejectButton': 'Reject',
-        'legal.privacyPolicy.link': 'Privacy Policy',
-        'legal.privacyPolicy.title': 'Privacy Policy',
-        'legal.privacyPolicy.placeholder': 'Your detailed Privacy Policy content goes here. Explain how you collect, use, and protect user data in compliance with GDPR and other relevant regulations.',
-        'legal.termsOfService.link': 'Terms of Service',
-        'legal.termsOfService.title': 'Terms of Service',
-        'legal.termsOfService.placeholder': 'Your comprehensive Terms of Service content goes here. Outline the rules and guidelines for using your application.',
-        'footer.copyright': `© ${new Date().getFullYear()} ATEZ Software Technologies. All rights reserved.`
-    },
-    de: {
-        'app.name': 'ATEZ Software Technologies',
-        'logo.text': 'ATEZ Softwaretechnologien',
-        'nav.home': 'Startseite',
-        'nav.products': 'Produkte',
-        'nav.solutions': 'Lösungen',
-        'nav.about': 'Über Uns',
-        'nav.contact': 'Kontakt',
-        'nav.news': 'Aktuelles',
-        'nav.settings': 'Einstellungen',
-        'home.welcomeTitle': 'Globalen Handel intelligent automatisieren.',
-        'home.blockchainReadySlogan': 'Blockchain-fähig',
-        'home.welcomeSubtitle': 'Revolutionierung des grenzüberschreitenden Handels mit intelligenten Lösungen für Zollkonformität, Warenverkehr und autonome Datenverarbeitung, unterstützt durch Künstliche Intelligenz, Maschinelles Lernen und Business Intelligence.',
-        'home.featuresTitle': 'Kernkompetenzen',
-        'home.capabilities.crossBorder.title': 'Umfassende Lösungen für Zollkonformität',
-        'home.capabilities.crossBorder.description': 'Stellen Sie die Einhaltung globaler Handelsvorschriften mit unseren fortschrittlichen Werkzeugen sicher. Nutzen Sie Tariff für aktuelle Vorschriften, Logicust für betriebliche Effizienz und KI-gestützte Lösungen für Risikomanagement und Genauigkeit.',
-        'home.capabilities.autonomousData.title': 'Automatisierte End-to-End-Zollverfahren',
-        'home.capabilities.autonomousData.description': 'Optimieren Sie Ihre Zollprozesse von Anfang bis Ende. Unsere Systeme ermöglichen einen nahtlosen Datenfluss, einschließlich der automatisierten Umwandlung von Ausfuhrdeklarationsdaten in Einfuhrdeklarationsdaten, wodurch Fehler minimiert und Zeit gespart wird.',
-        'home.capabilities.streamlinedCustomsTransit.title': 'Optimierte grenzüberschreitende Zoll- und Transitverfahren',
-        'home.capabilities.streamlinedCustomsTransit.description': 'Erleichtern Sie reibungslosere Warenbewegungen über Grenzen hinweg mit optimierten Zoll- und Transitverfahren, wodurch Verzögerungen reduziert und die Geschwindigkeit der Lieferkette erhöht wird.',
-        'home.capabilities.autonomousDataFlowAutomation.title': 'Autonomer Datenfluss & Prozessautomatisierung',
-        'home.capabilities.autonomousDataFlowAutomation.description': 'Implementieren Sie intelligente Automatisierung für den Datenaustausch und die Prozessabwicklung, minimieren Sie manuelle Eingriffe und verbessern Sie die betriebliche Effizienz während Ihres gesamten Handelszyklus.',
-        'home.companyInfo.title': 'Über ATEZ Software Technologies',
-        'home.companyInfo.description': 'ATEZ Software Technologies ist spezialisiert auf High-End-Softwarelösungen für den internationalen Handel, mit Fokus auf Zollkonformität, grenzüberschreitenden Warenverkehr und autonome Prozessautomatisierung durch Blockchain, Künstliche Intelligenz, Maschinelles Lernen und Business Intelligence.',
-        'home.cta.title': 'Transformieren Sie Ihre Handelsoperationen mit ATEZ',
-        'home.cta.description': 'Arbeiten Sie mit uns zusammen, um innovative Lösungen für autonome Zollanmeldungen, Compliance und effiziente grenzüberschreitende Logistik zu implementieren.',
-        'home.cta.button': 'Besprechen Sie Ihre Bedürfnisse',
-        'about.title': 'Über ATEZ Software Technologies',
-        'about.mission.title': 'Unsere Mission',
-        'about.mission.content': 'Unsere Mission ist es, ein autonomes, digitales, sicheres und integriertes Ökosystem für alle Akteure des grenzüberschreitenden Handels zu schaffen. Wir wollen zur Umwelt und Nachhaltigkeit beitragen, indem wir Prozesse im Zusammenhang mit dem grenzüberschreitenden Warenverkehr digitalisieren und gleichzeitig mit unseren Lösungen Effizienz und Transparenz steigern.',
-        'about.story.title': 'Unsere Geschichte',
-        'about.story.content': 'Atez Software Technologies, gegründet 2017, verkörpert eine reiche Konvergenz von Feld- und akademischer Kompetenz mit einer über 30-jährigen Erfahrung in grenzüberschreitenden Handelsverfahren, Logistik, Zollabfertigung und IT-Lösungen für die Zollabfertigung sowie Finanz- und Berichtswesen. Dieses Unternehmen gedeiht unter der Leitung erfahrener Manager und wird durch eine dynamische Fusion von Beratern und innovativen Köpfen gestärkt, was einen tiefen Wissensschatz in der Branche sicherstellt. Zentral für das Ethos von Atez ist die symbiotische Beziehung zwischen Fachexperten und Softwareentwicklern, eine Zusammenarbeit, die entscheidend ist, um neue Technologien, insbesondere Blockchain, zu nutzen und Lösungen zu entwickeln, die sowohl revolutionär als auch auf die Kundenanforderungen abgestimmt sind. Unsere Grundprinzipien sind: ein starkes Engagement für Teamarbeit, Innovation und die strategische Integration von Fachwissen mit modernster Technologie, um die vielschichtigen Herausforderungen des internationalen Handels und der Logistik zu bewältigen.',
-        'contact.title': 'Kontakt aufnehmen',
-        'contact.description': 'Besprechen Sie, wie unsere spezialisierten Lösungen für Zoll, Logistik und autonomen Handel Ihrem Unternehmen zugutekommen können. Wir freuen uns, von Ihnen zu hören!',
-        'contact.form.title': 'Kontaktformular',
-        'contact.form.description': 'Senden Sie uns Ihre Anfragen oder Fragen.',
-        'contact.form.name.label': 'Vollständiger Name',
-        'contact.form.name.placeholder': 'Max Mustermann',
-        'contact.form.email.label': 'E-Mail-Adresse',
-        'contact.form.email.placeholder': 'max.mustermann@example.com',
-        'contact.form.message.label': 'Ihre Anfrage',
-        'contact.form.message.placeholder': 'Beschreiben Sie Ihre Herausforderungen oder Projektideen...',
-        'contact.form.submitButton': 'Anfrage senden',
-        'contact.info.title': 'Unsere Büros',
-        'contact.info.address.hq.title': 'Hauptsitz',
-        'contact.info.address.hq.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkei',
-        'contact.info.address.uk.title': 'Niederlassung UK',
-        'contact.info.address.uk.address': 'China Works, 100 Black Prince Road SE1 7SJ London',
-        'contact.info.address.de.title': 'Niederlassung Deutschland',
-        'contact.info.address.de.address': 'Friedrich-Ebert-Anlage 49 Nr: 2227 60308 Frankfurt am Main',
-        'contact.info.address.us.title': 'Niederlassung US',
-        'contact.info.address.us.address': '1775 Tysons Blvd., Suite 4161 McLean, VA 22102 Virginia',
-        'contact.info.email': 'solutions@atez.com',
-        'products.title': 'Unsere Produkte',
-        'products.description': 'Entdecken Sie unsere Suite fortschrittlicher Softwarelösungen zur Optimierung internationaler Handels- und Zollabläufe. Alle unsere Produkte sind über unsere zentrale Plattform zugänglich.',
-        'products.mainPlatformIntro': 'Unsere umfassende Produktpalette ist über unsere zentrale Plattform verfügbar:',
-        'products.visitPlatformButton': 'singlewindow.io besuchen',
-        'products.exploreButton': 'Produkt entdecken',
-        'products.category.customsCompliance': 'Zollkonformität',
-        'products.category.aiSolutions': 'KI-Lösungen für den Zoll',
-        'products.category.declarationFiling': 'Zollanmeldung',
-        'products.category.other': 'Weitere Lösungen',
-        'products.product.tariff': 'Tariff',
-        'products.product.tariff.description': 'Rund um die Uhr aktualisierte offizielle (historisch indizierte) Zolldatenbank',
-        'products.product.logicust': 'Logicust',
-        'products.product.logicust.description': 'Produktbasierter, dynamisch aktualisierter Datenmanager für Zoll- und Regulierungskonformität',
-        'products.product.logicust.tooltip.productTrigger': 'Produkt',
-        'products.product.logicust.tooltip.productContent': '(Artikel, Rohmaterial, Halb- oder Fertigprodukt, das von einem Wirtschaftsbeteiligten international gehandelt wird)',
-        'products.product.customsShield': 'Customs Shield',
-        'products.product.customsShield.description': 'KI-gestützte Risikobewertung und Compliance-Überprüfung für Zolloperationen.',
-        'products.product.customsXRay': 'Customs X-Ray',
-        'products.product.customsXRay.description': 'Tiefe Einblicke in Zolldaten für verbesserte Compliance und Entscheidungsfindung.',
-        'products.product.transitAI': 'TransitAI',
-        'products.product.transitAI.description': 'Automatisierte Verwaltung von Transitverfahren für reibungslosere grenzüberschreitende Bewegungen.',
-        'products.product.declarantAI': 'Declarant AI',
-        'products.product.declarantAI.description': 'Intelligente Unterstützung für die genaue und effiziente Erstellung von Zollanmeldungen.',
-        'products.product.transcode': 'Transcode',
-        'products.product.transcode.description': 'Automatisierte Konvertierung und Validierung von Warencodes für den internationalen Handel.',
-        'products.product.declarant': 'Declarant',
-        'products.product.declarant.description': 'Umfassende Lösung für die effiziente und konforme Einreichung von Zollanmeldungen.',
-        'products.product.greenpulse': 'Greenpulse',
-        'products.product.greenpulse.description': 'Verfolgung und Verwaltung von Nachhaltigkeitskennzahlen und CO2-Fußabdruck in der Logistik.',
-        'products.product.customsLoupe': 'Customs Loupe',
-        'products.product.customsLoupe.description': 'Ein Werkzeug, das Datenvisualisierung für Zolltransaktionen bereitstellt.',
-        'news.title': 'Aktuelles & Einblicke',
-        'news.description': 'Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Brancheneinblicken und Technologie-Updates von ATEZ Software.',
-        'news.readMore': 'Weiterlesen',
-        'news.category.industryUpdates': 'Branchen-Updates',
-        'news.category.technology': 'Technologie',
-        'news.category.companyNews': 'Unternehmensnachrichten',
-        'news.post1.title': 'Die Zukunft des Zolls mit KI gestalten',
-        'news.post1.excerpt': 'Entdecken Sie, wie Künstliche Intelligenz die Zollkonformität neu gestaltet und den internationalen Handel für Unternehmen weltweit vereinfacht.',
-        'news.post2.title': 'ATEZ Software startet neue Blockchain-Initiative für Lieferketten',
-        'news.post2.excerpt': 'Wir freuen uns, unser neuestes Projekt bekannt zu geben, das Blockchain-Technologie zur Verbesserung der Transparenz und Sicherheit in globalen Lieferketten einsetzt.',
-        'news.post3.title': 'Die Auswirkungen autonomer Datenverarbeitung auf die grenzüberschreitende Logistik',
-        'news.post3.excerpt': 'Ein detaillierter Blick darauf, wie autonome Systeme den Datenfluss optimieren und die Verfahrensabwicklung im Logistiksektor revolutionieren.',
-        'settings.title': 'Einstellungen',
-        'settings.description': 'Passen Sie Ihre Anwendungserfahrung an.',
-        'settings.appearance.title': 'Erscheinungsbild',
-        'settings.appearance.description': 'Passen Sie das Aussehen und Verhalten der Anwendung an.',
-        'settings.appearance.theme.label': 'Thema',
-        'settings.appearance.theme.light': 'Hell',
-        'settings.appearance.theme.dark': 'Dunkel',
-        'settings.appearance.theme.system': 'System',
-        'settings.appearance.fontSize.label': 'Schriftgröße',
-        'settings.appearance.fontSize.sm': 'Klein',
-        'settings.appearance.fontSize.md': 'Mittel',
-        'settings.appearance.fontSize.lg': 'Groß',
-        'settings.language.title': 'Sprache',
-        'settings.language.description': 'Wählen Sie Ihre bevorzugte Sprache für die Anwendung.',
-        'settings.language.select.label': 'Sprache auswählen',
-        'settings.density.title': 'Inhaltsdichte',
-        'settings.density.description': 'Passen Sie den Abstand und die Dichte des Inhalts an.',
-        'settings.density.label': 'Dichtestufe',
-        'settings.density.compact': 'Kompakt',
-        'settings.density.default': 'Standard',
-        'settings.density.spacious': 'Großzügig',
-        'solutions.title': 'Unsere Lösungen',
-        'solutions.description': 'Entdecken Sie, wie ATEZ Software Technologies seine Produkte einsetzt, um gezielte Lösungen für Ihre internationalen Handels- und Zollherausforderungen zu liefern.',
-        'solutions.solution.htsClassification': 'HS-Code-Klassifizierung',
-        'solutions.solution.landedCost': 'Landed-Cost-Simulation',
-        'solutions.solution.customsCompliance': 'Zoll-Compliance-Management',
-        'solutions.solution.exportControls': 'Exportkontrollen & Sanktionslistenprüfung',
-        'solutions.solution.findHtsCode': 'Finden Sie Ihren HS-Code',
-        'solutions.solution.taxCalculation': 'Zoll- & Steuerberechnung',
-        'solutions.solution.sapIntegration': 'SAP Plugins für Datensynchronisation',
-        'solutions.solution.transitDeclarationFiling': 'Transitanmeldung',
-        'solutions.solution.guaranteeManagement': 'Bürgschaftsmanagement',
-        'solutions.solution.preClearanceControl': 'Vorfeldkontrolle & Risikobewertung',
-        'solutions.solution.postDeclarationControl': 'Nachverzollungskontrolle & Audit-Unterstützung',
-        'solutions.solution.cbamReporting': 'CBAM-Berichterstattung & CO2-Bilanzierung',
-        'solutions.solution.dataVisualization': 'Handelsdatenvisualisierung & -analyse',
-        'solutions.solution.declarantAI': 'KI-gestützte Erstellung von Zollanmeldungen',
-        'solutions.solution.transitAI': 'KI-gestützte Erstellung von Transitanmeldungen',
-        'solutions.solution.relayhub': 'Relayhub Daten Austausch Integration',
-        'solutions.solution.smartSuggestions': 'Intelligente Vorschläge',
-        'solutions.solution.historicalDataTariff': 'Historisch indexierte Regulierungsdaten',
-        'solutions.viewProductDetails': 'Produktdetails anzeigen',
-        'products.tariff.pageTitle': 'Tariff',
-        'products.tariff.generalDescription': 'Tariff ist die digitale Zolldatenbanklösung für Benutzer und Systeme, um auf historisch indexierte Zölle, Steuern und Maßnahmen zuzugreifen, die gemäß den in Zollgebieten verwendeten Zolltarifplänen angewendet werden. Tariff deckt derzeit die Vorschriften der Europäischen Union, des Vereinigten Königreichs, der Schweiz und der Türkei ab und stellt mit nur wenigen Klicks Zollvorschriften, Zölle und Kontrollmaßnahmen bereit. Tariff ermöglicht es Benutzern, auf kritische Informationen zuzugreifen, die auf ihre Handelsrouten zugeschnitten sind, und gewährleistet so eine reibungslosere, effizientere und konforme Import- oder Exportbereitschaft.',
-        'products.tariff.modules.title': 'Produktmodule',
-        'products.tariff.module.basicQuery.title': 'Basisabfrage',
-        'products.tariff.module.basicQuery.description': 'Identifizieren Sie schnell die wesentlichen Zollsätze und regulatorischen Maßnahmen für Ihre ausgewählte Export- oder Importhandelsroute, indem Sie einfach den Warencode eingeben. Die Basisabfrage liefert eine unkomplizierte Liste der anwendbaren Tarife.',
-        'products.tariff.module.detailedQuery.title': 'Detaillierte Abfrage',
-        'products.tariff.module.detailedQuery.description': 'Die detaillierte Abfrage bietet umfassende Einblicke einschließlich Fußnoten, Bedingungen, Rechtsgrundlagen sowie Start- und Enddaten von Maßnahmen. Ideal für Benutzer, die detaillierte Informationen zu spezifischen Tarifen und Vorschriften für fundierte Entscheidungen benötigen.',
-        'products.tariff.module.taxCalculation.title': 'Zoll- & Steuerberechnung',
-        'products.tariff.module.taxCalculation.description': 'Tariff bietet ein Steuerberechnungsmodul für Ihre Importanfragen, mit dem Sie Zollabgaben und andere Importsteuern mit wenigen Klicks schätzen können.',
-        'products.tariff.module.findMyCommodityCode.title': 'Finden Sie Ihren HS-Code',
-        'products.tariff.module.findMyCommodityCode.description': 'Definieren Sie Ihre Ware einfach mit Schlüsselwörtern und suchen Sie danach. Tariff hilft Ihnen, die passenden Warencodes für Ihre Waren basierend auf den von Ihnen eingegebenen Schlüsselwörtern zu identifizieren. Profitieren Sie von stets aktueller Nomenklatur für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei.',
-        'products.tariff.keyBenefits.title': 'Wichtige Vorteile',
-        'products.tariff.keyBenefit.realTimeUpdates.title': 'Echtzeit-Updates',
-        'products.tariff.keyBenefit.realTimeUpdates.description': 'Profitieren Sie von Echtzeit-Updates für Ihre Artikel, die eine ständige Anpassung an die neuesten Gesetze gewährleisten.',
-        'products.tariff.keyBenefit.multiCountrySupport.title': 'Unterstützung mehrerer Länder',
-        'products.tariff.keyBenefit.multiCountrySupport.description': 'Greifen Sie auf Zollvorschriftsdaten für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei zu, mit laufenden Erweiterungsbemühungen um weitere Länder. Tariff etabliert sich als eine wirklich internationale Ressource für Handelserleichterungen.',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.title': 'Sprachbarrieren beseitigen',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff bietet umfassende Zollvorschriften für die Europäische Union, das Vereinigte Königreich, die Schweiz und die Türkei in Englisch, Deutsch und Türkisch.',
-        'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Aktuelle Tarifnomenklaturen',
-        'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Bleiben Sie mit stets aktuellen Tarifnomenklaturen immer einen Schritt voraus. Jede Änderung wird von Tariff verfolgt, um seinen Benutzern zu dienen.',
-        'products.tariff.cta.title': 'Bereit, Tariff zu entdecken?',
-        'products.tariff.cta.button': 'Tariff KOSTENLOS nutzen',
-        'common.backToProducts': 'Zurück zu den Produkten',
-        'legal.cookieConsent.text': 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch den weiteren Besuch dieser Website stimmen Sie unserer Verwendung von Cookies zu.',
-        'legal.cookieConsent.acceptButton': 'Akzeptieren',
-        'legal.cookieConsent.rejectButton': 'Ablehnen',
-        'legal.privacyPolicy.link': 'Datenschutz-Bestimmungen',
-        'legal.privacyPolicy.title': 'Datenschutz-Bestimmungen',
-        'legal.privacyPolicy.placeholder': 'Ihre detaillierten Datenschutzbestimmungen finden Sie hier. Erklären Sie, wie Sie Benutzerdaten gemäß der DSGVO und anderen relevanten Vorschriften sammeln, verwenden und schützen.',
-        'legal.termsOfService.link': 'Nutzungsbedingungen',
-        'legal.termsOfService.title': 'Nutzungsbedingungen',
-        'legal.termsOfService.placeholder': 'Ihre umfassenden Nutzungsbedingungen finden Sie hier. Beschreiben Sie die Regeln und Richtlinien für die Nutzung Ihrer Anwendung.',
-        'footer.copyright': `© ${new Date().getFullYear()} ATEZ Softwaretechnologien. Alle Rechte vorbehalten.`
-    },
-    tr: {
-        'app.name': 'ATEZ Software Technologies',
-        'logo.text': 'ATEZ Yazılım Teknolojileri',
-        'nav.home': 'Ana Sayfa',
-        'nav.products': 'Ürünler',
-        'nav.solutions': 'Çözümler',
-        'nav.about': 'Hakkımızda',
-        'nav.contact': 'İletişim',
-        'nav.news': 'Haberler',
-        'nav.settings': 'Ayarlar',
-        'home.welcomeTitle': 'Küresel Ticareti Akıllıca Otomatikleştirin.',
-        'home.blockchainReadySlogan': 'Blockchain hazır',
-        'home.welcomeSubtitle': 'Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası ile desteklenen gümrük uyumluluğu, mal hareketi ve otonom veri işleme için akıllı çözümlerle sınır ötesi ticareti devrimleştiriyoruz.',
-        'home.featuresTitle': 'Temel Yetenekler',
-        'home.capabilities.crossBorder.title': 'Kapsamlı Gümrük Uyumluluk Çözümleri',
-        'home.capabilities.crossBorder.description': 'Gelişmiş araçlarımızla küresel ticaret düzenlemelerine uyumu sağlayın. Güncel mevzuat için Tariff\'i, operasyonel verimlilik için Logicust\'u ve risk yönetimi ile doğruluk için yapay zeka destekli çözümleri kullanın.',
-        'home.capabilities.autonomousData.title': 'Otomatikleştirilmiş Uçtan Uca Gümrük Prosedürleri',
-        'home.capabilities.autonomousData.description': 'Gümrük süreçlerinizi baştan sona optimize edin. Sistemlerimiz, ihracat beyannamesi verilerinin ithalat beyannamesi verilerine otomatik olarak dönüştürülmesi dahil olmak üzere kesintisiz veri akışı sağlayarak hataları en aza indirir ve zaman kazandırır.',
-        'home.capabilities.streamlinedCustomsTransit.title': 'Optimize Edilmiş Sınır Ötesi Gümrük ve Transit Prosedürleri',
-        'home.capabilities.streamlinedCustomsTransit.description': 'Optimize edilmiş gümrük ve transit prosedürleri ile malların sınırlar arasında daha sorunsuz hareketini kolaylaştırın, gecikmeleri azaltın ve tedarik zinciri hızını artırın.',
-        'home.capabilities.autonomousDataFlowAutomation.title': 'Otonom Veri Akışı ve Süreç Otomasyonu',
-        'home.capabilities.autonomousDataFlowAutomation.description': 'Veri alışverişi ve süreç yönetimi için akıllı otomasyon uygulayın, manuel müdahaleyi en aza indirin ve tüm ticaret yaşam döngünüz boyunca operasyonel verimliliği artırın.',
-        'home.companyInfo.title': 'ATEZ Software Technologies Hakkında',
-        'home.companyInfo.description': 'ATEZ Software Technologies, Blockchain, Yapay Zeka, Makine Öğrenimi ve İş Zekası aracılığıyla gümrük uyumluluğu, sınır ötesi mal hareketi ve otonom süreç otomasyonuna odaklanarak uluslararası ticaret için üst düzey yazılım çözümlerinde uzmanlaşmıştır.',
-        'home.cta.title': 'ATEZ ile Ticaret Operasyonlarınızı Dönüştürün',
-        'home.cta.description': 'Otonom gümrük beyannameleri, uyumluluk ve verimli sınır ötesi lojistik için en son çözümleri uygulamak üzere bizimle ortak olun.',
-        'home.cta.button': 'İhtiyaçlarınızı Görüşelim',
-        'about.title': 'ATEZ Software Technologies Hakkında',
-        'about.mission.title': 'Misyonumuz',
-        'about.mission.content': 'Misyonumuz, sınır ötesi ticaretin tüm paydaşları için otonom, dijital, güvenli ve entegre bir ekosistem oluşturmaktır. Çözümlerimizle verimliliği ve şeffaflığı artırırken, malların sınır ötesi hareketleriyle ilgili süreçleri dijitalleştirerek çevreye ve sürdürülebilirliğe katkıda bulunmayı amaçlıyoruz.',
-        'about.story.title': 'Hikayemiz',
-        'about.story.content': '2017 yılında kurulan Atez Yazılım Teknolojileri, sınır ötesi ticaret prosedürleri, lojistik, gümrük müşavirliği ve gümrük müşavirliği için IT çözümlerinin yanı sıra finans ve raporlama alanlarında 30 yılı aşan bir mirasa sahip, saha ve akademik yeterliliğin zengin bir birleşimini temsil etmektedir. Bu girişim, deneyimli yöneticilerin rehberliğinde gelişmekte ve danışmanlar ile yenilikçi beyinlerin dinamik bir birleşimiyle desteklenmekte, böylece sektöre özgü derin bir bilgi birikimi sağlanmaktadır. Atez’in temel felsefesi, alan uzmanları ile yazılım geliştiriciler arasındaki simbiyotik ilişkidir; bu işbirliği, özellikle Blockchain olmak üzere yeni teknolojilerin devrimci ve müşteri taleplerine uygun çözümler geliştirmek için kullanılmasında hayati öneme sahiptir. Temel ilkelerimiz: ekip çalışmasına, yeniliğe ve uluslararası ticaret ve lojistiğin çok yönlü zorluklarını ele almak için alan uzmanlığını en son teknolojiyle stratejik entegrasyonuna güçlü bir bağlılık.',
-        'contact.title': 'İletişime Geçin',
-        'contact.description': 'Gümrük, lojistik ve otonom ticaret için özel çözümlerimizin işletmenize nasıl fayda sağlayabileceğini görüşün. Sizden haber almak isteriz!',
-        'contact.form.title': 'İletişim Formu',
-        'contact.form.description': 'Sorularınızı veya taleplerinizi bize gönderin.',
-        'contact.form.name.label': 'Tam Adınız',
-        'contact.form.name.placeholder': 'Ahmet Yılmaz',
-        'contact.form.email.label': 'E-posta Adresi',
-        'contact.form.email.placeholder': 'ahmet.yilmaz@example.com',
-        'contact.form.message.label': 'Talebiniz',
-        'contact.form.message.placeholder': 'Zorluklarınızı veya proje fikirlerinizi açıklayın...',
-        'contact.form.submitButton': 'Talep Gönder',
-        'contact.info.title': 'Ofislerimiz',
-        'contact.info.address.hq.title': 'Genel Merkez',
-        'contact.info.address.hq.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Türkiye',
-        'contact.info.address.uk.title': 'İngiltere Şubesi',
-        'contact.info.address.uk.address': 'China Works, 100 Black Prince Road SE1 7SJ London',
-        'contact.info.address.de.title': 'Almanya Şubesi',
-        'contact.info.address.de.address': 'Friedrich-Ebert-Anlage 49 Nr: 2227 60308 Frankfurt am Main',
-        'contact.info.address.us.title': 'ABD Şubesi',
-        'contact.info.address.us.address': '1775 Tysons Blvd., Suite 4161 McLean, VA 22102 Virginia',
-        'contact.info.email': 'solutions@atez.com',
-        'products.title': 'Ürünlerimiz',
-        'products.description': 'Uluslararası ticaret ve gümrük operasyonlarını kolaylaştırmak için tasarlanmış gelişmiş yazılım çözümlerimizi keşfedin. Tüm ürünlerimize merkezi platformumuz üzerinden erişilebilir.',
-        'products.mainPlatformIntro': 'Kapsamlı ürün yelpazemiz merkezi platformumuz aracılığıyla sunulmaktadır:',
-        'products.visitPlatformButton': 'singlewindow.io\'yu ziyaret et',
-        'products.exploreButton': 'Ürünü Keşfet',
-        'products.category.customsCompliance': 'Gümrük Uyumluluğu',
-        'products.category.aiSolutions': 'Gümrük için Yapay Zeka Çözümleri',
-        'products.category.declarationFiling': 'Beyanname Dosyalama',
-        'products.category.other': 'Diğer Çözümler',
-        'products.product.tariff': 'Tariff',
-        'products.product.tariff.description': '7/24 güncel resmi (tarihsel olarak endekslenmiş) gümrük mevzuatı veritabanı',
-        'products.product.logicust': 'Logicust',
-        'products.product.logicust.description': 'Ürün bazlı, dinamik olarak güncellenen, gümrük ve düzenleyici uyumluluk veri yöneticisi',
-        'products.product.logicust.tooltip.productTrigger': 'Ürün',
-        'products.product.logicust.tooltip.productContent': '(Bir ekonomik operatör tarafından uluslararası ticareti yapılan eşya, hammadde, yarı mamul veya bitmiş ürün)',
-        'products.product.customsShield': 'Customs Shield',
-        'products.product.customsShield.description': 'Gümrük operasyonları için yapay zeka destekli risk değerlendirmesi ve uyumluluk doğrulaması.',
-        'products.product.customsXRay': 'Customs X-Ray',
-        'products.product.customsXRay.description': 'Gelişmiş uyumluluk ve karar verme için gümrük verilerine derinlemesine bakış.',
-        'products.product.transitAI': 'TransitAI',
-        'products.product.transitAI.description': 'Daha sorunsuz sınır ötesi hareketler için otomatikleştirilmiş transit prosedürleri yönetimi.',
-        'products.product.declarantAI': 'Declarant AI',
-        'products.product.declarantAI.description': 'Doğru ve verimli gümrük beyannamesi hazırlama için akıllı yardım.',
-        'products.product.transcode': 'Transcode',
-        'products.product.transcode.description': 'Uluslararası ticaret için otomatik emtia kodu dönüştürme ve doğrulama.',
-        'products.product.declarant': 'Declarant',
-        'products.product.declarant.description': 'Verimli ve uyumlu gümrük beyannamesi dosyalama için kapsamlı çözüm.',
-        'products.product.greenpulse': 'Greenpulse',
-        'products.product.greenpulse.description': 'Lojistikte sürdürülebilirlik ölçümlerini ve karbon ayak izini takip edin ve yönetin.',
-        'products.product.customsLoupe': 'Customs Loupe',
-        'products.product.customsLoupe.description': 'Gümrük işlemleri için veri görselleştirme sağlayan bir araçtır.',
-        'news.title': 'Haberler & Analizler',
-        'news.description': 'ATEZ Software\'den en son haberler, sektör analizleri ve teknoloji güncellemeleri ile haberdar olun.',
-        'news.readMore': 'Devamını Oku',
-        'news.category.industryUpdates': 'Sektör Güncellemeleri',
-        'news.category.technology': 'Teknoloji',
-        'news.category.companyNews': 'Şirket Haberleri',
-        'news.post1.title': 'Yapay Zeka ile Gümrüğün Geleceğine Yön Vermek',
-        'news.post1.excerpt': 'Yapay Zekanın gümrük uyumunu nasıl yeniden şekillendirdiğini ve dünya genelindeki işletmeler için uluslararası ticareti nasıl basitleştirdiğini keşfedin.',
-        'news.post2.title': 'ATEZ Software, Tedarik Zincirleri için Yeni Blockchain Girişimini Başlattı',
-        'news.post2.excerpt': 'Küresel tedarik zincirlerinde şeffaflığı ve güvenliği artırmak için blockchain teknolojisini kullanan en son projemizi duyurmaktan heyecan duyuyoruz.',
-        'news.post3.title': 'Otonom Veri İşlemenin Sınır Ötesi Lojistiğe Etkisi',
-        'news.post3.excerpt': 'Otonom sistemlerin lojistik sektöründe veri akışını nasıl optimize ettiğine ve prosedür yönetimini nasıl devrimleştirdiğine derinlemesine bir bakış.',
-        'settings.title': 'Ayarlar',
-        'settings.description': 'Uygulama deneyiminizi özelleştirin.',
-        'settings.appearance.title': 'Görünüm',
-        'settings.appearance.description': 'Uygulamanın görünümünü ve hissini ayarlayın.',
-        'settings.appearance.theme.label': 'Tema',
-        'settings.appearance.theme.light': 'Açık',
-        'settings.appearance.theme.dark': 'Koyu',
-        'settings.appearance.theme.system': 'Sistem',
-        'settings.appearance.fontSize.label': 'Yazı Tipi Boyutu',
-        'settings.appearance.fontSize.sm': 'Küçük',
-        'settings.appearance.fontSize.md': 'Orta',
-        'settings.appearance.fontSize.lg': 'Büyük',
-        'settings.language.title': 'Dil',
-        'settings.language.description': 'Uygulama için tercih ettiğiniz dili seçin.',
-        'settings.language.select.label': 'Dil Seçin',
-        'settings.density.title': 'İçerik Yoğunluğu',
-        'settings.density.description': 'İçeriğin aralıklarını ve yoğunluğunu ayarlayın.',
-        'settings.density.label': 'Yoğunluk Seviyesi',
-        'settings.density.compact': 'Kompakt',
-        'settings.density.default': 'Varsayılan',
-        'settings.density.spacious': 'Geniş',
-        'solutions.title': 'Çözümlerimiz',
-        'solutions.description': 'ATEZ Software Technologies\'in uluslararası ticaret ve gümrük zorluklarınız için ürünlerini nasıl kullanarak hedefe yönelik çözümler sunduğunu keşfedin.',
-        'solutions.solution.htsClassification': 'GTİP Kodu Sınıflandırması',
-        'solutions.solution.landedCost': 'Toplam Maliyet Simülasyonu',
-        'solutions.solution.customsCompliance': 'Gümrük Uyumluluk Yönetimi',
-        'solutions.solution.exportControls': 'İhracat Kontrolleri ve Yaptırım Taraması',
-        'solutions.solution.findHtsCode': 'GTİP Kodunuzu Bulun',
-        'solutions.solution.taxCalculation': 'Gümrük Vergisi ve Vergi Hesaplaması',
-        'solutions.solution.sapIntegration': 'Veri Senkronizasyonu için SAP Eklentileri',
-        'solutions.solution.transitDeclarationFiling': 'Transit Beyannamesi Dosyalama',
-        'solutions.solution.guaranteeManagement': 'Teminat Yönetimi',
-        'solutions.solution.preClearanceControl': 'Ön Gümrük Kontrolü ve Risk Değerlendirmesi',
-        'solutions.solution.postDeclarationControl': 'Sonradan Kontrol ve Denetim Desteği',
-        'solutions.solution.cbamReporting': 'CBAM Raporlaması ve Karbon Muhasebesi',
-        'solutions.solution.dataVisualization': 'Ticaret Veri Görselleştirme ve Analizi',
-        'solutions.solution.declarantAI': 'Yapay Zeka Destekli Gümrük Beyannamesi Hazırlama',
-        'solutions.solution.transitAI': 'Yapay Zeka Destekli Transit Beyannamesi Hazırlama',
-        'solutions.solution.relayhub': 'Relayhub Veri Değişim Entegrasyonu',
-        'solutions.solution.smartSuggestions': 'Akıllı Öneriler',
-        'solutions.solution.historicalDataTariff': 'Tarihsel Endeksli Düzenleyici Veriler',
-        'solutions.viewProductDetails': 'Ürün Detaylarını Görüntüle',
-        'products.tariff.pageTitle': 'Tariff',
-        'products.tariff.generalDescription': 'Tariff, kullanıcıların ve sistemlerin, gümrük bölgelerinde kullanılan Gümrük Tarife Cetvellerine uygun olarak uygulanan, tarihsel olarak endekslenmiş gümrük vergilerine, diğer vergilere ve önlemlere ulaşmaları için dijital gümrük mevzuatı veri bankası çözümüdür. Tariff şu anda Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye mevzuatlarını kapsamakta ve sadece birkaç tıklama ile gümrük düzenlemelerini, gümrük vergilerini ve kontrol önlemlerini sunmaktadır. Tariff, kullanıcıların ticaret rotalarına göre uyarlanmış kritik bilgilere erişmelerini sağlayarak daha sorunsuz, daha verimli ve uyumlu bir ithalat veya ihracat hazırbulunuşluğu temin eder.',
-        'products.tariff.modules.title': 'Ürün Modülleri',
-        'products.tariff.module.basicQuery.title': 'Temel Sorgulama',
-        'products.tariff.module.basicQuery.description': 'Sadece GTİP kodunu girerek seçtiğiniz ihracat veya ithalat ticaret rotası için temel gümrük vergisi oranlarını ve düzenleyici önlemleri hızla belirleyin. Temel Sorgulama, uygulanabilir tarifelerin basit bir listesini sunar.',
-        'products.tariff.module.detailedQuery.title': 'Detaylı Sorgulama',
-        'products.tariff.module.detailedQuery.description': 'Detaylı Sorgulama, dipnotlar, koşullar, yasal dayanaklar ve önlemlerin başlangıç ve bitiş tarihleri dahil olmak üzere kapsamlı bilgiler sunar. Bilinçli karar verme için belirli tarifeler ve düzenlemeler hakkında derinlemesine bilgiye ihtiyaç duyan kullanıcılar için idealdir.',
-        'products.tariff.module.taxCalculation.title': 'Gümrük Vergisi ve Vergi Hesaplaması',
-        'products.tariff.module.taxCalculation.description': 'Tariff, ithalat sorgularınız için bir vergi hesaplama modülü sunarak, birkaç tıklama ile gümrük vergilerini ve diğer ithalat vergilerini tahmin etmenizi sağlar.',
-        'products.tariff.module.findMyCommodityCode.title': 'GTİP Kodunuzu Bulun',
-        'products.tariff.module.findMyCommodityCode.description': 'Malınızı anahtar kelimelerle tanımlayın ve arayın. Tariff, girdiğiniz anahtar kelimelere göre mallarınız için uygun GTİP kodlarını belirlemenize yardımcı olur. Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için her zaman güncel nomanklatürden yararlanın.',
-        'products.tariff.keyBenefits.title': 'Temel Avantajlar',
-        'products.tariff.keyBenefit.realTimeUpdates.title': 'Gerçek Zamanlı Güncellemeler',
-        'products.tariff.keyBenefit.realTimeUpdates.description': 'Maddeleriniz için gerçek zamanlı güncellemelerden yararlanın, en son mevzuatlarla sürekli uyumu garanti edin.',
-        'products.tariff.keyBenefit.multiCountrySupport.title': 'Çoklu Ülke Desteği',
-        'products.tariff.keyBenefit.multiCountrySupport.description': 'Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için gümrük düzenleme verilerine erişin, daha fazla ülkeyi dahil etmek için devam eden genişletme çabalarıyla. Tariff\'i ticaret kolaylaştırması için gerçekten uluslararası bir kaynak olarak konumlandırın.',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.title': 'Dil Engellerini Ortadan Kaldırın',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff, Avrupa Birliği, Birleşik Krallık, İsviçre ve Türkiye için İngilizce, Almanca ve Türkçe dillerinde kapsamlı gümrük düzenlemeleri sunar.',
-        'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Güncel Tarife Nomanklatürleri',
-        'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Her zaman güncel tarife nomanklatürleri ile bir adım önde olun. Her değişiklik, kullanıcılarına hizmet vermek için Tariff tarafından takip edilir.',
-        'products.tariff.cta.title': 'Tariff\'i Keşfetmeye Hazır mısınız?',
-        'products.tariff.cta.button': 'Tariff\'i ÜCRETSİZ Kullanın',
-        'common.backToProducts': 'Ürünlere Geri Dön',
-        'legal.cookieConsent.text': 'Deneyiminizi geliştirmek için çerezleri kullanıyoruz. Bu siteyi ziyaret etmeye devam ederek çerez kullanımımızı kabul etmiş olursunuz.',
-        'legal.cookieConsent.acceptButton': 'Kabul Et',
-        'legal.cookieConsent.rejectButton': 'Reddet',
-        'legal.privacyPolicy.link': 'Gizlilik Politikası',
-        'legal.privacyPolicy.title': 'Gizlilik Politikası',
-        'legal.privacyPolicy.placeholder': 'Detaylı Gizlilik Politikası içeriğiniz buraya gelecek. Kullanıcı verilerini GDPR ve diğer ilgili düzenlemelere uygun olarak nasıl topladığınızı, kullandığınızı ve koruduğunuzu açıklayın.',
-        'legal.termsOfService.link': 'Hizmet Şartları',
-        'legal.termsOfService.title': 'Hizmet Şartları',
-        'legal.termsOfService.placeholder': 'Kapsamlı Hizmet Şartları içeriğiniz buraya gelecek. Uygulamanızı kullanma kurallarını ve yönergelerini belirtin.',
-        'footer.copyright': `© ${new Date().getFullYear()} ATEZ Yazılım Teknolojileri. Tüm hakları saklıdır.`
-    },
-    it: {
-        'app.name': 'ATEZ Software Technologies',
-        'logo.text': 'ATEZ Software Technologies',
-        'nav.home': 'Home',
-        'nav.products': 'Prodotti',
-        'nav.solutions': 'Soluzioni',
-        'nav.about': 'Chi Siamo',
-        'nav.contact': 'Contattaci',
-        'nav.news': 'Notizie',
-        'nav.settings': 'Impostazioni',
-        'home.welcomeTitle': 'Automatizzare il Commercio Globale, con Intelligenza.',
-        'home.blockchainReadySlogan': 'Pronto per la Blockchain',
-        'home.welcomeSubtitle': 'Rivoluzionare il commercio transfrontaliero con soluzioni intelligenti per la conformità doganale, la movimentazione transfrontaliera di merci e la gestione autonoma dei dati, alimentate da Intelligenza Artificiale, Apprendimento Automatico e Business Intelligence.',
-        'home.featuresTitle': 'Capacità Chiave',
-        'home.capabilities.crossBorder.title': 'Soluzioni Complete per la Conformità Doganale',
-        'home.capabilities.crossBorder.description': 'Garantisci l\'aderenza alle normative commerciali globali con i nostri strumenti avanzati. Sfrutta Tariff per normative aggiornate, Logicust per l\'efficienza operativa e soluzioni basate sull\'IA per la gestione del rischio e l\'accuratezza.',
-        'home.capabilities.autonomousData.title': 'Procedure Doganali Automatizzate End-to-End',
-        'home.capabilities.autonomousData.description': 'Semplifica i tuoi processi doganali dall\'inizio alla fine. I nostri sistemi consentono un flusso di dati senza interruzioni, inclusa la conversione automatizzata dei dati delle dichiarazioni di esportazione in dati delle dichiarazioni di importazione, minimizzando gli errori e risparmiando tempo.',
-        'home.capabilities.streamlinedCustomsTransit.title': 'Procedure Doganali e di Transito Transfrontaliere Semplificate',
-        'home.capabilities.streamlinedCustomsTransit.description': 'Facilita una movimentazione più fluida delle merci attraverso i confini con procedure doganali e di transito ottimizzate, riducendo i ritardi e migliorando la velocità della catena di approvvigionamento.',
-        'home.capabilities.autonomousDataFlowAutomation.title': 'Flusso di Dati Autonomo e Automazione dei Processi',
-        'home.capabilities.autonomousDataFlowAutomation.description': 'Implementa l\'automazione intelligente per lo scambio di dati e la gestione dei processi, minimizzando l\'intervento manuale e migliorando l\'efficienza operativa durante tutto il ciclo di vita commerciale.',
-        'home.companyInfo.title': 'Informazioni su ATEZ Software Technologies',
-        'home.companyInfo.description': 'ATEZ Software Technologies è specializzata in soluzioni software di fascia alta per il commercio internazionale, concentrandosi sulla conformità doganale, sulla movimentazione transfrontaliera di merci e sull\'automazione autonoma dei processi tramite Blockchain, Intelligenza Artificiale, Apprendimento Automatico e Business Intelligence.',
-        'home.cta.title': 'Trasforma le Tue Operazioni Commerciali con ATEZ',
-        'home.cta.description': 'Collabora con noi per implementare soluzioni all\'avanguardia per dichiarazioni doganali autonome, conformità e logistica transfrontaliera efficiente.',
-        'home.cta.button': 'Discuti le Tue Esigenze',
-        'about.title': 'Informazioni su ATEZ Software Technologies',
-        'about.mission.title': 'La Nostra Missione',
-        'about.mission.content': 'La nostra missione è creare un ecosistema autonomo, digitale, sicuro e integrato per tutti gli stakeholder del commercio transfrontaliero. Miriamo a contribuire all\'ambiente e alla sostenibilità digitalizzando i processi relativi alla movimentazione transfrontaliera di merci, aumentando al contempo l\'efficienza e la trasparenza con le nostre soluzioni.',
-        'about.story.title': 'La Nostra Storia',
-        'about.story.content': 'Atez Software Technologies, fondata nel 2017, incarna una ricca convergenza di competenze sul campo e accademiche, con un\'eredità che supera i 30 anni nelle procedure commerciali transfrontaliere, logistica, intermediazione doganale e soluzioni IT per l\'intermediazione doganale, nonché finanza e reporting. Questa impresa prospera sotto la guida di manager esperti ed è rafforzata da una fusione dinamica di consulenti e menti innovative, garantendo un profondo serbatoio di conoscenze specifiche del settore. Centrale nell\'etica di Atez è la relazione simbiotica tra esperti di dominio e sviluppatori di software, una collaborazione fondamentale per sfruttare le nuove tecnologie, in particolare la Blockchain, per ideare soluzioni che siano sia rivoluzionarie che allineate con le esigenze dei clienti. I nostri principi fondamentali sono: un solido impegno per il lavoro di squadra, l\'innovazione e l\'integrazione strategica delle competenze di dominio con la tecnologia all\'avanguardia per affrontare le molteplici sfide del commercio internazionale e della logistica.',
-        'contact.title': 'Mettiti in Contatto',
-        'contact.description': 'Discuti di come le nostre soluzioni specializzate per dogane, logistica e commercio autonomo possono apportare benefici alla tua attività. Ci piacerebbe sentirti!',
-        'contact.form.title': 'Modulo di Contatto',
-        'contact.form.description': 'Inviaci le tue richieste o domande.',
-        'contact.form.name.label': 'Nome Completo',
-        'contact.form.name.placeholder': 'Mario Rossi',
-        'contact.form.email.label': 'Indirizzo Email',
-        'contact.form.email.placeholder': 'mario.rossi@example.com',
-        'contact.form.message.label': 'La Tua Richiesta',
-        'contact.form.message.placeholder': 'Descrivi le tue sfide o idee di progetto...',
-        'contact.form.submitButton': 'Invia Richiesta',
-        'contact.info.title': 'I Nostri Uffici',
-        'contact.info.address.hq.title': 'Sede Centrale',
-        'contact.info.address.hq.address': 'Huzur Mh, Azerbaycan Cd. Skyland B Blok 4b/29, 34485 Sarıyer/İstanbul, Turchia',
-        'contact.info.address.uk.title': 'Filiale UK',
-        'contact.info.address.uk.address': 'China Works, 100 Black Prince Road SE1 7SJ London',
-        'contact.info.address.de.title': 'Filiale Germania',
-        'contact.info.address.de.address': 'Friedrich-Ebert-Anlage 49 Nr: 2227 60308 Frankfurt am Main',
-        'contact.info.address.us.title': 'Filiale US',
-        'contact.info.address.us.address': '1775 Tysons Blvd., Suite 4161 McLean, VA 22102 Virginia',
-        'contact.info.email': 'solutions@atez.com',
-        'products.title': 'I Nostri Prodotti',
-        'products.description': 'Scopri la nostra suite di soluzioni software avanzate progettate per semplificare il commercio internazionale e le operazioni doganali. Tutti i nostri prodotti sono accessibili tramite la nostra piattaforma centrale.',
-        'products.mainPlatformIntro': 'La nostra suite completa di prodotti è disponibile tramite la nostra piattaforma centrale:',
-        'products.visitPlatformButton': 'Visita singlewindow.io',
-        'products.exploreButton': 'Esplora Prodotto',
-        'products.category.customsCompliance': 'Conformità Doganale',
-        'products.category.aiSolutions': 'Soluzioni IA per Dogane',
-        'products.category.declarationFiling': 'Archiviazione Dichiarazioni',
-        'products.category.other': 'Altre Soluzioni',
-        'products.product.tariff': 'Tariff',
-        'products.product.tariff.description': 'Database normativo doganale ufficiale (indicizzato storicamente) aggiornato 24/7',
-        'products.product.logicust': 'Logicust',
-        'products.product.logicust.description': 'Gestore dati di conformità doganale e normativa, basato sul prodotto e aggiornato dinamicamente',
-        'products.product.logicust.tooltip.productTrigger': 'Prodotto',
-        'products.product.logicust.tooltip.productContent': '(Articolo, materia prima, semilavorato o prodotto finito, commercializzato internazionalmente da un operatore economico)',
-        'products.product.customsShield': 'Customs Shield',
-        'products.product.customsShield.description': 'Valutazione del rischio e verifica della conformità basate sull\'IA per le operazioni doganali.',
-        'products.product.customsXRay': 'Customs X-Ray',
-        'products.product.customsXRay.description': 'Ottieni informazioni approfondite sui dati doganali per una maggiore conformità e decisioni migliori.',
-        'products.product.transitAI': 'TransitAI',
-        'products.product.transitAI.description': 'Gestione automatizzata delle procedure di transito per movimenti transfrontalieri più fluidi.',
-        'products.product.declarantAI': 'Declarant AI',
-        'products.product.declarantAI.description': 'Assistenza intelligente per la preparazione accurata ed efficiente delle dichiarazioni doganali.',
-        'products.product.transcode': 'Transcode',
-        'products.product.transcode.description': 'Conversione e validazione automatizzata dei codici merceologici per il commercio internazionale.',
-        'products.product.declarant': 'Declarant',
-        'products.product.declarant.description': 'Soluzione completa per l\'archiviazione efficiente e conforme delle dichiarazioni doganali.',
-        'products.product.greenpulse': 'Greenpulse',
-        'products.product.greenpulse.description': 'Traccia e gestisci le metriche di sostenibilità e l\'impronta di carbonio nella logistica.',
-        'products.product.customsLoupe': 'Customs Loupe',
-        'products.product.customsLoupe.description': 'Uno strumento che fornisce la visualizzazione dei dati per le transazioni doganali.',
-        'news.title': 'Notizie e Approfondimenti',
-        'news.description': 'Rimani aggiornato con le ultime notizie, approfondimenti del settore e aggiornamenti tecnologici da ATEZ Software.',
-        'news.readMore': 'Leggi di Più',
-        'news.category.industryUpdates': 'Aggiornamenti del Settore',
-        'news.category.technology': 'Tecnologia',
-        'news.category.companyNews': 'Notizie Aziendali',
-        'news.post1.title': 'Navigare il Futuro delle Dogane con l\'IA',
-        'news.post1.excerpt': 'Scopri come l\'Intelligenza Artificiale sta ridisegnando la conformità doganale e semplificando il commercio internazionale per le aziende di tutto il mondo.',
-        'news.post2.title': 'ATEZ Software Lancia una Nuova Iniziativa Blockchain per le Catene di Approvvigionamento',
-        'news.post2.excerpt': 'Siamo entusiasti di annunciare il nostro ultimo progetto che utilizza la tecnologia blockchain per migliorare la trasparenza e la sicurezza nelle catene di approvvigionamento globali.',
-        'news.post3.title': 'L\'Impatto della Gestione Autonoma dei Dati sulla Logistica Transfrontaliera',
-        'news.post3.excerpt': 'Uno sguardo approfondito a come i sistemi autonomi stanno semplificando il flusso di dati e rivoluzionando la gestione delle procedure nel settore logistico.',
-        'settings.title': 'Impostazioni',
-        'settings.description': 'Personalizza la tua esperienza applicativa.',
-        'settings.appearance.title': 'Aspetto',
-        'settings.appearance.description': 'Regola l\'aspetto e il 느낌 dell\'applicazione.',
-        'settings.appearance.theme.label': 'Tema',
-        'settings.appearance.theme.light': 'Chiaro',
-        'settings.appearance.theme.dark': 'Scuro',
-        'settings.appearance.theme.system': 'Sistema',
-        'settings.appearance.fontSize.label': 'Dimensione Carattere',
-        'settings.appearance.fontSize.sm': 'Piccolo',
-        'settings.appearance.fontSize.md': 'Medio',
-        'settings.appearance.fontSize.lg': 'Grande',
-        'settings.language.title': 'Lingua',
-        'settings.language.description': 'Scegli la tua lingua preferita per l\'applicazione.',
-        'settings.language.select.label': 'Seleziona Lingua',
-        'settings.density.title': 'Densità Contenuto',
-        'settings.density.description': 'Regola la spaziatura e la densità del contenuto.',
-        'settings.density.label': 'Livello Densità',
-        'settings.density.compact': 'Compatto',
-        'settings.density.default': 'Predefinito',
-        'settings.density.spacious': 'Spazioso',
-        'solutions.title': 'Le Nostre Soluzioni',
-        'solutions.description': 'Scopri come ATEZ Software Technologies sfrutta i suoi prodotti per fornire soluzioni mirate per le tue sfide commerciali e doganali internazionali.',
-        'solutions.solution.htsClassification': 'Classificazione Codice HS',
-        'solutions.solution.landedCost': 'Simulazione Costo Sbarcato',
-        'solutions.solution.customsCompliance': 'Gestione Conformità Doganale',
-        'solutions.solution.exportControls': 'Controlli Esportazione e Screening Sanzioni',
-        'solutions.solution.findHtsCode': 'Trova il Tuo Codice HS',
-        'solutions.solution.taxCalculation': 'Calcolo Dazi e Imposte',
-        'solutions.solution.sapIntegration': 'Plugin SAP per Sincronizzazione Dati',
-        'solutions.solution.transitDeclarationFiling': 'Archiviazione Dichiarazione di Transito',
-        'solutions.solution.guaranteeManagement': 'Gestione Garanzie',
-        'solutions.solution.preClearanceControl': 'Controllo Pre-sdoganamento e Valutazione Rischio',
-        'solutions.solution.postDeclarationControl': 'Controllo Post-dichiarazione e Supporto Audit',
-        'solutions.solution.cbamReporting': 'Reporting CBAM e Contabilità Carbonio',
-        'solutions.solution.dataVisualization': 'Visualizzazione e Analisi Dati Commerciali',
-        'solutions.solution.declarantAI': 'Preparazione Dichiarazione Doganale Assistita da IA',
-        'solutions.solution.transitAI': 'Preparazione Dichiarazione di Transito Assistita da IA',
-        'solutions.solution.relayhub': 'Integrazione Scambio Dati Relayhub',
-        'solutions.solution.smartSuggestions': 'Suggerimenti Intelligenti',
-        'solutions.solution.historicalDataTariff': 'Dati Normativi Indicizzati Storicamente',
-        'solutions.viewProductDetails': 'Visualizza Dettagli Prodotto',
-        'products.tariff.pageTitle': 'Tariff',
-        'products.tariff.generalDescription': 'Tariff è la soluzione di banca dati digitale delle normative doganali per utenti e sistemi per accedere a dazi doganali, tasse e misure indicizzati storicamente, applicati in conformità con le Tariffe Doganali utilizzate nei territori doganali. Tariff copre attualmente le normative dell\'Unione Europea, del Regno Unito, della Svizzera e della Turchia e fornisce normative doganali, dazi e misure di controllo con pochi clic. Tariff consente agli utenti di accedere a informazioni critiche, adattate alle loro rotte commerciali, garantendo un processo di importazione o esportazione più fluido, efficiente e conforme.',
-        'products.tariff.modules.title': 'Moduli Prodotto',
-        'products.tariff.module.basicQuery.title': 'Interrogazione Base',
-        'products.tariff.module.basicQuery.description': 'Identifica rapidamente i tassi di dazio essenziali e le misure normative per la tua rotta commerciale di esportazione o importazione selezionata semplicemente inserendo il codice merceologico. L\'Interrogazione Base fornisce un elenco diretto delle tariffe applicabili.',
-        'products.tariff.module.detailedQuery.title': 'Interrogazione Dettagliata',
-        'products.tariff.module.detailedQuery.description': 'L\'Interrogazione Dettagliata offre approfondimenti completi, incluse note a piè di pagina, condizioni, basi legali e date di inizio e fine delle misure. Ideale per utenti che necessitano di informazioni approfondite su tariffe e normative specifiche per decisioni informate.',
-        'products.tariff.module.taxCalculation.title': 'Calcolo Dazi e Imposte',
-        'products.tariff.module.taxCalculation.description': 'Tariff offre un modulo di calcolo delle imposte per le tue richieste di importazione, consentendoti di stimare i dazi doganali e altre imposte di importazione con pochi clic.',
-        'products.tariff.module.findMyCommodityCode.title': 'Trova il Tuo Codice HS',
-        'products.tariff.module.findMyCommodityCode.description': 'Definisci semplicemente la tua merce con parole chiave e cercala. Tariff ti aiuta a identificare i codici merceologici appropriati per le tue merci in base alle parole chiave inserite. Approfitta della nomenclatura sempre aggiornata per Unione Europea, Regno Unito, Svizzera e Turchia.',
-        'products.tariff.keyBenefits.title': 'Vantaggi Chiave',
-        'products.tariff.keyBenefit.realTimeUpdates.title': 'Aggiornamenti in Tempo Reale',
-        'products.tariff.keyBenefit.realTimeUpdates.description': 'Approfitta degli aggiornamenti in tempo reale per i tuoi articoli, garantendo un costante allineamento con le ultime legislazioni.',
-        'products.tariff.keyBenefit.multiCountrySupport.title': 'Supporto Multi-Paese',
-        'products.tariff.keyBenefit.multiCountrySupport.description': 'Accedi ai dati normativi doganali per Unione Europea, Regno Unito, Svizzera e Turchia, con sforzi di espansione continui per includere più paesi. Tariff si afferma come una risorsa veramente internazionale per la facilitazione del commercio.',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.title': 'Elimina le Barriere Linguistiche',
-        'products.tariff.keyBenefit.eliminateLanguageBarriers.description': 'Tariff fornisce normative doganali complete per Unione Europea, Regno Unito, Svizzera e Turchia in inglese, tedesco e turco.',
-        'products.tariff.keyBenefit.upToDateNomenclatures.title': 'Nomenclature Tariffarie Aggiornate',
-        'products.tariff.keyBenefit.upToDateNomenclatures.description': 'Rimani sempre un passo avanti con nomenclature tariffarie sempre aggiornate. Ogni modifica viene tracciata da Tariff per servire i suoi utenti.',
-        'products.tariff.cta.title': 'Pronto per Esplorare Tariff?',
-        'products.tariff.cta.button': 'Usa Tariff GRATIS',
-        'common.backToProducts': 'Torna ai Prodotti',
-        'legal.cookieConsent.text': 'Utilizziamo i cookie per migliorare la tua esperienza. Continuando a visitare questo sito accetti il nostro utilizzo dei cookie.',
-        'legal.cookieConsent.acceptButton': 'Accetta',
-        'legal.cookieConsent.rejectButton': 'Rifiuta',
-        'legal.privacyPolicy.link': 'Informativa sulla Privacy',
-        'legal.privacyPolicy.title': 'Informativa sulla Privacy',
-        'legal.privacyPolicy.placeholder': 'Il contenuto dettagliato della tua Informativa sulla Privacy va qui. Spiega come raccogli, utilizzi e proteggi i dati degli utenti in conformità con il GDPR e altre normative pertinenti.',
-        'legal.termsOfService.link': 'Termini di Servizio',
-        'legal.termsOfService.title': 'Termini di Servizio',
-        'legal.termsOfService.placeholder': 'Il contenuto completo dei tuoi Termini di Servizio va qui. Descrivi le regole e le linee guida per l\'utilizzo della tua applicazione.',
-        'footer.copyright': `© ${new Date().getFullYear()} ATEZ Software Technologies. Tutti i diritti riservati.`
-    }
-};
+function getCopyrightText(translations) {
+    const rawText = translations?.['footer.copyright'] || `© ${new Date().getFullYear()} ATEZ Software Technologies. All rights reserved.`;
+    return rawText.replace('{{YEAR}}', new Date().getFullYear().toString());
+}
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
@@ -744,42 +58,95 @@ const LanguageContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$pro
 const LanguageProvider = ({ children })=>{
     _s();
     const [selectedLanguage, setSelectedLanguage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DEFAULT_LOCALE"]);
-    const [isInitialized, setIsInitialized] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [translations, setTranslations] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
+    const [isAppInitialized, setIsAppInitialized] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false); // Tracks if initial language and translations are loaded
+    // Effect for loading language preference from localStorage (runs once on mount)
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "LanguageProvider.useEffect": ()=>{
             const storedLanguage = localStorage.getItem('globalHubLanguage');
-            if (storedLanguage) {
+            if (storedLanguage && __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AVAILABLE_LOCALES"].find({
+                "LanguageProvider.useEffect": (l)=>l.value === storedLanguage
+            }["LanguageProvider.useEffect"])) {
                 setSelectedLanguage(storedLanguage);
             }
-            setIsInitialized(true);
+        // Initial translations will be loaded by the next effect, triggered by selectedLanguage state
         }
     }["LanguageProvider.useEffect"], []);
+    // Effect for loading translation file when selectedLanguage changes or on initial setup
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "LanguageProvider.useEffect": ()=>{
-            if (isInitialized) {
+            const loadTranslations = {
+                "LanguageProvider.useEffect.loadTranslations": async (lang)=>{
+                    try {
+                        const response = await fetch(`/locales/${lang}.json`);
+                        if (!response.ok) {
+                            console.error(`Failed to load ${lang}.json, status: ${response.status}`);
+                            throw new Error(`Failed to load ${lang}.json`);
+                        }
+                        const data = await response.json();
+                        setTranslations(data);
+                    } catch (error) {
+                        console.error(`Error loading translations for ${lang}:`, error);
+                        // Attempt to load default (English) if the selected one fails and it's not already English
+                        if (lang !== __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DEFAULT_LOCALE"]) {
+                            try {
+                                console.warn(`Attempting to load fallback translations for ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DEFAULT_LOCALE"]}`);
+                                const fallbackResponse = await fetch(`/locales/${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DEFAULT_LOCALE"]}.json`);
+                                if (!fallbackResponse.ok) {
+                                    console.error(`Failed to load fallback ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DEFAULT_LOCALE"]}.json, status: ${fallbackResponse.status}`);
+                                    throw new Error(`Failed to load ${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DEFAULT_LOCALE"]}.json`);
+                                }
+                                const fallbackData = await fallbackResponse.json();
+                                setTranslations(fallbackData);
+                            } catch (fallbackError) {
+                                console.error("Error loading default translations:", fallbackError);
+                                setTranslations({}); // Set to empty if all fails
+                            }
+                        } else {
+                            setTranslations({}); // Set to empty if English itself fails
+                        }
+                    } finally{
+                        if (!isAppInitialized) {
+                            setIsAppInitialized(true);
+                        }
+                    }
+                }
+            }["LanguageProvider.useEffect.loadTranslations"];
+            loadTranslations(selectedLanguage);
+        }
+    }["LanguageProvider.useEffect"], [
+        selectedLanguage,
+        isAppInitialized
+    ]); // Rerun if selectedLanguage changes or to init
+    // Effect for saving selected language to localStorage
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "LanguageProvider.useEffect": ()=>{
+            // Only save after initial determination and translations have been attempted
+            if (isAppInitialized) {
                 localStorage.setItem('globalHubLanguage', selectedLanguage);
             }
         }
     }["LanguageProvider.useEffect"], [
         selectedLanguage,
-        isInitialized
+        isAppInitialized
     ]);
-    if (!isInitialized) {
-        return null; // Or a loading spinner
+    if (!isAppInitialized) {
+        return null; // Or a global loading spinner
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LanguageContext.Provider, {
         value: {
             selectedLanguage,
-            setSelectedLanguage
+            setSelectedLanguage,
+            translations
         },
         children: children
     }, void 0, false, {
         fileName: "[project]/src/context/language-context.tsx",
-        lineNumber: 41,
+        lineNumber: 88,
         columnNumber: 5
     }, this);
 };
-_s(LanguageProvider, "Q0C6vTwm4LfI7XbV0AgHNqunVb8=");
+_s(LanguageProvider, "CV+8rU7NKlBAVVVdbi/EmMNeNPA=");
 _c = LanguageProvider;
 var _c;
 __turbopack_context__.k.register(_c, "LanguageProvider");
@@ -2590,11 +1957,19 @@ const useTranslation = ()=>{
     if (!context) {
         throw new Error('useTranslation must be used within a LanguageProvider');
     }
-    const { selectedLanguage } = context;
+    const { selectedLanguage, translations } = context;
     const t = (key)=>{
-        const lang = selectedLanguage;
-        // Fallback chain: selected language -> default language -> key itself
-        return __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["translations"][lang]?.[key] || __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["translations"][__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DEFAULT_LOCALE"]]?.[key] || String(key);
+        // translations object should ideally not be null if LanguageProvider handles loading correctly
+        // but we can add a check for robustness or if it's initially empty.
+        if (Object.keys(translations).length === 0 && key !== 'footer.copyright') {
+        // Could return a loading indicator or the key itself if translations are not yet loaded.
+        // For now, returning the key is a simple fallback.
+        // console.warn(`Translations not loaded or empty, returning key: ${key}`);
+        }
+        if (key === 'footer.copyright') {
+            return (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getCopyrightText"])(translations);
+        }
+        return translations[key] || String(key); // Fallback to the key itself if not found
     };
     return {
         t,
@@ -3251,9 +2626,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$settings$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Settings$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/settings.js [app-client] (ecmascript) <export default as Settings>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$log$2d$out$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__LogOut$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/log-out.js [app-client] (ecmascript) <export default as LogOut>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$translation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/hooks/use-translation.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/i18n.ts [app-client] (ecmascript)"); // Import the function
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$language$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/context/language-context.tsx [app-client] (ecmascript)"); // Import context for direct access
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)"); // Import React for useContext
 ;
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 "use client";
+;
+;
+;
 ;
 ;
 ;
@@ -3277,18 +2658,18 @@ function CustomSidebarHeaderContent() {
             className: "h-6 w-6"
         }, void 0, false, {
             fileName: "[project]/src/components/layout/main-layout.tsx",
-            lineNumber: 30,
+            lineNumber: 33,
             columnNumber: 31
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$panel$2d$left$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PanelLeftOpen$3e$__["PanelLeftOpen"], {
             className: "h-6 w-6"
         }, void 0, false, {
             fileName: "[project]/src/components/layout/main-layout.tsx",
-            lineNumber: 30,
+            lineNumber: 33,
             columnNumber: 72
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/layout/main-layout.tsx",
-        lineNumber: 29,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
@@ -3301,6 +2682,9 @@ _c = CustomSidebarHeaderContent;
 function MainLayout({ children }) {
     _s1();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$translation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
+    // Access translations directly from context for the copyright
+    const langContext = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].useContext(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$context$2f$language$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LanguageContext"]);
+    const copyrightText = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$i18n$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getCopyrightText"])(langContext?.translations || {});
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SidebarProvider"], {
         defaultOpen: true,
         children: [
@@ -3312,24 +2696,24 @@ function MainLayout({ children }) {
                         className: "p-4 flex items-center justify-end",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CustomSidebarHeaderContent, {}, void 0, false, {
                             fileName: "[project]/src/components/layout/main-layout.tsx",
-                            lineNumber: 42,
+                            lineNumber: 49,
                             columnNumber: 12
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/layout/main-layout.tsx",
-                        lineNumber: 41,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SidebarContent"], {
                         className: "p-2",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$layout$2f$sidebar$2d$nav$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SidebarNav"], {}, void 0, false, {
                             fileName: "[project]/src/components/layout/main-layout.tsx",
-                            lineNumber: 45,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/layout/main-layout.tsx",
-                        lineNumber: 44,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SidebarFooter"], {
@@ -3346,7 +2730,7 @@ function MainLayout({ children }) {
                                             className: "mr-2 h-5 w-5 group-data-[collapsible=icon]:mr-0"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/layout/main-layout.tsx",
-                                            lineNumber: 50,
+                                            lineNumber: 57,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3354,18 +2738,18 @@ function MainLayout({ children }) {
                                             children: t('nav.settings')
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/layout/main-layout.tsx",
-                                            lineNumber: 51,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/layout/main-layout.tsx",
-                                    lineNumber: 49,
+                                    lineNumber: 56,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/layout/main-layout.tsx",
-                                lineNumber: 48,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -3376,7 +2760,7 @@ function MainLayout({ children }) {
                                         className: "mr-2 h-5 w-5 group-data-[collapsible=icon]:mr-0"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/main-layout.tsx",
-                                        lineNumber: 55,
+                                        lineNumber: 62,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3384,25 +2768,25 @@ function MainLayout({ children }) {
                                         children: "Log Out"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/main-layout.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 63,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/layout/main-layout.tsx",
-                                lineNumber: 54,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/layout/main-layout.tsx",
-                        lineNumber: 47,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/layout/main-layout.tsx",
-                lineNumber: 40,
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SidebarInset"], {
@@ -3411,7 +2795,7 @@ function MainLayout({ children }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$layout$2f$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Header"], {}, void 0, false, {
                             fileName: "[project]/src/components/layout/main-layout.tsx",
-                            lineNumber: 62,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -3419,7 +2803,7 @@ function MainLayout({ children }) {
                             children: children
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/main-layout.tsx",
-                            lineNumber: 63,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -3428,10 +2812,10 @@ function MainLayout({ children }) {
                                 className: "container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        children: t('footer.copyright')
+                                        children: copyrightText
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/layout/main-layout.tsx",
-                                        lineNumber: 68,
+                                        lineNumber: 75,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -3443,7 +2827,7 @@ function MainLayout({ children }) {
                                                 children: t('legal.termsOfService.link')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/main-layout.tsx",
-                                                lineNumber: 70,
+                                                lineNumber: 77,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -3452,45 +2836,45 @@ function MainLayout({ children }) {
                                                 children: t('legal.privacyPolicy.link')
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/layout/main-layout.tsx",
-                                                lineNumber: 73,
+                                                lineNumber: 80,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/layout/main-layout.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/layout/main-layout.tsx",
-                                lineNumber: 67,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/layout/main-layout.tsx",
-                            lineNumber: 66,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/layout/main-layout.tsx",
-                    lineNumber: 61,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/layout/main-layout.tsx",
-                lineNumber: 60,
+                lineNumber: 67,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/layout/main-layout.tsx",
-        lineNumber: 39,
+        lineNumber: 46,
         columnNumber: 5
     }, this);
 }
-_s1(MainLayout, "zlIdU9EjM2llFt74AbE2KsUJXyM=", false, function() {
+_s1(MainLayout, "i2eaoHW0h5ohnBTjX7CXEYSW2+4=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$translation$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]
     ];

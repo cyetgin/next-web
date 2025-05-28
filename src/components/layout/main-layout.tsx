@@ -17,6 +17,9 @@ import { Button } from '@/components/ui/button';
 import { PanelLeftClose, PanelLeftOpen, Settings, LogOut } from 'lucide-react';
 import { useTranslation } from '@/hooks/use-translation';
 import { useSidebar } from '@/components/ui/sidebar';
+import { getCopyrightText } from '@/lib/i18n'; // Import the function
+import { LanguageContext } from '@/context/language-context'; // Import context for direct access
+import React from 'react'; // Import React for useContext
 
 function CustomSidebarHeaderContent() {
   const { isMobile, state, toggleSidebar } = useSidebar();
@@ -34,6 +37,10 @@ function CustomSidebarHeaderContent() {
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   const { t } = useTranslation();
+  // Access translations directly from context for the copyright
+  const langContext = React.useContext(LanguageContext);
+  const copyrightText = getCopyrightText(langContext?.translations || {});
+
 
   return (
     <SidebarProvider defaultOpen={true}>
@@ -65,7 +72,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           </main>
           <footer className="py-6 px-4 md:px-6 border-t bg-background">
             <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-              <p>{t('footer.copyright')}</p>
+              <p>{copyrightText}</p>
               <nav className="flex gap-4 mt-2 sm:mt-0">
                 <Link href="/terms-of-service" className="hover:text-primary hover:underline">
                   {t('legal.termsOfService.link')}
