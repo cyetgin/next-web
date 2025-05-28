@@ -53,10 +53,10 @@ export default function TariffPage() {
         <Image
           src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/TARIFF%402x-v2.png?alt=media&token=a94dcd84-fe64-4699-9ea2-70ec737ca484"
           alt={t('products.tariff.pageTitle')}
-          width={300} // You might want to adjust this
-          height={75} // You might want to adjust this
-          className="mx-auto" // Center the image
-          priority // Good for LCP elements
+          width={620} 
+          height={180}
+          className="mx-auto" 
+          priority 
         />
       </header>
 

@@ -221,9 +221,14 @@ function TariffPage() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
                 className: "text-center space-y-4",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                    className: "text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-primary",
-                    children: t('products.tariff.pageTitle')
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    src: "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/TARIFF%402x-v2.png?alt=media&token=a94dcd84-fe64-4699-9ea2-70ec737ca484",
+                    alt: t('products.tariff.pageTitle'),
+                    width: 300,
+                    height: 75,
+                    className: "mx-auto" // Center the image
+                    ,
+                    priority: true
                 }, void 0, false, {
                     fileName: "[project]/src/app/products/tariff/page.tsx",
                     lineNumber: 53,
@@ -246,12 +251,12 @@ function TariffPage() {
                             className: "rounded-lg shadow-xl object-cover"
                         }, void 0, false, {
                             fileName: "[project]/src/app/products/tariff/page.tsx",
-                            lineNumber: 60,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                        lineNumber: 59,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -261,18 +266,18 @@ function TariffPage() {
                             children: t('products.tariff.generalDescription')
                         }, void 0, false, {
                             fileName: "[project]/src/app/products/tariff/page.tsx",
-                            lineNumber: 69,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                        lineNumber: 68,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                lineNumber: 58,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -283,7 +288,7 @@ function TariffPage() {
                         children: t('products.tariff.modules.title')
                     }, void 0, false, {
                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                        lineNumber: 76,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -298,7 +303,7 @@ function TariffPage() {
                                                 className: "h-8 w-8 text-accent flex-shrink-0 mt-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                                                lineNumber: 83,
+                                                lineNumber: 88,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -307,18 +312,18 @@ function TariffPage() {
                                                     children: t(module.titleKey)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/products/tariff/page.tsx",
-                                                    lineNumber: 85,
+                                                    lineNumber: 90,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                                                lineNumber: 84,
+                                                lineNumber: 89,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 87,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -328,29 +333,29 @@ function TariffPage() {
                                             children: t(module.descriptionKey)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/products/tariff/page.tsx",
-                                            lineNumber: 89,
+                                            lineNumber: 94,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 93,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, module.titleKey, true, {
                                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                                lineNumber: 81,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                        lineNumber: 79,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                lineNumber: 75,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -361,7 +366,7 @@ function TariffPage() {
                         children: t('products.tariff.keyBenefits.title')
                     }, void 0, false, {
                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                        lineNumber: 97,
+                        lineNumber: 102,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -376,7 +381,7 @@ function TariffPage() {
                                                 className: "h-8 w-8 text-accent flex-shrink-0 mt-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                                                lineNumber: 104,
+                                                lineNumber: 109,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -385,18 +390,18 @@ function TariffPage() {
                                                     children: t(benefit.titleKey)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/products/tariff/page.tsx",
-                                                    lineNumber: 106,
+                                                    lineNumber: 111,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 110,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 108,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -406,29 +411,29 @@ function TariffPage() {
                                             children: t(benefit.descriptionKey)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/products/tariff/page.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 115,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                                        lineNumber: 109,
+                                        lineNumber: 114,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, benefit.titleKey, true, {
                                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                                lineNumber: 102,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/products/tariff/page.tsx",
-                        lineNumber: 100,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                lineNumber: 96,
+                lineNumber: 101,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -441,7 +446,7 @@ function TariffPage() {
                             children: t('products.tariff.cta.title')
                         }, void 0, false, {
                             fileName: "[project]/src/app/products/tariff/page.tsx",
-                            lineNumber: 119,
+                            lineNumber: 124,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -461,34 +466,34 @@ function TariffPage() {
                                             className: "ml-2 h-5 w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/products/tariff/page.tsx",
-                                            lineNumber: 125,
+                                            lineNumber: 130,
                                             columnNumber: 53
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/products/tariff/page.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 129,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                                lineNumber: 123,
+                                lineNumber: 128,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/products/tariff/page.tsx",
-                            lineNumber: 122,
+                            lineNumber: 127,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/products/tariff/page.tsx",
-                    lineNumber: 118,
+                    lineNumber: 123,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/products/tariff/page.tsx",
-                lineNumber: 117,
+                lineNumber: 122,
                 columnNumber: 7
             }, this)
         ]
