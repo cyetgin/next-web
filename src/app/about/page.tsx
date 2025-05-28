@@ -42,7 +42,7 @@ export default function AboutPage() {
             <Target className="h-10 w-10 text-primary" />
             <div>
               <CardTitle className="text-3xl">{t('about.mission.title')}</CardTitle>
-              <CardDescription>Our commitment to transforming international trade.</CardDescription>
+              <CardDescription>{t('about.mission.description')}</CardDescription>
             </div>
           </CardHeader>
           <CardContent>
@@ -59,7 +59,7 @@ export default function AboutPage() {
             <BookOpen className="h-10 w-10 text-primary" />
              <div>
               <CardTitle className="text-3xl">{t('about.story.title')}</CardTitle>
-              <CardDescription>Our journey in pioneering trade technology.</CardDescription>
+              <CardDescription>{t('about.story.description')}</CardDescription>
             </div>
           </CardHeader>
           <CardContent>
@@ -67,7 +67,7 @@ export default function AboutPage() {
               {t('about.story.content')}
             </p>
              <div className="mt-6">
-              <h4 className="text-xl font-semibold mb-3 text-primary">Enabling Technologies:</h4>
+              <h4 className="text-xl font-semibold mb-3 text-primary">{t('about.story.enablingTechnologiesTitle')}</h4>
               <div className="flex flex-wrap gap-4">
                 {techIcons.map(tech => (
                   <div key={tech.label} className="flex items-center gap-2 p-2 border rounded-lg bg-secondary/30">

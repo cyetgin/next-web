@@ -1,6 +1,7 @@
 {
   "/about/page": "app/about/page.js",
   "/contact/page": "app/contact/page.js",
+  "/news/page": "app/news/page.js",
   "/page": "app/page.js",
   "/privacy-policy/page": "app/privacy-policy/page.js",
   "/products/page": "app/products/page.js",

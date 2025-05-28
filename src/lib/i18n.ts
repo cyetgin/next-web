@@ -24,7 +24,7 @@ export type TranslationKey =
   | 'home.welcomeTitle'
   | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'
-  | 'home.exploreSolutionsButton' // Added
+  | 'home.exploreSolutionsButton'
   | 'home.featuresTitle'
   | 'home.capabilities.crossBorder.title'
   | 'home.capabilities.crossBorder.description'
@@ -41,8 +41,11 @@ export type TranslationKey =
   | 'home.cta.button'
   | 'about.title'
   | 'about.mission.title'
+  | 'about.mission.description' // New Key
   | 'about.mission.content'
   | 'about.story.title'
+  | 'about.story.description' // New Key
+  | 'about.story.enablingTechnologiesTitle' // New Key
   | 'about.story.content'
   | 'contact.title'
   | 'contact.description'
@@ -141,7 +144,6 @@ export type TranslationKey =
   | 'solutions.solution.findHtsCode'
   | 'solutions.solution.taxCalculation'
   | 'solutions.solution.sapIntegration'
-  // | 'solutions.solution.customsDeclarationFiling' // Removed as per previous request
   | 'solutions.solution.transitDeclarationFiling'
   | 'solutions.solution.guaranteeManagement'
   | 'solutions.solution.preClearanceControl'
@@ -183,7 +185,7 @@ export type TranslationKey =
   // GDPR & Legal
   | 'legal.cookieConsent.text'
   | 'legal.cookieConsent.acceptButton'
-  | 'legal.cookieConsent.rejectButton' // Added
+  | 'legal.cookieConsent.rejectButton'
   | 'legal.privacyPolicy.link'
   | 'legal.privacyPolicy.title'
   | 'legal.privacyPolicy.placeholder'
