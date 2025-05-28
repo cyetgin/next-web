@@ -233,7 +233,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.title': 'Our Products',
     'products.description': 'Discover our suite of advanced software solutions designed to streamline international trade and customs operations. All our products are accessible through our central platform.',
     'products.mainPlatformIntro': 'Our comprehensive suite of products is available through our central platform:',
-    'products.visitPlatformButton': 'Visit SingleWindow.io',
+    'products.visitPlatformButton': 'Visit singlewindow.io',
     'products.exploreButton': 'Explore Product',
     'products.category.customsCompliance': 'Customs Compliance',
     'products.category.aiSolutions': 'AI Solutions for Customs',
@@ -399,7 +399,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.title': 'Unsere Produkte',
     'products.description': 'Entdecken Sie unsere Suite fortschrittlicher Softwarelösungen zur Optimierung internationaler Handels- und Zollabläufe. Alle unsere Produkte sind über unsere zentrale Plattform zugänglich.',
     'products.mainPlatformIntro': 'Unsere umfassende Produktpalette ist über unsere zentrale Plattform verfügbar:',
-    'products.visitPlatformButton': 'SingleWindow.io besuchen',
+    'products.visitPlatformButton': 'singlewindow.io besuchen',
     'products.exploreButton': 'Produkt entdecken',
     'products.category.customsCompliance': 'Zollkonformität',
     'products.category.aiSolutions': 'KI-Lösungen für den Zoll',
@@ -561,7 +561,7 @@ export const translations: Record<Locale, Record<string, string>> = {
     'products.title': 'Ürünlerimiz',
     'products.description': 'Uluslararası ticaret ve gümrük operasyonlarını kolaylaştırmak için tasarlanmış gelişmiş yazılım çözümlerimizi keşfedin. Tüm ürünlerimize merkezi platformumuz üzerinden erişilebilir.',
     'products.mainPlatformIntro': 'Kapsamlı ürün yelpazemiz merkezi platformumuz aracılığıyla sunulmaktadır:',
-    'products.visitPlatformButton': 'SingleWindow.io\'yu Ziyaret Et',
+    'products.visitPlatformButton': 'singlewindow.io\'yu ziyaret et',
     'products.exploreButton': 'Ürünü Keşfet',
     'products.category.customsCompliance': 'Gümrük Uyumluluğu',
     'products.category.aiSolutions': 'Gümrük için Yapay Zeka Çözümleri',
@@ -668,3 +668,4 @@ export const translations: Record<Locale, Record<string, string>> = {
     'common.backToProducts': 'Ürünlere Geri Dön',
   },
 };
+

@@ -19,7 +19,6 @@ import {
   FileText, 
   Lightbulb, 
   ArrowRight,
-  AreaChart
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
@@ -143,9 +142,18 @@ export default function ProductsPage() {
         </header>
 
         <section className="text-center p-6 bg-secondary/30 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-3 text-primary">
+          <p className="text-lg font-semibold mb-4 text-primary">
             {t('products.mainPlatformIntro')}
-          </h2>
+          </p>
+          <div className="my-4">
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/A%20Global%20Single%20Window%402x-v2.png?alt=media&token=6fd2546c-956b-4896-abe3-c4c1ec359dc3"
+              alt={t('products.mainPlatformIntro')}
+              width={574}
+              height={90}
+              className="mx-auto"
+            />
+          </div>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href="https://singlewindow.io" target="_blank" rel="noopener noreferrer">
               {t('products.visitPlatformButton')} <ExternalLink className="ml-2 h-5 w-5" />

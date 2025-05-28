@@ -595,6 +595,11 @@ html.density-spacious {
   margin-bottom: .25rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mb-1 {
   margin-bottom: .25rem;
 }
