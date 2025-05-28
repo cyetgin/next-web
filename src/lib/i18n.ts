@@ -24,6 +24,7 @@ export type TranslationKey =
   | 'home.welcomeTitle'
   | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'
+  | 'home.exploreSolutionsButton' // Added
   | 'home.featuresTitle'
   | 'home.capabilities.crossBorder.title'
   | 'home.capabilities.crossBorder.description'
@@ -190,9 +191,6 @@ export type TranslationKey =
   | 'legal.termsOfService.title'
   | 'legal.termsOfService.placeholder'
   | 'footer.copyright';
-
-// The large translations object has been removed from here.
-// It will now be loaded from individual JSON files.
 
 // Function to replace {{YEAR}} placeholder in copyright string
 export function getCopyrightText(translations: Record<string, string> | null): string {
