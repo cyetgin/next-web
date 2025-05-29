@@ -26,15 +26,14 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start */}
+      <div className="grid md:grid-cols-2 gap-12 items-start">
         <div>
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/agsw-whole.webp?alt=media&token=7f020544-825f-4c47-b53e-11c14bb186a1"
             alt={t('about.mission.title')}
             width={600}
             height={400}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="global trade collaboration"
           />
         </div>
         <Card className="shadow-lg">
@@ -53,7 +52,7 @@ export default function AboutPage() {
         </Card>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start */}
+      <div className="grid md:grid-cols-2 gap-12 items-start">
         <Card className="shadow-lg md:order-last">
            <CardHeader className="flex flex-row items-center gap-3">
             <BookOpen className="h-10 w-10 text-primary" />
