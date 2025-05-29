@@ -6,9 +6,9 @@
   "path": "static/chunks/src_app_layout_tsx_f0e4c1a2._.js",
   "chunks": [
     "static/chunks/[root of the server]__b07dbc43._.css",
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_95ee32fd._.js",
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_07add916._.js",
     "static/chunks/src_dcaac7a6._.js",
-    "static/chunks/node_modules_5c132528._.js"
+    "static/chunks/node_modules_967b9c1c._.js"
   ],
   "source": "dynamic"
 });

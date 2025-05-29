@@ -17,7 +17,7 @@ export type TranslationKey =
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
-  | 'nav.settings'
+  // | 'nav.settings' // Removed this key
   | 'home.welcomeTitle'
   | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'

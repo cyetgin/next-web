@@ -14,12 +14,12 @@ import {
 import { Header } from './header';
 import { SidebarNav } from './sidebar-nav';
 import { Button } from '@/components/ui/button';
-import { PanelLeftClose, PanelLeftOpen, Settings, LogOut } from 'lucide-react';
+import { PanelLeftClose, PanelLeftOpen } from 'lucide-react'; // Removed Settings, LogOut
 import { useTranslation } from '@/hooks/use-translation';
 import { useSidebar } from '@/components/ui/sidebar';
-import { getCopyrightText } from '@/lib/i18n'; // Import the function
-import { LanguageContext } from '@/context/language-context'; // Import context for direct access
-import React from 'react'; // Import React for useContext
+import { getCopyrightText } from '@/lib/i18n';
+import { LanguageContext } from '@/context/language-context';
+import React from 'react';
 
 function CustomSidebarHeaderContent() {
   const { isMobile, state, toggleSidebar } = useSidebar();
@@ -37,7 +37,6 @@ function CustomSidebarHeaderContent() {
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   const { t } = useTranslation();
-  // Access translations directly from context for the copyright
   const langContext = React.useContext(LanguageContext);
   const copyrightText = getCopyrightText(langContext?.translations || {});
 
@@ -52,16 +51,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           <SidebarNav />
         </SidebarContent>
         <SidebarFooter className="p-2 border-t">
-          <Button asChild variant="ghost" className="w-full justify-start group-data-[collapsible=icon]:justify-center">
-            <Link href="/settings">
-              <Settings className="mr-2 h-5 w-5 group-data-[collapsible=icon]:mr-0" />
-              <span className="group-data-[collapsible=icon]:hidden">{t('nav.settings')}</span>
-            </Link>
-          </Button>
-          <Button variant="ghost" className="w-full justify-start group-data-[collapsible=icon]:justify-center">
-            <LogOut className="mr-2 h-5 w-5 group-data-[collapsible=icon]:mr-0" />
-            <span className="group-data-[collapsible=icon]:hidden">Log Out</span>
-          </Button>
+          {/* Settings and Logout buttons removed */}
         </SidebarFooter>
       </Sidebar>
       <SidebarInset>
@@ -88,5 +78,3 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     </SidebarProvider>
   );
 }
-
-    

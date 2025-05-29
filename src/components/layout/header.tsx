@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from '@/hooks/use-translation';
 import { LanguageSelector } from '@/components/language-selector';
-import { useSidebar } from '@/components/ui/sidebar'; // Import useSidebar
+import { useSidebar } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { Menu, UserCircle } from 'lucide-react';
+import { Menu, Settings } from 'lucide-react'; // Changed UserCircle to Settings
 
 export function Header() {
   const { t, currentLanguage } = useTranslation();
-  const { isMobile, toggleSidebar } = useSidebar(); // Call useSidebar at the top level
+  const { isMobile, toggleSidebar } = useSidebar();
 
   let logoSrc: string;
   let logoWidth: number;
@@ -32,7 +32,7 @@ export function Header() {
       <div className="container mx-auto flex h-[110px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
           {isMobile && (
-            <Button variant="ghost" size="icon" onClick={toggleSidebar}> {/* Use toggleSidebar directly */}
+            <Button variant="ghost" size="icon" onClick={toggleSidebar}>
               <Menu className="h-6 w-6" />
             </Button>
           )}
@@ -50,9 +50,11 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <LanguageSelector />
-          <Button variant="ghost" size="icon" className="rounded-full">
-            <UserCircle className="h-6 w-6" />
-            <span className="sr-only">User Profile</span>
+          <Button asChild variant="ghost" size="icon" className="rounded-full">
+            <Link href="/settings">
+              <Settings className="h-6 w-6" />
+              <span className="sr-only">Settings</span>
+            </Link>
           </Button>
         </div>
       </div>
