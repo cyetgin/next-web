@@ -21,6 +21,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'ATEZ Software Technologies',
   description: "ATEZ Software Technologies: Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Artificial Intelligence, Machine Learning, and Business Intelligence.",
+  icons: {
+    icon: '/favicon.png', // Link to the favicon in the public directory
+  },
 };
 
 export default function RootLayout({
