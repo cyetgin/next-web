@@ -85,7 +85,7 @@ export default function AboutPage() {
         </Card>
          <div>
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/agsw-whole.webp?alt=media&token=7f020544-825f-4c47-b53e-11c14bb186a1"
+            src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/atez-vision.webp?alt=media&token=6c7ca25e-2e2b-4ef2-a668-ace020e29a69"
             alt={t('about.story.title')}
             width={600}
             height={400}
