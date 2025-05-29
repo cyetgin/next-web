@@ -814,6 +814,10 @@ body {
   height: auto;
 }
 
+.h-\[52\.5px\] {
+  height: 52.5px;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }
@@ -3039,6 +3043,10 @@ body {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:h-\[105px\] {
+    height: 105px;
   }
 
   .md\:max-w-\[420px\] {

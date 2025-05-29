@@ -55,9 +55,9 @@ export function Header() {
                     <Image
                       src={logoSrc}
                       alt={t('logo.text')}
-                      width={logoWidth / 2} // Smaller logo for drawer
+                      width={logoWidth / 2} 
                       height={logoHeight / 2}
-                      className="h-auto w-auto max-h-[50px]" // Constrain height in drawer
+                      className="h-auto w-auto max-h-[50px]" 
                       priority
                     />
                   </Link>
@@ -92,7 +92,7 @@ export function Header() {
               alt={t('logo.text')}
               width={logoWidth}
               height={logoHeight}
-              className="h-[105px] w-auto"
+              className="h-[52.5px] md:h-[105px] w-auto" // Adjusted height for mobile and desktop
               priority
             />
           </Link>
