@@ -6,7 +6,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2, Truck, FileSearch, Users, Package, FileText, Bot, FileCheck2 } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2, Truck, Users, Package, FileText, Bot, FileCheck2 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
@@ -18,7 +18,6 @@ interface CapabilityItem {
   descriptionKey: TranslationKey;
   imageSrc: string;
   imageAltKey: TranslationKey;
-  icon?: LucideIcon; // Kept for potential future use or if some cards need icons
 }
 
 const capabilities: CapabilityItem[] = [
@@ -62,11 +61,16 @@ const technologiesList = [
 interface MetricItem {
   labelKey: TranslationKey;
   value: string;
-  Icon: LucideIcon;
+  Icon?: LucideIcon; // Make LucideIcon optional
+  imageUrl?: string; // Add optional imageUrl
 }
 
 const initialPlatformMetrics: MetricItem[] = [
-  { labelKey: 'home.metrics.tariffQueries', value: 'Loading...', Icon: FileSearch },
+  { 
+    labelKey: 'home.metrics.tariffQueries', 
+    value: 'Loading...', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
+  },
   { labelKey: 'home.metrics.tariffUsers', value: '50K+', Icon: Users },
   { labelKey: 'home.metrics.logicustProducts', value: 'Loading...', Icon: Package },
   { labelKey: 'home.metrics.transcodeTransitDeclarations', value: 'Loading...', Icon: FileText },
@@ -120,9 +124,6 @@ export default function HomePage() {
 
     const fetchLogicustProductCount = async () => {
       try {
-        // Note: Using 'no-cors' mode might prevent reading the response body client-side.
-        // If the API server supports CORS, that's the preferred solution.
-        // If not, a backend proxy would be needed for a production environment.
         const response = await fetch('https://logify.singlewindow.io/api/v1-0/commodities/count');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -135,11 +136,10 @@ export default function HomePage() {
           const data = await response.json();
           if (data && typeof data.count === 'number') {
             count = data.count;
-          } else if (typeof data === 'number') { // API might return a direct number
+          } else if (typeof data === 'number') { 
             count = data;
           } else {
-             // Attempt to parse if data is a string representing a number
-            const parsedNum = parseInt(data, 10); // Or parseFloat if decimals are possible
+            const parsedNum = parseInt(data, 10); 
             if (!isNaN(parsedNum)) {
                 count = parsedNum;
             } else {
@@ -147,9 +147,9 @@ export default function HomePage() {
                 throw new Error("Invalid data format for Logicust product count");
             }
           }
-        } else { // Handle plain text response
+        } else { 
             const textData = await response.text();
-            const parsedNum = parseInt(textData, 10); // Or parseFloat
+            const parsedNum = parseInt(textData, 10); 
             if (!isNaN(parsedNum)) {
                 count = parsedNum;
             } else {
@@ -183,12 +183,12 @@ export default function HomePage() {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.text(); // Assuming the API returns a formatted string directly
+        const data = await response.text(); 
 
         setMetricsData(prevMetrics =>
           prevMetrics.map(metric =>
             metric.labelKey === 'home.metrics.transcodeTransitDeclarations'
-              ? { ...metric, value: data } // Use the formatted string directly
+              ? { ...metric, value: data } 
               : metric
           )
         );
@@ -285,8 +285,18 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {metricsData.map((metric) => (
               <Card key={metric.labelKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                <CardHeader className="pb-2">
-                  <metric.Icon className="h-10 w-10 text-accent mx-auto" />
+                <CardHeader className="pb-2 flex items-center justify-center h-16"> {/* Added fixed height and flex centering */}
+                  {metric.imageUrl ? (
+                    <Image
+                      src={metric.imageUrl}
+                      alt={t(metric.labelKey)}
+                      width={32} // Adjust size as needed
+                      height={32} // Adjust size as needed
+                      className="object-contain" // Ensures image fits within bounds
+                    />
+                  ) : metric.Icon ? (
+                    <metric.Icon className="h-10 w-10 text-accent" />
+                  ) : null}
                 </CardHeader>
                 <CardContent className="pb-3">
                   <p className="text-4xl font-bold text-primary">{metric.value}</p>
@@ -316,5 +326,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    
