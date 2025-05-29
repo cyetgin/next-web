@@ -6,7 +6,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2, Truck, Users, Package, FileText, Bot, FileCheck2 } from 'lucide-react';
+import { ArrowRight, Cpu, BarChart, Link2, Workflow, Settings2, Truck } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
@@ -61,23 +61,51 @@ const technologiesList = [
 interface MetricItem {
   labelKey: TranslationKey;
   value: string;
-  Icon?: LucideIcon; // Make LucideIcon optional
-  imageUrl?: string; // Add optional imageUrl
+  Icon?: LucideIcon;
+  imageUrl?: string;
 }
 
 const initialPlatformMetrics: MetricItem[] = [
-  { 
-    labelKey: 'home.metrics.tariffQueries', 
-    value: 'Loading...', 
+  {
+    labelKey: 'home.metrics.tariffQueries',
+    value: 'Loading...',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
   },
-  { labelKey: 'home.metrics.tariffUsers', value: '50K+', Icon: Users },
-  { labelKey: 'home.metrics.logicustProducts', value: 'Loading...', Icon: Package },
-  { labelKey: 'home.metrics.transcodeTransitDeclarations', value: 'Loading...', Icon: FileText },
-  { labelKey: 'home.metrics.transcodeTransitAI', value: '95%+', Icon: Bot },
-  { labelKey: 'home.metrics.declarantCustomsDeclarations', value: '1M+', Icon: FileCheck2 },
-  { labelKey: 'home.metrics.declarantDeclarantAI', value: '98%+', Icon: Bot },
-  { labelKey: 'home.metrics.shieldAIDeclarationsControlled', value: '500K+', Icon: ShieldCheck },
+  { 
+    labelKey: 'home.metrics.tariffUsers', 
+    value: '50K+', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
+  },
+  { 
+    labelKey: 'home.metrics.logicustProducts', 
+    value: 'Loading...', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=4f83103e-5574-4ec7-abd5-8b0d299ecf2f'
+  },
+  { 
+    labelKey: 'home.metrics.transcodeTransitDeclarations', 
+    value: 'Loading...', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transcode-3-%400.5x.webp?alt=media&token=86b8bffe-3847-416a-b413-9b822565641b'
+  },
+  { 
+    labelKey: 'home.metrics.transcodeTransitAI', 
+    value: '95%+', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transitAI%400.5x.webp?alt=media&token=aaff5c1b-885a-4059-9a73-3cac5ef437c1'
+  },
+  { 
+    labelKey: 'home.metrics.declarantCustomsDeclarations', 
+    value: '1M+', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-declarant-3-%400.5x.webp?alt=media&token=a2c6cf7f-b841-455b-b503-043679d5400d'
+  },
+  { 
+    labelKey: 'home.metrics.declarantDeclarantAI', 
+    value: '98%+', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-declarantAI%400.5x.webp?alt=media&token=321b1787-e926-446f-9eec-79d2e4b778ea'
+  },
+  { 
+    labelKey: 'home.metrics.shieldAIDeclarationsControlled', 
+    value: '500K+', 
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icons-customs-shield-3-%400.5x.webp?alt=media&token=b0f7725f-a3b1-4765-834c-a7bda54e022a'
+  },
 ];
 
 
@@ -285,14 +313,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {metricsData.map((metric) => (
               <Card key={metric.labelKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                <CardHeader className="pb-2 flex items-center justify-center h-16"> {/* Added fixed height and flex centering */}
+                <CardHeader className="pb-2 flex items-center justify-center h-16">
                   {metric.imageUrl ? (
                     <Image
                       src={metric.imageUrl}
                       alt={t(metric.labelKey)}
-                      width={32} // Adjust size as needed
-                      height={32} // Adjust size as needed
-                      className="object-contain" // Ensures image fits within bounds
+                      width={32} 
+                      height={32}
+                      className="object-contain" 
                     />
                   ) : metric.Icon ? (
                     <metric.Icon className="h-10 w-10 text-accent" />
