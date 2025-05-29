@@ -3,13 +3,15 @@
 
 import Image from 'next/image';
 import { useTranslation } from '@/hooks/use-translation';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2, Truck } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Cpu, BarChart, Link2, Workflow, Settings2, Truck, FileSearch, Users, Package, FileText, Bot, FileCheck2 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import type { LucideIcon } from 'lucide-react';
+
 
 interface CapabilityItem {
   titleKey: TranslationKey;
@@ -56,6 +58,24 @@ const technologiesList = [
   { nameKey: 'Business Intelligence', icon: <BarChart className="h-4 w-4" /> },
 ];
 
+interface MetricItem {
+  labelKey: TranslationKey;
+  value: string;
+  Icon: LucideIcon;
+}
+
+const platformMetrics: MetricItem[] = [
+  { labelKey: 'home.metrics.tariffQueries', value: '1.2M+', Icon: FileSearch },
+  { labelKey: 'home.metrics.tariffUsers', value: '50K+', Icon: Users },
+  { labelKey: 'home.metrics.logicustProducts', value: '250K+', Icon: Package },
+  { labelKey: 'home.metrics.transcodeTransitDeclarations', value: '750K+', Icon: FileText },
+  { labelKey: 'home.metrics.transcodeTransitAI', value: '95%+', Icon: Bot },
+  { labelKey: 'home.metrics.declarantCustomsDeclarations', value: '1M+', Icon: FileCheck2 },
+  { labelKey: 'home.metrics.declarantDeclarantAI', value: '98%+', Icon: Bot },
+  { labelKey: 'home.metrics.shieldAIDeclarationsControlled', value: '500K+', Icon: ShieldCheck },
+];
+
+
 export default function HomePage() {
   const { t } = useTranslation();
   const [animateIn, setAnimateIn] = useState(false);
@@ -63,7 +83,7 @@ export default function HomePage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimateIn(true);
-    }, 300); // Start animation shortly after component mounts
+    }, 300); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -74,7 +94,7 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
             {t('home.welcomeTitle')}
           </h1>
-          <p className="mt-2 text-lg font-medium text-primary/80 md:text-xl">
+           <p className="mt-2 text-lg font-medium text-primary/80 md:text-xl">
             {t('home.blockchainReadySlogan')}
           </p>
           <p className="mx-auto max-w-[800px] text-foreground/80 md:text-xl mt-4">
@@ -83,16 +103,16 @@ export default function HomePage() {
            <div className="mt-6 flex justify-center gap-x-4 gap-y-2 flex-wrap">
             {technologiesList.map((tech, index) => (
               <span
-                key={tech.nameKey}
+                key={tech.nameKey as string}
                 className={cn(
                   "inline-flex items-center gap-2 text-sm font-medium text-accent-foreground bg-accent px-3 py-1 rounded-full",
                   "transition-all duration-500 ease-out",
                   animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
-                  `delay-[${index * 150}ms]` // Tailwind JIT handles arbitrary delay values
+                  `delay-[${index * 150}ms]` 
                 )}
-                style={{ transitionDelay: `${index * 150}ms` }} // Inline style for broader compatibility
+                style={{ transitionDelay: `${index * 150}ms` }} 
               >
-                {tech.icon} {tech.nameKey}
+                {tech.icon} {tech.nameKey as string}
               </span>
             ))}
           </div>
@@ -132,6 +152,29 @@ export default function HomePage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24 bg-muted/30">
+        <div className="container px-4 md:px-6 space-y-10">
+          <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl text-primary">
+            {t('home.metrics.title')}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {platformMetrics.map((metric) => (
+              <Card key={metric.labelKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                <CardHeader className="pb-2">
+                  <metric.Icon className="h-10 w-10 text-accent mx-auto" />
+                </CardHeader>
+                <CardContent className="pb-3">
+                  <p className="text-4xl font-bold text-primary">{metric.value}</p>
+                </CardContent>
+                <CardFooter className="pt-0 justify-center">
+                  <p className="text-sm text-muted-foreground">{t(metric.labelKey)}</p>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
