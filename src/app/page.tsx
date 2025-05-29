@@ -64,8 +64,8 @@ interface MetricItem {
   Icon: LucideIcon;
 }
 
-const platformMetrics: MetricItem[] = [
-  { labelKey: 'home.metrics.tariffQueries', value: '1.2M+', Icon: FileSearch },
+const initialPlatformMetrics: MetricItem[] = [
+  { labelKey: 'home.metrics.tariffQueries', value: 'Loading...', Icon: FileSearch },
   { labelKey: 'home.metrics.tariffUsers', value: '50K+', Icon: Users },
   { labelKey: 'home.metrics.logicustProducts', value: '250K+', Icon: Package },
   { labelKey: 'home.metrics.transcodeTransitDeclarations', value: '750K+', Icon: FileText },
@@ -79,12 +79,45 @@ const platformMetrics: MetricItem[] = [
 export default function HomePage() {
   const { t } = useTranslation();
   const [animateIn, setAnimateIn] = useState(false);
+  const [metricsData, setMetricsData] = useState<MetricItem[]>(initialPlatformMetrics);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimateIn(true);
-    }, 300); 
+    }, 300);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const fetchTariffQueries = async () => {
+      try {
+        const response = await fetch('https://tariff.singlewindow.io/api/v2-0/user-admin/public/query-count/free');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const count = data.count;
+
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.tariffQueries'
+              ? { ...metric, value: count.toLocaleString() }
+              : metric
+          )
+        );
+      } catch (error) {
+        console.error("Failed to fetch tariff queries:", error);
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.tariffQueries'
+              ? { ...metric, value: "Error" }
+              : metric
+          )
+        );
+      }
+    };
+
+    fetchTariffQueries();
   }, []);
 
   return (
@@ -108,9 +141,9 @@ export default function HomePage() {
                   "inline-flex items-center gap-2 text-sm font-medium text-accent-foreground bg-accent px-3 py-1 rounded-full",
                   "transition-all duration-500 ease-out",
                   animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
-                  `delay-[${index * 150}ms]` 
+                  `delay-[${index * 150}ms]`
                 )}
-                style={{ transitionDelay: `${index * 150}ms` }} 
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {tech.icon} {tech.nameKey as string}
               </span>
@@ -161,7 +194,7 @@ export default function HomePage() {
             {t('home.metrics.title')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {platformMetrics.map((metric) => (
+            {metricsData.map((metric) => (
               <Card key={metric.labelKey} className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
                 <CardHeader className="pb-2">
                   <metric.Icon className="h-10 w-10 text-accent mx-auto" />
