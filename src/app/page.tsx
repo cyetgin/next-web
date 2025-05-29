@@ -120,6 +120,7 @@ export default function HomePage() {
     const fetchLogicustProductCount = async () => {
       try {
         const response = await fetch('https://logicust.singlewindow.io/api/v1-0/commodities/count');
+        console.log('RESPONSE', response);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

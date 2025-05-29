@@ -1188,6 +1188,12 @@ body {
   margin-left: calc(.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -1246,12 +1252,6 @@ body {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-x-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-auto {
@@ -1415,6 +1415,10 @@ body {
   background-color: hsl(var(--muted));
 }
 
+.bg-muted\/30 {
+  background-color: hsl(var(--muted) / .3);
+}
+
 .bg-muted\/50 {
   background-color: hsl(var(--muted) / .5);
 }
@@ -1425,6 +1429,10 @@ body {
 
 .bg-primary {
   background-color: hsl(var(--primary));
+}
+
+.bg-primary\/10 {
+  background-color: hsl(var(--primary) / .1);
 }
 
 .bg-secondary {
@@ -1443,24 +1451,12 @@ body {
   background-color: hsl(var(--sidebar-background));
 }
 
-.bg-sidebar-accent {
-  background-color: hsl(var(--sidebar-accent));
-}
-
 .bg-sidebar-border {
   background-color: hsl(var(--sidebar-border));
 }
 
 .bg-transparent {
   background-color: #0000;
-}
-
-.bg-primary\/10 {
-  background-color: hsl(var(--primary) / .1);
-}
-
-.bg-muted\/30 {
-  background-color: hsl(var(--muted) / .3);
 }
 
 .bg-gradient-to-br {
@@ -1597,6 +1593,10 @@ body {
   padding-bottom: 2rem;
 }
 
+.pb-2 {
+  padding-bottom: .5rem;
+}
+
 .pb-3 {
   padding-bottom: .75rem;
 }
@@ -1631,10 +1631,6 @@ body {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pb-2 {
-  padding-bottom: .5rem;
 }
 
 .text-left {
@@ -1783,6 +1779,10 @@ body {
   color: hsl(var(--foreground) / .5);
 }
 
+.text-foreground\/70 {
+  color: hsl(var(--foreground) / .7);
+}
+
 .text-foreground\/80 {
   color: hsl(var(--foreground) / .8);
 }
@@ -1835,20 +1835,12 @@ body {
   color: hsl(var(--secondary-foreground));
 }
 
-.text-sidebar-accent-foreground {
-  color: hsl(var(--sidebar-accent-foreground));
-}
-
 .text-sidebar-foreground {
   color: hsl(var(--sidebar-foreground));
 }
 
 .text-sidebar-foreground\/70 {
   color: hsl(var(--sidebar-foreground) / .7);
-}
-
-.text-foreground\/70 {
-  color: hsl(var(--foreground) / .7);
 }
 
 .underline {
@@ -2036,6 +2028,10 @@ body {
   transition-duration: .15s;
 }
 
+.duration-150 {
+  transition-duration: .15s;
+}
+
 .duration-200 {
   transition-duration: .2s;
 }
@@ -2046,10 +2042,6 @@ body {
 
 .duration-500 {
   transition-duration: .5s;
-}
-
-.duration-150 {
-  transition-duration: .15s;
 }
 
 .ease-in-out {
@@ -2096,6 +2088,10 @@ body {
   --tw-enter-scale: .95;
 }
 
+.duration-150 {
+  animation-duration: .15s;
+}
+
 .duration-200 {
   animation-duration: .2s;
 }
@@ -2106,10 +2102,6 @@ body {
 
 .duration-500 {
   animation-duration: .5s;
-}
-
-.duration-150 {
-  animation-duration: .15s;
 }
 
 .ease-in-out {
@@ -2328,12 +2320,12 @@ body {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus\:ring-ring:focus {
-  --tw-ring-color: hsl(var(--ring));
-}
-
 .focus\:ring-primary\/50:focus {
   --tw-ring-color: hsl(var(--primary) / .5);
+}
+
+.focus\:ring-ring:focus {
+  --tw-ring-color: hsl(var(--ring));
 }
 
 .focus\:ring-offset-2:focus {
@@ -2813,10 +2805,6 @@ body {
   margin-top: -2rem;
 }
 
-.group[data-collapsible="icon"] .group-data-\[collapsible\=icon\]\:mr-0 {
-  margin-right: 0;
-}
-
 .group[data-collapsible="icon"] .group-data-\[collapsible\=icon\]\:hidden {
   display: none;
 }
@@ -2850,10 +2838,6 @@ body {
 .group[data-side="right"] .group-data-\[side\=right\]\:rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group[data-collapsible="icon"] .group-data-\[collapsible\=icon\]\:justify-center {
-  justify-content: center;
 }
 
 .group[data-collapsible="icon"] .group-data-\[collapsible\=icon\]\:overflow-hidden {
