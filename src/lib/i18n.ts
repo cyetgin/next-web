@@ -4,10 +4,10 @@ export type Locale = 'en' | 'de' | 'tr' | 'it' | 'fr' | 'nl'; // English, German
 export const DEFAULT_LOCALE: Locale = 'en';
 export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
   { value: 'de', label: 'Deutsch' }, // German
-  { value: 'nl', label: 'Nederlands' }, // Dutch
   { value: 'en', label: 'English' },
   { value: 'fr', label: 'Français' }, // French
   { value: 'it', label: 'Italiano' }, // Italian
+  { value: 'nl', label: 'Nederlands' }, // Dutch
   { value: 'tr', label: 'Türkçe' },   // Turkish
 ].sort((a, b) => a.label.localeCompare(b.label));
 
@@ -46,6 +46,14 @@ export type TranslationKey =
   | 'about.story.description'
   | 'about.story.enablingTechnologiesTitle'
   | 'about.story.content'
+  | 'about.team.title'
+  | 'about.team.description'
+  | 'about.team.member1.name'
+  | 'about.team.member1.title'
+  | 'about.team.member2.name'
+  | 'about.team.member2.title'
+  | 'about.team.member3.name'
+  | 'about.team.member3.title'
   | 'contact.title'
   | 'contact.description'
   | 'contact.form.title'

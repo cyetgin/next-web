@@ -17,10 +17,6 @@ const AVAILABLE_LOCALES = [
         label: 'Deutsch'
     },
     {
-        value: 'nl',
-        label: 'Nederlands'
-    },
-    {
         value: 'en',
         label: 'English'
     },
@@ -33,6 +29,10 @@ const AVAILABLE_LOCALES = [
         label: 'Italiano'
     },
     {
+        value: 'nl',
+        label: 'Nederlands'
+    },
+    {
         value: 'tr',
         label: 'Türkçe'
     }
@@ -43,7 +43,7 @@ function getCopyrightText(translations) {
     return rawText.replace('{{YEAR}}', new Date().getFullYear().toString());
 }
 var _c, _c1;
-__turbopack_context__.k.register(_c, "AVAILABLE_LOCALES$[\n  { value: 'de', label: 'Deutsch' }, // German\n  { value: 'nl', label: 'Nederlands' }, // Dutch\n  { value: 'en', label: 'English' },\n  { value: 'fr', label: 'Français' }, // French\n  { value: 'it', label: 'Italiano' }, // Italian\n  { value: 'tr', label: 'Türkçe' },   // Turkish\n].sort");
+__turbopack_context__.k.register(_c, "AVAILABLE_LOCALES$[\n  { value: 'de', label: 'Deutsch' }, // German\n  { value: 'en', label: 'English' },\n  { value: 'fr', label: 'Français' }, // French\n  { value: 'it', label: 'Italiano' }, // Italian\n  { value: 'nl', label: 'Nederlands' }, // Dutch\n  { value: 'tr', label: 'Türkçe' },   // Turkish\n].sort");
 __turbopack_context__.k.register(_c1, "AVAILABLE_LOCALES");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);

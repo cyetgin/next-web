@@ -25,10 +25,6 @@ const AVAILABLE_LOCALES = [
         label: 'Deutsch'
     },
     {
-        value: 'nl',
-        label: 'Nederlands'
-    },
-    {
         value: 'en',
         label: 'English'
     },
@@ -39,6 +35,10 @@ const AVAILABLE_LOCALES = [
     {
         value: 'it',
         label: 'Italiano'
+    },
+    {
+        value: 'nl',
+        label: 'Nederlands'
     },
     {
         value: 'tr',

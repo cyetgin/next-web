@@ -788,6 +788,14 @@ html.density-spacious {
   margin-left: .25rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -804,6 +812,10 @@ html.density-spacious {
 
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -921,6 +933,10 @@ html.density-spacious {
 
 .h-svh {
   height: 100svh;
+}
+
+.h-\[360px\] {
+  height: 360px;
 }
 
 .max-h-96 {
@@ -1409,6 +1425,11 @@ html.density-spacious {
 
 .rounded-sm {
   border-radius: calc(var(--radius)  - 4px);
+}
+
+.rounded-t-lg {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
 }
 
 .border {
@@ -3036,6 +3057,10 @@ html.density-spacious {
 
   .sm\:max-w-sm {
     max-width: 24rem;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
