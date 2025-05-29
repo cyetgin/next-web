@@ -818,6 +818,10 @@ body {
   height: 52.5px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
 .max-h-96 {
   max-height: 24rem;
 }

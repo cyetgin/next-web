@@ -27,6 +27,7 @@ export function Header() {
   let logoWidth: number;
   let logoHeight: number;
 
+  // Determine logo based on language
   if (currentLanguage === 'tr') {
     logoSrc = "https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/400-105-TR.png?alt=media&token=a93538ed-50f5-42db-a4bc-e749bc3ea9b8";
     logoWidth = 400;
@@ -36,6 +37,7 @@ export function Header() {
     logoWidth = 400;
     logoHeight = 105;
   }
+
 
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -92,7 +94,7 @@ export function Header() {
               alt={t('logo.text')}
               width={logoWidth}
               height={logoHeight}
-              className="h-[52.5px] md:h-[105px] w-auto" // Adjusted height for mobile and desktop
+              className="h-[40px] md:h-[105px] w-auto" 
               priority
             />
           </Link>
