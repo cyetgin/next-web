@@ -1130,26 +1130,19 @@ function HorizontalNav() {
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: item.href,
-                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("px-3 py-2 rounded-md text-sm transition-colors duration-150 ease-in-out", "text-foreground/80 hover:text-primary hover:font-bold focus:outline-none focus:ring-2 focus:ring-primary/50", isActive ? "font-semibold text-primary bg-primary/10" : "font-medium"),
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("inline-flex items-center px-3 py-2 rounded-md text-sm transition-colors duration-150 ease-in-out", "text-foreground/80 hover:text-primary hover:font-bold focus:outline-none focus:ring-2 focus:ring-primary/50", isActive ? "font-semibold text-primary bg-primary/10" : "font-medium"),
                         "aria-current": isActive ? 'page' : undefined,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "flex items-center",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(item.icon, {
-                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("mr-2 h-5 w-5 flex-shrink-0", isActive ? "text-primary" : "text-foreground/70")
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/layout/horizontal-nav.tsx",
-                                    lineNumber: 31,
-                                    columnNumber: 19
-                                }, this),
-                                t(item.titleKey)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/layout/horizontal-nav.tsx",
-                            lineNumber: 30,
-                            columnNumber: 17
-                        }, this)
-                    }, void 0, false, {
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(item.icon, {
+                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("mr-2 h-5 w-5 flex-shrink-0", isActive ? "text-primary" : "text-foreground/70")
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/layout/horizontal-nav.tsx",
+                                lineNumber: 30,
+                                columnNumber: 17
+                            }, this),
+                            t(item.titleKey)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/layout/horizontal-nav.tsx",
                         lineNumber: 21,
                         columnNumber: 15
