@@ -6,7 +6,7 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Cpu, BarChart, Link2, Workflow, Settings2, Truck } from 'lucide-react';
+import { ArrowRight, Cpu, BarChart, Link2 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
@@ -18,6 +18,7 @@ interface CapabilityItem {
   descriptionKey: TranslationKey;
   imageSrc: string;
   imageAltKey: TranslationKey;
+  icon?: LucideIcon; // Keep optional for now, though we removed them from display
 }
 
 const capabilities: CapabilityItem[] = [
@@ -61,8 +62,8 @@ const technologiesList = [
 interface MetricItem {
   labelKey: TranslationKey;
   value: string;
-  Icon?: LucideIcon;
-  imageUrl?: string;
+  Icon?: LucideIcon; // Keep this optional
+  imageUrl?: string; // Add imageUrl as optional
 }
 
 const initialPlatformMetrics: MetricItem[] = [
@@ -71,39 +72,39 @@ const initialPlatformMetrics: MetricItem[] = [
     value: 'Loading...',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
   },
-  { 
-    labelKey: 'home.metrics.tariffUsers', 
-    value: '50K+', 
+  {
+    labelKey: 'home.metrics.tariffUsers',
+    value: '50K+',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
   },
-  { 
-    labelKey: 'home.metrics.logicustProducts', 
-    value: 'Loading...', 
+  {
+    labelKey: 'home.metrics.logicustProducts',
+    value: 'Loading...',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-logicust-3-%400.5x.webp?alt=media&token=4f83103e-5574-4ec7-abd5-8b0d299ecf2f'
   },
-  { 
-    labelKey: 'home.metrics.transcodeTransitDeclarations', 
-    value: 'Loading...', 
+  {
+    labelKey: 'home.metrics.transcodeTransitDeclarations',
+    value: 'Loading...',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transcode-3-%400.5x.webp?alt=media&token=86b8bffe-3847-416a-b413-9b822565641b'
   },
-  { 
-    labelKey: 'home.metrics.transcodeTransitAI', 
-    value: '95%+', 
+  {
+    labelKey: 'home.metrics.transcodeTransitAI',
+    value: '95%+',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-transitAI%400.5x.webp?alt=media&token=aaff5c1b-885a-4059-9a73-3cac5ef437c1'
   },
-  { 
-    labelKey: 'home.metrics.declarantCustomsDeclarations', 
-    value: '1M+', 
+  {
+    labelKey: 'home.metrics.declarantCustomsDeclarations',
+    value: '1M+',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-declarant-3-%400.5x.webp?alt=media&token=a2c6cf7f-b841-455b-b503-043679d5400d'
   },
-  { 
-    labelKey: 'home.metrics.declarantDeclarantAI', 
-    value: '98%+', 
+  {
+    labelKey: 'home.metrics.declarantDeclarantAI',
+    value: 'Loading...',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-declarantAI%400.5x.webp?alt=media&token=321b1787-e926-446f-9eec-79d2e4b778ea'
   },
-  { 
-    labelKey: 'home.metrics.shieldAIDeclarationsControlled', 
-    value: '500K+', 
+  {
+    labelKey: 'home.metrics.shieldAIDeclarationsControlled',
+    value: '500K+',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icons-customs-shield-3-%400.5x.webp?alt=media&token=b0f7725f-a3b1-4765-834c-a7bda54e022a'
   },
 ];
@@ -156,7 +157,7 @@ export default function HomePage() {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const contentType = response.headers.get("content-type");
         let count: number;
 
@@ -164,10 +165,10 @@ export default function HomePage() {
           const data = await response.json();
           if (data && typeof data.count === 'number') {
             count = data.count;
-          } else if (typeof data === 'number') { 
+          } else if (typeof data === 'number') {
             count = data;
           } else {
-            const parsedNum = parseInt(data, 10); 
+            const parsedNum = parseInt(data, 10);
             if (!isNaN(parsedNum)) {
                 count = parsedNum;
             } else {
@@ -175,9 +176,9 @@ export default function HomePage() {
                 throw new Error("Invalid data format for Logicust product count");
             }
           }
-        } else { 
+        } else {
             const textData = await response.text();
-            const parsedNum = parseInt(textData, 10); 
+            const parsedNum = parseInt(textData, 10);
             if (!isNaN(parsedNum)) {
                 count = parsedNum;
             } else {
@@ -211,12 +212,12 @@ export default function HomePage() {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.text(); 
+        const data = await response.text();
 
         setMetricsData(prevMetrics =>
           prevMetrics.map(metric =>
             metric.labelKey === 'home.metrics.transcodeTransitDeclarations'
-              ? { ...metric, value: data } 
+              ? { ...metric, value: data }
               : metric
           )
         );
@@ -232,9 +233,65 @@ export default function HomePage() {
       }
     };
 
+    const fetchDeclarantAIDocumentCount = async () => {
+      try {
+        const response = await fetch('https://declarant-api.singlewindow.io/api/public/document-count');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const contentType = response.headers.get("content-type");
+        let count: number;
+
+        if (contentType && contentType.includes("application/json")) {
+          const data = await response.json();
+          if (data && typeof data.count === 'number') {
+            count = data.count;
+          } else if (typeof data === 'number') { 
+            count = data;
+          } else {
+            const parsedNum = parseInt(data, 10); 
+            if (!isNaN(parsedNum)) {
+                count = parsedNum;
+            } else {
+                console.error("DeclarantAI document count response is not in expected JSON format:", data);
+                throw new Error("Invalid data format for DeclarantAI document count");
+            }
+          }
+        } else { 
+            const textData = await response.text();
+            const parsedNum = parseInt(textData, 10); 
+            if (!isNaN(parsedNum)) {
+                count = parsedNum;
+            } else {
+                console.error("DeclarantAI document count response is not plain text number:", textData);
+                throw new Error("Invalid data format for DeclarantAI document count (text)");
+            }
+        }
+
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.declarantDeclarantAI'
+              ? { ...metric, value: count.toLocaleString() }
+              : metric
+          )
+        );
+      } catch (error) {
+        console.error("Failed to fetch DeclarantAI document count:", error);
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.declarantDeclarantAI'
+              ? { ...metric, value: "Error" }
+              : metric
+          )
+        );
+      }
+    };
+
     fetchTariffQueries();
     fetchLogicustProductCount();
     fetchTranscodeDeclarationCount();
+    fetchDeclarantAIDocumentCount();
   }, []);
 
   return (
@@ -318,9 +375,9 @@ export default function HomePage() {
                     <Image
                       src={metric.imageUrl}
                       alt={t(metric.labelKey)}
-                      width={32} 
+                      width={32}
                       height={32}
-                      className="object-contain" 
+                      className="object-contain"
                     />
                   ) : metric.Icon ? (
                     <metric.Icon className="h-10 w-10 text-accent" />
