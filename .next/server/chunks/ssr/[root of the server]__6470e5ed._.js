@@ -21,30 +21,30 @@ __turbopack_context__.s({
 const DEFAULT_LOCALE = 'en';
 const AVAILABLE_LOCALES = [
     {
-        value: 'en',
-        label: 'English'
-    },
-    {
         value: 'de',
         label: 'Deutsch'
     },
     {
-        value: 'tr',
-        label: 'Türkçe'
+        value: 'nl',
+        label: 'Nederlands'
     },
     {
-        value: 'it',
-        label: 'Italiano'
+        value: 'en',
+        label: 'English'
     },
     {
         value: 'fr',
         label: 'Français'
     },
     {
-        value: 'nl',
-        label: 'Nederlands'
+        value: 'it',
+        label: 'Italiano'
+    },
+    {
+        value: 'tr',
+        label: 'Türkçe'
     }
-];
+].sort((a, b)=>a.label.localeCompare(b.label));
 function getCopyrightText(translations) {
     const rawText = translations?.['footer.copyright'] || `© ${new Date().getFullYear()} ATEZ Software Technologies. All rights reserved.`;
     return rawText.replace('{{YEAR}}', new Date().getFullYear().toString());

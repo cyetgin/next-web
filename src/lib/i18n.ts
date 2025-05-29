@@ -3,13 +3,13 @@ export type Locale = 'en' | 'de' | 'tr' | 'it' | 'fr' | 'nl'; // English, German
 
 export const DEFAULT_LOCALE: Locale = 'en';
 export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
-  { value: 'en', label: 'English' },
   { value: 'de', label: 'Deutsch' }, // German
-  { value: 'tr', label: 'Türkçe' },   // Turkish
-  { value: 'it', label: 'Italiano' }, // Italian
-  { value: 'fr', label: 'Français' }, // French
   { value: 'nl', label: 'Nederlands' }, // Dutch
-];
+  { value: 'en', label: 'English' },
+  { value: 'fr', label: 'Français' }, // French
+  { value: 'it', label: 'Italiano' }, // Italian
+  { value: 'tr', label: 'Türkçe' },   // Turkish
+].sort((a, b) => a.label.localeCompare(b.label));
 
 export type TranslationKey =
   | 'app.name'
@@ -20,7 +20,6 @@ export type TranslationKey =
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
-  // | 'nav.settings' // Intentionally keeping this commented as per previous request
   | 'home.welcomeTitle'
   | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'
@@ -41,11 +40,11 @@ export type TranslationKey =
   | 'home.cta.button'
   | 'about.title'
   | 'about.mission.title'
-  | 'about.mission.description' // New Key
+  | 'about.mission.description'
   | 'about.mission.content'
   | 'about.story.title'
-  | 'about.story.description' // New Key
-  | 'about.story.enablingTechnologiesTitle' // New Key
+  | 'about.story.description'
+  | 'about.story.enablingTechnologiesTitle'
   | 'about.story.content'
   | 'contact.title'
   | 'contact.description'
@@ -181,7 +180,7 @@ export type TranslationKey =
   | 'products.tariff.cta.button'
   // Common
   | 'common.backToProducts'
-  | 'nav.settings' // Re-added for Settings page title and link
+  | 'nav.settings'
   // GDPR & Legal
   | 'legal.cookieConsent.text'
   | 'legal.cookieConsent.acceptButton'

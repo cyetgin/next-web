@@ -13,34 +13,38 @@ __turbopack_context__.s({
 const DEFAULT_LOCALE = 'en';
 const AVAILABLE_LOCALES = [
     {
-        value: 'en',
-        label: 'English'
-    },
-    {
         value: 'de',
         label: 'Deutsch'
     },
     {
-        value: 'tr',
-        label: 'Türkçe'
+        value: 'nl',
+        label: 'Nederlands'
     },
     {
-        value: 'it',
-        label: 'Italiano'
+        value: 'en',
+        label: 'English'
     },
     {
         value: 'fr',
         label: 'Français'
     },
     {
-        value: 'nl',
-        label: 'Nederlands'
+        value: 'it',
+        label: 'Italiano'
+    },
+    {
+        value: 'tr',
+        label: 'Türkçe'
     }
-];
+].sort(_c = (a, b)=>a.label.localeCompare(b.label));
+_c1 = AVAILABLE_LOCALES;
 function getCopyrightText(translations) {
     const rawText = translations?.['footer.copyright'] || `© ${new Date().getFullYear()} ATEZ Software Technologies. All rights reserved.`;
     return rawText.replace('{{YEAR}}', new Date().getFullYear().toString());
 }
+var _c, _c1;
+__turbopack_context__.k.register(_c, "AVAILABLE_LOCALES$[\n  { value: 'de', label: 'Deutsch' }, // German\n  { value: 'nl', label: 'Nederlands' }, // Dutch\n  { value: 'en', label: 'English' },\n  { value: 'fr', label: 'Français' }, // French\n  { value: 'it', label: 'Italiano' }, // Italian\n  { value: 'tr', label: 'Türkçe' },   // Turkish\n].sort");
+__turbopack_context__.k.register(_c1, "AVAILABLE_LOCALES");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
 }
