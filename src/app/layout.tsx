@@ -7,6 +7,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import MainLayout from '@/components/layout/main-layout';
 import { CookieConsentBanner } from '@/components/cookie-consent-banner';
+import { FontProvider } from '@/context/font-provider'; // Re-added
+import { DensityProvider } from '@/context/density-provider'; // Re-added
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
   title: 'ATEZ Software Technologies',
   description: "ATEZ Software Technologies: Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Artificial Intelligence, Machine Learning, and Business Intelligence.",
   icons: {
-    icon: '/favicon.png', // Link to the favicon in the public directory
+    icon: '/favicon.png',
   },
 };
 
@@ -41,11 +43,15 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <MainLayout>
-              {children}
-            </MainLayout>
-            <Toaster />
-            <CookieConsentBanner />
+            <FontProvider> {/* Re-added */}
+              <DensityProvider> {/* Re-added */}
+                <MainLayout>
+                  {children}
+                </MainLayout>
+                <Toaster />
+                <CookieConsentBanner />
+              </DensityProvider>
+            </FontProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>
