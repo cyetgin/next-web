@@ -62,23 +62,20 @@ const mockTeamMembers: TeamMember[] = [
   {
     nameKey: 'about.team.member7.name',
     titleKey: 'about.team.member7.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/tolgadikici/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_tolga_dikici.webp?alt=media&token=f0057480-6559-450b-8982-cb3ce1f120d5',
   },
   {
     nameKey: 'about.team.member8.name',
     titleKey: 'about.team.member8.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/emre-ozturk-/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_emre_ozturk.webp?alt=media&token=377f1651-4f52-4b6d-8ad2-ea5be6bea936',
   },
   {
     nameKey: 'about.team.member9.name',
     titleKey: 'about.team.member9.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/caglarberkerakyol/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_caglar_akyol.jpg?alt=media&token=834f53a8-4487-4498-885c-76110bf1c3e7',
   },
   {
     nameKey: 'about.team.member10.name',
@@ -231,4 +228,6 @@ export default function AboutPage() {
     </div>
   );
 }
+    
+
     
