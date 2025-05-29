@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, Target, BookOpen, Cpu, BarChart, Link as LinkIcon, Linkedin } from 'lucide-react';
+import { Users, Target, BookOpen, Cpu, BarChart, Link as LinkIcon } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 
 interface TechIcon {
@@ -17,28 +17,28 @@ interface TechIcon {
 interface TeamMember {
   nameKey: TranslationKey;
   titleKey: TranslationKey;
-  linkedInUrl: string; // Using string directly for placeholder
+  linkedInUrl: string; 
   photoPlaceholder: string;
-  dataAiHint?: string; // Make optional as it's removed for specific images
+  dataAiHint?: string; 
 }
 
 const mockTeamMembers: TeamMember[] = [
   {
     nameKey: 'about.team.member1.name',
     titleKey: 'about.team.member1.title',
-    linkedInUrl: '#', // Placeholder
+    linkedInUrl: 'https://www.linkedin.com/in/drkenanguler/', 
     photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_kenan_guler.webp?alt=media&token=d05b5482-8553-4af3-a704-1172a26081c5',
   },
   {
     nameKey: 'about.team.member2.name',
     titleKey: 'about.team.member2.title',
-    linkedInUrl: '#', // Placeholder
+    linkedInUrl: 'https://www.linkedin.com/in/cuneytyetgin/', 
     photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_cuneyt_yetgin.webp?alt=media&token=035e0e43-5ad6-49ff-b9f9-dd135085fcf1',
   },
   {
     nameKey: 'about.team.member3.name',
     titleKey: 'about.team.member3.title',
-    linkedInUrl: '#', // Placeholder
+    linkedInUrl: 'https://www.linkedin.com/in/murat-palaoglu-13029914/', 
     photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_murat_paloglu.webp?alt=media&token=8a87209c-1c53-4298-a29c-4f096412ca54',
   },
 ];
@@ -158,9 +158,8 @@ export default function AboutPage() {
                 />
               </div>
               <CardContent className="p-6">
-                <Link href={member.linkedInUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xl font-semibold text-primary hover:underline">
+                <Link href={member.linkedInUrl} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-primary hover:underline">
                   {t(member.nameKey)}
-                  <Linkedin className="h-5 w-5" />
                 </Link>
                 <p className="text-muted-foreground mt-1">{t(member.titleKey)}</p>
               </CardContent>
@@ -172,3 +171,5 @@ export default function AboutPage() {
     </div>
   );
 }
+
+    
