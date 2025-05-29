@@ -17,29 +17,92 @@ interface TechIcon {
 interface TeamMember {
   nameKey: TranslationKey;
   titleKey: TranslationKey;
-  linkedInUrl: string; 
+  linkedInUrl: string;
   photoPlaceholder: string;
-  dataAiHint?: string; 
+  dataAiHint?: string;
 }
 
 const mockTeamMembers: TeamMember[] = [
   {
     nameKey: 'about.team.member1.name',
     titleKey: 'about.team.member1.title',
-    linkedInUrl: 'https://www.linkedin.com/in/drkenanguler/', 
+    linkedInUrl: 'https://www.linkedin.com/in/drkenanguler/',
     photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_kenan_guler.webp?alt=media&token=d05b5482-8553-4af3-a704-1172a26081c5',
   },
   {
     nameKey: 'about.team.member2.name',
     titleKey: 'about.team.member2.title',
-    linkedInUrl: 'https://www.linkedin.com/in/cuneytyetgin/', 
+    linkedInUrl: 'https://www.linkedin.com/in/cuneytyetgin/',
     photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_cuneyt_yetgin.webp?alt=media&token=035e0e43-5ad6-49ff-b9f9-dd135085fcf1',
   },
   {
     nameKey: 'about.team.member3.name',
     titleKey: 'about.team.member3.title',
-    linkedInUrl: 'https://www.linkedin.com/in/murat-palaoglu-13029914/', 
+    linkedInUrl: 'https://www.linkedin.com/in/murat-palaoglu-13029914/',
     photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_murat_paloglu.webp?alt=media&token=8a87209c-1c53-4298-a29c-4f096412ca54',
+  },
+  {
+    nameKey: 'about.team.member4.name',
+    titleKey: 'about.team.member4.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member5.name',
+    titleKey: 'about.team.member5.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member6.name',
+    titleKey: 'about.team.member6.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member7.name',
+    titleKey: 'about.team.member7.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member8.name',
+    titleKey: 'about.team.member8.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member9.name',
+    titleKey: 'about.team.member9.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member10.name',
+    titleKey: 'about.team.member10.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member11.name',
+    titleKey: 'about.team.member11.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
+  },
+  {
+    nameKey: 'about.team.member12.name',
+    titleKey: 'about.team.member12.title',
+    linkedInUrl: '#',
+    photoPlaceholder: 'https://placehold.co/300x360.png',
+    dataAiHint: 'person portrait',
   },
 ];
 
@@ -171,5 +234,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-    
