@@ -19,7 +19,7 @@ interface TeamMember {
   titleKey: TranslationKey;
   linkedInUrl: string; // Using string directly for placeholder
   photoPlaceholder: string;
-  dataAiHint: string;
+  dataAiHint?: string; // Make optional as it's removed for specific images
 }
 
 const mockTeamMembers: TeamMember[] = [
@@ -27,22 +27,19 @@ const mockTeamMembers: TeamMember[] = [
     nameKey: 'about.team.member1.name',
     titleKey: 'about.team.member1.title',
     linkedInUrl: '#', // Placeholder
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_kenan_guler.webp?alt=media&token=d05b5482-8553-4af3-a704-1172a26081c5',
   },
   {
     nameKey: 'about.team.member2.name',
     titleKey: 'about.team.member2.title',
     linkedInUrl: '#', // Placeholder
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_cuneyt_yetgin.webp?alt=media&token=035e0e43-5ad6-49ff-b9f9-dd135085fcf1',
   },
   {
     nameKey: 'about.team.member3.name',
     titleKey: 'about.team.member3.title',
     linkedInUrl: '#', // Placeholder
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_murat_paloglu.webp?alt=media&token=8a87209c-1c53-4298-a29c-4f096412ca54',
   },
 ];
 
@@ -157,7 +154,7 @@ export default function AboutPage() {
                   width={300}
                   height={360}
                   className="object-cover rounded-t-lg"
-                  data-ai-hint={member.dataAiHint}
+                  {...(member.dataAiHint && { 'data-ai-hint': member.dataAiHint })}
                 />
               </div>
               <CardContent className="p-6">
