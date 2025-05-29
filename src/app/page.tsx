@@ -18,6 +18,7 @@ interface CapabilityItem {
   descriptionKey: TranslationKey;
   imageSrc: string;
   imageAltKey: TranslationKey;
+  icon?: LucideIcon; // Kept for potential future use or if some cards need icons
 }
 
 const capabilities: CapabilityItem[] = [
@@ -68,7 +69,7 @@ const initialPlatformMetrics: MetricItem[] = [
   { labelKey: 'home.metrics.tariffQueries', value: 'Loading...', Icon: FileSearch },
   { labelKey: 'home.metrics.tariffUsers', value: '50K+', Icon: Users },
   { labelKey: 'home.metrics.logicustProducts', value: 'Loading...', Icon: Package },
-  { labelKey: 'home.metrics.transcodeTransitDeclarations', value: '750K+', Icon: FileText },
+  { labelKey: 'home.metrics.transcodeTransitDeclarations', value: 'Loading...', Icon: FileText },
   { labelKey: 'home.metrics.transcodeTransitAI', value: '95%+', Icon: Bot },
   { labelKey: 'home.metrics.declarantCustomsDeclarations', value: '1M+', Icon: FileCheck2 },
   { labelKey: 'home.metrics.declarantDeclarantAI', value: '98%+', Icon: Bot },
@@ -119,30 +120,43 @@ export default function HomePage() {
 
     const fetchLogicustProductCount = async () => {
       try {
-        const response = await fetch('https://logicust.singlewindow.io/api/v1-0/commodities/count');
-        console.log('RESPONSE', response);
+        // Note: Using 'no-cors' mode might prevent reading the response body client-side.
+        // If the API server supports CORS, that's the preferred solution.
+        // If not, a backend proxy would be needed for a production environment.
+        const response = await fetch('https://logify.singlewindow.io/api/v1-0/commodities/count');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        // Assuming the response is a JSON object with a "count" field, e.g., { "count": 12345 }
-        // If the API directly returns a number, you might need response.text() and then parseInt()
-        const data = await response.json(); 
+        
+        const contentType = response.headers.get("content-type");
         let count: number;
-        if (typeof data === 'number') {
-          count = data;
-        } else if (data && typeof data.count === 'number') {
-          count = data.count;
-        } else {
-            // Attempt to parse if data is a string representing a number
-            const parsedNum = parseInt(data, 10);
+
+        if (contentType && contentType.includes("application/json")) {
+          const data = await response.json();
+          if (data && typeof data.count === 'number') {
+            count = data.count;
+          } else if (typeof data === 'number') { // API might return a direct number
+            count = data;
+          } else {
+             // Attempt to parse if data is a string representing a number
+            const parsedNum = parseInt(data, 10); // Or parseFloat if decimals are possible
             if (!isNaN(parsedNum)) {
                 count = parsedNum;
             } else {
-                console.error("Logicust product count response is not in expected format:", data);
+                console.error("Logicust product count response is not in expected JSON format:", data);
                 throw new Error("Invalid data format for Logicust product count");
             }
+          }
+        } else { // Handle plain text response
+            const textData = await response.text();
+            const parsedNum = parseInt(textData, 10); // Or parseFloat
+            if (!isNaN(parsedNum)) {
+                count = parsedNum;
+            } else {
+                console.error("Logicust product count response is not plain text number:", textData);
+                throw new Error("Invalid data format for Logicust product count (text)");
+            }
         }
-
 
         setMetricsData(prevMetrics =>
           prevMetrics.map(metric =>
@@ -163,8 +177,36 @@ export default function HomePage() {
       }
     };
 
+    const fetchTranscodeDeclarationCount = async () => {
+      try {
+        const response = await fetch('https://transcode.singlewindow.io/api/tds/public/reports/total-declaration-count-formatted');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.text(); // Assuming the API returns a formatted string directly
+
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.transcodeTransitDeclarations'
+              ? { ...metric, value: data } // Use the formatted string directly
+              : metric
+          )
+        );
+      } catch (error) {
+        console.error("Failed to fetch Transcode declaration count:", error);
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.transcodeTransitDeclarations'
+              ? { ...metric, value: "Error" }
+              : metric
+          )
+        );
+      }
+    };
+
     fetchTariffQueries();
     fetchLogicustProductCount();
+    fetchTranscodeDeclarationCount();
   }, []);
 
   return (
@@ -192,7 +234,7 @@ export default function HomePage() {
                 )}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                {tech.icon} {tech.nameKey as string}
+                {tech.icon} {t(tech.nameKey as TranslationKey)}
               </span>
             ))}
           </div>
