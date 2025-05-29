@@ -397,7 +397,7 @@ function HomePage() {
             const fetchLogicustProductCount = {
                 "HomePage.useEffect.fetchLogicustProductCount": async ()=>{
                     try {
-                        const response = await fetch('https://logify.singlewindow.io/api/v1-0/commodities/count');
+                        const response = await fetch('https://logicust.singlewindow.io/api/v1-0/commodities/count');
                         if (!response.ok) {
                             throw new Error(`HTTP error! status: ${response.status}`);
                         }
