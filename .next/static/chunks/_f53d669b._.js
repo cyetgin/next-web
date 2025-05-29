@@ -298,13 +298,13 @@ const technologiesList = [
 ];
 const initialPlatformMetrics = [
     {
-        labelKey: 'home.metrics.tariffQueries',
-        value: 'Loading...',
+        labelKey: 'home.metrics.tariffUsers',
+        value: '50K+',
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
     },
     {
-        labelKey: 'home.metrics.tariffUsers',
-        value: '50K+',
+        labelKey: 'home.metrics.tariffQueries',
+        value: 'Loading...',
         imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icon-tariff-3-%400.5x.webp?alt=media&token=3da28717-ea71-4362-b438-c3c5205be1bd'
     },
     {
