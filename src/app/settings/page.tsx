@@ -85,6 +85,55 @@ export default function SettingsPage() {
       </header>
 
       <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+        {/* Cookie Preferences Card */}
+        <Card className="shadow-lg">
+          <CardHeader className="flex flex-row items-start gap-3">
+            <Cookie className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <div>
+              <CardTitle className="text-2xl">{t("settings.cookies.title")}</CardTitle>
+              <CardDescription>{t("settings.cookies.description")}</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div>
+              <Label>{t('settings.cookies.status.label')}</Label>
+              <p className="text-sm text-muted-foreground">
+                {cookieStatus === 'accepted' && t('settings.cookies.status.accepted')}
+                {cookieStatus === 'rejected' && t('settings.cookies.status.rejected')}
+                {cookieStatus === 'notSet' && t('settings.cookies.status.notSet')}
+              </p>
+            </div>
+            <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+              <Button onClick={() => handleCookieAction('accept')} variant="default" size="sm">
+                {t('settings.cookies.button.acceptAll')}
+              </Button>
+              <Button onClick={() => handleCookieAction('reject')} variant="destructive" size="sm">
+                {t('settings.cookies.button.rejectAll')}
+              </Button>
+              <Button onClick={() => handleCookieAction('clear')} variant="outline" size="sm">
+                {t('settings.cookies.button.clear')}
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Language Card */}
+        <Card className="shadow-lg">
+          <CardHeader className="flex flex-row items-start gap-3">
+             <Languages className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <div>
+              <CardTitle className="text-2xl">{t("settings.language.title")}</CardTitle>
+              <CardDescription>{t("settings.language.description")}</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="language-select-settings-page">{t("settings.language.select.label")}</Label>
+              <LanguageSelector />
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Appearance Card */}
         <Card className="shadow-lg">
           <CardHeader className="flex flex-row items-start gap-3">
@@ -107,23 +156,6 @@ export default function SettingsPage() {
                   <SelectItem value="system">{t("settings.appearance.theme.system")}</SelectItem>
                 </SelectContent>
               </Select>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Language Card */}
-        <Card className="shadow-lg">
-          <CardHeader className="flex flex-row items-start gap-3">
-             <Languages className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
-            <div>
-              <CardTitle className="text-2xl">{t("settings.language.title")}</CardTitle>
-              <CardDescription>{t("settings.language.description")}</CardDescription>
-            </div>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="language-select-settings-page">{t("settings.language.select.label")}</Label>
-              <LanguageSelector />
             </div>
           </CardContent>
         </Card>
@@ -195,39 +227,6 @@ export default function SettingsPage() {
             </div>
           </CardContent>
         </Card>
-        
-        {/* Cookie Preferences Card */}
-        <Card className="shadow-lg">
-          <CardHeader className="flex flex-row items-start gap-3">
-            <Cookie className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
-            <div>
-              <CardTitle className="text-2xl">{t("settings.cookies.title")}</CardTitle>
-              <CardDescription>{t("settings.cookies.description")}</CardDescription>
-            </div>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <Label>{t('settings.cookies.status.label')}</Label>
-              <p className="text-sm text-muted-foreground">
-                {cookieStatus === 'accepted' && t('settings.cookies.status.accepted')}
-                {cookieStatus === 'rejected' && t('settings.cookies.status.rejected')}
-                {cookieStatus === 'notSet' && t('settings.cookies.status.notSet')}
-              </p>
-            </div>
-            <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
-              <Button onClick={() => handleCookieAction('accept')} variant="default" size="sm">
-                {t('settings.cookies.button.acceptAll')}
-              </Button>
-              <Button onClick={() => handleCookieAction('reject')} variant="destructive" size="sm">
-                {t('settings.cookies.button.rejectAll')}
-              </Button>
-              <Button onClick={() => handleCookieAction('clear')} variant="outline" size="sm">
-                {t('settings.cookies.button.clear')}
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-
       </div>
     </div>
   );
