@@ -28,18 +28,9 @@ const AVAILABLE_LOCALES = [
         value: 'en',
         label: 'English'
     },
-    {
-        value: 'fr',
-        label: 'Français'
-    },
-    {
-        value: 'it',
-        label: 'Italiano'
-    },
-    {
-        value: 'nl',
-        label: 'Nederlands'
-    },
+    // { value: 'fr', label: 'Français' }, // French - Disabled
+    // { value: 'it', label: 'Italiano' }, // Italian - Disabled
+    // { value: 'nl', label: 'Nederlands' }, // Dutch - Disabled
     {
         value: 'tr',
         label: 'Türkçe'

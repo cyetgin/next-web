@@ -1,13 +1,13 @@
 
-export type Locale = 'en' | 'de' | 'tr' | 'it' | 'fr' | 'nl'; // English, German, Turkish, Italian, French, Dutch
+export type Locale = 'en' | 'de' | 'tr'; // English, German, Turkish
 
 export const DEFAULT_LOCALE: Locale = 'en';
 export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
   { value: 'de', label: 'Deutsch' }, // German
   { value: 'en', label: 'English' },
-  { value: 'fr', label: 'Français' }, // French
-  { value: 'it', label: 'Italiano' }, // Italian
-  { value: 'nl', label: 'Nederlands' }, // Dutch
+  // { value: 'fr', label: 'Français' }, // French - Disabled
+  // { value: 'it', label: 'Italiano' }, // Italian - Disabled
+  // { value: 'nl', label: 'Nederlands' }, // Dutch - Disabled
   { value: 'tr', label: 'Türkçe' },   // Turkish
 ].sort((a, b) => a.label.localeCompare(b.label));
 
@@ -20,6 +20,7 @@ export type TranslationKey =
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
+  | 'nav.settings'
   | 'home.welcomeTitle'
   | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'
@@ -206,7 +207,6 @@ export type TranslationKey =
   | 'products.tariff.cta.button'
   // Common
   | 'common.backToProducts'
-  | 'nav.settings'
   // GDPR & Legal
   | 'legal.cookieConsent.text'
   | 'legal.cookieConsent.acceptButton'

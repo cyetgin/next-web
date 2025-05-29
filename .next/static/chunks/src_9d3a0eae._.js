@@ -20,18 +20,9 @@ const AVAILABLE_LOCALES = [
         value: 'en',
         label: 'English'
     },
-    {
-        value: 'fr',
-        label: 'Français'
-    },
-    {
-        value: 'it',
-        label: 'Italiano'
-    },
-    {
-        value: 'nl',
-        label: 'Nederlands'
-    },
+    // { value: 'fr', label: 'Français' }, // French - Disabled
+    // { value: 'it', label: 'Italiano' }, // Italian - Disabled
+    // { value: 'nl', label: 'Nederlands' }, // Dutch - Disabled
     {
         value: 'tr',
         label: 'Türkçe'
@@ -43,7 +34,7 @@ function getCopyrightText(translations) {
     return rawText.replace('{{YEAR}}', new Date().getFullYear().toString());
 }
 var _c, _c1;
-__turbopack_context__.k.register(_c, "AVAILABLE_LOCALES$[\n  { value: 'de', label: 'Deutsch' }, // German\n  { value: 'en', label: 'English' },\n  { value: 'fr', label: 'Français' }, // French\n  { value: 'it', label: 'Italiano' }, // Italian\n  { value: 'nl', label: 'Nederlands' }, // Dutch\n  { value: 'tr', label: 'Türkçe' },   // Turkish\n].sort");
+__turbopack_context__.k.register(_c, "AVAILABLE_LOCALES$[\n  { value: 'de', label: 'Deutsch' }, // German\n  { value: 'en', label: 'English' },\n  // { value: 'fr', label: 'Français' }, // French - Disabled\n  // { value: 'it', label: 'Italiano' }, // Italian - Disabled\n  // { value: 'nl', label: 'Nederlands' }, // Dutch - Disabled\n  { value: 'tr', label: 'Türkçe' },   // Turkish\n].sort");
 __turbopack_context__.k.register(_c1, "AVAILABLE_LOCALES");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
