@@ -104,7 +104,7 @@ const initialPlatformMetrics: MetricItem[] = [
   },
   {
     labelKey: 'home.metrics.shieldAIDeclarationsControlled',
-    value: '500K+',
+    value: 'Loading...',
     imageUrl: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/icons-customs-shield-3-%400.5x.webp?alt=media&token=b0f7725f-a3b1-4765-834c-a7bda54e022a'
   },
 ];
@@ -288,10 +288,64 @@ export default function HomePage() {
       }
     };
 
+    const fetchShieldAIDeclarationsCount = async () => {
+      try {
+        const response = await fetch('https://declarant-api.singlewindow.io/api/public/ai-sec-integrations-count');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const contentType = response.headers.get("content-type");
+        let count: number;
+
+        if (contentType && contentType.includes("application/json")) {
+          const data = await response.json();
+          if (data && typeof data.count === 'number') {
+            count = data.count;
+          } else if (typeof data === 'number') {
+            count = data;
+          } else {
+            const parsedNum = parseInt(data, 10);
+            if (!isNaN(parsedNum)) {
+                count = parsedNum;
+            } else {
+                console.error("ShieldAI integrations count response is not in expected JSON format:", data);
+                throw new Error("Invalid data format for ShieldAI integrations count");
+            }
+          }
+        } else {
+            const textData = await response.text();
+            const parsedNum = parseInt(textData, 10);
+            if (!isNaN(parsedNum)) {
+                count = parsedNum;
+            } else {
+                console.error("ShieldAI integrations count response is not plain text number:", textData);
+                throw new Error("Invalid data format for ShieldAI integrations count (text)");
+            }
+        }
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.shieldAIDeclarationsControlled'
+              ? { ...metric, value: count.toLocaleString() }
+              : metric
+          )
+        );
+      } catch (error) {
+        console.error("Failed to fetch ShieldAI integrations count:", error);
+        setMetricsData(prevMetrics =>
+          prevMetrics.map(metric =>
+            metric.labelKey === 'home.metrics.shieldAIDeclarationsControlled'
+              ? { ...metric, value: "Error" }
+              : metric
+          )
+        );
+      }
+    };
+
     fetchTariffQueries();
     fetchLogicustProductCount();
     fetchTranscodeDeclarationCount();
     fetchDeclarantAIDocumentCount();
+    fetchShieldAIDeclarationsCount();
   }, []);
 
   return (
@@ -411,3 +465,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
