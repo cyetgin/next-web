@@ -80,23 +80,20 @@ const mockTeamMembers: TeamMember[] = [
   {
     nameKey: 'about.team.member10.name',
     titleKey: 'about.team.member10.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/barisdikici/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_baris_dikici.webp?alt=media&token=d997e5b4-ac2d-4867-a53d-443dc30b0463',
   },
   {
     nameKey: 'about.team.member11.name',
     titleKey: 'about.team.member11.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/ozbayhal/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_halil_ozbay.webp?alt=media&token=caa93aec-b380-4f56-afb6-e6d3602b28ee',
   },
   {
     nameKey: 'about.team.member12.name',
     titleKey: 'about.team.member12.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/turkarslanaysenur/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_aysenur_turkarslan.webp?alt=media&token=228b2579-3e3c-4fac-b948-71ec7a6eca56',
   },
 ];
 
@@ -228,6 +225,8 @@ export default function AboutPage() {
     </div>
   );
 }
+    
+
     
 
     
