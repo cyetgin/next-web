@@ -4,11 +4,9 @@ import {Geist, Geist_Mono} from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/context/language-context';
 import { ThemeProvider } from '@/components/theme-provider';
-import { FontProvider } from '@/context/font-provider';
-import { DensityProvider } from '@/context/density-provider';
 import { Toaster } from '@/components/ui/toaster';
 import MainLayout from '@/components/layout/main-layout';
-import { CookieConsentBanner } from '@/components/cookie-consent-banner'; // Added
+import { CookieConsentBanner } from '@/components/cookie-consent-banner';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -22,7 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'ATEZ Software Technologies',
-  description: 'ATEZ Software Technologies: Revolutionizing cross-border trade with intelligent solutions for customs, logistics, and autonomous data handling using Blockchain, AI, ML, and BI.',
+  description: "ATEZ Software Technologies: Revolutionizing cross-border trade with intelligent solutions for customs compliance, cross-border movement of goods, and autonomous data handling, powered by Artificial Intelligence, Machine Learning, and Business Intelligence.",
 };
 
 export default function RootLayout({
@@ -40,20 +38,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <FontProvider>
-              <DensityProvider>
-                <MainLayout>
-                  {children}
-                </MainLayout>
-                <Toaster />
-                <CookieConsentBanner /> {/* Added */}
-              </DensityProvider>
-            </FontProvider>
+            <MainLayout>
+              {children}
+            </MainLayout>
+            <Toaster />
+            <CookieConsentBanner />
           </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>
   );
 }
-
-    

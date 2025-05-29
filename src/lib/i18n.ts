@@ -5,9 +5,6 @@ export const DEFAULT_LOCALE: Locale = 'en';
 export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
   { value: 'de', label: 'Deutsch' }, // German
   { value: 'en', label: 'English' },
-  // { value: 'fr', label: 'Français' }, // French - Disabled
-  // { value: 'it', label: 'Italiano' }, // Italian - Disabled
-  // { value: 'nl', label: 'Nederlands' }, // Dutch - Disabled
   { value: 'tr', label: 'Türkçe' },   // Turkish
 ].sort((a, b) => a.label.localeCompare(b.label));
 
@@ -147,19 +144,9 @@ export type TranslationKey =
   | 'settings.appearance.theme.light'
   | 'settings.appearance.theme.dark'
   | 'settings.appearance.theme.system'
-  | 'settings.appearance.fontSize.label'
-  | 'settings.appearance.fontSize.sm'
-  | 'settings.appearance.fontSize.md'
-  | 'settings.appearance.fontSize.lg'
   | 'settings.language.title'
   | 'settings.language.description'
   | 'settings.language.select.label'
-  | 'settings.density.title'
-  | 'settings.density.description'
-  | 'settings.density.label'
-  | 'settings.density.compact'
-  | 'settings.density.default'
-  | 'settings.density.spacious'
   // Solutions Page Keys
   | 'solutions.title'
   | 'solutions.description'

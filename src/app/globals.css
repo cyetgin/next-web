@@ -49,10 +49,6 @@
     --sidebar-accent-foreground: 216 67% 35%; /* Text on sidebar hover */
     --sidebar-border: 220 20% 88%;
     --sidebar-ring: 216 67% 51%; /* Ring for focus, same as main ring */
-
-    /* Density variables - default values */
-    --content-padding: 1rem; /* Example default padding */
-    --card-padding: 1.5rem; /* Example default card padding */
   }
 
   .dark {
@@ -87,16 +83,12 @@
 
     --sidebar-background: 224 71% 4%; /* Darker sidebar background */
     --sidebar-foreground: 210 40% 98%; /* Light text for dark sidebar */
-    --sidebar-primary: 210 40% 98%; 
+    --sidebar-primary: 210 40% 98%;
     --sidebar-primary-foreground: 222 47% 11%;
     --sidebar-accent: 210 40% 12.9%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 210 40% 14.9%;
     --sidebar-ring: 210 40% 83.1%;
-
-    /* Density variables for dark theme can be the same or different */
-    /* --content-padding: 1rem; */
-    /* --card-padding: 1.5rem; */
   }
 }
 
@@ -108,40 +100,4 @@
     @apply bg-background text-foreground;
     /* font-family from Geist in layout.tsx will take precedence */
   }
-
-  /* Font scaling classes */
-  html.font-scale-sm {
-    font-size: 14px; /* Approx 87.5% of 16px */
-  }
-  html.font-scale-md {
-    font-size: 16px; /* Default */
-  }
-  html.font-scale-lg {
-    font-size: 18px; /* Approx 112.5% of 16px */
-  }
-
-  /* Density classes */
-  html.density-compact {
-    --content-padding: 0.5rem;
-    --card-padding: 0.75rem;
-  }
-  html.density-default {
-    --content-padding: 1rem;
-    --card-padding: 1.5rem;
-  }
-  html.density-spacious {
-    --content-padding: 1.5rem;
-    --card-padding: 2rem;
-  }
-
-  /* Example usage of density variables */
-  /* You would apply these to specific components or general layouts */
-  /*
-  .some-content-area {
-    padding: var(--content-padding);
-  }
-  .some-card-component {
-    padding: var(--card-padding);
-  }
-  */
 }
