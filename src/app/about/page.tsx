@@ -26,7 +26,7 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start */}
         <div>
           <Image
             src="https://placehold.co/600x400.png"
@@ -53,7 +53,7 @@ export default function AboutPage() {
         </Card>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid md:grid-cols-2 gap-12 items-start"> {/* Changed items-center to items-start */}
         <Card className="shadow-lg md:order-last">
            <CardHeader className="flex flex-row items-center gap-3">
             <BookOpen className="h-10 w-10 text-primary" />
@@ -85,12 +85,11 @@ export default function AboutPage() {
         </Card>
          <div>
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/atez-vision.webp?alt=media&token=6c7ca25e-2e2b-4ef2-a668-ace020e29a69"
             alt={t('about.story.title')}
             width={600}
             height={400}
             className="rounded-lg shadow-xl object-cover"
-            data-ai-hint="autonomous systems"
           />
         </div>
       </div>
