@@ -4,25 +4,29 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { Header } from './header';
-import { HorizontalNav } from './horizontal-nav'; // Changed from SidebarNav
+import { HorizontalNav } from './horizontal-nav';
 import { useTranslation } from '@/hooks/use-translation';
 import { getCopyrightText } from '@/lib/i18n';
 import { LanguageContext } from '@/context/language-context';
 import React from 'react';
+import { useIsMobile } from '@/hooks/use-mobile'; // Import useIsMobile
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   const { t } = useTranslation();
   const langContext = React.useContext(LanguageContext);
   const copyrightText = getCopyrightText(langContext?.translations || {});
+  const isMobile = useIsMobile(); // Get mobile state
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header />
-      <div className="bg-secondary shadow-md border-b border-border">
-        <div className="container mx-auto">
-          <HorizontalNav />
+      {!isMobile && ( // Conditionally render HorizontalNav
+        <div className="bg-secondary shadow-md border-b border-border">
+          <div className="container mx-auto">
+            <HorizontalNav />
+          </div>
         </div>
-      </div>
+      )}
       <main className="flex-1 w-full p-4 sm:p-6 md:p-8 flex flex-col items-center">
         {children}
       </main>
