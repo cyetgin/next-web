@@ -5,13 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslation } from '@/hooks/use-translation';
 import { LanguageSelector } from '@/components/language-selector';
-import { useSidebar } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { Menu, Settings } from 'lucide-react'; // Changed UserCircle to Settings
+import { Settings } from 'lucide-react';
 
 export function Header() {
   const { t, currentLanguage } = useTranslation();
-  const { isMobile, toggleSidebar } = useSidebar();
+  // Removed useSidebar and isMobile as sidebar is being replaced
 
   let logoSrc: string;
   let logoWidth: number;
@@ -31,11 +30,7 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-[110px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
-          {isMobile && (
-            <Button variant="ghost" size="icon" onClick={toggleSidebar}>
-              <Menu className="h-6 w-6" />
-            </Button>
-          )}
+          {/* Mobile menu toggle removed as primary navigation is changing */}
           <Link href="/" className="flex items-center text-primary hover:text-primary/90 no-underline">
             <Image
               src={logoSrc}

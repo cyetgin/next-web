@@ -1360,6 +1360,12 @@ body {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -1559,6 +1565,10 @@ body {
 
 .bg-transparent {
   background-color: #0000;
+}
+
+.bg-primary\/10 {
+  background-color: hsl(var(--primary) / .1);
 }
 
 .bg-gradient-to-br {
@@ -1941,6 +1951,10 @@ body {
   color: hsl(var(--sidebar-foreground) / .7);
 }
 
+.text-foreground\/70 {
+  color: hsl(var(--foreground) / .7);
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2138,6 +2152,10 @@ body {
   transition-duration: .5s;
 }
 
+.duration-150 {
+  transition-duration: .15s;
+}
+
 .ease-in-out {
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
@@ -2192,6 +2210,10 @@ body {
 
 .duration-500 {
   animation-duration: .5s;
+}
+
+.duration-150 {
+  animation-duration: .15s;
 }
 
 .ease-in-out {
@@ -2314,6 +2336,10 @@ body {
   background-color: hsl(var(--sidebar-accent));
 }
 
+.hover\:font-bold:hover {
+  font-weight: 700;
+}
+
 .hover\:text-accent-foreground:hover {
   color: hsl(var(--accent-foreground));
 }
@@ -2408,6 +2434,10 @@ body {
 
 .focus\:ring-ring:focus {
   --tw-ring-color: hsl(var(--ring));
+}
+
+.focus\:ring-primary\/50:focus {
+  --tw-ring-color: hsl(var(--primary) / .5);
 }
 
 .focus\:ring-offset-2:focus {
@@ -3074,6 +3104,10 @@ body {
     border-radius: var(--radius);
   }
 
+  .sm\:p-6 {
+    padding: 1.5rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -3121,6 +3155,16 @@ body {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:space-x-6 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:px-6 {
