@@ -44,23 +44,20 @@ const mockTeamMembers: TeamMember[] = [
   {
     nameKey: 'about.team.member4.name',
     titleKey: 'about.team.member4.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/onur-eron-miex-4a896778/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_onur_eron.webp?alt=media&token=248fd992-278e-4971-a3ec-e532f339f63d',
   },
   {
     nameKey: 'about.team.member5.name',
     titleKey: 'about.team.member5.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/hazim-dikenli-4135252/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_hazim_dikenli.webp?alt=media&token=cc9cd859-0b22-4e63-9448-fadc68b1b368',
   },
   {
     nameKey: 'about.team.member6.name',
     titleKey: 'about.team.member6.title',
-    linkedInUrl: '#',
-    photoPlaceholder: 'https://placehold.co/300x360.png',
-    dataAiHint: 'person portrait',
+    linkedInUrl: 'https://www.linkedin.com/in/busra-yuksel-ozcan-54652461/',
+    photoPlaceholder: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/persona_busra_ozcan.webp?alt=media&token=811c04fc-364e-4860-a3ce-74ec072710fd',
   },
   {
     nameKey: 'about.team.member7.name',
@@ -234,3 +231,5 @@ export default function AboutPage() {
     </div>
   );
 }
+
+    
