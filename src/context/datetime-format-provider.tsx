@@ -6,14 +6,14 @@ import React, { createContext, useState, useEffect, useContext } from 'react';
 
 // Define a few common date formats. You can expand this list.
 // These are compatible with date-fns format strings.
-export type DateTimeFormatOption = 'DD/MM/YYYY' | 'MM/DD/YYYY' | 'YYYY-MM-DD';
+export type DateTimeFormatOption = 'dd/MM/yyyy' | 'MM/dd/yyyy' | 'yyyy-MM-dd';
 export const DATE_FORMAT_OPTIONS: { value: DateTimeFormatOption, labelKey: string }[] = [
-  { value: 'DD/MM/YYYY', labelKey: 'settings.dateTime.format.dmy' },
-  { value: 'MM/DD/YYYY', labelKey: 'settings.dateTime.format.mdy' },
-  { value: 'YYYY-MM-DD', labelKey: 'settings.dateTime.format.ymd' },
+  { value: 'dd/MM/yyyy', labelKey: 'settings.dateTime.format.dmy' },
+  { value: 'MM/dd/yyyy', labelKey: 'settings.dateTime.format.mdy' },
+  { value: 'yyyy-MM-dd', labelKey: 'settings.dateTime.format.ymd' },
 ];
 
-const DEFAULT_DATETIME_FORMAT: DateTimeFormatOption = 'MM/DD/YYYY';
+const DEFAULT_DATETIME_FORMAT: DateTimeFormatOption = 'MM/dd/yyyy'; // Updated to match new format
 const DATETIME_FORMAT_STORAGE_KEY = 'atez-datetime-format';
 
 
