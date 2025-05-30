@@ -13,7 +13,7 @@ export const DATE_FORMAT_OPTIONS: { value: DateTimeFormatOption, labelKey: strin
   { value: 'yyyy-MM-dd', labelKey: 'settings.dateTime.format.ymd' },
 ];
 
-const DEFAULT_DATETIME_FORMAT: DateTimeFormatOption = 'MM/dd/yyyy'; // Updated to match new format
+const DEFAULT_DATETIME_FORMAT: DateTimeFormatOption = 'dd/MM/yyyy'; // Updated default
 const DATETIME_FORMAT_STORAGE_KEY = 'atez-datetime-format';
 
 
@@ -58,3 +58,4 @@ export const useDateTimeFormat = (): DateTimeFormatContextType => {
   }
   return context;
 };
+
