@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { Palette, Languages, ExternalLinkIcon, Accessibility, CalendarClock, Trash2, Cookie, TextQuote,LayoutPanelLeft } from "lucide-react";
+import { Palette, Languages, ExternalLinkIcon, Accessibility, CalendarClock, Trash2, Cookie, TextQuote, LayoutPanelLeft } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { useLinkBehavior, type LinkBehaviorContextType } from "@/context/link-behavior-provider";
 import { useAccessibility, type AccessibilityContextType } from "@/context/accessibility-provider";
@@ -99,7 +99,7 @@ export default function SettingsPage() {
     localStorage.removeItem(REDUCE_MOTION_STORAGE_KEY);
     localStorage.removeItem(DATETIME_FORMAT_STORAGE_KEY);
     localStorage.removeItem(LANGUAGE_STORAGE_KEY);
-    localStorage.removeItem(THEME_STORAGE_KEY); 
+    localStorage.removeItem(THEME_STORAGE_KEY);
     localStorage.removeItem(FONT_SIZE_STORAGE_KEY);
     localStorage.removeItem(DENSITY_STORAGE_KEY);
     window.location.reload();
@@ -140,7 +140,7 @@ export default function SettingsPage() {
                 {cookieStatus === 'notSet' && t('settings.cookies.status.notSet')}
               </p>
             </div>
-            <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
+            <div className="flex flex-row flex-wrap gap-2">
               <Button onClick={() => handleCookieAction('accept')} variant="default" size="sm">
                 {t('settings.cookies.button.acceptAll')}
               </Button>
@@ -375,3 +375,4 @@ export default function SettingsPage() {
     </div>
   );
 }
+
