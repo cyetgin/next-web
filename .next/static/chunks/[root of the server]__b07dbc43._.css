@@ -1079,6 +1079,10 @@ html.density-spacious .some-component-class {
   min-width: var(--radix-select-trigger-width);
 }
 
+.min-w-\[80px\] {
+  min-width: 80px;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -1689,6 +1693,11 @@ html.density-spacious .some-component-class {
   padding-right: 1rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1732,11 +1741,6 @@ html.density-spacious .some-component-class {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pb-2 {

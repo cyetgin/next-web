@@ -47,7 +47,7 @@ export function Header() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-7 w-7" /> {/* Increased icon size */}
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
@@ -84,6 +84,22 @@ export function Header() {
                       </SheetClose>
                     );
                   })}
+                  {/* Settings link specifically for mobile menu */}
+                  <SheetClose asChild>
+                     <Link
+                        href="/settings"
+                        className={cn(
+                            "block rounded-md px-3 py-2 text-base font-medium flex items-center",
+                            pathname === '/settings'
+                            ? "bg-primary/10 text-primary"
+                            : "text-foreground/80 hover:bg-muted hover:text-primary"
+                        )}
+                        aria-current={pathname === '/settings' ? 'page' : undefined}
+                        >
+                        <Settings className="mr-2 h-5 w-5 flex-shrink-0" /> 
+                        {t('nav.settings')}
+                    </Link>
+                  </SheetClose>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -101,13 +117,8 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <LanguageSelector />
-          <Button asChild variant="ghost" size="icon" className="rounded-full">
-            <Link href="/settings">
-              <Settings className="h-6 w-6" />
-              <span className="sr-only">Settings</span>
-            </Link>
-          </Button>
+          <LanguageSelector useShortLabels={isMobile} />
+          {/* Settings icon removed from main header, now only in mobile sheet */}
         </div>
       </div>
     </header>

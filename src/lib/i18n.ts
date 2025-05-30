@@ -5,10 +5,10 @@ import { enUS, de, tr } from 'date-fns/locale'; // Removed it, fr, nl as they ar
 export type Locale = 'en' | 'de' | 'tr'; // English, German, Turkish
 
 export const DEFAULT_LOCALE: Locale = 'en';
-export const AVAILABLE_LOCALES: {value: Locale, label: string, dateFns: DateFnsLocale}[] = [
-  { value: 'de', label: 'Deutsch', dateFns: de },
-  { value: 'en', label: 'English', dateFns: enUS },
-  { value: 'tr', label: 'Türkçe', dateFns: tr },
+export const AVAILABLE_LOCALES: {value: Locale, label: string, shortLabel: string, dateFns: DateFnsLocale}[] = [
+  { value: 'de', label: 'Deutsch', shortLabel: 'DE', dateFns: de },
+  { value: 'en', label: 'English', shortLabel: 'EN', dateFns: enUS },
+  { value: 'tr', label: 'Türkçe', shortLabel: 'TR', dateFns: tr },
 ].sort((a, b) => a.label.localeCompare(b.label));
 
 
@@ -21,6 +21,7 @@ export type TranslationKey =
   | 'nav.about'
   | 'nav.contact'
   | 'nav.news'
+  | 'nav.settings'
   | 'home.welcomeTitle'
   | 'home.blockchainReadySlogan'
   | 'home.welcomeSubtitle'
