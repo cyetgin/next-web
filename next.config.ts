@@ -25,6 +25,14 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/v1-0/:path*',
+        destination: 'https://logify.singlewindow.io/api' + ':path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

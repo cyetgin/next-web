@@ -163,49 +163,25 @@ export default function HomePage() {
 
     const fetchLogicustProductCount = async () => {
       try {
-        const response = await fetch('https://logify.singlewindow.io/api/v1-0/commodities/count');
+        // Fetch from the internal API route
+        const response = await fetch('/api/logicustProductCount');
+        
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const contentType = response.headers.get("content-type");
-        let count: number;
-
-        if (contentType && contentType.includes("application/json")) {
-          const data = await response.json();
-          if (data && typeof data.count === 'number') {
-            count = data.count;
-          } else if (typeof data === 'number') {
-            count = data;
-          } else {
-            const parsedNum = parseInt(data, 10);
-            if (!isNaN(parsedNum)) {
-                count = parsedNum;
-            } else {
-                console.error("Logicust product count response is not in expected JSON format:", data);
-                throw new Error("Invalid data format for Logicust product count");
-            }
-          }
-        } else {
-            const textData = await response.text();
-            const parsedNum = parseInt(textData, 10);
-            if (!isNaN(parsedNum)) {
-                count = parsedNum;
-            } else {
-                console.error("Logicust product count response is not plain text number:", textData);
-                throw new Error("Invalid data format for Logicust product count (text)");
-            }
-        }
+        const data = await response.json();
 
         setMetricsData(prevMetrics =>
           prevMetrics.map(metric =>
+
             metric.labelKey === 'home.metrics.logicustProducts'
-              ? { ...metric, value: count.toLocaleString() }
+              ? { ...metric, value: data.value }
               : metric
           )
         );
       } catch (error) {
-        console.error("Failed to fetch Logicust product count:", error);
+        console.log("Failed to fetch Logicust product count:", error);
         setMetricsData(prevMetrics =>
           prevMetrics.map(metric =>
             metric.labelKey === 'home.metrics.logicustProducts'
@@ -351,11 +327,11 @@ export default function HomePage() {
       }
     };
 
-    fetchTariffQueries();
+    //fetchTariffQueries();
     fetchLogicustProductCount();
-    fetchTranscodeDeclarationCount();
-    fetchDeclarantAIDocumentCount();
-    fetchShieldAIDeclarationsCount();
+    //fetchTranscodeDeclarationCount();
+    //fetchDeclarantAIDocumentCount();
+    //fetchShieldAIDeclarationsCount();
   }, []);
 
   return (
