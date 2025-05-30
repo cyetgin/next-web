@@ -335,6 +335,15 @@ img, video {
   --sidebar-accent-foreground: 216 67% 35%;
   --sidebar-border: 220 20% 88%;
   --sidebar-ring: 216 67% 51%;
+  --font-size-base: 1rem;
+  --font-size-sm: .875rem;
+  --font-size-lg: 1.125rem;
+  --content-padding-compact: .5rem;
+  --content-padding-default: 1rem;
+  --content-padding-spacious: 1.5rem;
+  --card-padding-compact: .75rem;
+  --card-padding-default: 1.5rem;
+  --card-padding-spacious: 2rem;
 }
 
 .dark {
@@ -374,6 +383,18 @@ img, video {
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+}
+
+html.density-compact .some-component-class {
+  padding: var(--content-padding-compact);
+}
+
+html.density-default .some-component-class {
+  padding: var(--content-padding-default);
+}
+
+html.density-spacious .some-component-class {
+  padding: var(--content-padding-spacious);
 }
 
 .container {
@@ -685,10 +706,6 @@ body {
   display: block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
@@ -778,10 +795,6 @@ body {
   height: 2.25rem;
 }
 
-.h-\[105px\] {
-  height: 105px;
-}
-
 .h-\[110px\] {
   height: 110px;
 }
@@ -794,8 +807,16 @@ body {
   height: 360px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
 .h-\[var\(--radix-select-trigger-height\)\] {
   height: var(--radix-select-trigger-height);
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-full {
@@ -810,28 +831,16 @@ body {
   height: 100svh;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-\[52\.5px\] {
-  height: 52.5px;
-}
-
-.h-\[40px\] {
-  height: 40px;
-}
-
 .max-h-96 {
   max-height: 24rem;
 }
 
-.max-h-screen {
-  max-height: 100vh;
-}
-
 .max-h-\[50px\] {
   max-height: 50px;
+}
+
+.max-h-screen {
+  max-height: 100vh;
 }
 
 .min-h-0 {
@@ -922,16 +931,16 @@ body {
   width: 1px;
 }
 
+.w-\[280px\] {
+  width: 280px;
+}
+
 .w-auto {
   width: auto;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[280px\] {
-  width: 280px;
 }
 
 .min-w-0 {
@@ -1633,6 +1642,10 @@ body {
   padding-right: .5rem;
 }
 
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pr-8 {
   padding-right: 2rem;
 }
@@ -1651,10 +1664,6 @@ body {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
 }
 
 .text-left {
@@ -2220,6 +2229,10 @@ body {
   background-color: hsl(var(--destructive) / .9);
 }
 
+.hover\:bg-muted:hover {
+  background-color: hsl(var(--muted));
+}
+
 .hover\:bg-muted\/50:hover {
   background-color: hsl(var(--muted) / .5);
 }
@@ -2246,10 +2259,6 @@ body {
 
 .hover\:bg-sidebar-accent:hover {
   background-color: hsl(var(--sidebar-accent));
-}
-
-.hover\:bg-muted:hover {
-  background-color: hsl(var(--muted));
 }
 
 .hover\:font-bold:hover {

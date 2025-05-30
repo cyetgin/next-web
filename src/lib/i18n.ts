@@ -1,6 +1,6 @@
 
 import type { Locale as DateFnsLocale } from 'date-fns';
-import { enUS, de, tr } from 'date-fns/locale';
+import { enUS, de, tr } from 'date-fns/locale'; // Removed it, fr, nl as they are disabled
 
 export type Locale = 'en' | 'de' | 'tr'; // English, German, Turkish
 
@@ -169,6 +169,18 @@ export type TranslationKey =
   | 'settings.appearance.theme.light'
   | 'settings.appearance.theme.dark'
   | 'settings.appearance.theme.system'
+  | 'settings.fontSize.title'
+  | 'settings.fontSize.description'
+  | 'settings.fontSize.label'
+  | 'settings.fontSize.sm'
+  | 'settings.fontSize.md'
+  | 'settings.fontSize.lg'
+  | 'settings.density.title'
+  | 'settings.density.description'
+  | 'settings.density.label'
+  | 'settings.density.compact'
+  | 'settings.density.default'
+  | 'settings.density.spacious'
   | 'settings.linkBehavior.title'
   | 'settings.linkBehavior.description'
   | 'settings.linkBehavior.label'
@@ -182,9 +194,9 @@ export type TranslationKey =
   | 'settings.dateTime.title'
   | 'settings.dateTime.description'
   | 'settings.dateTime.format.label'
-  | 'settings.dateTime.format.dmy' // DD/MM/YYYY
-  | 'settings.dateTime.format.mdy' // MM/DD/YYYY
-  | 'settings.dateTime.format.ymd' // YYYY-MM-DD
+  | 'settings.dateTime.format.dmy' // dd/MM/yyyy
+  | 'settings.dateTime.format.mdy' // MM/dd/yyyy
+  | 'settings.dateTime.format.ymd' // yyyy-MM-dd
   | 'settings.dataManagement.title'
   | 'settings.dataManagement.description'
   | 'settings.dataManagement.clearAll.button'

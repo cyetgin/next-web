@@ -10,6 +10,8 @@ import { CookieConsentBanner } from '@/components/cookie-consent-banner';
 import { LinkBehaviorProvider } from '@/context/link-behavior-provider';
 import { AccessibilityProvider } from '@/context/accessibility-provider';
 import { DateTimeFormatProvider } from '@/context/datetime-format-provider';
+import { FontProvider } from '@/context/font-provider';
+import { DensityProvider } from '@/context/density-provider';
 
 
 const geistSans = Geist({
@@ -48,11 +50,15 @@ export default function RootLayout({
             <LinkBehaviorProvider>
               <AccessibilityProvider>
                 <DateTimeFormatProvider>
-                  <MainLayout>
-                    {children}
-                  </MainLayout>
-                  <Toaster />
-                  <CookieConsentBanner />
+                  <FontProvider>
+                    <DensityProvider>
+                      <MainLayout>
+                        {children}
+                      </MainLayout>
+                      <Toaster />
+                      <CookieConsentBanner />
+                    </DensityProvider>
+                  </FontProvider>
                 </DateTimeFormatProvider>
               </AccessibilityProvider>
             </LinkBehaviorProvider>

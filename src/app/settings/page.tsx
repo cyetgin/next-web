@@ -22,11 +22,13 @@ import {
 } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { Palette, Languages, ExternalLinkIcon, Accessibility, CalendarClock, Trash2, Cookie } from "lucide-react";
+import { Palette, Languages, ExternalLinkIcon, Accessibility, CalendarClock, Trash2, Cookie, TextQuote,LayoutPanelLeft } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { useLinkBehavior, type LinkBehaviorContextType } from "@/context/link-behavior-provider";
 import { useAccessibility, type AccessibilityContextType } from "@/context/accessibility-provider";
 import { useDateTimeFormat, type DateTimeFormatContextType, DATE_FORMAT_OPTIONS } from "@/context/datetime-format-provider";
+import { useFont, type FontContextType, type FontSize } from "@/context/font-provider";
+import { useDensity, type DensityContextType, type Density } from "@/context/density-provider";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -45,6 +47,9 @@ const REDUCE_MOTION_STORAGE_KEY = 'atez-accessibility-reduce-motion';
 const DATETIME_FORMAT_STORAGE_KEY = 'atez-datetime-format';
 const LANGUAGE_STORAGE_KEY = 'globalHubLanguage';
 const THEME_STORAGE_KEY = 'theme'; // next-themes default key
+const FONT_SIZE_STORAGE_KEY = 'atez-font-size';
+const DENSITY_STORAGE_KEY = 'atez-content-density';
+
 
 type CookieConsentStatus = 'accepted' | 'rejected' | 'notSet';
 
@@ -54,6 +59,9 @@ export default function SettingsPage() {
   const { linkBehavior, setLinkBehavior } = useLinkBehavior() as LinkBehaviorContextType;
   const { reduceMotion, setReduceMotion } = useAccessibility() as AccessibilityContextType;
   const { dateTimeFormat, setDateTimeFormat } = useDateTimeFormat() as DateTimeFormatContextType;
+  const { fontSize, setFontSize } = useFont() as FontContextType;
+  const { density, setDensity } = useDensity() as DensityContextType;
+
 
   const [mounted, setMounted] = React.useState(false);
   const [cookieStatus, setCookieStatus] = useState<CookieConsentStatus>('notSet');
@@ -91,7 +99,9 @@ export default function SettingsPage() {
     localStorage.removeItem(REDUCE_MOTION_STORAGE_KEY);
     localStorage.removeItem(DATETIME_FORMAT_STORAGE_KEY);
     localStorage.removeItem(LANGUAGE_STORAGE_KEY);
-    localStorage.removeItem(THEME_STORAGE_KEY); // next-themes might use a different key if configured
+    localStorage.removeItem(THEME_STORAGE_KEY); 
+    localStorage.removeItem(FONT_SIZE_STORAGE_KEY);
+    localStorage.removeItem(DENSITY_STORAGE_KEY);
     window.location.reload();
   };
 
@@ -184,6 +194,70 @@ export default function SettingsPage() {
                 </SelectContent>
               </Select>
             </div>
+          </CardContent>
+        </Card>
+
+        {/* Font Size Card */}
+        <Card className="shadow-lg">
+          <CardHeader className="flex flex-row items-start gap-3">
+            <TextQuote className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <div>
+              <CardTitle className="text-2xl">{t("settings.fontSize.title")}</CardTitle>
+              <CardDescription>{t("settings.fontSize.description")}</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Label>{t("settings.fontSize.label")}</Label>
+            <RadioGroup
+              value={fontSize}
+              onValueChange={(value) => setFontSize(value as FontSize)}
+              className="flex flex-col space-y-1"
+            >
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="sm" id="font-sm" />
+                <Label htmlFor="font-sm">{t("settings.fontSize.sm")}</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="md" id="font-md" />
+                <Label htmlFor="font-md">{t("settings.fontSize.md")}</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="lg" id="font-lg" />
+                <Label htmlFor="font-lg">{t("settings.fontSize.lg")}</Label>
+              </div>
+            </RadioGroup>
+          </CardContent>
+        </Card>
+
+        {/* Content Density Card */}
+        <Card className="shadow-lg">
+          <CardHeader className="flex flex-row items-start gap-3">
+            <LayoutPanelLeft className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <div>
+              <CardTitle className="text-2xl">{t("settings.density.title")}</CardTitle>
+              <CardDescription>{t("settings.density.description")}</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Label>{t("settings.density.label")}</Label>
+            <RadioGroup
+              value={density}
+              onValueChange={(value) => setDensity(value as Density)}
+              className="flex flex-col space-y-1"
+            >
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="compact" id="density-compact" />
+                <Label htmlFor="density-compact">{t("settings.density.compact")}</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="default" id="density-default" />
+                <Label htmlFor="density-default">{t("settings.density.default")}</Label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <RadioGroupItem value="spacious" id="density-spacious" />
+                <Label htmlFor="density-spacious">{t("settings.density.spacious")}</Label>
+              </div>
+            </RadioGroup>
           </CardContent>
         </Card>
         

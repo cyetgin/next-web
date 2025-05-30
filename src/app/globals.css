@@ -49,6 +49,20 @@
     --sidebar-accent-foreground: 216 67% 35%; /* Text on sidebar hover */
     --sidebar-border: 220 20% 88%;
     --sidebar-ring: 216 67% 51%; /* Ring for focus, same as main ring */
+
+    /* Font size variables */
+    --font-size-base: 1rem; /* Default */
+    --font-size-sm: 0.875rem;
+    --font-size-lg: 1.125rem;
+
+    /* Content density variables */
+    --content-padding-compact: 0.5rem;
+    --content-padding-default: 1rem;
+    --content-padding-spacious: 1.5rem;
+    --card-padding-compact: 0.75rem;
+    --card-padding-default: 1.5rem;
+    --card-padding-spacious: 2rem;
+
   }
 
   .dark {
@@ -99,5 +113,26 @@
   body {
     @apply bg-background text-foreground;
     /* font-family from Geist in layout.tsx will take precedence */
+  }
+
+  html.font-scale-sm {
+    font-size: var(--font-size-sm);
+  }
+  html.font-scale-md {
+    font-size: var(--font-size-base);
+  }
+  html.font-scale-lg {
+    font-size: var(--font-size-lg);
+  }
+
+  /* Example usage of density variables - you'll need to apply these more specifically */
+  html.density-compact .some-component-class {
+    padding: var(--content-padding-compact);
+  }
+  html.density-default .some-component-class {
+    padding: var(--content-padding-default);
+  }
+  html.density-spacious .some-component-class {
+    padding: var(--content-padding-spacious);
   }
 }
