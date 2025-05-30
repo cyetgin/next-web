@@ -47,7 +47,7 @@ export function Header() {
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-7 w-7" /> {/* Increased icon size */}
+                  <Menu className="h-7 w-7" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
@@ -57,9 +57,9 @@ export function Header() {
                     <Image
                       src={logoSrc}
                       alt={t('logo.text')}
-                      width={logoWidth / 2} 
+                      width={logoWidth / 2}
                       height={logoHeight / 2}
-                      className="h-auto w-auto max-h-[50px]" 
+                      className="h-auto w-auto max-h-[50px]"
                       priority
                     />
                   </Link>
@@ -96,8 +96,8 @@ export function Header() {
                         )}
                         aria-current={pathname === '/settings' ? 'page' : undefined}
                         >
-                        <Settings className="mr-2 h-5 w-5 flex-shrink-0" /> 
-                        {t('nav.settings')}
+                        <Settings className="mr-2 h-5 w-5 flex-shrink-0" />
+                        Settings
                     </Link>
                   </SheetClose>
                 </nav>
@@ -110,7 +110,7 @@ export function Header() {
               alt={t('logo.text')}
               width={logoWidth}
               height={logoHeight}
-              className="h-[40px] md:h-[105px] w-auto" 
+              className="h-[40px] md:h-[105px] w-auto"
               priority
             />
           </Link>
@@ -118,7 +118,6 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <LanguageSelector useShortLabels={isMobile} />
-          {/* Settings icon removed from main header, now only in mobile sheet */}
         </div>
       </div>
     </header>
