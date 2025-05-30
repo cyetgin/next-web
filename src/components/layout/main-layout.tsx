@@ -32,7 +32,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
       )}
-      <main className="flex-1 w-full p-4 sm:p-6 md:p-8 flex flex-col items-center">
+      <main className="flex-1 w-full py-4 px-5 sm:p-6 md:p-8 flex flex-col items-center">
         {children}
       </main>
       <footer className="py-6 px-4 md:px-6 border-t bg-background">

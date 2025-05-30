@@ -1622,6 +1622,11 @@ html.density-spacious .some-component-class {
   padding-bottom: 2rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .pb-2 {
   padding-bottom: .5rem;
 }
