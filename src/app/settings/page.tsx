@@ -22,19 +22,38 @@ import {
 } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { Palette, Languages, TextQuote, Rows, Cookie } from "lucide-react";
-import { useFont, FontContextType } from "@/context/font-provider";
-import { useDensity, DensityContextType } from "@/context/density-provider";
+import { Palette, Languages, ExternalLinkIcon, Accessibility, CalendarClock, Trash2, Cookie } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+import { useLinkBehavior, type LinkBehaviorContextType } from "@/context/link-behavior-provider";
+import { useAccessibility, type AccessibilityContextType } from "@/context/accessibility-provider";
+import { useDateTimeFormat, type DateTimeFormatContextType, DATE_FORMAT_OPTIONS } from "@/context/datetime-format-provider";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 const COOKIE_CONSENT_KEY = 'atez_cookie_consent';
+const LINK_BEHAVIOR_STORAGE_KEY = 'atez-link-behavior';
+const REDUCE_MOTION_STORAGE_KEY = 'atez-accessibility-reduce-motion';
+const DATETIME_FORMAT_STORAGE_KEY = 'atez-datetime-format';
+const LANGUAGE_STORAGE_KEY = 'globalHubLanguage';
+const THEME_STORAGE_KEY = 'theme'; // next-themes default key
 
 type CookieConsentStatus = 'accepted' | 'rejected' | 'notSet';
 
 export default function SettingsPage() {
   const { t } = useTranslation();
   const { theme, setTheme } = useTheme();
-  const { fontSize, setFontSize } = useFont() as FontContextType;
-  const { density, setDensity } = useDensity() as DensityContextType;
+  const { linkBehavior, setLinkBehavior } = useLinkBehavior() as LinkBehaviorContextType;
+  const { reduceMotion, setReduceMotion } = useAccessibility() as AccessibilityContextType;
+  const { dateTimeFormat, setDateTimeFormat } = useDateTimeFormat() as DateTimeFormatContextType;
 
   const [mounted, setMounted] = React.useState(false);
   const [cookieStatus, setCookieStatus] = useState<CookieConsentStatus>('notSet');
@@ -58,14 +77,22 @@ export default function SettingsPage() {
     if (action === 'clear') {
       localStorage.removeItem(COOKIE_CONSENT_KEY);
       setCookieStatus('notSet');
+      window.location.reload(); // Force reload to make banner reappear
     } else {
       const consentValue = action === 'accept' ? 'true' : 'false';
       localStorage.setItem(COOKIE_CONSENT_KEY, consentValue);
       setCookieStatus(action === 'accept' ? 'accepted' : 'rejected');
     }
-    // Optionally force a re-render of the banner or refresh page if needed
-    // Forcing a reload to make banner reappear if 'clear' is chosen
-    if (action === 'clear') window.location.reload();
+  };
+
+  const handleClearAllSettings = () => {
+    localStorage.removeItem(COOKIE_CONSENT_KEY);
+    localStorage.removeItem(LINK_BEHAVIOR_STORAGE_KEY);
+    localStorage.removeItem(REDUCE_MOTION_STORAGE_KEY);
+    localStorage.removeItem(DATETIME_FORMAT_STORAGE_KEY);
+    localStorage.removeItem(LANGUAGE_STORAGE_KEY);
+    localStorage.removeItem(THEME_STORAGE_KEY); // next-themes might use a different key if configured
+    window.location.reload();
   };
 
 
@@ -159,74 +186,117 @@ export default function SettingsPage() {
             </div>
           </CardContent>
         </Card>
-
-        {/* Font Size Card */}
+        
+        {/* Link Behavior Card */}
         <Card className="shadow-lg">
           <CardHeader className="flex flex-row items-start gap-3">
-            <TextQuote className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <ExternalLinkIcon className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
             <div>
-              <CardTitle className="text-2xl">{t("settings.fontSize.title")}</CardTitle>
-              <CardDescription>{t("settings.fontSize.description")}</CardDescription>
+              <CardTitle className="text-2xl">{t("settings.linkBehavior.title")}</CardTitle>
+              <CardDescription>{t("settings.linkBehavior.description")}</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between">
+              <Label htmlFor="link-behavior-switch" className="pr-4">{t("settings.linkBehavior.label")}</Label>
+              <Switch
+                id="link-behavior-switch"
+                checked={linkBehavior === 'newTab'}
+                onCheckedChange={(checked) => setLinkBehavior(checked ? 'newTab' : 'sameTab')}
+              />
+            </div>
+             <p className="text-sm text-muted-foreground">
+              {linkBehavior === 'newTab' ? t('common.on') : t('common.off')}
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Accessibility Card */}
+        <Card className="shadow-lg">
+          <CardHeader className="flex flex-row items-start gap-3">
+            <Accessibility className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <div>
+              <CardTitle className="text-2xl">{t("settings.accessibility.title")}</CardTitle>
+              <CardDescription>{t("settings.accessibility.description")}</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="flex items-center justify-between">
+              <Label htmlFor="reduce-motion-switch" className="pr-4">{t("settings.accessibility.reduceMotion.label")}</Label>
+              <Switch
+                id="reduce-motion-switch"
+                checked={reduceMotion}
+                onCheckedChange={setReduceMotion}
+              />
+            </div>
+            <p className="text-sm text-muted-foreground">
+              {reduceMotion ? t('settings.accessibility.reduceMotion.true') : t('settings.accessibility.reduceMotion.false')}
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Date & Time Format Card */}
+        <Card className="shadow-lg">
+          <CardHeader className="flex flex-row items-start gap-3">
+            <CalendarClock className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <div>
+              <CardTitle className="text-2xl">{t("settings.dateTime.title")}</CardTitle>
+              <CardDescription>{t("settings.dateTime.description")}</CardDescription>
             </div>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label>{t("settings.fontSize.label")}</Label>
-              <RadioGroup
-                value={fontSize}
-                onValueChange={(value) => setFontSize(value as FontContextType['fontSize'])}
-                className="flex space-x-2"
-              >
-                <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="sm" id="font-sm" />
-                  <Label htmlFor="font-sm" className="font-normal cursor-pointer">{t("settings.fontSize.sm")}</Label>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="md" id="font-md" />
-                  <Label htmlFor="font-md" className="font-normal cursor-pointer">{t("settings.fontSize.md")}</Label>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="lg" id="font-lg" />
-                  <Label htmlFor="font-lg" className="font-normal cursor-pointer">{t("settings.fontSize.lg")}</Label>
-                </div>
-              </RadioGroup>
+              <Label htmlFor="datetime-format-select">{t("settings.dateTime.format.label")}</Label>
+              <Select value={dateTimeFormat} onValueChange={(value) => setDateTimeFormat(value as DateTimeFormatContextType['dateTimeFormat'])}>
+                <SelectTrigger id="datetime-format-select" className="w-full">
+                  <SelectValue placeholder={t("settings.dateTime.format.label")} />
+                </SelectTrigger>
+                <SelectContent>
+                  {DATE_FORMAT_OPTIONS.map(option => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {t(option.labelKey as any)}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
           </CardContent>
         </Card>
 
-        {/* Content Density Card */}
+        {/* Data Management Card */}
         <Card className="shadow-lg">
           <CardHeader className="flex flex-row items-start gap-3">
-            <Rows className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+            <Trash2 className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
             <div>
-              <CardTitle className="text-2xl">{t("settings.density.title")}</CardTitle>
-              <CardDescription>{t("settings.density.description")}</CardDescription>
+              <CardTitle className="text-2xl">{t("settings.dataManagement.title")}</CardTitle>
+              <CardDescription>{t("settings.dataManagement.description")}</CardDescription>
             </div>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <Label>{t("settings.density.label")}</Label>
-               <RadioGroup
-                value={density}
-                onValueChange={(value) => setDensity(value as DensityContextType['density'])}
-                className="flex space-x-2"
-              >
-                <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="compact" id="density-compact" />
-                  <Label htmlFor="density-compact" className="font-normal cursor-pointer">{t("settings.density.compact")}</Label>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="default" id="density-default" />
-                  <Label htmlFor="density-default" className="font-normal cursor-pointer">{t("settings.density.default")}</Label>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="spacious" id="density-spacious" />
-                  <Label htmlFor="density-spacious" className="font-normal cursor-pointer">{t("settings.density.spacious")}</Label>
-                </div>
-              </RadioGroup>
-            </div>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button variant="destructive" className="w-full">
+                  {t("settings.dataManagement.clearAll.button")}
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>{t("settings.dataManagement.clearAll.confirm.title")}</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    {t("settings.dataManagement.clearAll.confirm.description")}
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>{t("settings.dataManagement.clearAll.confirm.cancelButton")}</AlertDialogCancel>
+                  <AlertDialogAction onClick={handleClearAllSettings}>
+                    {t("settings.dataManagement.clearAll.confirm.confirmButton")}
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </CardContent>
         </Card>
+
       </div>
     </div>
   );

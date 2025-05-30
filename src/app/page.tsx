@@ -6,11 +6,12 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, Cpu, BarChart, Link2 } from 'lucide-react';
+import { ArrowRight, Cpu, BarChart, Link2, ShieldCheck, Workflow, Truck, Settings2 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import type { LucideIcon } from 'lucide-react';
+import { useAccessibility } from '@/context/accessibility-provider';
 
 
 interface CapabilityItem {
@@ -18,7 +19,7 @@ interface CapabilityItem {
   descriptionKey: TranslationKey;
   imageSrc: string;
   imageAltKey: TranslationKey;
-  icon?: LucideIcon; // Keep optional for now, though we removed them from display
+  icon?: LucideIcon; 
 }
 
 const capabilities: CapabilityItem[] = [
@@ -27,24 +28,28 @@ const capabilities: CapabilityItem[] = [
     descriptionKey: 'home.capabilities.crossBorder.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/compliance-600-400.webp?alt=media&token=ae787123-7b50-47f0-899b-5b0369e35768',
     imageAltKey: 'home.capabilities.crossBorder.title',
+    icon: ShieldCheck,
   },
   {
     titleKey: 'home.capabilities.autonomousData.title',
     descriptionKey: 'home.capabilities.autonomousData.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/end-to-end.webp?alt=media&token=20090d41-cf2b-455e-ad11-e8c172743f9c',
     imageAltKey: 'home.capabilities.autonomousData.title',
+    icon: Workflow,
   },
   {
     titleKey: 'home.capabilities.streamlinedCustomsTransit.title',
     descriptionKey: 'home.capabilities.streamlinedCustomsTransit.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/streamlined-600-400.webp?alt=media&token=05a6798f-3d8c-4ee9-abc3-0f8e5b4dba75',
     imageAltKey: 'home.capabilities.streamlinedCustomsTransit.title',
+    icon: Truck,
   },
   {
     titleKey: 'home.capabilities.autonomousDataFlowAutomation.title',
     descriptionKey: 'home.capabilities.autonomousDataFlowAutomation.description',
     imageSrc: 'https://firebasestorage.googleapis.com/v0/b/global-hub-21v8j.firebasestorage.app/o/autonomous-600-400.webp?alt=media&token=a8bb849d-f80a-4457-afc9-8b5a9eded375',
     imageAltKey: 'home.capabilities.autonomousDataFlowAutomation.title',
+    icon: Settings2,
   },
 ];
 
@@ -62,8 +67,8 @@ const technologiesList = [
 interface MetricItem {
   labelKey: TranslationKey;
   value: string;
-  Icon?: LucideIcon; // Keep this optional
-  imageUrl?: string; // Add imageUrl as optional
+  Icon?: LucideIcon; 
+  imageUrl?: string; 
 }
 
 const initialPlatformMetrics: MetricItem[] = [
@@ -112,15 +117,20 @@ const initialPlatformMetrics: MetricItem[] = [
 
 export default function HomePage() {
   const { t } = useTranslation();
+  const { reduceMotion } = useAccessibility();
   const [animateIn, setAnimateIn] = useState(false);
   const [metricsData, setMetricsData] = useState<MetricItem[]>(initialPlatformMetrics);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimateIn(true);
-    }, 300);
-    return () => clearTimeout(timer);
-  }, []);
+    if (!reduceMotion) {
+      const timer = setTimeout(() => {
+        setAnimateIn(true);
+      }, 300);
+      return () => clearTimeout(timer);
+    } else {
+      setAnimateIn(true); // If reduceMotion is true, show immediately without animation
+    }
+  }, [reduceMotion]);
 
   useEffect(() => {
     const fetchTariffQueries = async () => {
@@ -367,11 +377,11 @@ export default function HomePage() {
                 key={tech.nameKey as string}
                 className={cn(
                   "inline-flex items-center gap-2 text-sm font-medium text-accent-foreground bg-accent px-3 py-1 rounded-full",
-                  "transition-all duration-500 ease-out",
+                  !reduceMotion && "transition-all duration-500 ease-out",
                   animateIn ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4',
-                  `delay-[${index * 150}ms]`
+                  !reduceMotion && `delay-[${index * 150}ms]`
                 )}
-                style={{ transitionDelay: `${index * 150}ms` }}
+                style={!reduceMotion ? { transitionDelay: `${index * 150}ms` } : {}}
               >
                 {tech.icon} {t(tech.nameKey as TranslationKey)}
               </span>
@@ -465,5 +475,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    

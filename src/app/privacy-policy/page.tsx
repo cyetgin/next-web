@@ -3,9 +3,29 @@
 
 import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useDateTimeFormat } from '@/context/datetime-format-provider';
+import { format } from 'date-fns';
+import { dateFnsLocales, type Locale } from '@/lib/i18n';
+import { useEffect, useState } from 'react';
+
 
 export default function PrivacyPolicyPage() {
-  const { t } = useTranslation();
+  const { t, currentLanguage } = useTranslation();
+  const { dateTimeFormat } = useDateTimeFormat();
+  const [formattedDate, setFormattedDate] = useState('');
+
+  useEffect(() => {
+    // Ensure this runs only on the client after hydration
+    try {
+      const date = new Date(); // Current date for "Last updated"
+      const locale = dateFnsLocales[currentLanguage as Locale] || dateFnsLocales.en;
+      setFormattedDate(format(date, dateTimeFormat, { locale }));
+    } catch (e) {
+      console.error("Error formatting date:", e);
+      setFormattedDate(new Date().toLocaleDateString()); // Fallback
+    }
+  }, [currentLanguage, dateTimeFormat]);
+
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
@@ -17,11 +37,10 @@ export default function PrivacyPolicyPage() {
         </CardHeader>
         <CardContent className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none dark:prose-invert">
           <p className="text-muted-foreground italic">
-            Last updated: {new Date().toLocaleDateString()}
+            Last updated: {formattedDate || "Loading..."}
           </p>
           <h2 className="text-xl font-semibold mt-6 mb-3">Introduction</h2>
           <p>
-            {/* Replace with your actual content */}
             {t('legal.privacyPolicy.placeholder')}
           </p>
           <p className="mt-4">
@@ -63,5 +82,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-
-    

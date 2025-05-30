@@ -7,8 +7,10 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 import MainLayout from '@/components/layout/main-layout';
 import { CookieConsentBanner } from '@/components/cookie-consent-banner';
-import { FontProvider } from '@/context/font-provider'; // Re-added
-import { DensityProvider } from '@/context/density-provider'; // Re-added
+import { LinkBehaviorProvider } from '@/context/link-behavior-provider';
+import { AccessibilityProvider } from '@/context/accessibility-provider';
+import { DateTimeFormatProvider } from '@/context/datetime-format-provider';
+
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -43,15 +45,17 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            <FontProvider> {/* Re-added */}
-              <DensityProvider> {/* Re-added */}
-                <MainLayout>
-                  {children}
-                </MainLayout>
-                <Toaster />
-                <CookieConsentBanner />
-              </DensityProvider>
-            </FontProvider>
+            <LinkBehaviorProvider>
+              <AccessibilityProvider>
+                <DateTimeFormatProvider>
+                  <MainLayout>
+                    {children}
+                  </MainLayout>
+                  <Toaster />
+                  <CookieConsentBanner />
+                </DateTimeFormatProvider>
+              </AccessibilityProvider>
+            </LinkBehaviorProvider>
           </LanguageProvider>
         </ThemeProvider>
       </body>

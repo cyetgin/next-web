@@ -7,6 +7,8 @@ import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, MapPin } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
+import { useLinkBehavior } from '@/context/link-behavior-provider';
+
 
 interface AddressInfo {
   titleKey: TranslationKey;
@@ -22,6 +24,10 @@ const officeAddresses: AddressInfo[] = [
 
 export default function ContactPage() {
   const { t } = useTranslation();
+  const { linkBehavior } = useLinkBehavior();
+
+  const linkTarget = linkBehavior === 'newTab' ? '_blank' : '_self';
+  const linkRel = linkBehavior === 'newTab' ? 'noopener noreferrer' : undefined;
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
@@ -59,7 +65,7 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">{t(office.titleKey)}</h3>
-                    <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary hover:underline">
+                    <Link href={googleMapsUrl} target={linkTarget} rel={linkRel} className="text-foreground/80 hover:text-primary hover:underline">
                       {address}
                     </Link>
                   </div>
@@ -83,5 +89,3 @@ export default function ContactPage() {
     </div>
   );
 }
-
-    

@@ -7,9 +7,11 @@ import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Target, BookOpen, Cpu, BarChart, Link as LinkIcon } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
+import { useLinkBehavior } from '@/context/link-behavior-provider';
+
 
 interface TechIcon {
-  Icon: React.ElementType; // Can be LucideIcon or an inline SVG component
+  Icon: React.ElementType; 
   label: string;
   color: string;
 }
@@ -100,6 +102,7 @@ const mockTeamMembers: TeamMember[] = [
 
 export default function AboutPage() {
   const { t } = useTranslation();
+  const { linkBehavior } = useLinkBehavior();
 
   const techIcons: TechIcon[] = [
     { Icon: LinkIcon, label: "Blockchain", color: "text-blue-500" },
@@ -111,6 +114,8 @@ export default function AboutPage() {
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6 text-orange-500 lucide lucide-brain-circuit"><path d="M12 5a3 3 0 1 0-5.997.125"/><path d="M18.62 4A2 2 0 0 0 17 2h-2"/><path d="M6 2A2 2 0 0 0 4 4v2"/><path d="M5 14a3 3 0 0 0 6 0"/><path d="M19 14a3 3 0 0 0 6 0"/><path d="M12 14a3 3 0 0 0 6 0"/><path d="M2 9A2 2 0 0 0 0 11v2a2 2 0 0 0 2 2h2c0-1.09.23-2.11.64-3H2Z"/><path d="M22 9a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2.64c.41-.89.64-1.91.64-3H22Z"/><path d="M15.24 10.5a3 3 0 0 0-4.48 0"/><path d="M15.5 15.5A2.5 2.5 0 0 0 18 18h1a2 2 0 0 1 2 2v2a2 2 0 0 1-4 0v-2a2.5 2.5 0 0 0-2.5-2.5h-1A2.5 2.5 0 0 0 13 15.5Z"/><path d="M8.5 15.5A2.5 2.5 0 0 1 6 18H5a2 2 0 0 0-2 2v2a2 2 0 0 0 4 0v-2A2.5 2.5 0 0 1 9.5 18h1a2.5 2.5 0 0 1 2.5-2.5Z"/></svg>
   );
 
+  const linkTarget = linkBehavior === 'newTab' ? '_blank' : '_self';
+  const linkRel = linkBehavior === 'newTab' ? 'noopener noreferrer' : undefined;
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6 space-y-16">
@@ -119,7 +124,7 @@ export default function AboutPage() {
           {t('about.title')}
         </h1>
         <p className="mx-auto max-w-[700px] text-foreground/80 md:text-xl">
-          {t('home.companyInfo.description')} {/* Re-using this key as it's updated */}
+          {t('home.companyInfo.description')} 
         </p>
       </header>
 
@@ -201,7 +206,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {mockTeamMembers.map((member) => (
             <Card key={member.nameKey} className="pt-4 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-              <div className="relative w-full h-[360px] flex justify-center items-center"> {/* Container for image */}
+              <div className="relative w-full h-[360px] flex justify-center items-center"> 
                 <Image
                   src={member.photoPlaceholder}
                   alt={t(member.nameKey)}
@@ -212,7 +217,7 @@ export default function AboutPage() {
                 />
               </div>
               <CardContent className="p-6">
-                <Link href={member.linkedInUrl} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold text-primary hover:underline">
+                <Link href={member.linkedInUrl} target={linkTarget} rel={linkRel} className="text-xl font-semibold text-primary hover:underline">
                   {t(member.nameKey)}
                 </Link>
                 <p className="text-muted-foreground mt-1">{t(member.titleKey)}</p>
@@ -225,10 +230,3 @@ export default function AboutPage() {
     </div>
   );
 }
-    
-
-    
-
-    
-
-    

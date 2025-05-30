@@ -1,7 +1,7 @@
 
 "use client";
 
-import Image from 'next/image'; // Import next/image
+import Image from 'next/image'; 
 import { useTranslation } from '@/hooks/use-translation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -22,13 +22,15 @@ import {
 } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
 import type { LucideIcon } from 'lucide-react';
+import { useLinkBehavior } from '@/context/link-behavior-provider';
+
 
 interface Product {
   nameKey: TranslationKey;
   descriptionKey: TranslationKey;
   slug: string; 
-  icon?: LucideIcon; // Optional Lucide icon
-  imageUrl?: string; // Optional image URL
+  icon?: LucideIcon; 
+  imageUrl?: string; 
   detailPagePath?: string;
 }
 
@@ -128,6 +130,10 @@ const productCategories: ProductCategory[] = [
 
 export default function ProductsPage() {
   const { t } = useTranslation();
+  const { linkBehavior } = useLinkBehavior();
+
+  const linkTarget = linkBehavior === 'newTab' ? '_blank' : '_self';
+  const linkRel = linkBehavior === 'newTab' ? 'noopener noreferrer' : undefined;
 
   return (
     <TooltipProvider>
@@ -155,7 +161,7 @@ export default function ProductsPage() {
             />
           </div>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-            <Link href="https://singlewindow.io" target="_blank" rel="noopener noreferrer">
+            <Link href="https://singlewindow.io" target={linkTarget} rel={linkRel}>
               {t('products.visitPlatformButton')} <ExternalLink className="ml-2 h-5 w-5" />
             </Link>
           </Button>
@@ -221,7 +227,7 @@ export default function ProductsPage() {
                         </div>
                         {productDescriptionElement}
                         <Button asChild size="sm" variant="outline" className="mt-auto group">
-                          <Link href={product.detailPagePath || `#${product.slug}`}>
+                          <Link href={product.detailPagePath || `#${product.slug}`} target={product.detailPagePath ? '_self' : linkTarget} rel={product.detailPagePath ? undefined : linkRel}>
                             {t('products.exploreButton')}
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                           </Link>
@@ -238,4 +244,3 @@ export default function ProductsPage() {
     </TooltipProvider>
   );
 }
-

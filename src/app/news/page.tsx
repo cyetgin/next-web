@@ -8,7 +8,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CalendarDays } from 'lucide-react';
-import type { TranslationKey } from '@/lib/i18n';
+import type { TranslationKey, Locale } from '@/lib/i18n';
+import { useDateTimeFormat } from '@/context/datetime-format-provider';
+import { format } from 'date-fns';
+import { dateFnsLocales } from '@/lib/i18n';
+import { useLinkBehavior } from '@/context/link-behavior-provider';
+
 
 interface BlogPost {
   id: string;
@@ -18,8 +23,8 @@ interface BlogPost {
   imageUrl: string;
   imageAltKey: TranslationKey;
   dataAiHint: string;
-  date: string; // Consider using Date object and formatting for i18n in a real app
-  slug: string; // For linking to a full post page (not implemented yet)
+  date: string; 
+  slug: string; 
 }
 
 const mockBlogPosts: BlogPost[] = [
@@ -31,7 +36,7 @@ const mockBlogPosts: BlogPost[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageAltKey: 'news.post1.title',
     dataAiHint: 'ai customs',
-    date: 'October 26, 2023',
+    date: '2023-10-26', // Using ISO format for easier parsing
     slug: '/news/future-of-customs-with-ai',
   },
   {
@@ -42,7 +47,7 @@ const mockBlogPosts: BlogPost[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageAltKey: 'news.post2.title',
     dataAiHint: 'blockchain supplychain',
-    date: 'November 5, 2023',
+    date: '2023-11-05',
     slug: '/news/atez-blockchain-initiative',
   },
   {
@@ -53,13 +58,30 @@ const mockBlogPosts: BlogPost[] = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageAltKey: 'news.post3.title',
     dataAiHint: 'autonomous data logistics',
-    date: 'November 15, 2023',
+    date: '2023-11-15',
     slug: '/news/impact-of-autonomous-data-handling',
   },
 ];
 
 export default function NewsPage() {
-  const { t } = useTranslation();
+  const { t, currentLanguage } = useTranslation();
+  const { dateTimeFormat } = useDateTimeFormat();
+  const { linkBehavior } = useLinkBehavior();
+
+  const formatDate = (dateString: string) => {
+    try {
+      const date = new Date(dateString);
+      const locale = dateFnsLocales[currentLanguage as Locale] || dateFnsLocales.en;
+      return format(date, dateTimeFormat, { locale });
+    } catch (e) {
+      console.error("Error formatting date:", e);
+      return dateString; // Fallback to original string
+    }
+  };
+
+  const linkTarget = linkBehavior === 'newTab' ? '_blank' : '_self';
+  const linkRel = linkBehavior === 'newTab' ? 'noopener noreferrer' : undefined;
+
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6 space-y-12">
@@ -89,7 +111,7 @@ export default function NewsPage() {
                 <Badge variant="secondary">{t(post.categoryKey)}</Badge>
                 <div className="flex items-center text-xs text-muted-foreground">
                   <CalendarDays className="mr-1 h-4 w-4" />
-                  {post.date}
+                  {formatDate(post.date)}
                 </div>
               </div>
               <CardTitle className="text-xl line-clamp-2">{t(post.titleKey)}</CardTitle>
@@ -99,7 +121,7 @@ export default function NewsPage() {
             </CardContent>
             <CardFooter>
               <Button asChild variant="outline" className="w-full group">
-                <Link href={post.slug}>
+                <Link href={post.slug} target={linkTarget} rel={linkRel}>
                   {t('news.readMore')}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -111,5 +133,3 @@ export default function NewsPage() {
     </div>
   );
 }
-
-    

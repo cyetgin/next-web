@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft, Search, ListChecks, Calculator, Sparkles, RefreshCw, Globe2, Languages, FileText, ExternalLink } from 'lucide-react';
 import type { TranslationKey } from '@/lib/i18n';
+import { useLinkBehavior } from '@/context/link-behavior-provider';
+
 
 interface Module {
   titleKey: TranslationKey;
@@ -23,6 +25,7 @@ interface Benefit {
 
 export default function TariffPage() {
   const { t } = useTranslation();
+  const { linkBehavior } = useLinkBehavior();
 
   const modules: Module[] = [
     { titleKey: 'products.tariff.module.basicQuery.title', descriptionKey: 'products.tariff.module.basicQuery.description', icon: Search },
@@ -37,6 +40,9 @@ export default function TariffPage() {
     { titleKey: 'products.tariff.keyBenefit.eliminateLanguageBarriers.title', descriptionKey: 'products.tariff.keyBenefit.eliminateLanguageBarriers.description', icon: Languages },
     { titleKey: 'products.tariff.keyBenefit.upToDateNomenclatures.title', descriptionKey: 'products.tariff.keyBenefit.upToDateNomenclatures.description', icon: FileText },
   ];
+
+  const linkTarget = linkBehavior === 'newTab' ? '_blank' : '_self';
+  const linkRel = linkBehavior === 'newTab' ? 'noopener noreferrer' : undefined;
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6 space-y-16">
@@ -125,7 +131,7 @@ export default function TariffPage() {
             </h2>
             <div className="mt-8">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-6 text-lg">
-                <Link href="https://tariff.singlewindow.io" target="_blank" rel="noopener noreferrer">
+                <Link href="https://tariff.singlewindow.io" target={linkTarget} rel={linkRel}>
                   {t('products.tariff.cta.button')} <ExternalLink className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

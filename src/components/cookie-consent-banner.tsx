@@ -6,16 +6,21 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/use-translation';
 import { cn } from '@/lib/utils';
+import { useLinkBehavior } from '@/context/link-behavior-provider';
+
 
 const COOKIE_CONSENT_KEY = 'atez_cookie_consent';
 
 export function CookieConsentBanner() {
   const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
+  const { linkBehavior } = useLinkBehavior();
+
+  const linkTarget = linkBehavior === 'newTab' ? '_blank' : '_self';
+  const linkRel = linkBehavior === 'newTab' ? 'noopener noreferrer' : undefined;
 
   useEffect(() => {
     const consentGiven = localStorage.getItem(COOKIE_CONSENT_KEY);
-    // Show banner if no consent decision has been recorded yet
     if (consentGiven === null) {
       setIsVisible(true);
     }
@@ -24,13 +29,11 @@ export function CookieConsentBanner() {
   const handleAccept = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, 'true');
     setIsVisible(false);
-    // Here you might trigger loading of consent-dependent scripts or services
   };
 
   const handleReject = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, 'false');
     setIsVisible(false);
-    // Here you might ensure non-essential cookies/trackers are disabled
   };
 
   if (!isVisible) {
@@ -47,7 +50,7 @@ export function CookieConsentBanner() {
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-foreground/80 text-center sm:text-left">
           {t('legal.cookieConsent.text')}
-          <Link href="/privacy-policy" className="underline hover:text-primary ml-1">
+          <Link href="/privacy-policy" className="underline hover:text-primary ml-1" target={linkTarget} rel={linkRel}>
             {t('legal.privacyPolicy.link')}
           </Link>.
         </p>
@@ -63,5 +66,3 @@ export function CookieConsentBanner() {
     </div>
   );
 }
-
-    

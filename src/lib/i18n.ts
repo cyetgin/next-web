@@ -1,12 +1,16 @@
 
+import type { Locale as DateFnsLocale } from 'date-fns';
+import { enUS, de, tr } from 'date-fns/locale';
+
 export type Locale = 'en' | 'de' | 'tr'; // English, German, Turkish
 
 export const DEFAULT_LOCALE: Locale = 'en';
-export const AVAILABLE_LOCALES: {value: Locale, label: string}[] = [
-  { value: 'de', label: 'Deutsch' }, // German
-  { value: 'en', label: 'English' },
-  { value: 'tr', label: 'Türkçe' },   // Turkish
+export const AVAILABLE_LOCALES: {value: Locale, label: string, dateFns: DateFnsLocale}[] = [
+  { value: 'de', label: 'Deutsch', dateFns: de },
+  { value: 'en', label: 'English', dateFns: enUS },
+  { value: 'tr', label: 'Türkçe', dateFns: tr },
 ].sort((a, b) => a.label.localeCompare(b.label));
+
 
 export type TranslationKey =
   | 'app.name'
@@ -147,27 +151,6 @@ export type TranslationKey =
   // Settings Page Keys
   | 'settings.title'
   | 'settings.description'
-  | 'settings.appearance.title'
-  | 'settings.appearance.description'
-  | 'settings.appearance.theme.label'
-  | 'settings.appearance.theme.light'
-  | 'settings.appearance.theme.dark'
-  | 'settings.appearance.theme.system'
-  | 'settings.language.title'
-  | 'settings.language.description'
-  | 'settings.language.select.label'
-  | 'settings.fontSize.title'
-  | 'settings.fontSize.description'
-  | 'settings.fontSize.label'
-  | 'settings.fontSize.sm'
-  | 'settings.fontSize.md'
-  | 'settings.fontSize.lg'
-  | 'settings.density.title'
-  | 'settings.density.description'
-  | 'settings.density.label'
-  | 'settings.density.compact'
-  | 'settings.density.default'
-  | 'settings.density.spacious'
   | 'settings.cookies.title'
   | 'settings.cookies.description'
   | 'settings.cookies.status.label'
@@ -177,6 +160,38 @@ export type TranslationKey =
   | 'settings.cookies.button.acceptAll'
   | 'settings.cookies.button.rejectAll'
   | 'settings.cookies.button.clear'
+  | 'settings.language.title'
+  | 'settings.language.description'
+  | 'settings.language.select.label'
+  | 'settings.appearance.title'
+  | 'settings.appearance.description'
+  | 'settings.appearance.theme.label'
+  | 'settings.appearance.theme.light'
+  | 'settings.appearance.theme.dark'
+  | 'settings.appearance.theme.system'
+  | 'settings.linkBehavior.title'
+  | 'settings.linkBehavior.description'
+  | 'settings.linkBehavior.label'
+  | 'settings.linkBehavior.option.newTab'
+  | 'settings.linkBehavior.option.sameTab'
+  | 'settings.accessibility.title'
+  | 'settings.accessibility.description'
+  | 'settings.accessibility.reduceMotion.label'
+  | 'settings.accessibility.reduceMotion.true'
+  | 'settings.accessibility.reduceMotion.false'
+  | 'settings.dateTime.title'
+  | 'settings.dateTime.description'
+  | 'settings.dateTime.format.label'
+  | 'settings.dateTime.format.dmy' // DD/MM/YYYY
+  | 'settings.dateTime.format.mdy' // MM/DD/YYYY
+  | 'settings.dateTime.format.ymd' // YYYY-MM-DD
+  | 'settings.dataManagement.title'
+  | 'settings.dataManagement.description'
+  | 'settings.dataManagement.clearAll.button'
+  | 'settings.dataManagement.clearAll.confirm.title'
+  | 'settings.dataManagement.clearAll.confirm.description'
+  | 'settings.dataManagement.clearAll.confirm.confirmButton'
+  | 'settings.dataManagement.clearAll.confirm.cancelButton'
   // Solutions Page Keys
   | 'solutions.title'
   | 'solutions.description'
@@ -224,6 +239,8 @@ export type TranslationKey =
   | 'products.tariff.cta.button'
   // Common
   | 'common.backToProducts'
+  | 'common.on'
+  | 'common.off'
   // GDPR & Legal
   | 'legal.cookieConsent.text'
   | 'legal.cookieConsent.acceptButton'
@@ -241,3 +258,9 @@ export function getCopyrightText(translations: Record<string, string> | null): s
   const rawText = translations?.['footer.copyright'] || `© ${new Date().getFullYear()} ATEZ Software Technologies. All rights reserved.`;
   return rawText.replace('{{YEAR}}', new Date().getFullYear().toString());
 }
+
+export const dateFnsLocales: Record<Locale, DateFnsLocale> = {
+  en: enUS,
+  de: de,
+  tr: tr,
+};
